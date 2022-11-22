@@ -1,0 +1,165 @@
+{
+  "main": {
+    "id": "519560873913e9c1",
+    "type": "split",
+    "children": [
+      {
+        "id": "a8d8bad5a3ea234a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f73525091821d326",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Computer Network.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6fb1ccc123a7fe29",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Computer Network.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2fca691351083801",
+    "type": "split",
+    "children": [
+      {
+        "id": "eb6afe55f4def9e6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6b0f7e5b7a5e09b8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0bcb6239a83e32e5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "062c662c0165c395",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "ac5fc7a3eb59f0f3",
+    "type": "split",
+    "children": [
+      {
+        "id": "32122fe96dd98e15",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4dcfa01691d31587",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Computer Network.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a88fd364584ef44e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Computer Network.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "94a0b222b7d91db0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "9eec3a46e627fbd3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Computer Network.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "6fb1ccc123a7fe29",
+  "lastOpenFiles": [
+    "未命名.md",
+    "Computer Network.md",
+    "Computer Networking Notes Ch. 3.md",
+    "DNA_Methylation.md",
+    "Computer Networking Notes Ch. 1.md",
+    "Picture/Pasted image 20221024092037.png",
+    "Computer Networking Notes Ch. 2.md",
+    "Computer Networking Notes Ch. 1 Refactor.md",
+    "2022-10-23.md"
+  ]
+}
