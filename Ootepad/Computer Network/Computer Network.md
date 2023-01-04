@@ -847,7 +847,67 @@ Client now has IP address, knows name & DNS server's address, IP address of its 
 A、B 互相傳資料，C 卻不知道，像是中間有一道牆一樣
 **Signal attenuation 信號衰減**
 在無線裡面的網路，會因為距離的問題，C 會不知道 A 再向 C 透過 B 傳送。
+![[Pasted image 20230104104512.png]]
 
 ## CDMA ( Code Division Multiple Access )
 頻道透過"碼"去知道訪問誰
 
+sender
+receiver 
+產生正交碼，就不會產生衝突
+
+## WiFi 802.11 
+![[Pasted image 20230104103525.png]]
+ISM 的頻譜
+
+#### 架構
+AP = access point = base station 家裡那個基地台
+所有人都會透過 AP 才會上網
+
+
+頻譜分為不同頻率的頻道
+
+Passive scanning:
+Active scanning:
+
+#### multiple access 多訪問
+802.11 沒有碰撞偵測
+因為無線無法做 CSMA/CD
+所以使用 **CSMA/CA**
+
+#### CSMA/CA
+DIFS: 聽了一段時間
+他是傳就是傳一整個 Data 出去，和 CD 不同，CD 連續船 Data 出去，聽到碰撞直接不傳
+然後 receiver 若是全部都收到，沒有碰撞，就會回傳 ACK
+
+如果聽到忙線中，就會開產生 random backoff time 的時間
+等到聽到沒碰撞時才開始計時，結束才會送
+
+雖然盡量避免碰撞，但是有**可能產生**
+如果碰撞沒收到 ACK，就會一樣產生延遲時間，等完再傳
+
+#### RTS-CTS
+RTS 會發出一個傳輸預約請求，說要送一段時間的資料
+如果成功，就會送出訊號，告訴所有人，CTS，有人要傳輸資料
+如果失敗，就是預約請求碰撞，就不會回傳成功的 ACK
+傳輸成功後，也會告訴所有人 ACK
+
+#### Addressing
+一個乙太網路的封包最多可以到 1500 Bytes
+
+## 4G/5G
+3G：3rd Generation Partnership Project ( 3GPP )
+
+#### 4G LTE 架構
+Base station ( eNode-B ) ( 5G叫做 ng-NB ) 可以解決移動裝置的問題
+Mobile device ( UE ) ( User equipment )
+IMSI 就像是手機的 sim 卡
+radio access network：UE到基地台的區間
+
+管理
+HSS ( Home Subscriber Service ) 就是一個資料庫
+MME ( Mobile Management Entity )
+
+路由
+S-GW ( Serving Gateway )
+P-GW ( PDN Gateway )
