@@ -333,6 +333,7 @@ Yes, when under idealized assumption  在理想的情況下 (都像是鋸齒狀�
 * same RTT
 * fixed number of sessions only in congestion avoidance
 
+---
 ## Network-layer functions
 network-layer function:
 forwarding
@@ -732,14 +733,14 @@ desiderata
 	+ 輪流送
 
 ## Channel partitioning MAC protocols
-##### TDMA: time division multiple access
+#### TDMA: time division multiple access
 slot : 時槽
 規定時間一個 frame
 不會有碰撞
 每個人都得對時才可以，時間要同步
 價錢cost太高!!
 
-##### FDMA: frequency division multiple access
+#### FDMA: frequency division multiple access
 是用頻率來分割
 
 ## Slotted ALOHA
@@ -799,7 +800,7 @@ Frame中也有Type欄位，用於表示上層協定，現金大部分都是IP。
 
 #### VLANs spanning mutiple switch
 
-就是在交換器的某一個port設定成tunk port用於介接不同交換器，乙連接不同交換器上的虛擬網路。
+就是在交換器的某一個port設定成trunk port用於介接不同交換器，乙連接不同交換器上的虛擬網路。
 
 ## Datacenter networks
 標準的資料中心有三層的routing
