@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/AI_12_06.md",
+                "file": "Computer Network/Final.md",
                 "mode": "source",
                 "source": false
               }
@@ -81,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AI/AI_12_06.md",
+                "file": "Computer Network/Final.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AI/AI_12_06.md",
+                "file": "Computer Network/Final.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AI/AI_12_06.md"
+                "file": "Computer Network/Final.md"
               }
             }
           }
@@ -161,15 +160,15 @@
   },
   "active": "c683abe023ece6d3",
   "lastOpenFiles": [
-    "AI/AI_12_09.md",
+    "Computer Network/Final.pdf",
     "AI/AI_12_06.md",
+    "AI/AI_12_09.md",
     "Computer Network/Final.md",
     "Computer Network/Computer Network.md",
     "AI/AI_11_25.md",
     "AI/AI_11_22.md",
     "AI/AI_12_02.md",
     "AI/AI_11_29.md",
-    "note.md",
-    "DNA_Methylation.md"
+    "note.md"
   ]
 }
