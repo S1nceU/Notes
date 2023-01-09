@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/AI_12_06.md",
+                "file": "AI/AI_12_09.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AI/AI_12_06.md",
+                "file": "AI/AI_12_09.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AI/AI_12_06.md",
+                "file": "AI/AI_12_09.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AI/AI_12_06.md"
+                "file": "AI/AI_12_09.md"
               }
             }
           }
@@ -149,6 +149,7 @@
   },
   "active": "5bf17e18fdaeeb47",
   "lastOpenFiles": [
+    "AI/AI_12_06.md",
     "DBS/DBS_HW3.md",
     "DBS/DBS.md",
     "DBS/我想要期末及格就好.md",
@@ -157,7 +158,6 @@
     "DBS/12_15.md",
     "109590009 資工三 楊明哲.md",
     "Picture/Pasted image 20221211203139.png",
-    "Picture/Pasted image 20221211203101.png",
-    "Picture/Pasted image 20221211202553.png"
+    "Picture/Pasted image 20221211203101.png"
   ]
 }
