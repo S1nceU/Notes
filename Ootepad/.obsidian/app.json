@@ -9,5 +9,6 @@
   },
   "newFileLocation": "root",
   "newFileFolderPath": "Picture",
-  "attachmentFolderPath": "Picture"
+  "attachmentFolderPath": "Picture",
+  "showUnsupportedFiles": true
 }
