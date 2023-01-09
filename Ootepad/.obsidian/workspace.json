@@ -37,14 +37,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/AI_12_16.md",
+                "file": "AI/AI_12_13.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AI/AI_12_16.md",
+                "file": "AI/AI_11_22.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AI/AI_12_16.md",
+                "file": "AI/AI_11_22.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AI/AI_12_16.md"
+                "file": "AI/AI_11_22.md"
               }
             }
           }
@@ -171,16 +171,16 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "7368f2bf2430cf3d",
+  "active": "395ee9a5fc4c1038",
   "lastOpenFiles": [
     "AI/AI_12_13.md",
     "AI/AI_12_16.md",
+    "AI/AI_11_25.md",
+    "AI/AI_11_22.md",
     "AI/AI_12_09.md",
     "AI/AI_12_06.md",
     "AI/AI_12_02.md",
     "AI/AI_11_29.md",
-    "AI/AI_11_25.md",
-    "AI/AI_11_22.md",
     "DBS/DBS_HW3.md",
     "DBS/DBS.md"
   ]
