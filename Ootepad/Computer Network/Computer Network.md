@@ -456,6 +456,7 @@ subnet mask: /24 ( 不一定只用24，最常用就是24 ) 遮罩前24個 bits�
 a.b.c.d/x $\rightarrow$ x 就是網域是前幾個 bits
 
 #### DHCP: Dynamic Host Configuration Protocol
+UDP
 + "plug-and-play" 不需要人工設定
 + when join 時可以從 DHCP server 拿到一個 IP address，為臨時的
 + " 使用 *UDP* "
@@ -486,7 +487,7 @@ Sol:
 **在一個具有NAT功能的路由器下的主機並沒有建立真正的IP位址，並且不能參與一些網際網路協定**
 
 #### IPv6
-長度一樣為 32 bits
+長度一樣為 32 bits (騙人的)
 address 長度可以到 128-bit
 跟 IPv4 差別: 都是為了節省時間，目的就是要快
 + no checksum
@@ -580,7 +581,7 @@ Base on *Bellman-Ford ( BF )* equation ( dynamic programming )
 like A* search
 
 iterative, asynchronous 迭代, 非同步
-distributed, self-stopping 
+distributed, self-stopping
 
 ###### link cost changes
 當 cost 降低的話 : 會很快就會全部更新
@@ -757,12 +758,12 @@ slot : 時槽
 #### efficiency 效率
 每個時曹都可以傳送一個，機率為 $p(1-p)^{N-1}$
 每個重送的機率為 $Np(1-p)^{N-1}$
-
+0.37
 ## Pure ALOHA
 + 不用做同步電路，但成功的機率會變低
 + 封包不會等到在 slot 的開頭傳送
 + 會增加碰撞機率
-
+0.18
 ## CSMA ( carrier sense multiple access )
 會檢視線路上是否有人在傳輸，listen before transmit
 但還是無法避免碰撞
