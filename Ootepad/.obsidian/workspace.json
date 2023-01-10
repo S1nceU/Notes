@@ -35,9 +35,11 @@
             "id": "7368f2bf2430cf3d",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "AI/pdf/AI_11_22.pdf"
+                "file": "Computer Network/Computer Network.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -108,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AI/pdf/AI_11_22.pdf",
+                "file": "Computer Network/Computer Network.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AI/pdf/AI_11_22.pdf",
+                "file": "Computer Network/Computer Network.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AI/pdf/AI_11_22.pdf"
+                "file": "Computer Network/Computer Network.md"
               }
             }
           }
@@ -171,15 +173,15 @@
   },
   "active": "7368f2bf2430cf3d",
   "lastOpenFiles": [
-    "AI/pdf/AI_11_25.pdf",
-    "AI/pdf/AI_11_29.pdf",
-    "AI/pdf/AI_11_22.pdf",
-    "AI/pdf/AI_12_20.pdf",
+    "AI/AI_12_16.md",
+    "AI/AI_12_20.md",
+    "AI/AI_12_23.md",
     "AI/AI_12_27.md",
-    "AI/pdf/AI_12_27.pdf",
-    "AI/pdf/AI_12_23.pdf",
-    "AI/pdf/AI_12_09.pdf",
-    "AI/pdf/AI_12_06.pdf",
-    "AI/pdf/AI_12_02.pdf"
+    "AI/AI_12_13.md",
+    "AI/AI_12_02.md",
+    "AI/AI_11_29.md",
+    "AI/AI_11_25.md",
+    "AI/AI_11_22.md",
+    "AI/pdf/AI_11_22.pdf"
   ]
 }
