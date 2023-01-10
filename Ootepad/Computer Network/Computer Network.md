@@ -339,8 +339,9 @@ network-layer function:
 forwarding
 routing
 networl layer protocols in **every internet device** : hosts, routers
-#### Dataplane
+#### Data plane
 local 
+**forwarding**
 傳統的 router，只看目的端，就直接傳送到目的地 
 跟其他的 router 叫喚資訊，得知要從哪個 output port 出去
 
@@ -348,6 +349,7 @@ local
 將 data forwarding table 放在自己的 router
 (現在大部分都是)
 #### Software-Defined Networking (SDN) control plane 軟體定義網路
+**routing**
 <font color = "orange">中央控制 Remote Controller，集中化，指定 router 的 data forwarding table</font>
 把所有 table 送到每一個 router
 現在的傳輸速率已經相當快速，可以隨時做update
@@ -396,7 +398,7 @@ Crossbar
 #### Input port queuing
 input buffer 要看 switch 夠不夠快才需要
 ##### Head-of-the-Line ( HOL ) blocking
-因為 switch 不夠快， 導致原本時間該送到的 data ，卻被前面的 data 擋住
+因為 switching 不夠快， 導致原本時間該送到的 data ，卻被前面的 data 擋住
 因為有 input port queuing 才會有的問題
 
 #### Output port queuing
