@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computer Network/Final.md",
+                "file": "Computer Network/Computer Network.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computer Network/Final.md",
+                "file": "Computer Network/Computer Network.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computer Network/Final.md",
+                "file": "Computer Network/Computer Network.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computer Network/Final.md"
+                "file": "Computer Network/Computer Network.md"
               }
             }
           }
@@ -148,15 +148,15 @@
   },
   "active": "1e2da2d14ee541a0",
   "lastOpenFiles": [
-    "Computer Network/Computer Network.md",
+    "Computer Network/Computer Networking Notes Ch. 1.md",
     "Computer Network/Final.md",
+    "Computer Network/Computer Network.md",
     "Computer Network/Final.pdf",
     "AI/AI_12_16.md",
     "AI/AI_12_20.md",
     "AI/AI_12_23.md",
     "AI/AI_12_27.md",
     "AI/AI_12_13.md",
-    "AI/AI_12_02.md",
-    "AI/AI_11_29.md"
+    "AI/AI_12_02.md"
   ]
 }
