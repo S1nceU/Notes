@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computer Network/Computer Network.md",
+                "file": "企劃書綱要.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computer Network/Computer Network.md",
+                "file": "企劃書綱要.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computer Network/Computer Network.md",
+                "file": "企劃書綱要.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computer Network/Computer Network.md"
+                "file": "企劃書綱要.md"
               }
             }
           }
@@ -148,15 +149,15 @@
   },
   "active": "1e2da2d14ee541a0",
   "lastOpenFiles": [
+    "組內互評.md",
+    "資工三 109590009 楊明哲.pdf",
+    "Pasted image 20221118224413.png",
+    "note.md",
+    "DNA_Methylation.md",
+    "企劃書綱要.md",
+    "Computer Network/Computer Network.md",
     "Computer Network/Computer Networking Notes Ch. 1.md",
     "Computer Network/Final.md",
-    "Computer Network/Computer Network.md",
-    "Computer Network/Final.pdf",
-    "AI/AI_12_16.md",
-    "AI/AI_12_20.md",
-    "AI/AI_12_23.md",
-    "AI/AI_12_27.md",
-    "AI/AI_12_13.md",
-    "AI/AI_12_02.md"
+    "Computer Network/Final.pdf"
   ]
 }
