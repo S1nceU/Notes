@@ -28,9 +28,21 @@
                 "file": "DNA/企劃書綱要.pdf"
               }
             }
+          },
+          {
+            "id": "2b3a6169a101069b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OS/OS_3_2.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -80,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -96,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DNA/企劃書綱要.pdf",
+                "file": "OS/OS_3_2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DNA/企劃書綱要.pdf",
+                "file": "OS/OS_3_2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DNA/企劃書綱要.pdf"
+                "file": "OS/OS_3_2.md"
               }
             }
           }
@@ -157,8 +170,9 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "c0ca4b0c09f81c82",
+  "active": "2b3a6169a101069b",
   "lastOpenFiles": [
+    "DNA/企劃書綱要.pdf",
     "DNA/研究動機與研究問題.md",
     "DNA/企劃書綱要.md",
     "AI/AI_12_16.md",
@@ -167,7 +181,6 @@
     "組內互評.md",
     "資工三 109590009 楊明哲.pdf",
     "Pasted image 20221118224413.png",
-    "note.md",
-    "DNA_Methylation.md"
+    "note.md"
   ]
 }
