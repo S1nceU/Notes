@@ -4,55 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "b0de204e5e8293bf",
+        "id": "3cc7c5e5158afab1",
         "type": "tabs",
         "children": [
           {
-            "id": "1e2da2d14ee541a0",
+            "id": "b8cdf39cf3f23f78",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DNA/企劃書綱要.md",
+                "file": "Computer Algorithm/CA_3_8.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "c0ca4b0c09f81c82",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "DNA/企劃書綱要.pdf"
-              }
-            }
-          },
-          {
-            "id": "2b3a6169a101069b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OS/OS_3_2.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "349c0b25263ce564",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.1.15"
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -102,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -119,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/OS_3_2.md",
+                "file": "Computer Algorithm/CA_3_8.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/OS_3_2.md",
+                "file": "Computer Algorithm/CA_3_8.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -159,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/OS_3_2.md"
+                "file": "Computer Algorithm/CA_3_8.md"
               }
             }
           }
@@ -180,11 +146,15 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "349c0b25263ce564",
+  "active": "b8cdf39cf3f23f78",
   "lastOpenFiles": [
-    "DNA/企劃書綱要.pdf",
-    "DNA/研究動機與研究問題.md",
+    "Computer Algorithm/CA_3_8.md",
+    "Computer Algorithm/未命名",
+    "Computer Algorithm",
     "DNA/企劃書綱要.md",
+    "DNA/企劃書綱要.pdf",
+    "OS/OS_3_2.md",
+    "DNA/研究動機與研究問題.md",
     "AI/AI_12_16.md",
     "AI/AI_12_20.md",
     "AI/AI_12_23.md",
