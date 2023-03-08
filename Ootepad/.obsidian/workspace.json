@@ -40,9 +40,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "349c0b25263ce564",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.1.15"
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -162,15 +172,15 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "canvas:建立新畫布": false,
       "switcher:開啟快速切換": false,
       "graph:查看關聯圖": false,
-      "canvas:Create new canvas": false,
       "daily-notes:開啟今天的每日筆記": false,
       "templates:插入模板": false,
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "2b3a6169a101069b",
+  "active": "349c0b25263ce564",
   "lastOpenFiles": [
     "DNA/企劃書綱要.pdf",
     "DNA/研究動機與研究問題.md",
