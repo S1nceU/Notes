@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e978d305a6b38a5a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OS/OS_3_9.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -85,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computer Algorithm/CA_3_8.md",
+                "file": "OS/OS_3_9.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computer Algorithm/CA_3_8.md",
+                "file": "OS/OS_3_9.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computer Algorithm/CA_3_8.md"
+                "file": "OS/OS_3_9.md"
               }
             }
           }
@@ -146,9 +160,13 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "b8cdf39cf3f23f78",
+  "active": "e978d305a6b38a5a",
   "lastOpenFiles": [
+    "Picture/Pasted image 20230309105113.png",
+    "Picture/Pasted image 20230309105028.png",
+    "Picture/Pasted image 20230309104955.png",
     "Computer Algorithm/CA_3_8.md",
+    "OS/OS_3_9.md",
     "Computer Algorithm/未命名",
     "Computer Algorithm",
     "DNA/企劃書綱要.md",
