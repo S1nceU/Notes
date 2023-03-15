@@ -52,9 +52,39 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "12c92c4ef3598106",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "未命名/未命名.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
+      },
+      {
+        "id": "69514f3e5c2b7ed3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1a76aed248d60dca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "未命名/未命名 1.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -121,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NLP/NLP_3_15.md",
+                "file": "未命名/未命名 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +168,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "NLP/NLP_3_15.md",
+                "file": "未命名/未命名 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +191,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NLP/NLP_3_15.md"
+                "file": "未命名/未命名 1.md"
               }
             }
           }
@@ -182,12 +212,14 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "6c8a5c09aa80e976",
+  "active": "1a76aed248d60dca",
   "lastOpenFiles": [
+    "未命名/未命名.md",
+    "未命名/未命名 1.md",
+    "NLP/NLP_3_15.md",
     "Picture/Pasted image 20230315110159.png",
     "Picture/Pasted image 20230315104105.png",
     "Picture/Pasted image 20230315104025.png",
-    "NLP/NLP_3_15.md",
     "NLP",
     "未命名",
     "Picture/Pasted image 20230309105113.png",
