@@ -40,9 +40,21 @@
                 "currentVersion": "1.1.16"
               }
             }
+          },
+          {
+            "id": "6c8a5c09aa80e976",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NLP/NLP_3_15.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -109,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/OS_3_9.md",
+                "file": "NLP/NLP_3_15.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/OS_3_9.md",
+                "file": "NLP/NLP_3_15.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/OS_3_9.md"
+                "file": "NLP/NLP_3_15.md"
               }
             }
           }
@@ -157,7 +169,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -169,8 +182,14 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "8cc3492202c41ac0",
+  "active": "6c8a5c09aa80e976",
   "lastOpenFiles": [
+    "Picture/Pasted image 20230315110159.png",
+    "Picture/Pasted image 20230315104105.png",
+    "Picture/Pasted image 20230315104025.png",
+    "NLP/NLP_3_15.md",
+    "NLP",
+    "未命名",
     "Picture/Pasted image 20230309105113.png",
     "Picture/Pasted image 20230309105028.png",
     "Picture/Pasted image 20230309104955.png",
