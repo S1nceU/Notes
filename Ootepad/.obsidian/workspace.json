@@ -30,9 +30,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "8cc3492202c41ac0",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.1.16"
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -147,8 +157,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -160,7 +169,7 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "e978d305a6b38a5a",
+  "active": "8cc3492202c41ac0",
   "lastOpenFiles": [
     "Picture/Pasted image 20230309105113.png",
     "Picture/Pasted image 20230309105028.png",
