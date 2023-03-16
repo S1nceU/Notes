@@ -4,84 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "3cc7c5e5158afab1",
+        "id": "3b1a1099bc0ee71e",
         "type": "tabs",
         "children": [
           {
-            "id": "b8cdf39cf3f23f78",
+            "id": "aa93550e362ac537",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computer Algorithm/CA_3_8.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e978d305a6b38a5a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OS/OS_3_9.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8cc3492202c41ac0",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.1.16"
-              }
-            }
-          },
-          {
-            "id": "6c8a5c09aa80e976",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NLP/NLP_3_15.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "12c92c4ef3598106",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "未命名/未命名.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ],
-        "currentTab": 4
-      },
-      {
-        "id": "69514f3e5c2b7ed3",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "1a76aed248d60dca",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "未命名/未命名 1.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -151,7 +82,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "未命名/未命名 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,7 +98,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "未命名/未命名 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -190,9 +119,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "未命名/未命名 1.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -212,11 +139,13 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "1a76aed248d60dca",
+  "active": "aa93550e362ac537",
   "lastOpenFiles": [
     "未命名/未命名.md",
-    "未命名/未命名 1.md",
     "NLP/NLP_3_15.md",
+    "OS/OS_3_9.md",
+    "Computer Algorithm/CA_3_8.md",
+    "未命名/未命名 1.md",
     "Picture/Pasted image 20230315110159.png",
     "Picture/Pasted image 20230315104105.png",
     "Picture/Pasted image 20230315104025.png",
@@ -225,8 +154,6 @@
     "Picture/Pasted image 20230309105113.png",
     "Picture/Pasted image 20230309105028.png",
     "Picture/Pasted image 20230309104955.png",
-    "Computer Algorithm/CA_3_8.md",
-    "OS/OS_3_9.md",
     "Computer Algorithm/未命名",
     "Computer Algorithm",
     "DNA/企劃書綱要.md",
