@@ -1,18 +1,23 @@
 ## Back-end
 - [ ] 查詢
 	- [ ] Repository
-		- [ ] Customer
-			- [x] 用國籍加 ID 做查詢 return model.customer
+		- [x] Customer
+			- [ ] 用國籍加 ID 做查詢 return model.customer
 			- [x] 列出全部 return []model.customer
-			- [x] 用 ID 查詢顧客 return model.customer
-			- [ ] 其他
+			- [ ] 用 ID 查詢顧客 return model.customer
+			- [ ] 用國籍列出該國顧客
 		- [ ] History
 			- [ ] 列出全部
 	- [ ] Service
+		- [ ] Customer
+		- [ ] History
 	- [ ] Delivery
+		- [ ] Customer
+		- [ ] History
 - [ ] 創建
 	- [ ] Repository
-		- [ ] Customer
+		- [x] Customer
+			- [x] 創建一個全新 customer
 		- [ ] History
 	- [ ] Service
 		- [ ] Customer
@@ -35,7 +40,7 @@
 		- [ ] History
 - [ ] 刪除
 	- [ ] Repository
-		- [ ] Customer
+		- [x] Customer
 			- [x] 刪除特定ID的顧客 
 		- [ ] History
 	- [ ] Service
