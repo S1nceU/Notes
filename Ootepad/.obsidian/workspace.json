@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "3b1a1099bc0ee71e",
+        "id": "80d53fdbf64d44a6",
         "type": "tabs",
         "children": [
           {
-            "id": "aa93550e362ac537",
+            "id": "74af6a76648521d3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/OS_3_16.md",
+                "file": "DNA_Methylation.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "8478d66a70c4495e",
+            "id": "d6bbbb10454c617f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CRMS.md",
+                "file": "人生好難.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CRMS.md",
+                "file": "人生好難.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CRMS.md",
+                "file": "人生好難.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CRMS.md"
+                "file": "人生好難.md"
               }
             }
           }
@@ -160,8 +159,12 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "8478d66a70c4495e",
+  "active": "d6bbbb10454c617f",
   "lastOpenFiles": [
+    "DNA_Methylation.md",
+    "人生好難.md",
+    "Picture/Pasted image 20230317175850.png",
+    "Picture/Pasted image 20230317174418.png",
     "OS/OS_3_16.md",
     "CRMS.md",
     "CRMS",
