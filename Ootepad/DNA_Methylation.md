@@ -39,6 +39,8 @@ AmiGO 可以直接查詢
 | validate | 驗證 | |
 | aspect | 方面 | |
 | cluster | 分群 | |
+| intersity | 強度 | |
+
 
 #### Normal distribution ( Gaussian distribution )
 常態分布 ( 高斯分布 )
