@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e2fa58a0413d5b5c",
+        "id": "b0bef0fa798aad0d",
         "type": "tabs",
         "children": [
           {
-            "id": "25643e77babfdb4b",
+            "id": "b6dc481bcddb25c2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -148,11 +148,15 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "25643e77babfdb4b",
+  "active": "b6dc481bcddb25c2",
   "lastOpenFiles": [
+    "Picture/Pasted image 20230318093250.png",
+    "Picture/Pasted image 20230318092254.png",
+    "PDF/人生好難.pdf",
+    "人生好難.md",
+    "PDF",
     "Picture/Pasted image 20230318083152.png",
     "DNA_Methylation.md",
-    "人生好難.md",
     "Picture/Pasted image 20230317175850.png",
     "Picture/Pasted image 20230317174418.png",
     "OS/OS_3_16.md",
@@ -171,7 +175,6 @@
     "未命名",
     "Picture/Pasted image 20230309105113.png",
     "Picture/Pasted image 20230309105028.png",
-    "Picture/Pasted image 20230309104955.png",
     "Computer Algorithm/未命名",
     "Computer Algorithm",
     "DNA/企劃書綱要.md",
@@ -183,7 +186,6 @@
     "AI/AI_12_23.md",
     "組內互評.md",
     "資工三 109590009 楊明哲.pdf",
-    "Pasted image 20221118224413.png",
     "note.md"
   ]
 }
