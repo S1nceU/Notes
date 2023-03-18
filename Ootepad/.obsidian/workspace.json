@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "人生好難.md",
+                "file": "CRMS.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "人生好難.md",
+                "file": "CRMS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "人生好難.md",
+                "file": "CRMS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "人生好難.md"
+                "file": "CRMS.md"
               }
             }
           },
@@ -159,9 +158,9 @@
   },
   "active": "b6dc481bcddb25c2",
   "lastOpenFiles": [
+    "人生好難.md",
     "12_27.md",
     "DBS/pdf/12_27.pdf",
-    "人生好難.md",
     "資工三 109590009 楊明哲.pdf",
     "PDF/人生好難.pdf",
     "Picture/Pasted image 20230318093250.png",
