@@ -2,10 +2,10 @@
 - [ ] 查詢
 	- [ ] Repository
 		- [x] Customer
-			- [ ] 用國籍加 ID 做查詢 return model.customer
+			- [x] 用 ID 做查詢 return model.customer 不能給 customer_id
 			- [x] 列出全部 return []model.customer
-			- [ ] 用 ID 查詢顧客 return model.customer
-			- [ ] 用國籍列出該國顧客
+			- [x] 用 customer 查詢顧客 return model.customer
+			- [x] 用國籍列出該國顧客
 		- [ ] History
 			- [ ] 列出全部
 	- [ ] Service
@@ -28,7 +28,7 @@
 - [ ] 更新
 	- [ ] Repository
 		- [ ] Customer
-			- [ ] 整筆資料更新
+			- [x] 整筆資料更新
 			- [ ] 單列更新
 			- [ ] 更新多列
 		- [ ] History
