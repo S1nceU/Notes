@@ -8,6 +8,8 @@
 			- [x] 用國籍列出該國顧客
 		- [ ] History
 			- [ ] 列出全部
+			- [ ] 列出特定顧客的住宿紀錄
+			- [ ] 列出特定日期的住宿紀錄
 	- [ ] Service
 		- [ ] Customer
 		- [ ] History
@@ -15,10 +17,11 @@
 		- [ ] Customer
 		- [ ] History
 - [ ] 創建
-	- [ ] Repository
+	- [x] Repository
 		- [x] Customer
 			- [x] 創建一個全新 customer
-		- [ ] History
+		- [x] History
+			- [x] 創建一個全新 history
 	- [ ] Service
 		- [ ] Customer
 		- [ ] History
@@ -32,6 +35,8 @@
 			- [ ] 單列更新
 			- [ ] 更新多列
 		- [ ] History
+			- [ ] 整筆資料更新
+			- [ ] 更新多列
 	- [ ] Service
 		- [ ] Customer
 		- [ ] History
@@ -43,6 +48,7 @@
 		- [x] Customer
 			- [x] 刪除特定ID的顧客 
 		- [ ] History
+			- [ ] 刪除特定顧客的單一住宿紀錄
 	- [ ] Service
 		- [ ] Customer
 		- [ ] History

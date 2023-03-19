@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CRMS.md",
+                "file": "人生好難.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CRMS.md",
+                "file": "人生好難.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CRMS.md",
+                "file": "人生好難.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CRMS.md"
+                "file": "人生好難.md"
               }
             }
           },
@@ -158,6 +158,7 @@
   },
   "active": "b6dc481bcddb25c2",
   "lastOpenFiles": [
+    "CRMS.md",
     "人生好難.md",
     "12_27.md",
     "DBS/pdf/12_27.pdf",
@@ -171,7 +172,6 @@
     "Picture/Pasted image 20230317175850.png",
     "Picture/Pasted image 20230317174418.png",
     "OS/OS_3_16.md",
-    "CRMS.md",
     "CRMS",
     "Picture/Pasted image 20230316114234.png",
     "未命名/未命名.md",
