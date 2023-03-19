@@ -6,10 +6,10 @@
 			- [x] 列出全部 return []model.customer
 			- [x] 用 customer 查詢顧客 return model.customer
 			- [x] 用國籍列出該國顧客
-		- [ ] History
-			- [ ] 列出全部
-			- [ ] 列出特定顧客的住宿紀錄
-			- [ ] 列出特定日期的住宿紀錄
+		- [x] History
+			- [x] 列出全部
+			- [x] 列出特定顧客的住宿紀錄
+			- [x] 列出特定日期的住宿紀錄
 	- [ ] Service
 		- [ ] Customer
 		- [ ] History
@@ -44,11 +44,11 @@
 		- [ ] Customer
 		- [ ] History
 - [ ] 刪除
-	- [ ] Repository
+	- [x] Repository
 		- [x] Customer
 			- [x] 刪除特定ID的顧客 
-		- [ ] History
-			- [ ] 刪除特定顧客的單一住宿紀錄
+		- [x] History
+			- [x] 刪除特定顧客的特定住宿紀錄
 	- [ ] Service
 		- [ ] Customer
 		- [ ] History
