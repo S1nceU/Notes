@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DNA_Methylation.md",
+                "file": "組內互評.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DNA_Methylation.md",
+                "file": "組內互評.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DNA_Methylation.md",
+                "file": "組內互評.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DNA_Methylation.md"
+                "file": "組內互評.md"
               }
             }
           },
@@ -156,46 +156,46 @@
       "pdf-to-markdown-plugin:PDF to Markdown": false
     }
   },
-  "active": "b6dc481bcddb25c2",
+  "active": "6b0f7e5b7a5e09b8",
   "lastOpenFiles": [
+    "~$專生研究計畫.docx",
+    "mso8F5D.tmp",
+    "mso8CFA.tmp",
+    "大專生研究計畫.pdf",
+    "mso1817.tmp",
+    "mso14F9.tmp",
+    "~WRL0003.tmp",
+    "~WRD0002.tmp",
+    "大專生研究計畫.docx",
+    "Picture/Pasted image 20230321223019.png",
+    "Picture/Pasted image 20230321222943.png",
+    "Picture/Pasted image 20230321222300.png",
+    "Picture/Pasted image 20230321222248.png",
+    "Picture/Pasted image 20230321222226.png",
+    "CRMS.md",
+    "DNA_Methylation.md",
     "Pasted image 20221118224413.png",
+    "note.md",
     "資工三 109590009 楊明哲.pdf",
     "人生好難.md",
-    "CRMS.md",
     "12_27.md",
     "DBS/pdf/12_27.pdf",
-    "PDF/人生好難.pdf",
     "Picture/Pasted image 20230318093250.png",
     "Picture/Pasted image 20230318092254.png",
-    "PDF",
     "Picture/Pasted image 20230318083152.png",
-    "DNA_Methylation.md",
     "Picture/Pasted image 20230317175850.png",
-    "Picture/Pasted image 20230317174418.png",
     "OS/OS_3_16.md",
-    "CRMS",
-    "Picture/Pasted image 20230316114234.png",
     "未命名/未命名.md",
     "NLP/NLP_3_15.md",
     "OS/OS_3_9.md",
     "Computer Algorithm/CA_3_8.md",
     "未命名/未命名 1.md",
-    "Picture/Pasted image 20230315110159.png",
-    "Picture/Pasted image 20230315104105.png",
-    "Picture/Pasted image 20230315104025.png",
-    "NLP",
-    "未命名",
-    "Picture/Pasted image 20230309105113.png",
-    "Computer Algorithm/未命名",
-    "Computer Algorithm",
     "DNA/企劃書綱要.md",
-    "DNA/企劃書綱要.pdf",
     "OS/OS_3_2.md",
     "DNA/研究動機與研究問題.md",
     "AI/AI_12_16.md",
     "AI/AI_12_20.md",
     "AI/AI_12_23.md",
-    "組內互評.md",
-    "note.md"
+    "組內互評.md"
   ]
 }
