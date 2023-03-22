@@ -11,9 +11,11 @@
             "id": "b6dc481bcddb25c2",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Picture/Pasted image 20230321222943.png"
+                "file": "組內互評.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -67,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -83,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Picture/Pasted image 20230321222943.png",
+                "file": "組內互評.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Picture/Pasted image 20230321222943.png",
+                "file": "組內互評.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Picture/Pasted image 20230321222943.png"
+                "file": "組內互評.md"
               }
             }
           },
@@ -156,27 +159,27 @@
   },
   "active": "b6dc481bcddb25c2",
   "lastOpenFiles": [
+    "CRMS.md",
+    "DNA_Methylation.md",
+    "人生好難.md",
+    "大專生研究計畫.pdf",
+    "Picture/Pasted image 20230321222943.png",
     "組內互評.md",
     "PDF/resume.pdf",
     "~$專生研究計畫.docx",
     "mso8F5D.tmp",
     "mso8CFA.tmp",
-    "大專生研究計畫.pdf",
     "mso1817.tmp",
     "mso14F9.tmp",
     "~WRL0003.tmp",
     "~WRD0002.tmp",
     "大專生研究計畫.docx",
     "Picture/Pasted image 20230321223019.png",
-    "Picture/Pasted image 20230321222943.png",
     "Picture/Pasted image 20230321222300.png",
     "Picture/Pasted image 20230321222248.png",
     "Picture/Pasted image 20230321222226.png",
-    "CRMS.md",
-    "DNA_Methylation.md",
     "Pasted image 20221118224413.png",
     "note.md",
-    "人生好難.md",
     "12_27.md",
     "Picture/Pasted image 20230318093250.png",
     "Picture/Pasted image 20230318092254.png",
