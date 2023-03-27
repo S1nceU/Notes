@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "b0bef0fa798aad0d",
+        "id": "9348a2e3a39fca42",
         "type": "tabs",
         "children": [
           {
-            "id": "b6dc481bcddb25c2",
+            "id": "4eca955a2f2df28b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "組內互評.md",
+                "file": "OS/OS_3_27.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "9bfd0e002b9ede1c",
+            "id": "c23e6340b3d8b895",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/OS_3_23.md",
+                "file": "OS_HW/OS HW1.md",
                 "mode": "source",
                 "source": false
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/OS_3_23.md",
+                "file": "OS_HW/OS HW1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/OS_3_23.md",
+                "file": "OS_HW/OS HW1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/OS_3_23.md"
+                "file": "OS_HW/OS HW1.md"
               }
             }
           },
@@ -170,11 +170,17 @@
       "pdf-to-markdown-plugin:PDF to Markdown": false
     }
   },
-  "active": "9bfd0e002b9ede1c",
+  "active": "c23e6340b3d8b895",
   "lastOpenFiles": [
+    "OS/OS_3_27.md",
+    "OS_HW/OS HW1.md",
+    "OS_HW",
+    "OS/OS_3_23.md",
+    "Computer Network/Computer Network.md",
+    "Computer Network/Final.md",
+    "DBS/我想要期末及格就好.md",
     "Picture/Pasted image 20230323103721.png",
     "組內互評.md",
-    "OS/OS_3_23.md",
     "CRMS.md",
     "DNA_Methylation.md",
     "人生好難.md",
@@ -188,7 +194,6 @@
     "mso14F9.tmp",
     "~WRL0003.tmp",
     "~WRD0002.tmp",
-    "大專生研究計畫.docx",
     "Picture/Pasted image 20230321223019.png",
     "Picture/Pasted image 20230321222300.png",
     "Picture/Pasted image 20230321222248.png",
@@ -199,7 +204,6 @@
     "Picture/Pasted image 20230318093250.png",
     "Picture/Pasted image 20230318092254.png",
     "Picture/Pasted image 20230318083152.png",
-    "Picture/Pasted image 20230317175850.png",
     "OS/OS_3_16.md",
     "未命名/未命名.md",
     "NLP/NLP_3_15.md",
