@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS_HW/OS HW1.md",
+                "file": "OS_HW/CA_HW1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS_HW/OS HW1.md",
+                "file": "OS_HW/CA_HW1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS_HW/OS HW1.md"
+                "file": "OS_HW/CA_HW1.md"
               }
             }
           },
@@ -169,12 +169,12 @@
       "pdf-to-markdown-plugin:PDF to Markdown": false
     }
   },
-  "active": "3efaf9e4895345ca",
+  "active": "ef40316c018feb8d",
   "lastOpenFiles": [
-    "OS_HW/CA_HW1.md",
     "OS_HW/OS HW1.md",
-    "OS_HW/NLP HW1.md",
     "OS/OS_3_27.md",
+    "OS_HW/CA_HW1.md",
+    "OS_HW/NLP HW1.md",
     "PDF/NLP HW1.pdf",
     "組內互評.md",
     "OS_HW",
