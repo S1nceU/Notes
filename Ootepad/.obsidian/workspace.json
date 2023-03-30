@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS_HW/CA_HW1.md",
+                "file": "OS_HW/OS HW1.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS_HW/CA_HW1.md",
+                "file": "OS_HW/OS HW1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS_HW/CA_HW1.md",
+                "file": "OS_HW/OS HW1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS_HW/CA_HW1.md"
+                "file": "OS_HW/OS HW1.md"
               }
             }
           },
@@ -171,14 +171,16 @@
   },
   "active": "ef40316c018feb8d",
   "lastOpenFiles": [
-    "OS_HW/OS HW1.md",
-    "OS/OS_3_27.md",
-    "OS_HW/CA_HW1.md",
     "OS_HW/NLP HW1.md",
+    "OS_HW/CA_HW1.md",
+    "OS/OS_3_9.md",
+    "OS/OS_3_16.md",
+    "OS/OS_3_23.md",
+    "OS/OS_3_27.md",
+    "OS_HW/OS HW1.md",
     "PDF/NLP HW1.pdf",
     "組內互評.md",
     "OS_HW",
-    "OS/OS_3_23.md",
     "Computer Network/Computer Network.md",
     "Computer Network/Final.md",
     "DBS/我想要期末及格就好.md",
@@ -205,10 +207,8 @@
     "Picture/Pasted image 20230318093250.png",
     "Picture/Pasted image 20230318092254.png",
     "Picture/Pasted image 20230318083152.png",
-    "OS/OS_3_16.md",
     "未命名/未命名.md",
     "NLP/NLP_3_15.md",
-    "OS/OS_3_9.md",
     "Computer Algorithm/CA_3_8.md",
     "未命名/未命名 1.md",
     "DNA/企劃書綱要.md",
