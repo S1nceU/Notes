@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "827d45a1a70b5a9a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OS_HW/HW1_program_doc.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS_HW/OS HW1.md",
+                "file": "OS_HW/HW1_program_doc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS_HW/OS HW1.md",
+                "file": "OS_HW/HW1_program_doc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS_HW/OS HW1.md"
+                "file": "OS_HW/HW1_program_doc.md"
               }
             }
           },
@@ -169,8 +181,11 @@
       "pdf-to-markdown-plugin:PDF to Markdown": false
     }
   },
-  "active": "ef40316c018feb8d",
+  "active": "827d45a1a70b5a9a",
   "lastOpenFiles": [
+    "OS_HW/PDF/HW1_program_doc.pdf",
+    "OS_HW/OS HW1.md",
+    "OS_HW/HW1_program_doc.md",
     "OS_HW/PDF/OS HW1.pdf",
     "OS_HW/PDF",
     "OS_HW/新增資料夾",
@@ -180,7 +195,6 @@
     "OS/OS_3_16.md",
     "OS/OS_3_23.md",
     "OS/OS_3_27.md",
-    "OS_HW/OS HW1.md",
     "PDF/NLP HW1.pdf",
     "組內互評.md",
     "OS_HW",
@@ -197,7 +211,6 @@
     "~$專生研究計畫.docx",
     "mso8F5D.tmp",
     "mso8CFA.tmp",
-    "mso1817.tmp",
     "Picture/Pasted image 20230321223019.png",
     "Picture/Pasted image 20230321222300.png",
     "Picture/Pasted image 20230321222248.png",
@@ -215,7 +228,6 @@
     "DNA/企劃書綱要.md",
     "OS/OS_3_2.md",
     "DNA/研究動機與研究問題.md",
-    "AI/AI_12_16.md",
-    "AI/AI_12_20.md"
+    "AI/AI_12_16.md"
   ]
 }
