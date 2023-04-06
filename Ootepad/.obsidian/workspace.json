@@ -37,14 +37,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "人生好難.md",
+                "file": "OS/OS_3_27.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4858081c88641307",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OS/OS_110_2.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -94,7 +106,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -110,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "人生好難.md",
+                "file": "OS/OS_110_2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "人生好難.md",
+                "file": "OS/OS_110_2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "人生好難.md"
+                "file": "OS/OS_110_2.md"
               }
             }
           },
@@ -181,8 +194,13 @@
       "pdf-to-markdown-plugin:PDF to Markdown": false
     }
   },
-  "active": "827d45a1a70b5a9a",
+  "active": "4858081c88641307",
   "lastOpenFiles": [
+    "OS/OS_3_2.md",
+    "OS/OS_110_2.md",
+    "OS/OS_3_27.md",
+    "OS/OS_3_23.md",
+    "人生好難.md",
     "OS_HW/HW1_program_doc.md",
     "OS_HW/PDF/HW1_program_doc.pdf",
     "OS_HW/OS HW1.md",
@@ -193,8 +211,6 @@
     "OS_HW/CA_HW1.md",
     "OS/OS_3_9.md",
     "OS/OS_3_16.md",
-    "OS/OS_3_23.md",
-    "OS/OS_3_27.md",
     "PDF/NLP HW1.pdf",
     "組內互評.md",
     "OS_HW",
@@ -204,7 +220,6 @@
     "Picture/Pasted image 20230323103721.png",
     "CRMS.md",
     "DNA_Methylation.md",
-    "人生好難.md",
     "大專生研究計畫.pdf",
     "Picture/Pasted image 20230321222943.png",
     "PDF/resume.pdf",
@@ -225,7 +240,6 @@
     "Computer Algorithm/CA_3_8.md",
     "未命名/未命名 1.md",
     "DNA/企劃書綱要.md",
-    "OS/OS_3_2.md",
     "DNA/研究動機與研究問題.md",
     "AI/AI_12_16.md"
   ]
