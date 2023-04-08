@@ -8,55 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3efaf9e4895345ca",
+            "id": "ff5c80c18d221a3e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS_HW/OS HW1.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ef40316c018feb8d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OS_HW/OS HW1.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "827d45a1a70b5a9a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OS/OS_3_27.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4858081c88641307",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OS/OS_110_2.md",
+                "file": "OS/OS_110_CH1.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -123,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/OS_110_2.md",
+                "file": "OS/OS_110_CH1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/OS_110_2.md",
+                "file": "OS/OS_110_CH1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/OS_110_2.md"
+                "file": "OS/OS_110_CH1.md"
               }
             }
           },
@@ -194,11 +157,13 @@
       "pdf-to-markdown-plugin:PDF to Markdown": false
     }
   },
-  "active": "4858081c88641307",
+  "active": "ff5c80c18d221a3e",
   "lastOpenFiles": [
-    "OS/OS_3_2.md",
-    "OS/OS_110_2.md",
+    "Picture/Pasted image 20230408152128.png",
     "OS/OS_3_27.md",
+    "OS/OS_110_CH1.md",
+    "OS/OS_110_CH0.md",
+    "OS/OS_3_2.md",
     "OS/OS_3_23.md",
     "人生好難.md",
     "OS_HW/HW1_program_doc.md",
@@ -239,8 +204,6 @@
     "NLP/NLP_3_15.md",
     "Computer Algorithm/CA_3_8.md",
     "未命名/未命名 1.md",
-    "DNA/企劃書綱要.md",
-    "DNA/研究動機與研究問題.md",
-    "AI/AI_12_16.md"
+    "DNA/企劃書綱要.md"
   ]
 }
