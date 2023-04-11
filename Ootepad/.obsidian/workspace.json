@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6ab9726f38092943",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NLP/NLP_4_10.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -99,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/OS_4_10.md",
+                "file": "NLP/NLP_4_10.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/OS_4_10.md",
+                "file": "NLP/NLP_4_10.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/OS_4_10.md"
+                "file": "NLP/NLP_4_10.md"
               }
             }
           },
@@ -170,10 +182,11 @@
       "pdf-to-markdown-plugin:PDF to Markdown": false
     }
   },
-  "active": "41267e8e162f3673",
+  "active": "6ab9726f38092943",
   "lastOpenFiles": [
-    "OS/OS_110_CH3.md",
     "OS/OS_4_10.md",
+    "NLP/NLP_4_10.md",
+    "OS/OS_110_CH3.md",
     "OS/OS_110_CH2.md",
     "OS_HW/OS HW1.md",
     "OS/OS_110_CH1.md",
@@ -216,7 +229,6 @@
     "12_27.md",
     "Picture/Pasted image 20230318093250.png",
     "未命名/未命名.md",
-    "NLP/NLP_3_15.md",
-    "Computer Algorithm/CA_3_8.md"
+    "NLP/NLP_3_15.md"
   ]
 }
