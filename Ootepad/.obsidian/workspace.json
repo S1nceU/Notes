@@ -21,6 +21,30 @@
             }
           },
           {
+            "id": "4a8014a2943734e9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NLP/OS_4_12.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9cfee80fa433c198",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NLP/OS_4_12.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "4f2b49562dc880cc",
             "type": "leaf",
             "state": {
@@ -32,7 +56,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -82,7 +107,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -98,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/OS_110_CH3.md",
+                "file": "NLP/OS_4_12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/OS_110_CH3.md",
+                "file": "NLP/OS_4_12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +164,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/OS_110_CH3.md"
+                "file": "NLP/OS_4_12.md"
               }
             }
           },
@@ -169,11 +195,13 @@
       "pdf-to-markdown-plugin:PDF to Markdown": false
     }
   },
-  "active": "055f1098085e05f0",
+  "active": "9cfee80fa433c198",
   "lastOpenFiles": [
+    "未命名.md",
+    "NLP/OS_4_12.md",
+    "OS/OS_110_CH3.md",
     "OS/OS_3_16.md",
     "OS/OS_3_9.md",
-    "OS/OS_110_CH3.md",
     "OS/OS_3_23.md",
     "OS/OS_3_27.md",
     "OS/OS_4_10.md",
@@ -214,8 +242,6 @@
     "Picture/Pasted image 20230321222226.png",
     "Pasted image 20221118224413.png",
     "note.md",
-    "12_27.md",
-    "Picture/Pasted image 20230318093250.png",
-    "未命名/未命名.md"
+    "Picture/Pasted image 20230318093250.png"
   ]
 }
