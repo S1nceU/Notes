@@ -19,45 +19,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "4a8014a2943734e9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NLP/OS_4_12.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9cfee80fa433c198",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NLP/OS_4_12.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4f2b49562dc880cc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OS/OS_3_16.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -124,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NLP/OS_4_12.md",
+                "file": "OS/OS_110_CH3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "NLP/OS_4_12.md",
+                "file": "OS/OS_110_CH3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NLP/OS_4_12.md"
+                "file": "OS/OS_110_CH3.md"
               }
             }
           },
@@ -195,12 +158,12 @@
       "pdf-to-markdown-plugin:PDF to Markdown": false
     }
   },
-  "active": "9cfee80fa433c198",
+  "active": "055f1098085e05f0",
   "lastOpenFiles": [
-    "未命名.md",
     "NLP/OS_4_12.md",
-    "OS/OS_110_CH3.md",
     "OS/OS_3_16.md",
+    "未命名.md",
+    "OS/OS_110_CH3.md",
     "OS/OS_3_9.md",
     "OS/OS_3_23.md",
     "OS/OS_3_27.md",
