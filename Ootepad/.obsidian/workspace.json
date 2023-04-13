@@ -4,18 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "f2ba326a9b806c86",
+        "id": "61e6d36c469f2ced",
         "type": "tabs",
         "children": [
           {
-            "id": "055f1098085e05f0",
+            "id": "be52b88f581ed078",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "OS/OS_110_CH3.md",
                 "mode": "source",
-                "backlinks": false,
                 "source": false
               }
             }
@@ -158,12 +157,12 @@
       "pdf-to-markdown-plugin:PDF to Markdown": false
     }
   },
-  "active": "055f1098085e05f0",
+  "active": "be52b88f581ed078",
   "lastOpenFiles": [
+    "OS/OS_110_CH3.md",
     "NLP/OS_4_12.md",
     "OS/OS_3_16.md",
     "未命名.md",
-    "OS/OS_110_CH3.md",
     "OS/OS_3_9.md",
     "OS/OS_3_23.md",
     "OS/OS_3_27.md",
