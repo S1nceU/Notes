@@ -32,14 +32,15 @@ body {
   --yellow: #e5b567;
   --orange: #e87d3e;
   --red: #e83e3e;
-  --purple: #9e86c8;
+  --purple: #c8b086;
+  --green: #52f600;
 
   --h1-color: var(--text-normal);
   --h2-color: var(--blue);
   --h3-color: var(--blue);
   --h4-color: var(--yellow);
   --h5-color: var(--red);
-  --h6-color: var(--text-muted);
+  --h6-color: var(--green);
 
   --strong-color: var(--pink);
   --em-color: var(--pink);
