@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/OS_110_CH3.md",
+                "file": "OS/OS_3_27.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "250ba4f4fc62a779",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OS/OS_110_CH8.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -98,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/OS_110_CH3.md",
+                "file": "OS/OS_110_CH8.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/OS_110_CH3.md",
+                "file": "OS/OS_110_CH8.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/OS_110_CH3.md"
+                "file": "OS/OS_110_CH8.md"
               }
             }
           },
@@ -169,24 +182,25 @@
       "pdf-to-markdown-plugin:PDF to Markdown": false
     }
   },
-  "active": "be52b88f581ed078",
+  "active": "250ba4f4fc62a779",
   "lastOpenFiles": [
-    "OS_HW/OS HW1.md",
+    "OS/OS_3_27.md",
+    "OS/OS_110_CH8.md",
+    "OS/OS_4_10.md",
+    "OS/OS_110_CH0.md",
     "OS/OS_110_CH3.md",
+    "OS_HW/OS HW1.md",
     "NLP/OS_4_12.md",
     "OS/OS_3_16.md",
     "未命名.md",
     "OS/OS_3_9.md",
     "OS/OS_3_23.md",
-    "OS/OS_3_27.md",
-    "OS/OS_4_10.md",
     "TEST.md",
     "NLP/NLP_4_10.md",
     "OS/OS_110_CH2.md",
     "OS/OS_110_CH1.md",
     "Picture/Pasted image 20230408214344.png",
     "Picture/Pasted image 20230408152128.png",
-    "OS/OS_110_CH0.md",
     "OS/OS_3_2.md",
     "人生好難.md",
     "OS_HW/HW1_program_doc.md",
@@ -215,7 +229,6 @@
     "Picture/Pasted image 20230321222248.png",
     "Picture/Pasted image 20230321222226.png",
     "Pasted image 20221118224413.png",
-    "note.md",
     "Picture/Pasted image 20230318093250.png"
   ]
 }
