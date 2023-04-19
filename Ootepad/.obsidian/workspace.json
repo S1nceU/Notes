@@ -8,55 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "250ba4f4fc62a779",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OS/OS_110_CH3.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "09c8cefb50df5e63",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NLP/NLP_3_15.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "86b2d24feb45af74",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS_HW/未命名.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "159fdf0d9a369c26",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OS_HW/OS HW1.md",
+                "file": "OS/OS_110_CH8.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -122,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS_HW/未命名.md",
+                "file": "OS/OS_110_CH8.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS_HW/未命名.md",
+                "file": "OS/OS_110_CH8.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS_HW/未命名.md"
+                "file": "OS/OS_110_CH8.md"
               }
             }
           },
@@ -195,22 +159,22 @@
   },
   "active": "86b2d24feb45af74",
   "lastOpenFiles": [
+    "OS_HW/OS HW1.md",
+    "OS/OS_110_CH8.md",
+    "OS/OS_110_CH4.md",
+    "OS_HW/OS_HW2.md",
     "NLP/NLP_3_15.md",
-    "OS_HW/未命名.md",
     "NLP/OS_4_12.md",
     "NLP/NLP_4_10.md",
-    "OS/OS_110_CH4.md",
     "OS/OS_110_CH3.md",
     "OS/OS_110_CH0.md",
     "OS/OS_110_CH2.md",
     "OS/OS_110_CH1.md",
-    "OS/OS_110_CH8.md",
     "OS/OS_3_2.md",
     "Picture/Pasted image 20230416165443.png",
     "Picture/Pasted image 20230416143850.png",
     "OS/OS_3_27.md",
     "OS/OS_4_10.md",
-    "OS_HW/OS HW1.md",
     "OS/OS_3_16.md",
     "未命名.md",
     "OS/OS_3_9.md",
