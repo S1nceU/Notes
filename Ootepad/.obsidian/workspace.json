@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TQM_Midterm.md",
+                "file": "全面品質管理.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TQM_Midterm.md",
+                "file": "全面品質管理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "TQM_Midterm.md",
+                "file": "全面品質管理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TQM_Midterm.md"
+                "file": "全面品質管理.md"
               }
             }
           },
@@ -172,8 +171,21 @@
   },
   "active": "158e46f03a933439",
   "lastOpenFiles": [
-    "OS/OS_110_CH8.md",
+    "OS_HW/PDF/全面品質管理.pdf",
     "TQM_Midterm.md",
+    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled.png",
+    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 9.png",
+    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 8.png",
+    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 7.png",
+    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 6.png",
+    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 5.png",
+    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 42.png",
+    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 41.png",
+    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 40.png",
+    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 4.png",
+    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b",
+    "全面品質管理.md",
+    "OS/OS_110_CH8.md",
     "OS_HW/OS HW1.md",
     "OS/OS_110_CH4.md",
     "OS_HW/OS_HW2.md",
@@ -185,8 +197,6 @@
     "OS/OS_110_CH2.md",
     "OS/OS_110_CH1.md",
     "OS/OS_3_2.md",
-    "Picture/Pasted image 20230416165443.png",
-    "Picture/Pasted image 20230416143850.png",
     "OS/OS_3_27.md",
     "OS/OS_4_10.md",
     "OS/OS_3_16.md",
@@ -194,8 +204,6 @@
     "OS/OS_3_9.md",
     "OS/OS_3_23.md",
     "TEST.md",
-    "Picture/Pasted image 20230408214344.png",
-    "Picture/Pasted image 20230408152128.png",
     "人生好難.md",
     "OS_HW/HW1_program_doc.md",
     "OS_HW/PDF/HW1_program_doc.pdf",
@@ -205,18 +213,9 @@
     "OS_HW/NLP HW1.md",
     "OS_HW/CA_HW1.md",
     "PDF/NLP HW1.pdf",
-    "組內互評.md",
     "OS_HW",
-    "Computer Network/Computer Network.md",
-    "Picture/Pasted image 20230323103721.png",
     "大專生研究計畫.pdf",
-    "Picture/Pasted image 20230321222943.png",
     "PDF/resume.pdf",
-    "~$專生研究計畫.docx",
-    "mso8F5D.tmp",
-    "Picture/Pasted image 20230321223019.png",
-    "Picture/Pasted image 20230321222300.png",
-    "Picture/Pasted image 20230321222248.png",
-    "Picture/Pasted image 20230321222226.png"
+    "~$專生研究計畫.docx"
   ]
 }
