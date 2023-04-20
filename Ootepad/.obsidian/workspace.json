@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "158e46f03a933439",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "TQM_Midterm.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/OS_110_CH8.md",
+                "file": "TQM_Midterm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/OS_110_CH8.md",
+                "file": "TQM_Midterm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/OS_110_CH8.md"
+                "file": "TQM_Midterm.md"
               }
             }
           },
@@ -157,10 +170,11 @@
       "pdf-to-markdown-plugin:PDF to Markdown": false
     }
   },
-  "active": "86b2d24feb45af74",
+  "active": "158e46f03a933439",
   "lastOpenFiles": [
-    "OS_HW/OS HW1.md",
     "OS/OS_110_CH8.md",
+    "TQM_Midterm.md",
+    "OS_HW/OS HW1.md",
     "OS/OS_110_CH4.md",
     "OS_HW/OS_HW2.md",
     "NLP/NLP_3_15.md",
@@ -194,7 +208,6 @@
     "組內互評.md",
     "OS_HW",
     "Computer Network/Computer Network.md",
-    "Computer Network/Final.md",
     "Picture/Pasted image 20230323103721.png",
     "大專生研究計畫.pdf",
     "Picture/Pasted image 20230321222943.png",
