@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/OS_110_CH8.md",
+                "file": "OS/OS_110_CH4OS_110_CH4.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/OS_110_CH8.md",
+                "file": "OS/OS_110_CH4OS_110_CH4.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/OS_110_CH8.md",
+                "file": "OS/OS_110_CH4OS_110_CH4.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/OS_110_CH8.md"
+                "file": "OS/OS_110_CH4OS_110_CH4.md"
               }
             }
           },
@@ -158,6 +159,8 @@
   },
   "active": "86b2d24feb45af74",
   "lastOpenFiles": [
+    "OS/PDF",
+    "OS/OS_110_CH8.md",
     "全面品質管理.md",
     "OS_HW/PDF/全面品質管理.pdf",
     "TQM_Midterm.md",
@@ -172,9 +175,8 @@
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 40.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 4.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b",
-    "OS/OS_110_CH8.md",
     "OS_HW/OS HW1.md",
-    "OS/OS_110_CH4.md",
+    "OS/OS_110_CH4OS_110_CH4.md",
     "OS_HW/OS_HW2.md",
     "NLP/NLP_3_15.md",
     "NLP/OS_4_12.md",
