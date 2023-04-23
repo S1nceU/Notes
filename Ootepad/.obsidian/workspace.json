@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/OS_110_CH3.md",
+                "file": "OS/OS_110_CH4.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -172,13 +171,13 @@
   },
   "active": "5fedea5c0cbacfbf",
   "lastOpenFiles": [
+    "OS/OS_110_CH4.md",
     "OS/OS_110_CH3.md",
     "OS_HW/OS_HW2.md",
     "OS/OS_110_CH2.md",
     "OS/OS_110_CH1.md",
     "OS/OS_110_CH0.md",
     "OS/OS_110_CH8.md",
-    "OS/OS_110_CH4.md",
     "DNA/研究動機與研究問題.md",
     "DNA/企劃書綱要.pdf",
     "DNA/企劃書綱要.md",
