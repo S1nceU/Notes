@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/OS_110_CH4.md",
+                "file": "OS/OS_110_CH3.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DNA/研究動機與研究問題.md",
+                "file": "OS_HW/OS_HW2.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DNA/研究動機與研究問題.md",
+                "file": "OS_HW/OS_HW2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DNA/研究動機與研究問題.md",
+                "file": "OS_HW/OS_HW2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DNA/研究動機與研究問題.md"
+                "file": "OS_HW/OS_HW2.md"
               }
             }
           },
@@ -171,6 +172,14 @@
   },
   "active": "5fedea5c0cbacfbf",
   "lastOpenFiles": [
+    "OS/OS_110_CH3.md",
+    "OS_HW/OS_HW2.md",
+    "OS/OS_110_CH2.md",
+    "OS/OS_110_CH1.md",
+    "OS/OS_110_CH0.md",
+    "OS/OS_110_CH8.md",
+    "OS/OS_110_CH4.md",
+    "DNA/研究動機與研究問題.md",
     "DNA/企劃書綱要.pdf",
     "DNA/企劃書綱要.md",
     "DBS/DBS_HW3.md",
@@ -193,12 +202,6 @@
     "DNA_Methylation.md",
     "組內互評.md",
     "CRMS.md",
-    "OS/OS_110_CH8.md",
-    "OS/OS_110_CH3.md",
-    "OS/OS_110_CH4.md",
-    "OS/OS_110_CH2.md",
-    "OS/OS_110_CH1.md",
-    "OS/OS_110_CH0.md",
     "OS/OS_110_CH5.md",
     "OS/PDF",
     "OS_HW/PDF/全面品質管理.pdf",
@@ -210,12 +213,10 @@
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 41.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 40.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b",
-    "OS_HW/OS HW1.md",
     "OS_HW/PDF/HW1_program_doc.pdf",
     "OS_HW/PDF/OS HW1.pdf",
     "OS_HW/PDF",
     "OS_HW/新增資料夾",
-    "PDF/NLP HW1.pdf",
-    "OS_HW"
+    "PDF/NLP HW1.pdf"
   ]
 }
