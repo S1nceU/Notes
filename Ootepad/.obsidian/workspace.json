@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/OS_110_CH5.md",
+                "file": "DNA/研究動機與研究問題.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/OS_110_CH5.md",
+                "file": "DNA/研究動機與研究問題.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/OS_110_CH5.md",
+                "file": "DNA/研究動機與研究問題.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/OS_110_CH5.md"
+                "file": "DNA/研究動機與研究問題.md"
               }
             }
           },
@@ -172,51 +171,51 @@
   },
   "active": "5fedea5c0cbacfbf",
   "lastOpenFiles": [
-    "OS/OS_110_CH4.md",
-    "OS/OS_110_CH5.md",
-    "OS/OS_110_CH8.md",
-    "OS/PDF",
-    "全面品質管理.md",
-    "OS_HW/PDF/全面品質管理.pdf",
-    "TQM_Midterm.md",
+    "DNA/企劃書綱要.pdf",
+    "DNA/企劃書綱要.md",
+    "DBS/DBS_HW3.md",
+    "DBS/DBS.md",
+    "DBS/英文小教室.md",
+    "DBS/我想要期末及格就好.md",
+    "DBS/12_20.md",
+    "DBS/12_15.md",
+    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 10.png",
+    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 6.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled.png",
+    "未命名/未命名 1.md",
+    "未命名/未命名.md",
+    "人生好難.md",
+    "大專生研究計畫.pdf",
+    "未命名.md",
+    "全面品質管理.md",
+    "TQM_Midterm.md",
+    "note.md",
+    "DNA_Methylation.md",
+    "組內互評.md",
+    "CRMS.md",
+    "OS/OS_110_CH8.md",
+    "OS/OS_110_CH3.md",
+    "OS/OS_110_CH4.md",
+    "OS/OS_110_CH2.md",
+    "OS/OS_110_CH1.md",
+    "OS/OS_110_CH0.md",
+    "OS/OS_110_CH5.md",
+    "OS/PDF",
+    "OS_HW/PDF/全面品質管理.pdf",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 9.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 8.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 7.png",
-    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 6.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 5.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 42.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 41.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 40.png",
-    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 4.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b",
     "OS_HW/OS HW1.md",
-    "OS_HW/OS_HW2.md",
-    "NLP/NLP_3_15.md",
-    "NLP/OS_4_12.md",
-    "NLP/NLP_4_10.md",
-    "OS/OS_110_CH3.md",
-    "OS/OS_110_CH0.md",
-    "OS/OS_110_CH2.md",
-    "OS/OS_110_CH1.md",
-    "OS/OS_3_2.md",
-    "OS/OS_3_27.md",
-    "OS/OS_4_10.md",
-    "OS/OS_3_16.md",
-    "未命名.md",
-    "OS/OS_3_9.md",
-    "OS/OS_3_23.md",
-    "TEST.md",
-    "人生好難.md",
-    "OS_HW/HW1_program_doc.md",
     "OS_HW/PDF/HW1_program_doc.pdf",
     "OS_HW/PDF/OS HW1.pdf",
     "OS_HW/PDF",
     "OS_HW/新增資料夾",
-    "OS_HW/NLP HW1.md",
-    "OS_HW/CA_HW1.md",
     "PDF/NLP HW1.pdf",
-    "OS_HW",
-    "大專生研究計畫.pdf"
+    "OS_HW"
   ]
 }
