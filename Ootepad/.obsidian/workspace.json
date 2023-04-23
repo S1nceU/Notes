@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/OS_110_CH4.md",
+                "file": "OS/OS_110_CH3.md",
                 "mode": "source",
                 "source": false
               }
@@ -28,6 +28,28 @@
                 "file": "OS_HW/OS_HW2.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "6ef98d0cc9e823ea",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OS_HW/HW2_program_doc.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ccbf0187d0a27a51",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Picture/Pasted image 20230423224824.png"
               }
             }
           }
@@ -82,7 +104,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -171,13 +194,23 @@
   },
   "active": "5fedea5c0cbacfbf",
   "lastOpenFiles": [
+    "OS_HW/HW2_program_doc.md",
+    "Picture/Pasted image 20230423225455.png",
+    "Picture/Pasted image 20230423224717.png",
+    "Picture/Pasted image 20230423224824.png",
+    "OS_HW/PDF/HW2_program_doc.pdf",
+    "OS_HW/OS_HW2.md",
+    "OS_HW/HW1_program_doc.md",
     "OS/OS_110_CH3.md",
+    "OS/OS_110_CH4.md",
+    "OS/OS_110_CH0.md",
+    "OS/OS_3_27.md",
+    "OS_HW/OS HW1.md",
+    "OS_HW/CA_HW1.md",
+    "OS_HW/PDF/OS_HW2.pdf",
+    "Picture/Pasted image 20230423215527.png",
     "OS/OS_110_CH2.md",
     "OS/OS_110_CH1.md",
-    "OS/OS_110_CH0.md",
-    "OS_HW/OS_HW2.md",
-    "OS_HW/OS HW1.md",
-    "OS/OS_110_CH4.md",
     "OS/OS_110_CH8.md",
     "DNA/研究動機與研究問題.md",
     "DNA/企劃書綱要.pdf",
@@ -197,25 +230,14 @@
     "大專生研究計畫.pdf",
     "未命名.md",
     "全面品質管理.md",
-    "TQM_Midterm.md",
-    "note.md",
-    "DNA_Methylation.md",
-    "組內互評.md",
-    "CRMS.md",
     "OS/PDF",
     "OS_HW/PDF/全面品質管理.pdf",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 9.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 8.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 7.png",
-    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 5.png",
-    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 42.png",
-    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 41.png",
-    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 40.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b",
     "OS_HW/PDF/HW1_program_doc.pdf",
     "OS_HW/PDF/OS HW1.pdf",
-    "OS_HW/PDF",
-    "OS_HW/新增資料夾",
-    "PDF/NLP HW1.pdf"
+    "OS_HW/PDF"
   ]
 }
