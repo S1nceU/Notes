@@ -4,57 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "61e6d36c469f2ced",
+        "id": "d7138dc1290e671f",
         "type": "tabs",
         "children": [
           {
-            "id": "86b2d24feb45af74",
+            "id": "68c466537cf1149b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/OS_110_CH3.md",
+                "file": "人生好難.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "5fedea5c0cbacfbf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OS_HW/OS_HW2.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6ef98d0cc9e823ea",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OS_HW/HW2_program_doc.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ccbf0187d0a27a51",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Picture/Pasted image 20230423224824.png"
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -104,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -121,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS_HW/OS_HW2.md",
+                "file": "人生好難.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS_HW/OS_HW2.md",
+                "file": "人生好難.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS_HW/OS_HW2.md"
+                "file": "人生好難.md"
               }
             }
           },
@@ -192,15 +156,16 @@
       "pdf-to-markdown-plugin:PDF to Markdown": false
     }
   },
-  "active": "5fedea5c0cbacfbf",
+  "active": "68c466537cf1149b",
   "lastOpenFiles": [
-    "Picture/Pasted image 20230424110401.png",
+    "OS_HW/CA_mid.md",
+    "Picture/Pasted image 20230423224824.png",
     "OS_HW/HW2_program_doc.md",
+    "OS_HW/OS_HW2.md",
+    "Picture/Pasted image 20230424110401.png",
     "Picture/Pasted image 20230423225455.png",
     "Picture/Pasted image 20230423224717.png",
-    "Picture/Pasted image 20230423224824.png",
     "OS_HW/PDF/HW2_program_doc.pdf",
-    "OS_HW/OS_HW2.md",
     "OS_HW/HW1_program_doc.md",
     "OS/OS_110_CH3.md",
     "OS/OS_110_CH4.md",
@@ -235,7 +200,6 @@
     "OS_HW/PDF/全面品質管理.pdf",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 9.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 8.png",
-    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 7.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b",
     "OS_HW/PDF/HW1_program_doc.pdf",
     "OS_HW/PDF/OS HW1.pdf",
