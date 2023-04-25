@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "1639e9cf34f75429",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NLP/Note.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -85,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "人生好難.md",
+                "file": "NLP/Note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "人生好難.md",
+                "file": "NLP/Note.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "人生好難.md"
+                "file": "NLP/Note.md"
               }
             }
           },
@@ -156,8 +170,10 @@
       "pdf-to-markdown-plugin:PDF to Markdown": false
     }
   },
-  "active": "68c466537cf1149b",
+  "active": "1639e9cf34f75429",
   "lastOpenFiles": [
+    "人生好難.md",
+    "NLP/Note.md",
     "OS_HW/CA_mid.md",
     "Picture/Pasted image 20230423224824.png",
     "OS_HW/HW2_program_doc.md",
@@ -192,10 +208,8 @@
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled.png",
     "未命名/未命名 1.md",
     "未命名/未命名.md",
-    "人生好難.md",
     "大專生研究計畫.pdf",
     "未命名.md",
-    "全面品質管理.md",
     "OS/PDF",
     "OS_HW/PDF/全面品質管理.pdf",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 9.png",
