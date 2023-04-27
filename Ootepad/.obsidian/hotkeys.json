@@ -61,5 +61,14 @@
       ],
       "key": "H"
     }
+  ],
+  "workspace:export-pdf": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "F1"
+    }
   ]
 }
