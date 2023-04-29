@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -159,9 +158,10 @@
   },
   "active": "f65ed098c608e5b9",
   "lastOpenFiles": [
-    "Memory Access Architecture.md",
+    "OS/PDF/OS_110_Ch6.pdf",
     "OS/OS_110_CH5.md",
     "OS/OS_110_Ch6.md",
+    "Memory Access Architecture.md",
     "OS/OS_110_CH0.md",
     "人生好難.md",
     "我要下載澀澀的東西.md",
@@ -200,7 +200,6 @@
     "DNA/企劃書綱要.md",
     "DBS/DBS_HW3.md",
     "DBS/DBS.md",
-    "DBS/英文小教室.md",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 10.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 6.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled.png",
