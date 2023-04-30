@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/OS_110_Ch6.md",
+                "file": "OS/OS_110_CH5.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/OS_110_Ch6.md",
+                "file": "OS/OS_110_CH5.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/OS_110_Ch6.md",
+                "file": "OS/OS_110_CH5.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/OS_110_Ch6.md"
+                "file": "OS/OS_110_CH5.md"
               }
             }
           },
@@ -159,9 +158,12 @@
   },
   "active": "f65ed098c608e5b9",
   "lastOpenFiles": [
-    "OS/PDF/OS_110_Ch6.pdf",
-    "OS/OS_110_CH5.md",
     "OS/OS_110_Ch6.md",
+    "OS/OS_110_CH4.md",
+    "OS/OS_110_CH3.md",
+    "OS/OS_110_CH5.md",
+    "OS/OS_110_CH8.md",
+    "OS/PDF/OS_110_Ch6.pdf",
     "Memory Access Architecture.md",
     "OS/OS_110_CH0.md",
     "人生好難.md",
@@ -172,11 +174,8 @@
     "PDF/PDFPDFPDFP.pdf",
     "DNA_Methylation.md",
     "Picture/粉彩彩繪線稿圖.jpg",
-    "OS/OS_110_CH8.md",
     "OS/PDF/OS_110_CH8.pdf",
-    "OS/OS_110_CH4.md",
     "OS/PDF/OS_110_CH4.pdf",
-    "OS/OS_110_CH3.md",
     "OS/PDF/OS_110_CH3.pdf",
     "OS/OS_110_CH2.md",
     "OS/PDF/OS_110_CH2.pdf",
@@ -191,7 +190,6 @@
     "Picture/Pasted image 20230424110401.png",
     "Picture/Pasted image 20230423225455.png",
     "Picture/Pasted image 20230423224717.png",
-    "OS_HW/PDF/HW2_program_doc.pdf",
     "OS_HW/HW1_program_doc.md",
     "OS/OS_3_27.md",
     "OS_HW/OS HW1.md",
