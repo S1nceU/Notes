@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/OS_110_CH1.md",
+                "file": "OS/OS_110_Ch6.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/OS_110_CH1.md",
+                "file": "OS/OS_110_Ch6.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/OS_110_CH1.md",
+                "file": "OS/OS_110_Ch6.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/OS_110_CH1.md"
+                "file": "OS/OS_110_Ch6.md"
               }
             }
           },
@@ -158,13 +158,24 @@
   },
   "active": "f65ed098c608e5b9",
   "lastOpenFiles": [
-    "OS/OS_110_CH0.md",
-    "OS/OS_3_2.md",
-    "OS/OS_110_Ch6.md",
-    "OS/OS_110_CH8.md",
     "OS/OS_110_CH5.md",
+    "OS/OS_110_Ch6.md",
     "OS/OS_110_CH4.md",
+    "OS/OS_110_CH8.md",
     "OS/OS_110_CH3.md",
+    "OS/OS_110_CH2.md",
+    "OS/OS_110_CH1.md",
+    "OS/OS_110_CH0.md",
+    "OS/OS_3_23.md",
+    "OS/OS_4_10.md",
+    "OS_HW/OS_HW2.md",
+    "OS_HW/OS HW1.md",
+    "OS_HW/NLP HW1.md",
+    "OS/OS_3_16.md",
+    "OS/OS_3_9.md",
+    "OS/OS_3_2.md",
+    "NLP/OS_4_12.md",
+    "OS/OS_3_27.md",
     "OS/PDF/OS_110_Ch6.pdf",
     "Memory Access Architecture.md",
     "人生好難.md",
@@ -178,28 +189,17 @@
     "OS/PDF/OS_110_CH8.pdf",
     "OS/PDF/OS_110_CH4.pdf",
     "OS/PDF/OS_110_CH3.pdf",
-    "OS/OS_110_CH2.md",
     "OS/PDF/OS_110_CH2.pdf",
-    "OS/OS_110_CH1.md",
     "OS/PDF/OS_110_CH1.pdf",
     "OS/PDF/OS_110_CH0.pdf",
     "NLP/Note.md",
     "OS_HW/CA_mid.md",
     "Picture/Pasted image 20230423224824.png",
     "OS_HW/HW2_program_doc.md",
-    "OS_HW/OS_HW2.md",
     "Picture/Pasted image 20230424110401.png",
     "Picture/Pasted image 20230423225455.png",
     "Picture/Pasted image 20230423224717.png",
-    "OS_HW/HW1_program_doc.md",
-    "OS/OS_3_27.md",
-    "OS_HW/OS HW1.md",
-    "OS_HW/CA_HW1.md",
     "Picture/Pasted image 20230423215527.png",
-    "DNA/研究動機與研究問題.md",
-    "DNA/企劃書綱要.md",
-    "DBS/DBS_HW3.md",
-    "DBS/DBS.md",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 10.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 6.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled.png",
