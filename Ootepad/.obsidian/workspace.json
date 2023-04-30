@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/OS_110_Ch6.md",
+                "file": "OS/OS_110_CH1.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/OS_110_Ch6.md",
+                "file": "OS/OS_110_CH1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/OS_110_Ch6.md",
+                "file": "OS/OS_110_CH1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/OS_110_Ch6.md"
+                "file": "OS/OS_110_CH1.md"
               }
             }
           },
@@ -158,14 +158,15 @@
   },
   "active": "f65ed098c608e5b9",
   "lastOpenFiles": [
-    "OS/OS_110_CH5.md",
+    "OS/OS_110_CH0.md",
+    "OS/OS_3_2.md",
     "OS/OS_110_Ch6.md",
+    "OS/OS_110_CH8.md",
+    "OS/OS_110_CH5.md",
     "OS/OS_110_CH4.md",
     "OS/OS_110_CH3.md",
-    "OS/OS_110_CH8.md",
     "OS/PDF/OS_110_Ch6.pdf",
     "Memory Access Architecture.md",
-    "OS/OS_110_CH0.md",
     "人生好難.md",
     "我要下載澀澀的東西.md",
     "PDF/我要下載澀澀的東西.pdf",
