@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/OS_110_Ch6.md",
+                "file": "NLP/Note.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/OS_110_Ch6.md",
+                "file": "NLP/Note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/OS_110_Ch6.md",
+                "file": "NLP/Note.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/OS_110_Ch6.md"
+                "file": "NLP/Note.md"
               }
             }
           },
@@ -158,8 +158,9 @@
   },
   "active": "f65ed098c608e5b9",
   "lastOpenFiles": [
-    "OS/OS_110_CH5.md",
+    "OS_HW/OS_HW2.md",
     "OS/OS_110_Ch6.md",
+    "OS/OS_110_CH5.md",
     "OS/OS_110_CH4.md",
     "OS/OS_110_CH8.md",
     "OS/OS_110_CH3.md",
@@ -168,7 +169,6 @@
     "OS/OS_110_CH0.md",
     "OS/OS_3_23.md",
     "OS/OS_4_10.md",
-    "OS_HW/OS_HW2.md",
     "OS_HW/OS HW1.md",
     "OS_HW/NLP HW1.md",
     "OS/OS_3_16.md",
