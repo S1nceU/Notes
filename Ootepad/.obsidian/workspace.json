@@ -13,8 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NLP/Note.md",
+                "file": "OS_HW/NLP HW2.md",
                 "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "61acaef03bb8bef7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OS_HW/OS_HW2.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NLP/Note.md",
+                "file": "OS_HW/NLP HW2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "NLP/Note.md",
+                "file": "OS_HW/NLP HW2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NLP/Note.md"
+                "file": "OS_HW/NLP HW2.md"
               }
             }
           },
@@ -158,7 +170,21 @@
   },
   "active": "f65ed098c608e5b9",
   "lastOpenFiles": [
+    "OS_HW/NLP HW1.md",
     "OS_HW/OS_HW2.md",
+    "OS_HW/CA_mid.md",
+    "Picture/粉彩彩繪線稿圖.jpg",
+    "Picture/Pasted image 20221024092037.png",
+    "OS_HW/HW2_program_doc.md",
+    "OS_HW/HW1_program_doc.md",
+    "OS_HW/CA_HW1.md",
+    "OS_HW/NLP HW2.md",
+    "OS_HW/PDF/NLP HW2.pdf",
+    "Picture/Pasted image 20230501220333.png",
+    "Picture/Pasted image 20230501214506.png",
+    "NLP/OS_4_12.md",
+    "NLP/NLP_4_10.md",
+    "NLP/Note.md",
     "OS/OS_110_Ch6.md",
     "OS/OS_110_CH5.md",
     "OS/OS_110_CH4.md",
@@ -170,39 +196,24 @@
     "OS/OS_3_23.md",
     "OS/OS_4_10.md",
     "OS_HW/OS HW1.md",
-    "OS_HW/NLP HW1.md",
     "OS/OS_3_16.md",
     "OS/OS_3_9.md",
     "OS/OS_3_2.md",
-    "NLP/OS_4_12.md",
     "OS/OS_3_27.md",
     "OS/PDF/OS_110_Ch6.pdf",
-    "Memory Access Architecture.md",
-    "人生好難.md",
-    "我要下載澀澀的東西.md",
     "PDF/我要下載澀澀的東西.pdf",
     "OS/PDF/OS_110_CH5.pdf",
-    "PDFPDFPDFP.md",
     "PDF/PDFPDFPDFP.pdf",
-    "DNA_Methylation.md",
-    "Picture/粉彩彩繪線稿圖.jpg",
     "OS/PDF/OS_110_CH8.pdf",
     "OS/PDF/OS_110_CH4.pdf",
     "OS/PDF/OS_110_CH3.pdf",
     "OS/PDF/OS_110_CH2.pdf",
     "OS/PDF/OS_110_CH1.pdf",
-    "OS/PDF/OS_110_CH0.pdf",
-    "NLP/Note.md",
-    "OS_HW/CA_mid.md",
     "Picture/Pasted image 20230423224824.png",
-    "OS_HW/HW2_program_doc.md",
     "Picture/Pasted image 20230424110401.png",
     "Picture/Pasted image 20230423225455.png",
     "Picture/Pasted image 20230423224717.png",
     "Picture/Pasted image 20230423215527.png",
-    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 10.png",
-    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 6.png",
-    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled.png",
-    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 9.png"
+    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 10.png"
   ]
 }
