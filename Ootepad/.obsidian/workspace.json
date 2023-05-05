@@ -18,6 +18,16 @@
             }
           },
           {
+            "id": "24ed7f2791ad025e",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.2.7"
+              }
+            }
+          },
+          {
             "id": "61acaef03bb8bef7",
             "type": "leaf",
             "state": {
@@ -29,7 +39,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -72,6 +83,14 @@
             "type": "leaf",
             "state": {
               "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "339204389339d187",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
               "state": {}
             }
           }
@@ -167,7 +186,7 @@
       "pdf-to-markdown-plugin:PDF to Markdown": false
     }
   },
-  "active": "f65ed098c608e5b9",
+  "active": "24ed7f2791ad025e",
   "lastOpenFiles": [
     "DBS/我想要期末及格就好.md",
     "OS_HW/NLP HW2.md",
