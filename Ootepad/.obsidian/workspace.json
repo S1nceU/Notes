@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "人生好難.md",
+                "file": "我要下載澀澀的東西.md",
                 "mode": "source",
                 "source": false
               }
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "人生好難.md",
+                "file": "我要下載澀澀的東西.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "人生好難.md",
+                "file": "我要下載澀澀的東西.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "人生好難.md"
+                "file": "我要下載澀澀的東西.md"
               }
             }
           },
@@ -178,6 +178,9 @@
   },
   "active": "f65ed098c608e5b9",
   "lastOpenFiles": [
+    "note.md",
+    "DNA_Methylation.md",
+    "人生好難.md",
     "CRMS.md",
     "DBS/pdf/我想要期末及格就好.pdf",
     "DBS/我想要期末及格就好.md",
@@ -207,9 +210,6 @@
     "OS/OS_3_23.md",
     "OS/OS_4_10.md",
     "OS_HW/OS HW1.md",
-    "OS/OS_3_16.md",
-    "OS/OS_3_9.md",
-    "OS/OS_3_2.md",
     "OS/PDF/OS_110_Ch6.pdf",
     "PDF/我要下載澀澀的東西.pdf",
     "OS/PDF/OS_110_CH5.pdf",
