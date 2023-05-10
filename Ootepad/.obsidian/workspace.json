@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computer Network/Computer Network.md",
+                "file": "OS_HW/OS_HW3.md",
                 "mode": "source",
                 "source": false
               }
@@ -100,7 +100,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -116,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computer Network/Computer Network.md",
+                "file": "OS_HW/OS_HW3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computer Network/Computer Network.md",
+                "file": "OS_HW/OS_HW3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computer Network/Computer Network.md"
+                "file": "OS_HW/OS_HW3.md"
               }
             }
           },
@@ -189,11 +190,12 @@
   },
   "active": "61acaef03bb8bef7",
   "lastOpenFiles": [
-    "DBS/pdf/我想要期末及格就好.pdf",
+    "OS_HW/OS_HW2.md",
+    "OS_HW/OS_HW3.md",
     "Computer Network/Computer Network.md",
+    "DBS/pdf/我想要期末及格就好.pdf",
     "TQM_Midterm.md",
     "Computer Network/Final.pdf",
-    "OS_HW/OS_HW2.md",
     "我要下載澀澀的東西.md",
     "note.md",
     "DNA_Methylation.md",
