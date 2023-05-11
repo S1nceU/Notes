@@ -8,16 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f65ed098c608e5b9",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "DBS/pdf/我想要期末及格就好.pdf"
-              }
-            }
-          },
-          {
             "id": "61acaef03bb8bef7",
             "type": "leaf",
             "state": {
@@ -28,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "732956d1d9f4f243",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "TQM_Midterm.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
