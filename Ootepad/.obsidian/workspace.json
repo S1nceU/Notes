@@ -146,7 +146,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -161,8 +162,7 @@
       "graph:查看關聯圖": false,
       "daily-notes:開啟今天的每日筆記": false,
       "templates:插入模板": false,
-      "command-palette:開啟命令面板": false,
-      "pdf-to-markdown-plugin:PDF to Markdown": false
+      "command-palette:開啟命令面板": false
     }
   },
   "active": "61acaef03bb8bef7",
