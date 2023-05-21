@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "4d709098fabfe9cf",
+        "id": "ad702336e2a9a50d",
         "type": "tabs",
         "children": [
           {
-            "id": "cd7c72a0da35342f",
+            "id": "c811d5114dbcdb85",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OS_HW/HW3_program_doc.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -164,7 +160,7 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "cd7c72a0da35342f",
+  "active": "6b0f7e5b7a5e09b8",
   "lastOpenFiles": [
     "OS_HW/OS_HW3.md",
     "OS_HW/PDF/OS_HW3.pdf",
