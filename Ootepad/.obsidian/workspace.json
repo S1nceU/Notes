@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/OS_110_CH10.md",
+                "file": "OS_HW/NLP HW3.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "34800c3a9a8ed277",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OS_HW/NLP HW2.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/OS_110_CH10.md",
+                "file": "OS_HW/NLP HW3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/OS_110_CH10.md",
+                "file": "OS_HW/NLP HW3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/OS_110_CH10.md"
+                "file": "OS_HW/NLP HW3.md"
               }
             }
           },
@@ -156,41 +168,48 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "canvas:建立新畫布": false,
       "switcher:開啟快速切換": false,
       "graph:查看關聯圖": false,
       "daily-notes:開啟今天的每日筆記": false,
       "templates:插入模板": false,
-      "command-palette:開啟命令面板": false
+      "command-palette:開啟命令面板": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
   "active": "c811d5114dbcdb85",
   "lastOpenFiles": [
+    "OS_HW/NLP HW2.md",
+    "OS_HW/NLP HW3.md",
+    "Picture/Pasted image 20230528184613.png",
+    "Picture/Pasted image 20230528184556.png",
+    "Picture/Pasted image 20230528184532.png",
+    "OS_HW/NLP HW1.md",
+    "OS_HW/HW2_program_doc.md",
+    "OS_HW/CA_mid.md",
+    "OS_HW/HW1_program_doc.md",
+    "OS_HW/HW3_program_doc.md",
+    "OS_HW/OS_HW2.md",
+    "OS_HW/OS HW1.md",
+    "OS_HW/PDF/未命名.md",
+    "OS/OS_110_CH10.md",
     "OS/OS_110_CH8.md",
     "OS/OS_110_CH0.md",
     "OS/OS_4_10.md",
-    "OS/OS_110_CH10.md",
     "人生好難.md",
     "未命名/未命名 1.md",
     "演算法.md",
     "未命名/未命名.md",
-    "OS_HW/HW3_program_doc.md",
     "OS_HW/OS_HW3.md",
     "OS_HW/PDF/OS_HW3.pdf",
     "OS_HW/PDF/HW3_program_doc.pdf",
     "Picture/Pasted image 20230515225754.png",
     "Picture/Pasted image 20230515224752.png",
     "Picture/Pasted image 20230515224444.png",
-    "OS_HW/HW2_program_doc.md",
     "Picture/Pasted image 20230515221239.png",
     "Picture/Pasted image 20230515220618.png",
     "Picture/Pasted image 20230515220101.png",
     "Picture/Pasted image 20230515220050.png",
-    "Picture/Pasted image 20230515200121.png",
-    "Picture/Pasted image 20230515200112.png",
-    "Picture/Pasted image 20230515200058.png",
-    "OS_HW/OS_HW2.md",
     "Computer Network/Computer Network.md",
     "DBS/pdf/我想要期末及格就好.pdf",
     "TQM_Midterm.md",
@@ -199,15 +218,7 @@
     "note.md",
     "DNA_Methylation.md",
     "CRMS.md",
-    "DBS/我想要期末及格就好.md",
-    "OS_HW/NLP HW2.md",
-    "OS_HW/NLP HW1.md",
-    "OS_HW/CA_mid.md",
-    "OS_HW/HW1_program_doc.md",
-    "OS_HW/CA_HW1.md",
     "OS_HW/PDF/NLP HW2.pdf",
-    "NLP/OS_4_12.md",
-    "NLP/NLP_4_10.md",
     "OS/PDF/OS_110_Ch6.pdf",
     "PDF/我要下載澀澀的東西.pdf",
     "OS/PDF/OS_110_CH5.pdf",
