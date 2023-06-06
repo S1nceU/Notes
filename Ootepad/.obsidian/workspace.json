@@ -89,8 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -177,8 +176,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c811d5114dbcdb85",
+  "active": "6b0f7e5b7a5e09b8",
   "lastOpenFiles": [
+    "OS_HW/PDF/NLP HW3.pdf",
+    "Picture/Pasted image 20230528210855.png",
     "OS_HW/NLP HW2.md",
     "OS_HW/NLP HW3.md",
     "Picture/Pasted image 20230528184613.png",
@@ -209,7 +210,6 @@
     "Picture/Pasted image 20230515221239.png",
     "Picture/Pasted image 20230515220618.png",
     "Picture/Pasted image 20230515220101.png",
-    "Picture/Pasted image 20230515220050.png",
     "Computer Network/Computer Network.md",
     "DBS/pdf/我想要期末及格就好.pdf",
     "TQM_Midterm.md",
