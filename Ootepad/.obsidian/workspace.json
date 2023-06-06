@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS_HW/NLP HW3.md",
+                "file": "OS_HW/HW4_program_doc.md",
                 "mode": "source",
                 "source": false
               }
@@ -89,7 +89,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -105,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS_HW/NLP HW3.md",
+                "file": "OS_HW/HW4_program_doc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS_HW/NLP HW3.md",
+                "file": "OS_HW/HW4_program_doc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS_HW/NLP HW3.md"
+                "file": "OS_HW/HW4_program_doc.md"
               }
             }
           },
@@ -176,20 +177,27 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6b0f7e5b7a5e09b8",
+  "active": "c811d5114dbcdb85",
   "lastOpenFiles": [
-    "OS_HW/PDF/NLP HW3.pdf",
-    "Picture/Pasted image 20230528210855.png",
+    "Picture/Pasted image 20230606230657.png",
+    "Picture/Pasted image 20230606230449.png",
+    "Picture/Pasted image 20230606230007.png",
+    "OS_HW/HW3_program_doc.md",
+    "OS_HW/HW4_program_doc.md",
+    "OS_HW/HW2_program_doc.md",
+    "OS_HW/NLP HW1.md",
+    "OS_HW/OS_HW3.md",
+    "OS_HW/OS_HW4.md",
+    "NLP/NLP_Project.md",
     "OS_HW/NLP HW2.md",
     "OS_HW/NLP HW3.md",
+    "OS_HW/PDF/NLP HW3.pdf",
+    "Picture/Pasted image 20230528210855.png",
     "Picture/Pasted image 20230528184613.png",
     "Picture/Pasted image 20230528184556.png",
     "Picture/Pasted image 20230528184532.png",
-    "OS_HW/NLP HW1.md",
-    "OS_HW/HW2_program_doc.md",
     "OS_HW/CA_mid.md",
     "OS_HW/HW1_program_doc.md",
-    "OS_HW/HW3_program_doc.md",
     "OS_HW/OS_HW2.md",
     "OS_HW/OS HW1.md",
     "OS_HW/PDF/未命名.md",
@@ -201,28 +209,21 @@
     "未命名/未命名 1.md",
     "演算法.md",
     "未命名/未命名.md",
-    "OS_HW/OS_HW3.md",
     "OS_HW/PDF/OS_HW3.pdf",
     "OS_HW/PDF/HW3_program_doc.pdf",
     "Picture/Pasted image 20230515225754.png",
     "Picture/Pasted image 20230515224752.png",
     "Picture/Pasted image 20230515224444.png",
     "Picture/Pasted image 20230515221239.png",
-    "Picture/Pasted image 20230515220618.png",
-    "Picture/Pasted image 20230515220101.png",
     "Computer Network/Computer Network.md",
     "DBS/pdf/我想要期末及格就好.pdf",
     "TQM_Midterm.md",
     "Computer Network/Final.pdf",
     "我要下載澀澀的東西.md",
-    "note.md",
-    "DNA_Methylation.md",
-    "CRMS.md",
     "OS_HW/PDF/NLP HW2.pdf",
     "OS/PDF/OS_110_Ch6.pdf",
     "PDF/我要下載澀澀的東西.pdf",
     "OS/PDF/OS_110_CH5.pdf",
-    "PDF/PDFPDFPDFP.pdf",
-    "OS/PDF/OS_110_CH8.pdf"
+    "PDF/PDFPDFPDFP.pdf"
   ]
 }
