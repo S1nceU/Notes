@@ -20,18 +20,53 @@
             }
           },
           {
-            "id": "34800c3a9a8ed277",
+            "id": "0d8ee1d10c1ba5c6",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.3.5"
+              }
+            }
+          },
+          {
+            "id": "5f30d57779980bf2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS_HW/NLP HW2.md",
+                "file": "OS_HW/HW3_program_doc.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "64732e8a27e88aeb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OS_HW/HW1_program_doc.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6dfd643b40cd6cd0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OS_HW/HW2_program_doc.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -89,8 +124,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -177,17 +211,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c811d5114dbcdb85",
+  "active": "0d8ee1d10c1ba5c6",
   "lastOpenFiles": [
+    "OS_HW/PDF/HW4_program_doc.pdf",
+    "Picture/Pasted image 20230607162240.png",
+    "OS_HW/HW2_program_doc.md",
+    "OS_HW/HW1_program_doc.md",
+    "OS_HW/HW4_program_doc.md",
+    "Picture/Pasted image 20230607162125.png",
+    "OS_HW/HW3_program_doc.md",
     "Picture/Pasted image 20230606233223.png",
     "Picture/Pasted image 20230606232803.png",
     "Picture/Pasted image 20230606232618.png",
     "Picture/Pasted image 20230606230657.png",
     "Picture/Pasted image 20230606230449.png",
     "Picture/Pasted image 20230606230007.png",
-    "OS_HW/HW3_program_doc.md",
-    "OS_HW/HW4_program_doc.md",
-    "OS_HW/HW2_program_doc.md",
     "OS_HW/NLP HW1.md",
     "OS_HW/OS_HW3.md",
     "OS_HW/OS_HW4.md",
@@ -197,10 +235,7 @@
     "OS_HW/PDF/NLP HW3.pdf",
     "Picture/Pasted image 20230528210855.png",
     "Picture/Pasted image 20230528184613.png",
-    "Picture/Pasted image 20230528184556.png",
-    "Picture/Pasted image 20230528184532.png",
     "OS_HW/CA_mid.md",
-    "OS_HW/HW1_program_doc.md",
     "OS_HW/OS_HW2.md",
     "OS_HW/OS HW1.md",
     "OS_HW/PDF/未命名.md",
@@ -214,7 +249,6 @@
     "未命名/未命名.md",
     "OS_HW/PDF/OS_HW3.pdf",
     "OS_HW/PDF/HW3_program_doc.pdf",
-    "Picture/Pasted image 20230515225754.png",
     "Computer Network/Computer Network.md",
     "DBS/pdf/我想要期末及格就好.pdf",
     "TQM_Midterm.md",
