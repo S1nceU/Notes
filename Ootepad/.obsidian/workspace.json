@@ -20,16 +20,6 @@
             }
           },
           {
-            "id": "0d8ee1d10c1ba5c6",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.3.5"
-              }
-            }
-          },
-          {
             "id": "5f30d57779980bf2",
             "type": "leaf",
             "state": {
@@ -65,8 +55,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -211,8 +200,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "0d8ee1d10c1ba5c6",
+  "active": "c811d5114dbcdb85",
   "lastOpenFiles": [
+    "Picture/Pasted image 20230607164507.png",
     "OS_HW/PDF/HW4_program_doc.pdf",
     "Picture/Pasted image 20230607162240.png",
     "OS_HW/HW2_program_doc.md",
@@ -257,7 +247,6 @@
     "OS_HW/PDF/NLP HW2.pdf",
     "OS/PDF/OS_110_Ch6.pdf",
     "PDF/我要下載澀澀的東西.pdf",
-    "OS/PDF/OS_110_CH5.pdf",
-    "PDF/PDFPDFPDFP.pdf"
+    "OS/PDF/OS_110_CH5.pdf"
   ]
 }
