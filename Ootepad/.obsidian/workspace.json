@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS_HW/OS_HW4.md",
+                "file": "OS/OS_6_12.md",
                 "mode": "source",
                 "source": false
               }
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS_HW/OS_HW4.md",
+                "file": "OS/OS_6_12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS_HW/OS_HW4.md",
+                "file": "OS/OS_6_12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS_HW/OS_HW4.md"
+                "file": "OS/OS_6_12.md"
               }
             }
           },
@@ -203,9 +203,10 @@
   },
   "active": "c811d5114dbcdb85",
   "lastOpenFiles": [
+    "OS_HW/OS_HW4.md",
+    "OS/OS_6_12.md",
     "OS_HW/PDF/OS_HW4.pdf",
     "OS_HW/OS HW1.md",
-    "OS_HW/OS_HW4.md",
     "OS_HW/HW4_program_doc.md",
     "Picture/Pasted image 20230607164507.png",
     "OS_HW/PDF/HW4_program_doc.pdf",
@@ -247,7 +248,6 @@
     "我要下載澀澀的東西.md",
     "OS_HW/PDF/NLP HW2.pdf",
     "OS/PDF/OS_110_Ch6.pdf",
-    "PDF/我要下載澀澀的東西.pdf",
-    "OS/PDF/OS_110_CH5.pdf"
+    "PDF/我要下載澀澀的東西.pdf"
   ]
 }
