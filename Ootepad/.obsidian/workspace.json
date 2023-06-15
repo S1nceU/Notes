@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/OS_6_12.md",
+                "file": "OS/OS_110_CH10.md",
                 "mode": "source",
                 "source": false
               }
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/OS_6_12.md",
+                "file": "OS/OS_110_CH10.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/OS_6_12.md",
+                "file": "OS/OS_110_CH10.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/OS_6_12.md"
+                "file": "OS/OS_110_CH10.md"
               }
             }
           },
@@ -203,8 +203,11 @@
   },
   "active": "c811d5114dbcdb85",
   "lastOpenFiles": [
-    "OS_HW/OS_HW4.md",
+    "Picture/Pasted image 20230615165155.png",
+    "Picture/Pasted image 20230615164207.png",
+    "Picture/Pasted image 20230615163411.png",
     "OS/OS_6_12.md",
+    "OS_HW/OS_HW4.md",
     "OS_HW/PDF/OS_HW4.pdf",
     "OS_HW/OS HW1.md",
     "OS_HW/HW4_program_doc.md",
@@ -220,14 +223,12 @@
     "Picture/Pasted image 20230606232618.png",
     "Picture/Pasted image 20230606230657.png",
     "Picture/Pasted image 20230606230449.png",
-    "Picture/Pasted image 20230606230007.png",
     "OS_HW/NLP HW1.md",
     "OS_HW/OS_HW3.md",
     "NLP/NLP_Project.md",
     "OS_HW/NLP HW2.md",
     "OS_HW/NLP HW3.md",
     "OS_HW/PDF/NLP HW3.pdf",
-    "Picture/Pasted image 20230528210855.png",
     "OS_HW/CA_mid.md",
     "OS_HW/OS_HW2.md",
     "OS_HW/PDF/未命名.md",
@@ -245,7 +246,6 @@
     "DBS/pdf/我想要期末及格就好.pdf",
     "TQM_Midterm.md",
     "Computer Network/Final.pdf",
-    "我要下載澀澀的東西.md",
     "OS_HW/PDF/NLP HW2.pdf",
     "OS/PDF/OS_110_Ch6.pdf",
     "PDF/我要下載澀澀的東西.pdf"
