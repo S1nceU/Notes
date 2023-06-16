@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -167,12 +166,13 @@
   },
   "active": "e480568ffe0ca6f7",
   "lastOpenFiles": [
-    "Picture/Pasted image 20230615230110.png",
+    "OS/OS_110_CH10.md",
     "OS/OS_110_CH11.md",
+    "OS/OS_110_CH8.md",
+    "Picture/Pasted image 20230615230110.png",
     "Picture/Pasted image 20230615221235.png",
     "Picture/Pasted image 20230615221227.png",
     "Picture/Pasted image 20230615215644.png",
-    "OS/OS_110_CH10.md",
     "OS_HW/HW3_program_doc.md",
     "未命名.md",
     "Picture/Pasted image 20230615165155.png",
@@ -189,7 +189,6 @@
     "OS_HW/HW2_program_doc.md",
     "OS_HW/HW1_program_doc.md",
     "Picture/Pasted image 20230607162125.png",
-    "Picture/Pasted image 20230606233223.png",
     "OS_HW/NLP HW1.md",
     "OS_HW/OS_HW3.md",
     "NLP/NLP_Project.md",
@@ -199,7 +198,6 @@
     "OS_HW/CA_mid.md",
     "OS_HW/OS_HW2.md",
     "OS_HW/PDF/未命名.md",
-    "OS/OS_110_CH8.md",
     "OS/OS_110_CH0.md",
     "OS/OS_4_10.md",
     "人生好難.md",
