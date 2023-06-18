@@ -30,30 +30,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "fe4be4a8396411d0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OS_HW/OS_HW3.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "07aff6df6b6587d0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OS_HW/OS_HW4.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
         "currentTab": 1
@@ -204,13 +180,13 @@
   },
   "active": "454753bd52e20a07",
   "lastOpenFiles": [
+    "OS/OS_110_CH11.md",
+    "OS_HW/OS_final.md",
+    "OS_HW/OS_HW4.md",
     "OS_HW/PDF/OS_final.pdf",
     "OS_HW/OS_HW3.md",
-    "OS_HW/OS_final.md",
     "Picture/Pasted image 20230617215129.png",
-    "OS_HW/OS_HW4.md",
     "Picture/Pasted image 20230617214502.png",
-    "OS/OS_110_CH11.md",
     "Picture/Pasted image 20230617214400.png",
     "OS/OS_110_CH13.md",
     "Picture/Pasted image 20230617155957.png",
@@ -248,7 +224,6 @@
     "DBS/pdf/我想要期末及格就好.pdf",
     "Computer Network/Final.pdf",
     "OS_HW/PDF/NLP HW2.pdf",
-    "OS/PDF/OS_110_Ch6.pdf",
-    "PDF/我要下載澀澀的東西.pdf"
+    "OS/PDF/OS_110_Ch6.pdf"
   ]
 }
