@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS_HW/OS_final.md",
+                "file": "OS/OS_110_CH11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS_HW/OS_final.md",
+                "file": "OS/OS_110_CH11.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS_HW/OS_final.md"
+                "file": "OS/OS_110_CH11.md"
               }
             }
           },
@@ -177,10 +176,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "454753bd52e20a07",
+  "active": "e480568ffe0ca6f7",
   "lastOpenFiles": [
-    "OS/OS_110_CH11.md",
     "OS_HW/OS_final.md",
+    "OS/OS_110_CH11.md",
     "OS_HW/OS_HW4.md",
     "OS_HW/PDF/OS_final.pdf",
     "OS_HW/OS_HW3.md",
