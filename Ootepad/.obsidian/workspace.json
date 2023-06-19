@@ -25,7 +25,7 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "OS_HW/PDF/OS_HW2.pdf"
+                "file": "OS_HW/PDF/OS_final.pdf"
               }
             }
           }
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS_HW/PDF/OS_HW2.pdf",
+                "file": "OS_HW/PDF/OS_final.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS_HW/PDF/OS_HW2.pdf",
+                "file": "OS_HW/PDF/OS_final.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS_HW/PDF/OS_HW2.pdf"
+                "file": "OS_HW/PDF/OS_final.pdf"
               }
             }
           },
@@ -177,6 +177,7 @@
   },
   "active": "454753bd52e20a07",
   "lastOpenFiles": [
+    "OS_HW/PDF/OS_HW2.pdf",
     "OS/OS_110_CH13.md",
     "OS/PDF/OS_110_CH13.pdf",
     "OS/OS_110_CH11.md",
