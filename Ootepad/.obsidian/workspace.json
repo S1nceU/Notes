@@ -23,15 +23,14 @@
             "id": "454753bd52e20a07",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "OS_HW/OS_final.md",
-                "mode": "source",
-                "source": false
+                "file": "OS_HW/PDF/OS_HW2.pdf"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -105,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/OS_110_CH11.md",
+                "file": "OS_HW/PDF/OS_HW2.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/OS_110_CH11.md",
+                "file": "OS_HW/PDF/OS_HW2.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/OS_110_CH11.md"
+                "file": "OS_HW/PDF/OS_HW2.pdf"
               }
             }
           },
@@ -176,20 +175,23 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e480568ffe0ca6f7",
+  "active": "454753bd52e20a07",
   "lastOpenFiles": [
-    "OS_HW/OS_final.md",
+    "OS/OS_110_CH13.md",
+    "OS/PDF/OS_110_CH13.pdf",
     "OS/OS_110_CH11.md",
+    "OS/PDF/OS_110_CH11.pdf",
+    "OS/OS_110_CH10.md",
+    "OS/PDF/OS_110_CH10.pdf",
+    "OS_HW/OS_final.md",
     "OS_HW/OS_HW4.md",
     "OS_HW/PDF/OS_final.pdf",
     "OS_HW/OS_HW3.md",
     "Picture/Pasted image 20230617215129.png",
     "Picture/Pasted image 20230617214502.png",
     "Picture/Pasted image 20230617214400.png",
-    "OS/OS_110_CH13.md",
     "Picture/Pasted image 20230617155957.png",
     "OS/OS_110_CH8.md",
-    "OS/OS_110_CH10.md",
     "Picture/Pasted image 20230615230110.png",
     "Picture/Pasted image 20230615221235.png",
     "Picture/Pasted image 20230615221227.png",
@@ -219,9 +221,6 @@
     "未命名/未命名 1.md",
     "OS_HW/PDF/OS_HW3.pdf",
     "OS_HW/PDF/HW3_program_doc.pdf",
-    "DBS/pdf/我想要期末及格就好.pdf",
-    "Computer Network/Final.pdf",
-    "OS_HW/PDF/NLP HW2.pdf",
-    "OS/PDF/OS_110_Ch6.pdf"
+    "DBS/pdf/我想要期末及格就好.pdf"
   ]
 }
