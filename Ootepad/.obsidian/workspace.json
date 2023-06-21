@@ -23,9 +23,11 @@
             "id": "454753bd52e20a07",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "OS_HW/PDF/OS_final.pdf"
+                "file": "人生好難.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -104,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS_HW/PDF/OS_final.pdf",
+                "file": "人生好難.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS_HW/PDF/OS_final.pdf",
+                "file": "人生好難.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS_HW/PDF/OS_final.pdf"
+                "file": "人生好難.md"
               }
             }
           },
@@ -177,6 +179,7 @@
   },
   "active": "454753bd52e20a07",
   "lastOpenFiles": [
+    "OS_HW/PDF/OS_final.pdf",
     "OS_HW/PDF/OS_HW2.pdf",
     "OS/OS_110_CH13.md",
     "OS/PDF/OS_110_CH13.pdf",
@@ -186,7 +189,6 @@
     "OS/PDF/OS_110_CH10.pdf",
     "OS_HW/OS_final.md",
     "OS_HW/OS_HW4.md",
-    "OS_HW/PDF/OS_final.pdf",
     "OS_HW/OS_HW3.md",
     "Picture/Pasted image 20230617215129.png",
     "Picture/Pasted image 20230617214502.png",
