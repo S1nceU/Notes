@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "6f2eb61a0ca08635",
+        "id": "5caf2c80865a1937",
         "type": "tabs",
         "children": [
           {
-            "id": "e480568ffe0ca6f7",
+            "id": "d1583f71f4953ab1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/OS_110_CH11.md",
+                "file": "組內互評.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "454753bd52e20a07",
+            "id": "435f0ad26b4729c3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "人生好難.md",
+                "file": "Cloud Compute/我想學點不一樣的.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "人生好難.md",
+                "file": "Cloud Compute/我想學點不一樣的.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "人生好難.md",
+                "file": "Cloud Compute/我想學點不一樣的.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "人生好難.md"
+                "file": "Cloud Compute/我想學點不一樣的.md"
               }
             }
           },
@@ -177,13 +177,35 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "454753bd52e20a07",
+  "active": "435f0ad26b4729c3",
   "lastOpenFiles": [
+    "組內互評.md",
+    "Cloud Compute/我想學點不一樣的.md",
+    "大專生研究計畫.pdf",
+    "我要下載澀澀的東西.md",
+    "人生好難.md",
+    "DBS/note.md",
+    "Pasted image 20221118224413.png",
+    "TQM_Midterm.md",
+    "OS/Memory Access Architecture.md",
+    "DNA/DNA_Methylation.md",
+    "CRMS.md",
+    "演算法.md",
+    "全面品質管理.md",
+    "Picture/粉彩彩繪線稿圖.jpg",
+    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 39.png",
+    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 37.png",
+    "未命名/未命名 1.md",
+    "未命名/未命名.md",
+    "Cloud Compute",
+    "AI/AI_12_20.md",
+    "OS/OS_110_CH11.md",
+    "AI/AI_12_27.md",
+    "AI/AI_12_23.md",
     "OS_HW/PDF/OS_final.pdf",
     "OS_HW/PDF/OS_HW2.pdf",
     "OS/OS_110_CH13.md",
     "OS/PDF/OS_110_CH13.pdf",
-    "OS/OS_110_CH11.md",
     "OS/PDF/OS_110_CH11.pdf",
     "OS/OS_110_CH10.md",
     "OS/PDF/OS_110_CH10.pdf",
@@ -197,33 +219,10 @@
     "OS/OS_110_CH8.md",
     "Picture/Pasted image 20230615230110.png",
     "Picture/Pasted image 20230615221235.png",
-    "Picture/Pasted image 20230615221227.png",
-    "Picture/Pasted image 20230615215644.png",
     "OS_HW/HW3_program_doc.md",
-    "未命名.md",
-    "Picture/Pasted image 20230615165155.png",
-    "Picture/Pasted image 20230615164207.png",
     "OS/OS_6_12.md",
     "OS_HW/PDF/OS_HW4.pdf",
-    "OS_HW/OS HW1.md",
-    "OS_HW/HW4_program_doc.md",
     "OS_HW/PDF/HW4_program_doc.pdf",
-    "OS_HW/HW2_program_doc.md",
-    "OS_HW/HW1_program_doc.md",
-    "OS_HW/NLP HW1.md",
-    "NLP/NLP_Project.md",
-    "OS_HW/NLP HW2.md",
-    "OS_HW/NLP HW3.md",
-    "OS_HW/PDF/NLP HW3.pdf",
-    "OS_HW/CA_mid.md",
-    "OS_HW/OS_HW2.md",
-    "OS_HW/PDF/未命名.md",
-    "OS/OS_110_CH0.md",
-    "OS/OS_4_10.md",
-    "人生好難.md",
-    "未命名/未命名 1.md",
-    "OS_HW/PDF/OS_HW3.pdf",
-    "OS_HW/PDF/HW3_program_doc.pdf",
-    "DBS/pdf/我想要期末及格就好.pdf"
+    "OS_HW/PDF/NLP HW3.pdf"
   ]
 }
