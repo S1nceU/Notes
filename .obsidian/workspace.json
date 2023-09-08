@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cloud Compute/我想學點不一樣的.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cloud Compute/我想學點不一樣的.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cloud Compute/我想學點不一樣的.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cloud Compute/我想學點不一樣的.md"
+                "file": "README.md"
               }
             }
           },
@@ -167,18 +166,27 @@
   },
   "active": "435f0ad26b4729c3",
   "lastOpenFiles": [
+    "CRMS.md",
+    "Calendar.md",
     "組內互評.md",
+    "DNA/DNA_Methylation.md",
+    "DNA/研究動機與研究問題.md",
+    "DNA/企劃書綱要.pdf",
+    "DNA/企劃書綱要.md",
+    "Computer Algorithm/CA_3_8.md",
     "Cloud Compute/我想學點不一樣的.md",
+    "DBS/note.md",
+    "DBS/DBS_HW3.md",
+    "DBS/DBS.md",
+    "DBS/英文小教室.md",
+    "DBS/我想要期末及格就好.md",
     "README.md",
     "大專生研究計畫.pdf",
     "我要下載澀澀的東西.md",
     "人生好難.md",
-    "DBS/note.md",
     "Pasted image 20221118224413.png",
     "TQM_Midterm.md",
     "OS/Memory Access Architecture.md",
-    "DNA/DNA_Methylation.md",
-    "CRMS.md",
     "演算法.md",
     "全面品質管理.md",
     "Picture/粉彩彩繪線稿圖.jpg",
@@ -193,25 +201,16 @@
     "AI/AI_12_23.md",
     "OS_HW/PDF/OS_final.pdf",
     "OS_HW/PDF/OS_HW2.pdf",
-    "OS/OS_110_CH13.md",
     "OS/PDF/OS_110_CH13.pdf",
     "OS/PDF/OS_110_CH11.pdf",
-    "OS/OS_110_CH10.md",
     "OS/PDF/OS_110_CH10.pdf",
-    "OS_HW/OS_final.md",
-    "OS_HW/OS_HW4.md",
-    "OS_HW/OS_HW3.md",
     "Picture/Pasted image 20230617215129.png",
     "Picture/Pasted image 20230617214502.png",
     "Picture/Pasted image 20230617214400.png",
     "Picture/Pasted image 20230617155957.png",
-    "OS/OS_110_CH8.md",
     "Picture/Pasted image 20230615230110.png",
     "Picture/Pasted image 20230615221235.png",
-    "OS_HW/HW3_program_doc.md",
-    "OS/OS_6_12.md",
     "OS_HW/PDF/OS_HW4.pdf",
-    "OS_HW/PDF/HW4_program_doc.pdf",
-    "OS_HW/PDF/NLP HW3.pdf"
+    "OS_HW/PDF/HW4_program_doc.pdf"
   ]
 }
