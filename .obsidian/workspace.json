@@ -28,9 +28,21 @@
                 "currentVersion": "1.4.12"
               }
             }
+          },
+          {
+            "id": "2050d094d4de4923",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "bocounty/API 要求.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -88,7 +100,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -104,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar.md",
+                "file": "bocounty/API 要求.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar.md",
+                "file": "bocounty/API 要求.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar.md"
+                "file": "bocounty/API 要求.md"
               }
             }
           },
@@ -185,8 +198,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "eb9de945736ee82a",
+  "active": "2050d094d4de4923",
   "lastOpenFiles": [
+    "bocounty",
+    "bocounty/API 要求.md",
     "Meeting trace/9_9.md",
     "README.md",
     "Calendar.md",
@@ -219,8 +234,6 @@
     "未命名/未命名.md",
     "Cloud Compute",
     "AI/AI_12_20.md",
-    "OS/OS_110_CH11.md",
-    "AI/AI_12_27.md",
     "OS_HW/PDF/OS_final.pdf",
     "OS_HW/PDF/OS_HW2.pdf",
     "OS/PDF/OS_110_CH13.pdf",
