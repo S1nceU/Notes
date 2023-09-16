@@ -11,6 +11,9 @@
 + Abstrace : limit to 2200 characters
 + Topic : 15-5 ?
 
++ Acceptance of Abstract Data: **9/21**
++ Submission of Full Paper Due: **10/5**
+
 + Need to call pro. Pei to submission 
 
 + Submission link : [Submission | IEEE ECICE 2023](https://www.ecice.asia/Submission)

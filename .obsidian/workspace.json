@@ -11,8 +11,12 @@
             "id": "005a3bc68c4a7384",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Calendar.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -73,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -90,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Calendar.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Calendar.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Calendar.md"
+              }
             }
           },
           {
@@ -169,6 +176,7 @@
   },
   "active": "005a3bc68c4a7384",
   "lastOpenFiles": [
+    "我要下載澀澀的東西.md",
     "Calendar.md",
     "bocounty/API 要求.md",
     "bocounty",
@@ -189,7 +197,6 @@
     "DBS/英文小教室.md",
     "DBS/我想要期末及格就好.md",
     "大專生研究計畫.pdf",
-    "我要下載澀澀的東西.md",
     "人生好難.md",
     "Pasted image 20221118224413.png",
     "TQM_Midterm.md",
