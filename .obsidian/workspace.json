@@ -13,13 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "23b70919123fad69",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.4.13"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar.md"
+                "file": "README.md"
               }
             }
           },
@@ -174,17 +185,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "005a3bc68c4a7384",
+  "active": "23b70919123fad69",
   "lastOpenFiles": [
-    "我要下載澀澀的東西.md",
+    "CRMS.md",
     "Calendar.md",
+    "組內互評.md",
+    "我要下載澀澀的東西.md",
+    "人生好難.md",
+    "大專生研究計畫.pdf",
     "bocounty/API 要求.md",
     "bocounty",
     "Meeting trace/9_9.md",
     "README.md",
     "Meeting trace",
-    "CRMS.md",
-    "組內互評.md",
     "DNA/DNA_Methylation.md",
     "DNA/研究動機與研究問題.md",
     "DNA/企劃書綱要.pdf",
@@ -196,8 +209,6 @@
     "DBS/DBS.md",
     "DBS/英文小教室.md",
     "DBS/我想要期末及格就好.md",
-    "大專生研究計畫.pdf",
-    "人生好難.md",
     "Pasted image 20221118224413.png",
     "TQM_Midterm.md",
     "OS/Memory Access Architecture.md",
