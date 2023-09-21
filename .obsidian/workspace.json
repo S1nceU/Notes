@@ -4,22 +4,43 @@
     "type": "split",
     "children": [
       {
-        "id": "5caf2c80865a1937",
+        "id": "4c0365fb5a1f984c",
         "type": "tabs",
         "children": [
           {
-            "id": "435f0ad26b4729c3",
+            "id": "6bbcad16fa828c34",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cloud Compute/我想學點不一樣的.md",
+                "file": "pekoFLAG/笑你不敢.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "bd97a32648d7e73d",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Picture/Pasted image 20221229230144.png"
+              }
+            }
+          },
+          {
+            "id": "d90c0ccb25ce7fa2",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Picture/Pasted image 20221229172003.png"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,8 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -94,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cloud Compute/我想學點不一樣的.md",
+                "file": "Picture/Pasted image 20221229230144.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cloud Compute/我想學點不一樣的.md",
+                "file": "Picture/Pasted image 20221229230144.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cloud Compute/我想學點不一樣的.md"
+                "file": "Picture/Pasted image 20221229230144.png"
               }
             }
           },
@@ -144,6 +164,16 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {}
+            }
+          },
+          {
+            "id": "cd5d557d83b06fb5",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
             }
           }
         ],
@@ -156,62 +186,61 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "canvas:建立新畫布": false,
-      "switcher:開啟快速切換": false,
-      "graph:查看關聯圖": false,
-      "daily-notes:開啟今天的每日筆記": false,
-      "templates:插入模板": false,
-      "command-palette:開啟命令面板": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "435f0ad26b4729c3",
+  "active": "bd97a32648d7e73d",
   "lastOpenFiles": [
+    "pekoFLAG/笑你不敢.md",
+    "pekoFLAG/笑你不敢.pdf",
+    "pekoFLAG/今天晚餐吃什麼？.pdf",
+    "pekoFLAG/忘記密碼惹.pdf",
+    "pekoFLAG/花生省反術.pdf",
+    "pekoFLAG/花生省模術.pdf",
+    "Picture/Pasted image 20221229172003.png",
+    "pekoFLAG/今天晚餐吃什麼？.md",
     "研究所.md",
+    "README.md",
+    "人生好難.md",
     "Picture/Pasted image 20230918225623.png",
     "Picture/Pasted image 20230918225616.png",
+    "Meeting trace/9_9.md",
+    "Untitled",
     "Meeting trace/PDF/9_9.pdf",
     "Meeting trace/PDF",
-    "Meeting trace/9_9.md",
-    "Meeting trace",
-    "Calendar.md",
-    "組內互評.md",
-    "Cloud Compute/我想學點不一樣的.md",
-    "README.md",
-    "大專生研究計畫.pdf",
     "我要下載澀澀的東西.md",
-    "人生好難.md",
+    "組內互評.md",
+    "Calendar.md",
+    "CRMS.md",
+    "大專生研究計畫.pdf",
+    "bocounty/API 要求.md",
+    "bocounty",
+    "DNA/DNA_Methylation.md",
+    "DNA/研究動機與研究問題.md",
+    "DNA/企劃書綱要.md",
+    "Computer Algorithm/CA_3_8.md",
+    "Cloud Compute/我想學點不一樣的.md",
     "DBS/note.md",
+    "DBS/DBS_HW3.md",
+    "DBS/DBS.md",
+    "DBS/英文小教室.md",
+    "DBS/我想要期末及格就好.md",
     "Pasted image 20221118224413.png",
     "TQM_Midterm.md",
     "OS/Memory Access Architecture.md",
-    "DNA/DNA_Methylation.md",
-    "CRMS.md",
     "演算法.md",
     "全面品質管理.md",
     "Picture/粉彩彩繪線稿圖.jpg",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 39.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 37.png",
-    "未命名/未命名 1.md",
-    "未命名/未命名.md",
-    "Cloud Compute",
-    "AI/AI_12_20.md",
-    "OS/OS_110_CH11.md",
-    "AI/AI_12_27.md",
-    "AI/AI_12_23.md",
-    "OS_HW/PDF/OS_final.pdf",
-    "OS_HW/PDF/OS_HW2.pdf",
-    "OS/OS_110_CH13.md",
-    "OS/PDF/OS_110_CH13.pdf",
-    "OS/PDF/OS_110_CH11.pdf",
-    "OS/OS_110_CH10.md",
-    "OS/PDF/OS_110_CH10.pdf",
-    "OS_HW/OS_final.md",
-    "OS_HW/OS_HW4.md",
-    "OS_HW/OS_HW3.md",
     "Picture/Pasted image 20230617215129.png",
     "Picture/Pasted image 20230617214502.png",
-    "Picture/Pasted image 20230617214400.png",
-    "Picture/Pasted image 20230617155957.png"
+    "Picture/Pasted image 20230617214400.png"
   ]
 }
