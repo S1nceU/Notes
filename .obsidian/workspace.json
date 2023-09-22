@@ -4,43 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "4c0365fb5a1f984c",
+        "id": "ad848b23749186a1",
         "type": "tabs",
         "children": [
           {
-            "id": "6bbcad16fa828c34",
+            "id": "ebcb037611768160",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pekoFLAG/笑你不敢.md",
+                "file": "pekoFLAG/今天晚餐吃什麼？.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "bd97a32648d7e73d",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Picture/Pasted image 20221229230144.png"
-              }
-            }
-          },
-          {
-            "id": "d90c0ccb25ce7fa2",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Picture/Pasted image 20221229172003.png"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 201.5086555480957
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -114,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Picture/Pasted image 20221229230144.png",
+                "file": "pekoFLAG/今天晚餐吃什麼？.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Picture/Pasted image 20221229230144.png",
+                "file": "pekoFLAG/今天晚餐吃什麼？.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Picture/Pasted image 20221229230144.png"
+                "file": "pekoFLAG/今天晚餐吃什麼？.md"
               }
             }
           },
@@ -195,15 +174,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "bd97a32648d7e73d",
+  "active": "ebcb037611768160",
   "lastOpenFiles": [
+    "Picture/Pasted image 20221229172003.png",
+    "Picture/Pasted image 20221229230144.png",
     "pekoFLAG/笑你不敢.md",
     "pekoFLAG/笑你不敢.pdf",
     "pekoFLAG/今天晚餐吃什麼？.pdf",
     "pekoFLAG/忘記密碼惹.pdf",
     "pekoFLAG/花生省反術.pdf",
     "pekoFLAG/花生省模術.pdf",
-    "Picture/Pasted image 20221229172003.png",
     "pekoFLAG/今天晚餐吃什麼？.md",
     "研究所.md",
     "README.md",
@@ -240,7 +220,6 @@
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 39.png",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 37.png",
     "Picture/Pasted image 20230617215129.png",
-    "Picture/Pasted image 20230617214502.png",
-    "Picture/Pasted image 20230617214400.png"
+    "Picture/Pasted image 20230617214502.png"
   ]
 }
