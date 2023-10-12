@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pekoFLAG/今天晚餐吃什麼？.md",
+                "file": "PBL/Resource.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "pekoFLAG/今天晚餐吃什麼？.md",
+                "file": "PBL/Resource.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "pekoFLAG/今天晚餐吃什麼？.md",
+                "file": "PBL/Resource.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "pekoFLAG/今天晚餐吃什麼？.md"
+                "file": "PBL/Resource.md"
               }
             }
           },
@@ -156,11 +156,11 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -176,6 +176,14 @@
   },
   "active": "ebcb037611768160",
   "lastOpenFiles": [
+    "研究所.md",
+    "PBL/Resource.md",
+    "PBL",
+    "Picture/Pasted image 20230924235443.png",
+    "Picture/Pasted image 20230924234827.png",
+    "Picture/Pasted image 20230924221258.png",
+    "人生好難.md",
+    "pekoFLAG/今天晚餐吃什麼？.md",
     "Picture/Pasted image 20221229172003.png",
     "Picture/Pasted image 20221229230144.png",
     "pekoFLAG/笑你不敢.md",
@@ -184,14 +192,10 @@
     "pekoFLAG/忘記密碼惹.pdf",
     "pekoFLAG/花生省反術.pdf",
     "pekoFLAG/花生省模術.pdf",
-    "pekoFLAG/今天晚餐吃什麼？.md",
-    "研究所.md",
     "README.md",
-    "人生好難.md",
     "Picture/Pasted image 20230918225623.png",
     "Picture/Pasted image 20230918225616.png",
     "Meeting trace/9_9.md",
-    "Untitled",
     "Meeting trace/PDF/9_9.pdf",
     "Meeting trace/PDF",
     "我要下載澀澀的東西.md",
@@ -217,9 +221,6 @@
     "演算法.md",
     "全面品質管理.md",
     "Picture/粉彩彩繪線稿圖.jpg",
-    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 39.png",
-    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 37.png",
-    "Picture/Pasted image 20230617215129.png",
-    "Picture/Pasted image 20230617214502.png"
+    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 39.png"
   ]
 }
