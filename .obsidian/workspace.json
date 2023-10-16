@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ad848b23749186a1",
+        "id": "cb38e31b44b7193f",
         "type": "tabs",
         "children": [
           {
-            "id": "ebcb037611768160",
+            "id": "de6b27f27805fae6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PBL/Resource.md",
+                "file": "問都給你問.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PBL/Resource.md",
+                "file": "問都給你問.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PBL/Resource.md",
+                "file": "問都給你問.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PBL/Resource.md"
+                "file": "問都給你問.md"
               }
             }
           },
@@ -174,15 +174,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ebcb037611768160",
+  "active": "de6b27f27805fae6",
   "lastOpenFiles": [
+    "人生好難.md",
+    "問都給你問.md",
     "研究所.md",
     "PBL/Resource.md",
     "PBL",
     "Picture/Pasted image 20230924235443.png",
     "Picture/Pasted image 20230924234827.png",
     "Picture/Pasted image 20230924221258.png",
-    "人生好難.md",
     "pekoFLAG/今天晚餐吃什麼？.md",
     "Picture/Pasted image 20221229172003.png",
     "Picture/Pasted image 20221229230144.png",
@@ -219,7 +220,6 @@
     "TQM_Midterm.md",
     "OS/Memory Access Architecture.md",
     "演算法.md",
-    "全面品質管理.md",
     "Picture/粉彩彩繪線稿圖.jpg",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 39.png"
   ]
