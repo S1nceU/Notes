@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "問都給你問.md",
+                "file": "CRMS.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "問都給你問.md",
+                "file": "CRMS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "問都給你問.md",
+                "file": "CRMS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "問都給你問.md"
+                "file": "CRMS.md"
               }
             }
           },
@@ -176,9 +176,9 @@
   },
   "active": "de6b27f27805fae6",
   "lastOpenFiles": [
+    "問都給你問.md",
     "PDF/問都給你問.pdf",
     "人生好難.md",
-    "問都給你問.md",
     "研究所.md",
     "PBL/Resource.md",
     "PBL",
@@ -206,7 +206,6 @@
     "CRMS.md",
     "大專生研究計畫.pdf",
     "bocounty/API 要求.md",
-    "bocounty",
     "DNA/DNA_Methylation.md",
     "DNA/研究動機與研究問題.md",
     "DNA/企劃書綱要.md",
