@@ -4,31 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "2913bdfce47f93e7",
+        "id": "805734436cd6baaa",
         "type": "tabs",
         "children": [
           {
-            "id": "5104496e7b1fd081",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "人生好難.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3a9c7021d3935443",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "7ebe9776b088e54b",
+            "id": "dcd5d59c705e4840",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -39,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 201.5086555480957
+    "width": 201.5086555480957,
+    "collapsed": true
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -195,10 +175,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7ebe9776b088e54b",
+  "active": "dcd5d59c705e4840",
   "lastOpenFiles": [
-    "給蕭詠之的講稿哦.md",
     "人生好難.md",
+    "給蕭詠之的講稿哦.md",
+    "PDF/給蕭詠之的講稿哦.pdf",
     "CRMS.md",
     "問都給你問.md",
     "PDF/問都給你問.pdf",
@@ -226,7 +207,6 @@
     "我要下載澀澀的東西.md",
     "組內互評.md",
     "Calendar.md",
-    "大專生研究計畫.pdf",
     "bocounty/API 要求.md",
     "DNA/DNA_Methylation.md",
     "DNA/研究動機與研究問題.md",
@@ -240,7 +220,6 @@
     "DBS/我想要期末及格就好.md",
     "Pasted image 20221118224413.png",
     "TQM_Midterm.md",
-    "OS/Memory Access Architecture.md",
     "Picture/粉彩彩繪線稿圖.jpg",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 39.png"
   ]
