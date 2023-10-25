@@ -13,7 +13,43 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "給蕭詠之的講稿哦.md",
+                "file": "問都給你問.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "eff55f28b8e8cac4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "03349f3695347ab1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "問都給你問_ENG.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "8c86a90bfe5f51b7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "36b84ae0805a99cc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "問都給你問_英文小教室.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "給蕭詠之的講稿哦.md",
+                "file": "問都給你問_英文小教室.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "給蕭詠之的講稿哦.md",
+                "file": "問都給你問_英文小教室.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "給蕭詠之的講稿哦.md"
+                "file": "問都給你問_英文小教室.md"
               }
             }
           },
@@ -175,13 +211,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "dcd5d59c705e4840",
+  "active": "36b84ae0805a99cc",
   "lastOpenFiles": [
-    "人生好難.md",
+    "PDF/問都給你問_英文小教室.pdf",
+    "問都給你問_ENG.md",
+    "PDF/問都給你問_ENG.pdf",
+    "問都給你問.md",
+    "問都給你問_英文小教室.md",
     "給蕭詠之的講稿哦.md",
+    "人生好難.md",
     "PDF/給蕭詠之的講稿哦.pdf",
     "CRMS.md",
-    "問都給你問.md",
     "PDF/問都給你問.pdf",
     "研究所.md",
     "PBL/Resource.md",
@@ -203,7 +243,6 @@
     "Picture/Pasted image 20230918225616.png",
     "Meeting trace/9_9.md",
     "Meeting trace/PDF/9_9.pdf",
-    "Meeting trace/PDF",
     "我要下載澀澀的東西.md",
     "組內互評.md",
     "Calendar.md",
@@ -217,9 +256,7 @@
     "DBS/DBS_HW3.md",
     "DBS/DBS.md",
     "DBS/英文小教室.md",
-    "DBS/我想要期末及格就好.md",
     "Pasted image 20221118224413.png",
-    "TQM_Midterm.md",
     "Picture/粉彩彩繪線稿圖.jpg",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 39.png"
   ]
