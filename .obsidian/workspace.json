@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Computer Network/Computer Network.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Computer Network/Computer Network.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Computer Network/Computer Network.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Computer Network/Computer Network.md"
               }
             }
           },
@@ -176,6 +176,8 @@
   },
   "active": "1472b3b2ab940345",
   "lastOpenFiles": [
+    "Computer Network/Final.md",
+    "README.md",
     "問都給你問_英文小教室.md",
     "PDF/問都給你問_英文小教室.pdf",
     "問都給你問_ENG.md",
@@ -201,7 +203,6 @@
     "pekoFLAG/忘記密碼惹.pdf",
     "pekoFLAG/花生省反術.pdf",
     "pekoFLAG/花生省模術.pdf",
-    "README.md",
     "Picture/Pasted image 20230918225623.png",
     "Picture/Pasted image 20230918225616.png",
     "Meeting trace/9_9.md",
