@@ -60,7 +60,7 @@ link        連結  點對點的問題  Ethernet、802.11(WiFi)、PPP
 physical    實體  bit在線上的傳輸
 
 
-ISO 7層架構
+OSI 7層架構
 
 封裝 (加標籤) Encapsulation 往下就是封裝    送出東西
 解封裝        Decapsulation 往上就是解封裝  收到東西

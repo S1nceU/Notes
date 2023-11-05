@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computer Network/Final.md",
+                "file": "Computer Network/Computer Network.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computer Network/Final.md",
+                "file": "Computer Network/Computer Network.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computer Network/Final.md",
+                "file": "Computer Network/Computer Network.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computer Network/Final.md"
+                "file": "Computer Network/Computer Network.md"
               }
             }
           },
@@ -176,7 +176,10 @@
   },
   "active": "1472b3b2ab940345",
   "lastOpenFiles": [
+    "Cloud Compute/我想學點不一樣的.md",
+    "Calendar.md",
     "Computer Network/Computer Network.md",
+    "Computer Network/Final.pdf",
     "Computer Network/Final.md",
     "README.md",
     "問都給你問_英文小教室.md",
@@ -203,22 +206,18 @@
     "pekoFLAG/今天晚餐吃什麼？.pdf",
     "pekoFLAG/忘記密碼惹.pdf",
     "pekoFLAG/花生省反術.pdf",
-    "pekoFLAG/花生省模術.pdf",
     "Picture/Pasted image 20230918225623.png",
     "Picture/Pasted image 20230918225616.png",
     "Meeting trace/9_9.md",
     "我要下載澀澀的東西.md",
     "組內互評.md",
-    "Calendar.md",
     "bocounty/API 要求.md",
     "DNA/DNA_Methylation.md",
     "DNA/研究動機與研究問題.md",
     "DNA/企劃書綱要.md",
     "Computer Algorithm/CA_3_8.md",
-    "Cloud Compute/我想學點不一樣的.md",
     "DBS/note.md",
     "DBS/DBS_HW3.md",
-    "DBS/DBS.md",
     "Pasted image 20221118224413.png",
     "Picture/粉彩彩繪線稿圖.jpg",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 39.png"
