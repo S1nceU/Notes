@@ -123,7 +123,7 @@ HTTP,IMAP : 看信(一個是雲端另一個是載下來)
 ###### DNS name resolution :
 1.iterated query :對於server的load較小  現今大多都用這個
 2.recuersive query :以上相反
-DNS用的是TCP的服務
+DNS用的是UDP的服務
 
 **P2P:peer不是固定的server
 
