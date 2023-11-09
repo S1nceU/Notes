@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computer Network/Computer Network.md",
+                "file": "人生好難.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computer Network/Computer Network.md",
+                "file": "人生好難.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computer Network/Computer Network.md",
+                "file": "人生好難.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computer Network/Computer Network.md"
+                "file": "人生好難.md"
               }
             }
           },
@@ -174,8 +174,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1472b3b2ab940345",
+  "active": "6b0f7e5b7a5e09b8",
   "lastOpenFiles": [
+    "Computer Network/Computer Network.md",
     "給蕭詠之的講稿哦.md",
     "Calendar.md",
     "組內互評.md",
@@ -183,7 +184,6 @@
     "研究所.md",
     "問都給你問.md",
     "README.md",
-    "Computer Network/Computer Network.md",
     "Cloud Compute/我想學點不一樣的.md",
     "Computer Network/Final.pdf",
     "Computer Network/Final.md",
