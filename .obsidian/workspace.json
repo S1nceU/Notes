@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "人生好難.md",
+                "file": "PBL/Resource.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "人生好難.md",
+                "file": "PBL/Resource.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "人生好難.md",
+                "file": "PBL/Resource.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "人生好難.md"
+                "file": "PBL/Resource.md"
               }
             }
           },
@@ -174,8 +174,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6b0f7e5b7a5e09b8",
+  "active": "1472b3b2ab940345",
   "lastOpenFiles": [
+    "人生好難.md",
     "Computer Network/Computer Network.md",
     "給蕭詠之的講稿哦.md",
     "Calendar.md",
@@ -190,7 +191,6 @@
     "PDF/問都給你問_英文小教室.pdf",
     "問都給你問_ENG.md",
     "PDF/問都給你問_ENG.pdf",
-    "人生好難.md",
     "PDF/給蕭詠之的講稿哦.pdf",
     "CRMS.md",
     "PDF/問都給你問.pdf",
