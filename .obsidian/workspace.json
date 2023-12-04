@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PBL/Resource.md",
+                "file": "研究所.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PBL/Resource.md",
+                "file": "研究所.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PBL/Resource.md",
+                "file": "研究所.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PBL/Resource.md"
+                "file": "研究所.md"
               }
             }
           },
@@ -176,6 +176,7 @@
   },
   "active": "1472b3b2ab940345",
   "lastOpenFiles": [
+    "PBL/Resource.md",
     "人生好難.md",
     "Computer Network/Computer Network.md",
     "給蕭詠之的講稿哦.md",
@@ -194,7 +195,6 @@
     "PDF/給蕭詠之的講稿哦.pdf",
     "CRMS.md",
     "PDF/問都給你問.pdf",
-    "PBL/Resource.md",
     "PBL",
     "Picture/Pasted image 20230924235443.png",
     "Picture/Pasted image 20230924234827.png",
