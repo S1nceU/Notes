@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "研究所.md",
+                "file": "給蕭詠之的講稿哦.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "研究所.md",
+                "file": "給蕭詠之的講稿哦.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "研究所.md",
+                "file": "給蕭詠之的講稿哦.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "研究所.md"
+                "file": "給蕭詠之的講稿哦.md"
               }
             }
           },
@@ -177,6 +177,7 @@
   },
   "active": "1472b3b2ab940345",
   "lastOpenFiles": [
+    "研究所.md",
     "PBL/Resource.md",
     "人生好難.md",
     "Computer Network/Computer Network.md",
@@ -184,7 +185,6 @@
     "Calendar.md",
     "組內互評.md",
     "問都給你問_英文小教室.md",
-    "研究所.md",
     "問都給你問.md",
     "README.md",
     "Cloud Compute/我想學點不一樣的.md",
