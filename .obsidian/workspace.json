@@ -13,13 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "給蕭詠之的講稿哦.md",
+                "file": "人生好難.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "ac3223e86714b2a4",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.3"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 201.5086555480957,
-    "collapsed": true
+    "width": 201.5086555480957
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -94,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "給蕭詠之的講稿哦.md",
+                "file": "人生好難.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "給蕭詠之的講稿哦.md",
+                "file": "人生好難.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "給蕭詠之的講稿哦.md"
+                "file": "人生好難.md"
               }
             }
           },
@@ -152,7 +162,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -175,23 +187,23 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1472b3b2ab940345",
+  "active": "ac3223e86714b2a4",
   "lastOpenFiles": [
+    "Calendar.md",
+    "組內互評.md",
+    "給蕭詠之的講稿哦.md",
+    "問都給你問_ENG.md",
+    "問都給你問_英文小教室.md",
+    "問都給你問.md",
     "研究所.md",
     "PBL/Resource.md",
     "人生好難.md",
     "Computer Network/Computer Network.md",
-    "給蕭詠之的講稿哦.md",
-    "Calendar.md",
-    "組內互評.md",
-    "問都給你問_英文小教室.md",
-    "問都給你問.md",
     "README.md",
     "Cloud Compute/我想學點不一樣的.md",
     "Computer Network/Final.pdf",
     "Computer Network/Final.md",
     "PDF/問都給你問_英文小教室.pdf",
-    "問都給你問_ENG.md",
     "PDF/問都給你問_ENG.pdf",
     "PDF/給蕭詠之的講稿哦.pdf",
     "CRMS.md",
