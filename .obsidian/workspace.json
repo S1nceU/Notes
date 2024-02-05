@@ -18,19 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "ac3223e86714b2a4",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.5.3"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -187,9 +176,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ac3223e86714b2a4",
+  "active": "1472b3b2ab940345",
   "lastOpenFiles": [
     "Calendar.md",
+    "人生好難.md",
     "組內互評.md",
     "給蕭詠之的講稿哦.md",
     "問都給你問_ENG.md",
@@ -197,7 +187,6 @@
     "問都給你問.md",
     "研究所.md",
     "PBL/Resource.md",
-    "人生好難.md",
     "Computer Network/Computer Network.md",
     "README.md",
     "Cloud Compute/我想學點不一樣的.md",
