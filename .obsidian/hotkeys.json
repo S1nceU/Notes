@@ -44,15 +44,6 @@
       "key": "M"
     }
   ],
-  "obsidian-git:list-changed-files": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "F"
-    }
-  ],
   "obsidian-git:edit-gitignore": [
     {
       "modifiers": [
