@@ -4,17 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "abcf0d7e5e804e9a",
+        "id": "fade9d7ce4ee0f91",
         "type": "tabs",
         "children": [
           {
-            "id": "f5ba4e50ac600957",
+            "id": "e2adb89df16b104f",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "OS/PDF/OS_110_CH3.pdf"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -95,7 +93,6 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "OS/PDF/OS_110_CH3.pdf",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -112,7 +109,6 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "OS/PDF/OS_110_CH3.pdf",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -123,9 +119,7 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {
-            "file": "OS/PDF/OS_110_CH3.pdf"
-          }
+          "state": {}
         }
       }
     ],
@@ -141,8 +135,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f5ba4e50ac600957",
+  "active": "e2adb89df16b104f",
   "lastOpenFiles": [
+    "OS/PDF/OS_110_CH3.pdf",
     "Blockchain",
     "Blockchain/LN_109590009_0403.pdf",
     "Blockchain/LN_109590009_0327.pdf",
@@ -153,7 +148,6 @@
     "/Blockchain/LN_109590009_0313.pdf",
     "/Blockchain/LN_109590009_0306.pdf",
     "/Blockchain",
-    "OS/PDF/OS_110_CH2.pdf",
     "README.md",
     "AI/AI_11_29.md"
   ]
