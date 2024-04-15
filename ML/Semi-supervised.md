@@ -3,14 +3,17 @@
 + Transductive learning: unlabeled data is the testing data
 	+ **not cheating**, use testing set with label is cheating
 	+ 常用在對特定數據集有目標需求，且對於新數據沒有分析需求的狀況。
+	+ 對應於 meta-learning，要求從諸多給定的任務和數據中學習通用的模式，遷移到未知的任務和數據上
 + Inductive learning: unlabeled data is not the testing data
 	+ training 時，還不知道 testing set，learning model 完後才有 testing set 可以使用
 	+ 常用於數據樣本夠大，標籤數據夠多時，或是需求是一般的而非特化的目標的狀況。
+	+ 對應於 domain adaptation，給定訓練的數據包含了目標域數據，要求訓練一個對目標域數據有最小誤差的模型
 
-| Inductive learning | Transductive learning |
-| ------------------ | --------------------- |
-| 給從未見過的數據           |                       |
-|                    |                       |
+| Inductive learning       | Transductive learning |
+| ------------------------ | --------------------- |
+| 給從未見過的數據 label 並 predict | 給已label的數據做 predict   |
+| 新 testing set，可以直接做      | 不行                    |
+| 計算成本低，效率高                | 計算成本高，效率低，但效果時而勝過對方   |
  ### Why semi-supervised learing?
 + 我們不缺 data，則是缺 **labeled** 的 data，**unlabeled** 的 data 則可以有超級多
 + 所以用 unlabeled 的資料能夠做，非常做有價值
