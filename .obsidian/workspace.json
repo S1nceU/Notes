@@ -11,8 +11,12 @@
             "id": "4fdfd5054056e47a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Line貼圖小偷/雛形.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Line貼圖小偷/雛形.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,6 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Line貼圖小偷/雛形.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +133,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Line貼圖小偷/雛形.md"
+              }
             }
           },
           {
@@ -171,6 +179,13 @@
   },
   "active": "4fdfd5054056e47a",
   "lastOpenFiles": [
+    "pekoFLAG/笑你不敢.md",
+    "Line貼圖小偷/雛形.md",
+    "Line貼圖小偷",
+    "pekoFLAG/花生省模術.md",
+    "pekoFLAG/花生省反術.md",
+    "pekoFLAG/忘記密碼惹.md",
+    "pekoFLAG/今天晚餐吃什麼？.md",
     "ML/Semi-supervised.md",
     "OS/OS_110_CH3.md",
     "OS/OS_110_CH4.md",
@@ -191,12 +206,6 @@
     "NLP/NLP_3_15.md",
     "Meeting trace/9_9.md",
     "DNA/企劃書綱要.md",
-    "DNA/研究動機與研究問題.md",
-    "Computer Network/Computer Networking Notes Ch. 3.md",
-    "Computer Network/Computer Networking Notes Ch. 2.md",
-    "Computer Network/Computer Networking Notes Ch. 1 Refactor.md",
-    "Computer Network/Computer Networking Notes Ch. 1.md",
-    "Computer Network/Computer Network.md",
     "ML",
     "Blockchain/LN_109590009_0306.pdf",
     "Computer Network/Final.pdf",
@@ -211,7 +220,6 @@
     "Picture/Pasted image 20221229172003.png",
     "Picture/Pasted image 20221229230144.png",
     "pekoFLAG/笑你不敢.pdf",
-    "pekoFLAG/今天晚餐吃什麼？.pdf",
     "Picture/Pasted image 20230918225623.png",
     "Picture/Pasted image 20230918225616.png",
     "Pasted image 20221118224413.png",
