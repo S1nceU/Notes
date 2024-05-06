@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Line貼圖小偷/雛形.md",
+                "file": "Blockchain/Zero knowledge proof.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 201.5086555480957
+    "width": 201.5086555480957,
+    "collapsed": true
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Line貼圖小偷/雛形.md",
+                "file": "Blockchain/Zero knowledge proof.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Line貼圖小偷/雛形.md",
+                "file": "Blockchain/Zero knowledge proof.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Line貼圖小偷/雛形.md"
+                "file": "Blockchain/Zero knowledge proof.md"
               }
             }
           },
@@ -178,8 +179,10 @@
   },
   "active": "4fdfd5054056e47a",
   "lastOpenFiles": [
-    "pekoFLAG/笑你不敢.md",
     "Line貼圖小偷/雛形.md",
+    "Blockchain/Zero knowledge proof.md",
+    "Untitled",
+    "pekoFLAG/笑你不敢.md",
     "Line貼圖小偷",
     "pekoFLAG/花生省模術.md",
     "pekoFLAG/花生省反術.md",
@@ -204,7 +207,6 @@
     "NLP/NLP_4_10.md",
     "NLP/NLP_3_15.md",
     "Meeting trace/9_9.md",
-    "DNA/企劃書綱要.md",
     "ML",
     "Blockchain/LN_109590009_0306.pdf",
     "Computer Network/Final.pdf",
@@ -218,7 +220,6 @@
     "Picture/Pasted image 20230924221258.png",
     "Picture/Pasted image 20221229172003.png",
     "Picture/Pasted image 20221229230144.png",
-    "pekoFLAG/笑你不敢.pdf",
     "Picture/Pasted image 20230918225623.png",
     "Picture/Pasted image 20230918225616.png",
     "Pasted image 20221118224413.png",
