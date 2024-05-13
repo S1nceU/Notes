@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blockchain/Zero knowledge proof.md",
+                "file": "簡歷.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blockchain/Zero knowledge proof.md",
+                "file": "簡歷.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blockchain/Zero knowledge proof.md",
+                "file": "簡歷.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blockchain/Zero knowledge proof.md"
+                "file": "簡歷.md"
               }
             }
           },
@@ -179,9 +179,11 @@
   },
   "active": "4fdfd5054056e47a",
   "lastOpenFiles": [
+    "我要下載澀澀的東西.md",
+    "人生好難.md",
+    "Blockchain/Zero knowledge proof.md",
     "PDF/Zero knowledge proof.pdf",
     "Line貼圖小偷/雛形.md",
-    "Blockchain/Zero knowledge proof.md",
     "Untitled",
     "pekoFLAG/笑你不敢.md",
     "Line貼圖小偷",
@@ -206,7 +208,6 @@
     "NLP/Note.md",
     "NLP/NLP_Project.md",
     "NLP/NLP_4_10.md",
-    "NLP/NLP_3_15.md",
     "ML",
     "Blockchain/LN_109590009_0306.pdf",
     "Computer Network/Final.pdf",
@@ -214,7 +215,6 @@
     "PDF/問都給你問_ENG.pdf",
     "PDF/給蕭詠之的講稿哦.pdf",
     "PDF/問都給你問.pdf",
-    "PBL",
     "Picture/Pasted image 20230924235443.png",
     "Picture/Pasted image 20230924234827.png",
     "Picture/Pasted image 20230924221258.png",
