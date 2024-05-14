@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "29f0f9cb7ed25da1",
+        "id": "f6b788afbc56fd98",
         "type": "tabs",
         "children": [
           {
-            "id": "4fdfd5054056e47a",
+            "id": "99d3c028b624a387",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "簡歷.md",
+                "file": "Blockchain/Zero knowledge proof.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "簡歷.md",
+                "file": "Blockchain/Zero knowledge proof.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "簡歷.md",
+                "file": "Blockchain/Zero knowledge proof.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "簡歷.md"
+                "file": "Blockchain/Zero knowledge proof.md"
               }
             }
           },
@@ -177,8 +177,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "4fdfd5054056e47a",
+  "active": "6b0f7e5b7a5e09b8",
   "lastOpenFiles": [
+    "簡歷.md",
     "PDF/簡歷.pdf",
     "我要下載澀澀的東西.md",
     "人生好難.md",
@@ -214,7 +215,6 @@
     "PDF/問都給你問_英文小教室.pdf",
     "PDF/問都給你問_ENG.pdf",
     "PDF/給蕭詠之的講稿哦.pdf",
-    "PDF/問都給你問.pdf",
     "Picture/Pasted image 20230924235443.png",
     "Picture/Pasted image 20230924234827.png",
     "Picture/Pasted image 20230924221258.png",
