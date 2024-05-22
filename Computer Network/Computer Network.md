@@ -164,6 +164,8 @@ service not available:
 *  delay guarantees
 *  bandwidth guarantees
 
+
+
 ## UDP: User Datagram Protocol
 只提供port number
 use on :
@@ -200,7 +202,7 @@ Receiver：
 sender : 要等到接收到該街道的序號 ACK0 就該收到ACK0 若是收到ACK1就要重傳
 receiver : 在等ACK0封包，卻收到ACK1，就代表錯了
 ![[Pasted image 20221116000347.png]]
-#若傳輸過程封包不見了怎麼半？！  rdt1、rdt2無法解決
+若傳輸過程封包不見了怎麼半？！  rdt1、rdt2無法解決
 
 ## rdt3.0
 sender->計時器等太久重送

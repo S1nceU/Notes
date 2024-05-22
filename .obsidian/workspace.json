@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "41eb5fb84f14e65d",
+        "id": "0adb78b93f86e55d",
         "type": "tabs",
         "children": [
           {
-            "id": "8cb6ae8ea66a226c",
+            "id": "dbbff0c4884e6b34",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computer Network/Computer Network.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -48,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Kalman",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -93,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computer Network/Computer Network.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computer Network/Computer Network.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Computer Network/Computer Network.md"
-              }
+              "state": {}
             }
           },
           {
@@ -162,7 +154,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
+    "width": 236.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -176,21 +168,27 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6b0f7e5b7a5e09b8",
+  "active": "dbbff0c4884e6b34",
   "lastOpenFiles": [
+    "Calendar.md",
+    "CRMS.md",
+    "Template/Callout notice.md",
+    "Template/Basic Properties.md",
+    "Untitled.md",
+    "Template",
+    "Computer Network/Computer Network.md",
+    "簡歷.md",
     "Computer Algorithm/CA_3_8.md",
     "Cloud Compute/我想學點不一樣的.md",
     "ML/Semi-supervised.md",
     "Blockchain/Zero knowledge proof.md",
     "Blockchain/LN_109590009_0306.pdf",
     "問都給你問.md",
-    "簡歷.md",
     "PDF/簡歷.pdf",
     "我要下載澀澀的東西.md",
     "人生好難.md",
     "PDF/Zero knowledge proof.pdf",
     "Line貼圖小偷/雛形.md",
-    "Untitled",
     "pekoFLAG/笑你不敢.md",
     "Line貼圖小偷",
     "pekoFLAG/花生省模術.md",
@@ -203,12 +201,6 @@
     "OS/OS_110_CH1.md",
     "OS/OS_110_CH0.md",
     "OS/OS_6_12.md",
-    "OS/OS_4_10.md",
-    "OS/OS_3_27.md",
-    "OS/OS_3_23.md",
-    "OS/OS_3_16.md",
-    "OS/OS_3_9.md",
-    "OS/OS_3_2.md",
     "ML",
     "Computer Network/Final.pdf",
     "PDF/問都給你問_英文小教室.pdf",
