@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f6b788afbc56fd98",
+        "id": "41eb5fb84f14e65d",
         "type": "tabs",
         "children": [
           {
-            "id": "99d3c028b624a387",
+            "id": "8cb6ae8ea66a226c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blockchain/Zero knowledge proof.md",
+                "file": "Computer Network/Computer Network.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 201.5086555480957,
-    "collapsed": true
+    "width": 201.5086555480957
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blockchain/Zero knowledge proof.md",
+                "file": "Computer Network/Computer Network.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blockchain/Zero knowledge proof.md",
+                "file": "Computer Network/Computer Network.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blockchain/Zero knowledge proof.md"
+                "file": "Computer Network/Computer Network.md"
               }
             }
           },
@@ -179,11 +178,16 @@
   },
   "active": "6b0f7e5b7a5e09b8",
   "lastOpenFiles": [
+    "Computer Algorithm/CA_3_8.md",
+    "Cloud Compute/我想學點不一樣的.md",
+    "ML/Semi-supervised.md",
+    "Blockchain/Zero knowledge proof.md",
+    "Blockchain/LN_109590009_0306.pdf",
+    "問都給你問.md",
     "簡歷.md",
     "PDF/簡歷.pdf",
     "我要下載澀澀的東西.md",
     "人生好難.md",
-    "Blockchain/Zero knowledge proof.md",
     "PDF/Zero knowledge proof.pdf",
     "Line貼圖小偷/雛形.md",
     "Untitled",
@@ -193,7 +197,6 @@
     "pekoFLAG/花生省反術.md",
     "pekoFLAG/忘記密碼惹.md",
     "pekoFLAG/今天晚餐吃什麼？.md",
-    "ML/Semi-supervised.md",
     "OS/OS_110_CH3.md",
     "OS/OS_110_CH4.md",
     "OS/OS_110_CH2.md",
@@ -206,24 +209,20 @@
     "OS/OS_3_16.md",
     "OS/OS_3_9.md",
     "OS/OS_3_2.md",
-    "NLP/OS_4_12.md",
-    "NLP/Note.md",
-    "NLP/NLP_Project.md",
     "ML",
-    "Blockchain/LN_109590009_0306.pdf",
     "Computer Network/Final.pdf",
     "PDF/問都給你問_英文小教室.pdf",
     "PDF/問都給你問_ENG.pdf",
     "PDF/給蕭詠之的講稿哦.pdf",
-    "Picture/Pasted image 20230924235443.png",
-    "Picture/Pasted image 20230924234827.png",
-    "Picture/Pasted image 20230924221258.png",
-    "Picture/Pasted image 20221229172003.png",
-    "Picture/Pasted image 20221229230144.png",
-    "Picture/Pasted image 20230918225623.png",
-    "Picture/Pasted image 20230918225616.png",
+    "Image/Pasted image 20230924235443.png",
+    "Image/Pasted image 20230924234827.png",
+    "Image/Pasted image 20230924221258.png",
+    "Image/Pasted image 20221229172003.png",
+    "Image/Pasted image 20221229230144.png",
+    "Image/Pasted image 20230918225623.png",
+    "Image/Pasted image 20230918225616.png",
     "Pasted image 20221118224413.png",
-    "Picture/粉彩彩繪線稿圖.jpg",
+    "Image/粉彩彩繪線稿圖.jpg",
     "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 39.png"
   ]
 }
