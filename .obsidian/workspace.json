@@ -11,8 +11,12 @@
             "id": "dbbff0c4884e6b34",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "README.md"
+              }
             }
           },
           {
@@ -170,14 +178,16 @@
   },
   "active": "dbbff0c4884e6b34",
   "lastOpenFiles": [
-    "Calendar.md",
+    "Untitled.md",
+    "README.md",
     "CRMS.md",
+    "Calendar.md",
+    "簡歷.md",
+    "簡麗.md",
     "Template/Callout notice.md",
     "Template/Basic Properties.md",
-    "Untitled.md",
     "Template",
     "Computer Network/Computer Network.md",
-    "簡歷.md",
     "Computer Algorithm/CA_3_8.md",
     "Cloud Compute/我想學點不一樣的.md",
     "ML/Semi-supervised.md",
@@ -199,8 +209,6 @@
     "OS/OS_110_CH4.md",
     "OS/OS_110_CH2.md",
     "OS/OS_110_CH1.md",
-    "OS/OS_110_CH0.md",
-    "OS/OS_6_12.md",
     "ML",
     "Computer Network/Final.pdf",
     "PDF/問都給你問_英文小教室.pdf",
