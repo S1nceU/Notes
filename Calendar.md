@@ -1,3 +1,10 @@
+---
+aliases: 
+up: 
+related: 
+tags:
+---
+ 
 ## TWU and APAMI Joint International Conference
 + Submission deadline : 9/15
 + Abstract : limit to 300 characters 
