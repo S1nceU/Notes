@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "3f1cc9d590f1721d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "租屋補助.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,7 +90,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 201.5086555480957
+    "width": 201.5086555480957,
+    "collapsed": true
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -93,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar.md",
+                "file": "租屋補助.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar.md",
+                "file": "租屋補助.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar.md"
+                "file": "租屋補助.md"
               }
             }
           },
@@ -176,13 +190,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "dbbff0c4884e6b34",
+  "active": "3f1cc9d590f1721d",
   "lastOpenFiles": [
-    "簡歷.md",
+    "PDF/租屋補助.pdf",
     "Calendar.md",
+    "租屋補助.md",
+    "attachments/Pasted image 20240527211226.png",
+    "attachments/Pasted image 20240527211120.png",
+    "attachments/Pasted image 20240527211104.png",
+    "attachments/Pasted image 20240527211051.png",
+    "attachments",
+    "簡歷.md",
     "CRMS.md",
     "README.md",
-    "Untitled.md",
     "簡麗.md",
     "Template/Callout notice.md",
     "Template/Basic Properties.md",
@@ -208,21 +228,15 @@
     "OS/OS_110_CH3.md",
     "OS/OS_110_CH4.md",
     "OS/OS_110_CH2.md",
-    "OS/OS_110_CH1.md",
     "ML",
     "Computer Network/Final.pdf",
     "PDF/問都給你問_英文小教室.pdf",
     "PDF/問都給你問_ENG.pdf",
-    "PDF/給蕭詠之的講稿哦.pdf",
     "Image/Pasted image 20230924235443.png",
     "Image/Pasted image 20230924234827.png",
     "Image/Pasted image 20230924221258.png",
     "Image/Pasted image 20221229172003.png",
     "Image/Pasted image 20221229230144.png",
-    "Image/Pasted image 20230918225623.png",
-    "Image/Pasted image 20230918225616.png",
-    "Pasted image 20221118224413.png",
-    "Image/粉彩彩繪線稿圖.jpg",
-    "全面品質管理 5c0f2dd4590a4c04b9e72032f9a4ae8b/Untitled 39.png"
+    "Image/Pasted image 20230918225623.png"
   ]
 }
