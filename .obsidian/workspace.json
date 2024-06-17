@@ -13,13 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blockchain/Zero knowledge proof.md",
+                "file": "人生好難.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "c284dbb7aaa02a95",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.2"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 201.5086555480957,
-    "collapsed": true
+    "width": 201.5086555480957
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -94,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blockchain/Zero knowledge proof.md",
+                "file": "人生好難.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blockchain/Zero knowledge proof.md",
+                "file": "人生好難.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blockchain/Zero knowledge proof.md"
+                "file": "人生好難.md"
               }
             }
           },
@@ -177,8 +187,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "dbbff0c4884e6b34",
+  "active": "c284dbb7aaa02a95",
   "lastOpenFiles": [
+    "大專生研究計畫.pdf",
+    "Blockchain/Zero knowledge proof.md",
     "Calendar.md",
     "租屋補助.md",
     "PDF/租屋補助.pdf",
@@ -198,7 +210,6 @@
     "Computer Algorithm/CA_3_8.md",
     "Cloud Compute/我想學點不一樣的.md",
     "ML/Semi-supervised.md",
-    "Blockchain/Zero knowledge proof.md",
     "Blockchain/LN_109590009_0306.pdf",
     "問都給你問.md",
     "PDF/簡歷.pdf",
