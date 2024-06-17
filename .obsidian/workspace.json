@@ -13,24 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "人生好難.md",
-                "mode": "source",
+                "file": "Blockchain/第三組的報告.md",
+                "mode": "preview",
                 "source": false
               }
             }
-          },
-          {
-            "id": "c284dbb7aaa02a95",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.2"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -88,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 201.5086555480957
+    "width": 201.5086555480957,
+    "collapsed": true
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -104,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "人生好難.md",
+                "file": "Blockchain/第三組的報告.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "人生好難.md",
+                "file": "Blockchain/第三組的報告.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "人生好難.md"
+                "file": "Blockchain/第三組的報告.md"
               }
             }
           },
@@ -187,11 +177,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c284dbb7aaa02a95",
+  "active": "dbbff0c4884e6b34",
   "lastOpenFiles": [
-    "大專生研究計畫.pdf",
     "Blockchain/Zero knowledge proof.md",
+    "Blockchain/第三組的報告.md",
     "Calendar.md",
+    "CRMS.md",
+    "README.md",
+    "人生好難.md",
+    "大專生研究計畫.pdf",
     "租屋補助.md",
     "PDF/租屋補助.pdf",
     "attachments/Pasted image 20240527211226.png",
@@ -200,8 +194,6 @@
     "attachments/Pasted image 20240527211051.png",
     "attachments",
     "簡歷.md",
-    "CRMS.md",
-    "README.md",
     "簡麗.md",
     "Template/Callout notice.md",
     "Template/Basic Properties.md",
@@ -214,7 +206,6 @@
     "問都給你問.md",
     "PDF/簡歷.pdf",
     "我要下載澀澀的東西.md",
-    "人生好難.md",
     "PDF/Zero knowledge proof.pdf",
     "Line貼圖小偷/雛形.md",
     "pekoFLAG/笑你不敢.md",
@@ -228,7 +219,6 @@
     "OS/OS_110_CH2.md",
     "ML",
     "Computer Network/Final.pdf",
-    "PDF/問都給你問_英文小教室.pdf",
     "Image/Pasted image 20230924235443.png",
     "Image/Pasted image 20230924234827.png",
     "Image/Pasted image 20230924221258.png",
