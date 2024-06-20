@@ -4,33 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "0adb78b93f86e55d",
+        "id": "690c2b4523a199f3",
         "type": "tabs",
         "children": [
           {
-            "id": "dbbff0c4884e6b34",
+            "id": "0633bd883123d5a4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blockchain/第三組的報告.md",
-                "mode": "preview",
+                "file": "給蕭詠之的講稿哦.md",
+                "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "a23caa52b6846030",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.3"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -105,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blockchain/第三組的報告.md",
+                "file": "給蕭詠之的講稿哦.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blockchain/第三組的報告.md",
+                "file": "給蕭詠之的講稿哦.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blockchain/第三組的報告.md"
+                "file": "給蕭詠之的講稿哦.md"
               }
             }
           },
@@ -188,10 +177,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a23caa52b6846030",
+  "active": "0633bd883123d5a4",
   "lastOpenFiles": [
-    "Blockchain/Zero knowledge proof.md",
+    "給蕭詠之的講稿哦.md",
     "Blockchain/第三組的報告.md",
+    "Blockchain/Zero knowledge proof.md",
     "Calendar.md",
     "CRMS.md",
     "README.md",
@@ -227,7 +217,6 @@
     "pekoFLAG/今天晚餐吃什麼？.md",
     "OS/OS_110_CH3.md",
     "OS/OS_110_CH4.md",
-    "OS/OS_110_CH2.md",
     "ML",
     "Computer Network/Final.pdf",
     "Image/Pasted image 20230924235443.png",
