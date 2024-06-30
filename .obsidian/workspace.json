@@ -18,19 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "06b6e7ca333f2e1a",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.5"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -188,7 +177,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "06b6e7ca333f2e1a",
+  "active": "0633bd883123d5a4",
   "lastOpenFiles": [
     "給蕭詠之的講稿哦.md",
     "Blockchain/第三組的報告.md",
