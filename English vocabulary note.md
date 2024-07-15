@@ -22,3 +22,6 @@
 | toggle      | 切換                    |
 | squishy     | 軟軟的                   |
 | inflation   | 通貨膨脹                  |
+| allergen    | 過敏原                   |
+| sneeze      | 噴嚏                    |
+|             |                       |
