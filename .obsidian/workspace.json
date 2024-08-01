@@ -18,19 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "340defb16c4290fb",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.7"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -187,7 +176,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "340defb16c4290fb",
+  "active": "f443422b333bfd57",
   "lastOpenFiles": [
     "CRMS.md",
     "English vocabulary note.md",
