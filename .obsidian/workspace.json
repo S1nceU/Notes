@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BLADDER.md",
+                "file": "English vocabulary note.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BLADDER.md",
+                "file": "English vocabulary note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BLADDER.md",
+                "file": "English vocabulary note.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BLADDER.md"
+                "file": "English vocabulary note.md"
               }
             }
           },
@@ -163,7 +163,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 236.5
+    "width": 236.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -178,13 +179,15 @@
   },
   "active": "f443422b333bfd57",
   "lastOpenFiles": [
+    "給蕭詠之的講稿哦.md",
+    "問都給你問_ENG.md",
+    "問都給你問_英文小教室.md",
+    "BLADDER.md",
     "CRMS.md",
     "English vocabulary note.md",
-    "BLADDER.md",
     "README.md",
     "DBS/英文小教室.md",
     "Cloud Compute/我想學點不一樣的.md",
-    "給蕭詠之的講稿哦.md",
     "Blockchain/第三組的報告.md",
     "Blockchain/Zero knowledge proof.md",
     "人生好難.md",
@@ -214,8 +217,6 @@
     "Line貼圖小偷",
     "pekoFLAG/花生省模術.md",
     "pekoFLAG/花生省反術.md",
-    "pekoFLAG/忘記密碼惹.md",
-    "pekoFLAG/今天晚餐吃什麼？.md",
     "ML",
     "Computer Network/Final.pdf",
     "Image/Pasted image 20230924235443.png",

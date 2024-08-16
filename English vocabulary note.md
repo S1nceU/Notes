@@ -24,7 +24,7 @@
 | inflation   | 通貨膨脹                  |
 | allergen    | 過敏原                   |
 | sneeze      | 噴嚏                    |
-|             |                       |
+| inventory   | 存貨                    |
 |             |                       |
 |             |                       |
 |             |                       |
