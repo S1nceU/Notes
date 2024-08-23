@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "690c2b4523a199f3",
+        "id": "d91a710f1cb7639a",
         "type": "tabs",
         "children": [
           {
-            "id": "f443422b333bfd57",
+            "id": "16ec844e2c6f836c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BLADDER.md",
+                "file": "Bladder/BLADDER.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 201.5086555480957,
-    "collapsed": true
+    "width": 201.5086555480957
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BLADDER.md",
+                "file": "Bladder/BLADDER.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BLADDER.md",
+                "file": "Bladder/BLADDER.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BLADDER.md"
+                "file": "Bladder/BLADDER.md"
               }
             }
           },
@@ -177,13 +176,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f443422b333bfd57",
+  "active": "16ec844e2c6f836c",
   "lastOpenFiles": [
+    "Bladder/20240816 ref gene BG32.md",
+    "Bladder/BLADDER.md",
+    "Bladder/20230816.md",
+    "Bladder/20240730.md",
+    "Bladder",
     "English vocabulary note.md",
     "給蕭詠之的講稿哦.md",
     "問都給你問_ENG.md",
     "問都給你問_英文小教室.md",
-    "BLADDER.md",
     "CRMS.md",
     "README.md",
     "DBS/英文小教室.md",
@@ -213,12 +216,8 @@
     "我要下載澀澀的東西.md",
     "PDF/Zero knowledge proof.pdf",
     "Line貼圖小偷/雛形.md",
-    "pekoFLAG/笑你不敢.md",
     "Line貼圖小偷",
-    "pekoFLAG/花生省模術.md",
-    "pekoFLAG/花生省反術.md",
     "ML",
-    "Computer Network/Final.pdf",
     "Image/Pasted image 20230924235443.png",
     "Image/Pasted image 20230924234827.png",
     "Image/Pasted image 20230924221258.png",
