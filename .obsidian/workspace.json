@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "d91a710f1cb7639a",
+        "id": "9a138ef9216e228c",
         "type": "tabs",
         "children": [
           {
-            "id": "16ec844e2c6f836c",
+            "id": "a2475fc1f077e301",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ML/Semi-supervised.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ba07c8eaff57d09a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Big Data Mining/HW0.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Big Data Mining/HW0.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Big Data Mining/HW0.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Big Data Mining/HW0.md"
-              }
+              "state": {}
             }
           },
           {
@@ -189,15 +168,24 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ba07c8eaff57d09a",
+  "active": "a2475fc1f077e301",
   "lastOpenFiles": [
-    "Big Data Mining/attachments/Pasted image 20241016232947.png",
-    "Big Data Mining/attachments/Pasted image 20241016232944.png",
-    "Big Data Mining/attachments/Pasted image 20241016232913.png",
-    "Big Data Mining/attachments/Pasted image 20241016232557.png",
+    "Big Data Mining/HW0.md",
+    "Big Data Mining/attachments/Pasted image 20241017001824.png",
+    "Big Data Mining/attachments/Pasted image 20241017001753.png",
+    "Big Data Mining/attachments/Pasted image 20241017000129.png",
+    "Big Data Mining/pdf/HW0.pdf",
+    "Big Data Mining/pdf",
+    "Big Data Mining/新增資料夾",
+    "Big Data Mining/attachments/Pasted image 20241016235753.png",
+    "Big Data Mining/attachments/Pasted image 20241016235650.png",
+    "Big Data Mining/attachments/Pasted image 20241016235602.png",
+    "Big Data Mining/attachments/Pasted image 20241016235209.png",
+    "Big Data Mining/attachments/Pasted image 20241016235159.png",
+    "Big Data Mining/attachments/Pasted image 20241016235146.png",
+    "Big Data Mining/attachments/Pasted image 20241016235025.png",
     "Big Data Mining/attachments",
     "ML/Semi-supervised.md",
-    "Big Data Mining/HW0.md",
     "Big Data Mining",
     "Line貼圖小偷/雛形.md",
     "Bladder/20240816 ref gene BG32.md",
@@ -219,10 +207,6 @@
     "大專生研究計畫.pdf",
     "租屋補助.md",
     "PDF/租屋補助.pdf",
-    "attachments/Pasted image 20240527211226.png",
-    "attachments/Pasted image 20240527211120.png",
-    "attachments/Pasted image 20240527211104.png",
-    "attachments/Pasted image 20240527211051.png",
     "attachments",
     "簡歷.md",
     "簡麗.md",
@@ -230,12 +214,6 @@
     "Template/Basic Properties.md",
     "Template",
     "Computer Network/Computer Network.md",
-    "Computer Algorithm/CA_3_8.md",
-    "Blockchain/LN_109590009_0306.pdf",
-    "PDF/簡歷.pdf",
-    "PDF/Zero knowledge proof.pdf",
-    "Image/Pasted image 20230924235443.png",
-    "Image/Pasted image 20230924234827.png",
-    "Image/Pasted image 20230924221258.png"
+    "Computer Algorithm/CA_3_8.md"
   ]
 }
