@@ -4,19 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "9a138ef9216e228c",
+        "id": "3c7c72d0ab00b146",
         "type": "tabs",
         "children": [
           {
-            "id": "a2475fc1f077e301",
+            "id": "99a8bc3925ab18ef",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "pdf",
               "state": {
-                "currentVersion": "1.7.4"
+                "file": "Big Data Mining/pdf/HW0.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.7.4"
+              "icon": "lucide-file-text",
+              "title": "HW0"
             }
           }
         ]
@@ -101,6 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Big Data Mining/pdf/HW0.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +111,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for HW0"
             }
           },
           {
@@ -119,11 +120,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Big Data Mining/pdf/HW0.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from HW0"
             }
           },
           {
@@ -144,9 +146,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "Big Data Mining/pdf/HW0.pdf"
+              },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of HW0"
             }
           },
           {
@@ -192,7 +196,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a2475fc1f077e301",
+  "active": "99a8bc3925ab18ef",
   "lastOpenFiles": [
     "Big Data Mining/HW0.md",
     "Big Data Mining/attachments/Pasted image 20241017001824.png",
