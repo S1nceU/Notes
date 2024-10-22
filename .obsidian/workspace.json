@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "3c7c72d0ab00b146",
+        "id": "6c7ddf62da555d3f",
         "type": "tabs",
         "children": [
           {
-            "id": "99a8bc3925ab18ef",
+            "id": "6ff35c61bda8530b",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Big Data Mining/pdf/HW0.pdf"
+                "file": "Paper/DNA methylation markers for kidney func- tion and progression of diabetic kidney disease.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "HW0"
+              "icon": "lucide-file",
+              "title": "DNA methylation markers for kidney func- tion and progression of diabetic kidney disease"
             }
           }
         ]
@@ -50,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:Methylation",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +87,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 201.5086555480957
+    "width": 351.5026054382324,
+    "collapsed": true
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -178,7 +181,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -196,13 +199,25 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "99a8bc3925ab18ef",
+  "active": "6ff35c61bda8530b",
   "lastOpenFiles": [
+    "Paper/DNA methylation markers for kidney func- tion and progression of diabetic kidney disease.md",
+    "Paper/Jounal/Nature communications.md",
+    "MULTIDISCIPLINARY.md",
+    "Paper/Publisher/Nature Portfolio.md",
+    "Paper/Jounal",
+    "Paper/Publisher",
+    "AI/AI_12_02.md",
+    "Untitled.canvas",
+    "Bladder/20230816.md",
+    "Bladder/BLADDER.md",
+    "人生好難.md",
+    "Big Data Mining/pdf/HW0.pdf",
+    "Paper",
     "Big Data Mining/HW0.md",
     "Big Data Mining/attachments/Pasted image 20241017001824.png",
     "Big Data Mining/attachments/Pasted image 20241017001753.png",
     "Big Data Mining/attachments/Pasted image 20241017000129.png",
-    "Big Data Mining/pdf/HW0.pdf",
     "Big Data Mining/pdf",
     "Big Data Mining/新增資料夾",
     "Big Data Mining/attachments/Pasted image 20241016235753.png",
@@ -217,8 +232,6 @@
     "Big Data Mining",
     "Line貼圖小偷/雛形.md",
     "Bladder/20240816 ref gene BG32.md",
-    "Bladder/BLADDER.md",
-    "Bladder/20230816.md",
     "Bladder/20240730.md",
     "Bladder",
     "English vocabulary note.md",
@@ -231,17 +244,9 @@
     "Cloud Compute/我想學點不一樣的.md",
     "Blockchain/第三組的報告.md",
     "Blockchain/Zero knowledge proof.md",
-    "人生好難.md",
     "大專生研究計畫.pdf",
     "租屋補助.md",
-    "PDF/租屋補助.pdf",
-    "attachments",
     "簡歷.md",
-    "簡麗.md",
-    "Template/Callout notice.md",
-    "Template/Basic Properties.md",
-    "Template",
-    "Computer Network/Computer Network.md",
-    "Computer Algorithm/CA_3_8.md"
+    "簡麗.md"
   ]
 }
