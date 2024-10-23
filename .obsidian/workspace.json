@@ -87,8 +87,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 351.5026054382324,
-    "collapsed": true
+    "width": 351.5026054382324
   },
   "right": {
     "id": "ac5fc7a3eb59f0f3",
@@ -201,14 +200,20 @@
   },
   "active": "6ff35c61bda8530b",
   "lastOpenFiles": [
+    "Paper/Disease/腎小管過濾率.md",
     "Paper/DNA methylation markers for kidney func- tion and progression of diabetic kidney disease.md",
+    "Paper/Disease/腎功能衰竭.md",
+    "Untitled.canvas",
+    "Paper/Disease",
+    "Paper/attachments/Pasted image 20241023225318.png",
+    "Paper/attachments/Pasted image 20241023225311.png",
+    "Paper/attachments",
     "Paper/Jounal/Nature communications.md",
     "MULTIDISCIPLINARY.md",
     "Paper/Publisher/Nature Portfolio.md",
     "Paper/Jounal",
     "Paper/Publisher",
     "AI/AI_12_02.md",
-    "Untitled.canvas",
     "Bladder/20230816.md",
     "Bladder/BLADDER.md",
     "人生好難.md",
@@ -225,15 +230,12 @@
     "Big Data Mining/attachments/Pasted image 20241016235602.png",
     "Big Data Mining/attachments/Pasted image 20241016235209.png",
     "Big Data Mining/attachments/Pasted image 20241016235159.png",
-    "Big Data Mining/attachments/Pasted image 20241016235146.png",
-    "Big Data Mining/attachments/Pasted image 20241016235025.png",
     "Big Data Mining/attachments",
     "ML/Semi-supervised.md",
     "Big Data Mining",
     "Line貼圖小偷/雛形.md",
     "Bladder/20240816 ref gene BG32.md",
     "Bladder/20240730.md",
-    "Bladder",
     "English vocabulary note.md",
     "給蕭詠之的講稿哦.md",
     "問都給你問_ENG.md",
@@ -244,9 +246,6 @@
     "Cloud Compute/我想學點不一樣的.md",
     "Blockchain/第三組的報告.md",
     "Blockchain/Zero knowledge proof.md",
-    "大專生研究計畫.pdf",
-    "租屋補助.md",
-    "簡歷.md",
-    "簡麗.md"
+    "租屋補助.md"
   ]
 }
