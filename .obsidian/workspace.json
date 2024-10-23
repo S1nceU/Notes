@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "fa619d751ee7180c",
+        "id": "42ce17e6be1e26b4",
         "type": "tabs",
         "children": [
           {
@@ -200,25 +200,29 @@
   },
   "active": "a566c3fe95d0338f",
   "lastOpenFiles": [
-    "Paper/Abbreviation/ESKD.md",
-    "Paper/DNA methylation markers for kidney func- tion and progression of diabetic kidney disease.md",
-    "Paper/Abbreviation/DKD.md",
-    "Paper/attachments/Pasted image 20241023225311.png",
-    "Paper/Abbreviation/GFR.md",
-    "Paper/Gene/TXNIP.md",
-    "Paper/Gene/RFTN1.md",
-    "Paper/Gene/ITGB2.md",
-    "Paper/Gene/CTSB.md",
-    "Paper/Gene/ANXA1.md",
-    "Paper/Untitled",
+    "Template/Callout notice.md",
     "Paper/Jounal/Nature communications.md",
+    "Paper/Publisher/Nature Portfolio.md",
+    "Template/Jounal Properties.md",
+    "Paper/Gene/ANXA1.md",
+    "Template/Abbreviation.md",
+    "Paper/Abbreviation/DKD.md",
+    "Paper/Abbreviation/ESKD.md",
+    "Paper/Abbreviation/GFR.md",
+    "Template/Gene Direction.md",
+    "Paper/Gene/ITGB2.md",
+    "Paper/Gene/RFTN1.md",
+    "Paper/Gene/TXNIP.md",
+    "Paper/Gene/CTSB.md",
+    "Paper/DNA methylation markers for kidney func- tion and progression of diabetic kidney disease.md",
+    "Paper/attachments/Pasted image 20241023225311.png",
+    "Paper/Untitled",
     "Paper/Gene",
     "Untitled.canvas",
     "Paper/Abbreviation",
     "Paper/attachments/Pasted image 20241023225318.png",
     "Paper/attachments",
     "MULTIDISCIPLINARY.md",
-    "Paper/Publisher/Nature Portfolio.md",
     "Paper/Jounal",
     "Paper/Publisher",
     "AI/AI_12_02.md",
@@ -242,9 +246,6 @@
     "Line貼圖小偷/雛形.md",
     "Bladder/20240816 ref gene BG32.md",
     "Bladder/20240730.md",
-    "English vocabulary note.md",
-    "給蕭詠之的講稿哦.md",
-    "問都給你問_ENG.md",
-    "問都給你問_英文小教室.md"
+    "English vocabulary note.md"
   ]
 }
