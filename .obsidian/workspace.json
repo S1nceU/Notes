@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6c7ddf62da555d3f",
+        "id": "fa619d751ee7180c",
         "type": "tabs",
         "children": [
           {
-            "id": "6ff35c61bda8530b",
+            "id": "a566c3fe95d0338f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:Methylation",
+                "query": "GFR",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -198,17 +198,25 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6ff35c61bda8530b",
+  "active": "a566c3fe95d0338f",
   "lastOpenFiles": [
-    "Paper/Disease/腎小管過濾率.md",
+    "Paper/Abbreviation/ESKD.md",
     "Paper/DNA methylation markers for kidney func- tion and progression of diabetic kidney disease.md",
-    "Paper/Disease/腎功能衰竭.md",
-    "Untitled.canvas",
-    "Paper/Disease",
-    "Paper/attachments/Pasted image 20241023225318.png",
+    "Paper/Abbreviation/DKD.md",
     "Paper/attachments/Pasted image 20241023225311.png",
-    "Paper/attachments",
+    "Paper/Abbreviation/GFR.md",
+    "Paper/Gene/TXNIP.md",
+    "Paper/Gene/RFTN1.md",
+    "Paper/Gene/ITGB2.md",
+    "Paper/Gene/CTSB.md",
+    "Paper/Gene/ANXA1.md",
+    "Paper/Untitled",
     "Paper/Jounal/Nature communications.md",
+    "Paper/Gene",
+    "Untitled.canvas",
+    "Paper/Abbreviation",
+    "Paper/attachments/Pasted image 20241023225318.png",
+    "Paper/attachments",
     "MULTIDISCIPLINARY.md",
     "Paper/Publisher/Nature Portfolio.md",
     "Paper/Jounal",
@@ -230,22 +238,13 @@
     "Big Data Mining/attachments/Pasted image 20241016235602.png",
     "Big Data Mining/attachments/Pasted image 20241016235209.png",
     "Big Data Mining/attachments/Pasted image 20241016235159.png",
-    "Big Data Mining/attachments",
     "ML/Semi-supervised.md",
-    "Big Data Mining",
     "Line貼圖小偷/雛形.md",
     "Bladder/20240816 ref gene BG32.md",
     "Bladder/20240730.md",
     "English vocabulary note.md",
     "給蕭詠之的講稿哦.md",
     "問都給你問_ENG.md",
-    "問都給你問_英文小教室.md",
-    "CRMS.md",
-    "README.md",
-    "DBS/英文小教室.md",
-    "Cloud Compute/我想學點不一樣的.md",
-    "Blockchain/第三組的報告.md",
-    "Blockchain/Zero knowledge proof.md",
-    "租屋補助.md"
+    "問都給你問_英文小教室.md"
   ]
 }
