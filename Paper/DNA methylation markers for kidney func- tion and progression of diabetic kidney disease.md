@@ -17,17 +17,25 @@ tags:
 ## Method
 - 他們所用的甲基化分析套件為 R 的 RnBeads，得到甲基化資料
 
- - 使用 PCA 對資料降維，在表 6 中有詳細的條件二分化變數 
+ - 使用 PCA 對甲基化中CpG位點降維，得到幾個主成分PCs，而透過這些主成分預測二分化變數的結果(補充表 6)，作者有嘗試了L2正規化的邏輯回歸、SVM、RF等分類模型，結果大致相同
+	 - 連結：[DKD EWAS AND PREDICTION MODELS](https://hkdbrmlab.shinyapps.io/DKD_EWAS/) ![[Pasted image 20241024224740.png]]
 
-- eGFR 的計算方法是用 Chronic Kidney Disease Epidemiology Collaboration ( CKD-EPI ) 所計算
+- eGFR 的計算方法是用 Chronic Kidney Disease Epidemiology Collaboration ( [[CKD-EPI]] ) 所計算
 	- 而 baseline eGFR 是當下也是初始的 eGFR，以便與後續的 eGFR 做比較，單位 $ml/min/1.73m^2$
 	- eGFR slope 是一個變化速率，單位 $eGFR / one year$
 	- 公式：
-		- $log(eGFR_{ij}) = \beta_0 + \beta_1t_{ij} + b_{0i} + b_{1i}t_{ij} + \epsilon_{ij}$
-			- 第 i 個參與者，第 j 次的測量
-			- $\beta_0$：表示所有患者在 t = 0 的平均 eGFR 對數值
-			- $\beta_1t_{ij}$：$t_{ij}$ 對所有患者eGFR影響的平均變化率
-			- $b_{0i}$：每個患者
+		- 混和效應模型
+			- $log(eGFR_{ij}) = \beta_0 + \beta_1t_{ij} + b_{0i} + b_{1i}t_{ij} + \epsilon_{ij}$
+				- 第 i 個參與者，第 j 次的測量
+				- $\beta_0$：表示所有患者在 t = 0 的平均 eGFR 對數值
+				- $\beta_1t_{ij}$：$t_{ij}$ 對所有患者eGFR影響的平均變化率
+				- $b_{0i}$：每個患者與總體平均截距之間的差異
+				- $b_{1i}t_{ij}$：每個參與者的eGFR隨時間變化的個體特定速率
+		- 斜率
+			- $(eGFR\ slope)_i = (e^{\beta_{1} + b_{1i}} - 1) * 100$
+
+- 他們將每個CpG位點建構一個線性模型
+
 - 單一位點分析
 
 
