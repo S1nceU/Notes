@@ -15,6 +15,21 @@ tags:
 - CpG 甲基化水平可以預測 eGFR 隨著時間的推移而下降，所以使用 eGFR 的成長斜率建構模型
 
 ## Method
+- 他們所用的甲基化分析套件為 R 的 RnBeads，得到甲基化資料
+
+ - 使用 PCA 對資料降維，在表 6 中有詳細的條件二分化變數 
+
+- eGFR 的計算方法是用 Chronic Kidney Disease Epidemiology Collaboration ( CKD-EPI ) 所計算
+	- 而 baseline eGFR 是當下也是初始的 eGFR，以便與後續的 eGFR 做比較，單位 $ml/min/1.73m^2$
+	- eGFR slope 是一個變化速率，單位 $eGFR / one year$
+	- 公式：
+		- $log(eGFR_{ij}) = \beta_0 + \beta_1t_{ij} + b_{0i} + b_{1i}t_{ij} + \epsilon_{ij}$
+			- 第 i 個參與者，第 j 次的測量
+			- $\beta_0$：表示所有患者在 t = 0 的平均 eGFR 對數值
+			- $\beta_1t_{ij}$：$t_{ij}$ 對所有患者eGFR影響的平均變化率
+			- $b_{0i}$：每個患者
+- 單一位點分析
+
 
 - 以往單一位點研究兩個問題
 	- 一個是有一些 CpG 點位雖沒有強烈關係，卻能補充其他位點來解釋殘餘的腎臟功能差異。而這些位點無法透過單一個位點去分別出來
