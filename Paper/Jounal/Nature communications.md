@@ -4,7 +4,7 @@ Edition: SCIE
 Category: MULTIDISCIPLINARY SCIENCES
 ---
 ## Papers
-+ [[DNA methylation markers for kidney func- tion and progression of diabetic kidney disease]]
++ [[DNA methylation markers for kidney function and progression of diabetic kidney disease]]
 
 ## Journal's performance 
 + Impact Factor : 14.7 (2023)

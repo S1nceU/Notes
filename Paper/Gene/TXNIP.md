@@ -3,4 +3,4 @@ Directions：這個基因與糖尿病腎病（[[DKD]]）的發病機制有關，
 Links：
 - GeneCards：[TXNIP Gene - GeneCards | TXNIP Protein | TXNIP Antibody](https://www.genecards.org/cgi-bin/carddisp.pl?gene=TXNIP)
 - Notes Reference：
-	- [[DNA methylation markers for kidney func- tion and progression of diabetic kidney disease]]
+	- [[DNA methylation markers for kidney function and progression of diabetic kidney disease]]

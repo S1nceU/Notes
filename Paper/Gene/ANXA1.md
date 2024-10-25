@@ -3,4 +3,4 @@ Directions：編碼一種具有抗發炎活性的膜定位蛋白，在 [[DKD]] �
 Links：
 - GeneCards：[ANXA1 Gene - GeneCards | ANXA1 Protein | ANXA1 Antibody](https://www.genecards.org/cgi-bin/carddisp.pl?gene=ANXA1
 - Notes Reference：
-	- [[DNA methylation markers for kidney func- tion and progression of diabetic kidney disease]]
+	- [[DNA methylation markers for kidney function and progression of diabetic kidney disease]]
