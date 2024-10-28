@@ -27,7 +27,6 @@ tags:
 	- 在4b的圖中可以觀察到性別、年齡、吸菸與eGFR相關性不高，可說明它們對腎功能的影響較為間接或不穩定
 	- 在圖4a中，甲基化與腎臟功能一定的相關性
 	- 而最後甲基化加入臨床變數後並沒有改善模型的表現，這可以表達在甲基化已經捕捉了很大一部份性別、年齡、吸菸的關係了，所以沒有變得更好，則可能因為多加了許多冗餘資料則使相關變低![[Pasted image 20241023225318.png]]
-	 - 連結：[DKD EWAS AND PREDICTION MODELS](https://hkdbrmlab.shinyapps.io/DKD_EWAS/) ![[Pasted image 20241024224740.png]]
 
 - eGFR 的計算方法是用 Chronic Kidney Disease Epidemiology Collaboration ( [[CKD-EPI]] ) 所計算
 	- 而 baseline eGFR 是當下也是初始的 eGFR，以便與後續的 eGFR 做比較，單位 $ml/min/1.73m^2$
@@ -58,9 +57,15 @@ tags:
 - 以往單一位點研究兩個問題
 	- 一個是有一些 CpG 點位雖沒有強烈關係，卻能補充其他位點來解釋殘餘的腎臟功能差異。而這些位點無法透過單一個位點去分別出來
 	- 基因組有依賴性或是其他原因，單一位點可能會有強烈關係，但卻是因為依賴關係而造成冗餘，則結果在非功能的位點上
-- 多位點方法
+- 多位點分析方法
 	- 所以他們開發了方法，多位點模型，可同時考慮所有 CpG 位點，並選擇一個子集建立模型，推斷 eGFR 的情況
-	- 使用 LASSO 建構迴歸模型
+	- 使用 LASSO 建構迴歸模型，目的在保留最具影響力的 CpG 位點
+	- 透過交叉驗證評估模型的穩定性
+	- 使用 BIC 選擇 CpG 位點集合，在模型複雜度和性能間取得平衡
+
+	- 將所有樣本先分為 9:1，再將訓練集分成 10 個子集做 10 fold cross-validation，以 LASSO 建構線性回歸模型，並用網格搜尋選擇每個資料集巢式 5 fold cross-validation 的正規化參數值
+	- 連結：[DKD EWAS AND PREDICTION MODELS](https://hkdbrmlab.shinyapps.io/DKD_EWAS/) ![[Pasted image 20241024224740.png]]
+
 
 
 ## Result
