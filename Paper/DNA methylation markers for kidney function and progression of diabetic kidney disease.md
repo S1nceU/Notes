@@ -64,7 +64,9 @@ tags:
 	- 使用 BIC 選擇 CpG 位點集合，在模型複雜度和性能間取得平衡
 
 	- 將所有樣本先分為 9:1，再將訓練集分成 10 個子集，每個子集做 10 fold cross-validation，以 LASSO 建構線性回歸模型，並用網格搜尋選擇每個資料集巢式 5 fold cross-validation 的正規化參數值
-	- 連結：[DKD EWAS AND PREDICTION MODELS](https://hkdbrmlab.shinyapps.io/DKD_EWAS/) ![[Pasted image 20241024224740.png]]
+		- 正規化參數 $\alpha$
+			- 作者使用 LASSO 回歸模型挑選數個 CpG 位點，
+		- 連結：[DKD EWAS AND PREDICTION MODELS](https://hkdbrmlab.shinyapps.io/DKD_EWAS/) ![[Pasted image 20241024224740.png]]
 
 
 
