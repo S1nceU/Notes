@@ -7,7 +7,6 @@
 	- $110101$
 	- ooooxo
 	- $Hamming \ distance = 5$
-
 #### Jaccard similarities 
 - 兩集合交集和聯集的比例
 - $Jaccard \ similarities = \frac{|A \cap B|}{|A \cup B|}$
@@ -19,7 +18,6 @@
 - $Jaccard \ distance = 1 - Jaccard \ similarities$
 - Example 
 	- $Jaccard dis = 1 - 0.6 = 0.4$
-
 #### Cosine similarities
 - 反映兩向量之間角度關係
 - $Cosine \ similarities = \frac{\Sigma_{i=1}^{n}A_iB_i}{\sqrt{\Sigma_{n=1}^{n}A_{i}^{2}}\sqrt{\Sigma_{n=1}^{n}B_{i}^{2}}}$
@@ -38,7 +36,6 @@
 ### Clustering
 #### K-means vs. Hierarchical Agglomerative Clustering
 - K-means 只需在每階段計算每一個點至重心的距離，階層式分群需在每階段都計算群與群的距離，在計算量而言，K-means 會有更好的效率
-
 #### K-means
 - 重複分配以及更新直至收斂
 	- 隨機選擇 **k** 個初始重心
@@ -61,7 +58,6 @@
 - 將高維資料降維
 - 用於資料降維和去除雜訊
 - 保留重要特徵
-
 ### TF-IDF
 - $TF = \frac{出現次數}{文件總詞數}$
 - $IDF = \log \frac{文章數}{包含詞的文章數}$
