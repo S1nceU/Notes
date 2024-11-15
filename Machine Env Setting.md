@@ -64,3 +64,5 @@ CUDA_DEVICE_ORDER="PCI_BUS_ID" PYTORCH_NVML_BASED_CUDA_CHECK=1 CUDA_VISIBLE_DEVI
 CUDA_DEVICE_ORDER="PCI_BUS_ID" CUDA_VISIBLE_DEVICES=0,1,2,3 python -c "from accelerate import Accelerator;import torch;print(torch.cuda.is_available());"
 
 ```
+
+- print(torch.cuda.is_available()
