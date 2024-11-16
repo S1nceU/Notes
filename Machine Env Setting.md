@@ -50,7 +50,7 @@ export PATH=/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export CUDNN_INCLUDE_DIR=/usr/include
 export CUDNN_LIB_DIR=/usr/lib/x86_64-linux-gnu
-export LD_LIBRARY_PATH=\$CUDNN_LIB_DIR:\$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$CUDNN_LIB_DIR:$LD_LIBRARY_PATH
 
 export LD_LIBRARY_PATH=/usr/local/cuda-12.4/lib64:
                        /usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
