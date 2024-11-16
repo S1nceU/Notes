@@ -51,6 +51,9 @@ export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export CUDNN_INCLUDE_DIR=/usr/include
 export CUDNN_LIB_DIR=/usr/lib/x86_64-linux-gnu
 export LD_LIBRARY_PATH=\$CUDNN_LIB_DIR:\$LD_LIBRARY_PATH
+
+export LD_LIBRARY_PATH=/usr/local/cuda-12.4/lib64:
+                       /usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
 ```
 
 
@@ -65,4 +68,4 @@ CUDA_DEVICE_ORDER="PCI_BUS_ID" CUDA_VISIBLE_DEVICES=0,1,2,3 python -c "from acce
 
 ```
 
-- print(torch.cuda.is_available()
+- print(torch.cuda.is_available())
