@@ -31,7 +31,7 @@
 		+ 下載指定的 Java 版本
 		+ 下載指定的 Spark，並且解壓縮到 Documents 下
 		+ 將各環境變數設置![[Pasted image 20241016234507.png|500]]
-		+ 執行 spark-class org.apache.spark.deply.worker.Worker spark://192.168.18.5:7077 ![[Pasted image 20241016234812.png|500]]
+		+ 執行 spark-class org.apache.spark.deploy.worker.Worker spark://192.168.18.11:7077 ![[Pasted image 20241016234812.png|500]]
 		+ 網頁畫面![[Pasted image 20241016234930.png|600]]
 		+ 並且能夠在 Master 上的網頁看到 Worker 的資訊![[Pasted image 20241016235025.png|500]]
 
