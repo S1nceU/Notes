@@ -7,7 +7,7 @@
 		+ PySpark : 3.5.3
 		+ Pandas : 2.2.3
 	- 執行指令 spark-class org.apache.spark.deploy.master.Master，並打開 URL
-		- 指令結果![[Pasted image 20241016233327.png|600]]
+		- 指令結果![[Pasted image 20241119181843.png|600]]
 2. **Ubuntu**
 	+ 環境版本
 		+ Memory : 8GB
@@ -15,7 +15,7 @@
 		+ Java : 17.0.12
 		+ Python : 3.10.12
 		+ Spark : 3.5.3
-	+ 執行 spark-class org.apache.spark.deply.worker.Worker spark://192.168.18.5:7077 
+	+ 執行 spark-class org.apache.spark.deply.worker.Worker spark://192.168.18.11:7077 
 ### 資料夾結構
 - homework2.py
 - Data
@@ -29,7 +29,9 @@
 ![[Pasted image 20241118153127.png|600]]
 ![[Pasted image 20241118153154.png|600]]
 ### 輸出結果
-+ 執行 spark-submit --master spark://192.168.18.5:7077 --conf spark.driver.host=192.168.18.5 homework1.py
++ 執行 spark-submit --master spark://192.168.18.11:7077 --conf spark.driver.host=192.168.18.11 homework2.py
+#### Spark Master Web
+![[Pasted image 20241119181731.png|800]]
 #### 第一題
 - Words frequency
 ##### Total word frequency
