@@ -66,7 +66,7 @@ tags:
 			- 這個值表示 LASSO 在該參數設置下的解釋能力
 			- 在 $\alpha$ 越大時，模型只會保留少數重要特徵，達到**特徵選擇**的效果
 			- 在太小時，會包含太多特徵，容易 overfitting，則太大時，模型可能過於簡單，解釋能力不足
-			- 
+
 			- 在選取 $\alpha$ 值時，作者通過嵌套五折交叉驗證來確定最佳的 $\alpha$ 值，以平衡模型的解釋能力和簡潔性。用最大值減掉標準差的方法
 			- $\alpha^* = max\{\alpha \in D\ |\ R^2_{\alpha} \ge max(R^2) - Standard(R^2)\}$
 		- 連結：[DKD EWAS AND PREDICTION MODELS](https://hkdbrmlab.shinyapps.io/DKD_EWAS/) ![[Pasted image 20241024224740.png]]
