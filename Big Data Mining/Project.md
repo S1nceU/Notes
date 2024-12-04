@@ -177,11 +177,93 @@ lymphadenopathy       0.84      0.97      0.90        39
 
 INFO:__main__:{'F1': {'omittable': 0.9501661129568106, 'measure': 0.9479768786127167, 'extension': 0.7857142857142856, 'atelectasis': 0.5142857142857143, 'satellite': 0.6792452830188679, 'lymphadenopathy': 0.9047619047619048, 'pleural': 0.9189189189189189, 'distant': 0.8461538461538461, 'Overall': 0.8843537414965987}, 'F2': {'omittable': 0.9558823529411764, 'measure': 0.9382151029748282, 'extension': 0.7534246575342466, 'atelectasis': 0.4736842105263158, 'satellite': 0.6293706293706293, 'lymphadenopathy': 0.945273631840796, 'pleural': 0.8762886597938145, 'distant': 0.8461538461538461, 'Overall': 0.8736559139784947}}
 ```
-## Microsoft BERT
-
-
 ## BioClinical BERT
+```
+INFO:__main__:F1 Scores:
+INFO:__main__:omittable: 0.9265
+INFO:__main__:measure: 0.9059
+INFO:__main__:extension: 0.8537
+INFO:__main__:atelectasis: 0.9231
+INFO:__main__:satellite: 0.7857
+INFO:__main__:lymphadenopathy: 0.9487
+INFO:__main__:pleural: 0.8732
+INFO:__main__:distant: 0.8219
+INFO:__main__:Overall: 0.8957
+INFO:__main__:F2 Scores:
+INFO:__main__:omittable: 0.9539
+INFO:__main__:measure: 0.8871
+INFO:__main__:extension: 0.8065
+INFO:__main__:atelectasis: 0.9091
+INFO:__main__:satellite: 0.7534
+INFO:__main__:lymphadenopathy: 0.9487
+INFO:__main__:pleural: 0.8115
+INFO:__main__:distant: 0.7895
+INFO:__main__:Overall: 0.8849
+INFO:__main__:Classification Report:
+INFO:__main__:
+                 precision    recall  f1-score   support
 
+      omittable       0.88      0.97      0.93       149
+        measure       0.94      0.88      0.91        88
+      extension       0.95      0.78      0.85        45
+    atelectasis       0.95      0.90      0.92        20
+      satellite       0.85      0.73      0.79        30
+lymphadenopathy       0.95      0.95      0.95        39
+        pleural       1.00      0.78      0.87        40
+        distant       0.88      0.77      0.82        39
 
+      micro avg       0.91      0.88      0.90       450
+      macro avg       0.92      0.84      0.88       450
+   weighted avg       0.92      0.88      0.89       450
+    samples avg       0.92      0.90      0.90       450
+
+INFO:__main__:{'F1': {'omittable': 0.926517571884984, 'measure': 0.9058823529411764, 'extension': 0.8536585365853658, 'atelectasis': 0.9230769230769231, 'satellite': 0.7857142857142856, 'lymphadenopathy': 0.9487179487179487, 'pleural': 0.8732394366197184, 'distant': 0.8219178082191781, 'Overall': 0.8956916099773242}, 'F2': {'omittable': 0.9539473684210527, 'measure': 0.8870967741935485, 'extension': 0.8064516129032258, 'atelectasis': 0.9090909090909091, 'satellite': 0.7534246575342466, 'lymphadenopathy': 0.9487179487179486, 'pleural': 0.8115183246073298, 'distant': 0.7894736842105264, 'Overall': 0.8848566308243729}}
+
+```
+
+```
+INFO:__main__:F1 Scores:
+INFO:__main__:omittable: 0.9385
+INFO:__main__:measure: 0.9070
+INFO:__main__:extension: 0.8409
+INFO:__main__:atelectasis: 0.7500
+INFO:__main__:satellite: 0.8077
+INFO:__main__:lymphadenopathy: 0.9367
+INFO:__main__:pleural: 0.8889
+INFO:__main__:distant: 0.8611
+INFO:__main__:Overall: 0.8973
+INFO:__main__:F2 Scores:
+INFO:__main__:omittable: 0.9590
+INFO:__main__:measure: 0.8945
+INFO:__main__:extension: 0.8296
+INFO:__main__:atelectasis: 0.6522
+INFO:__main__:satellite: 0.7394
+INFO:__main__:lymphadenopathy: 0.9439
+INFO:__main__:pleural: 0.8333
+INFO:__main__:distant: 0.8201
+INFO:__main__:Overall: 0.8827
+INFO:__main__:Classification Report:
+c:\Users\Zhe\miniconda3\envs\moead\lib\site-packages\sklearn\metrics\_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in samples with no predicted labels. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+INFO:__main__:
+                 precision    recall  f1-score   support
+
+      omittable       0.91      0.97      0.94       149
+        measure       0.93      0.89      0.91        88
+      extension       0.86      0.82      0.84        45
+    atelectasis       1.00      0.60      0.75        20
+      satellite       0.95      0.70      0.81        30
+lymphadenopathy       0.93      0.95      0.94        39
+        pleural       1.00      0.80      0.89        40
+        distant       0.94      0.79      0.86        39
+
+      micro avg       0.92      0.87      0.90       450
+      macro avg       0.94      0.82      0.87       450
+   weighted avg       0.93      0.87      0.89       450
+    samples avg       0.91      0.89      0.90       450
+
+INFO:__main__:{'F1': {'omittable': 0.9385113268608415, 'measure': 0.9069767441860465, 'extension': 0.8409090909090908, 'atelectasis': 0.7499999999999999, 'satellite': 0.8076923076923077, 'lymphadenopathy': 0.9367088607594937, 'pleural': 0.888888888888889, 'distant': 0.8611111111111112, 'Overall': 0.8972602739726027}, 'F2': {'omittable': 0.9589947089947092, 'measure': 0.8944954128440367, 'extension': 0.8295964125560538, 'atelectasis': 0.6521739130434783, 'satellite': 0.7394366197183099, 'lymphadenopathy': 0.943877551020408, 'pleural': 0.8333333333333334, 'distant': 0.8201058201058201, 'Overall': 0.8827493261455526}}
+
+```
 ## BlueBERT
 
