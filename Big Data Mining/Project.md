@@ -1,293 +1,309 @@
 ## Google Bert
 
 ```
-F1 Scores:
-	omittable: 0.9533
-	measure: 0.9195
-	extension: 0.7711
-	atelectasis: 0.5185
-	satellite: 0.7407
-	lymphadenopathy: 0.9487
-	pleural: 0.8732
-	distant: 0.7429
-	Overall: 0.8775
-F2 Scores:
-	omittable: 0.9572
-	measure: 0.9132
-	extension: 0.7339
-	atelectasis: 0.4023
-	satellite: 0.6944
-	lymphadenopathy: 0.9487
-	pleural: 0.8115
-	distant: 0.6952
-	Overall: 0.8518
+INFO:__main__:F1 Scores:
+INFO:__main__:measure: 0.8191
+INFO:__main__:extension: 0.8913
+INFO:__main__:atelectasis: 0.6452
+INFO:__main__:satellite: 0.6275
+INFO:__main__:lymphadenopathy: 0.8315
+INFO:__main__:pleural: 0.8611
+INFO:__main__:distant: 0.5862
+INFO:__main__:Overall: 0.7883
+INFO:__main__:F2 Scores:
+INFO:__main__:measure: 0.8518
+INFO:__main__:extension: 0.9031
+INFO:__main__:atelectasis: 0.5495
+INFO:__main__:satellite: 0.5674
+INFO:__main__:lymphadenopathy: 0.8981
+INFO:__main__:pleural: 0.8073
+INFO:__main__:distant: 0.4857
+INFO:__main__:Overall: 0.7716
 Classification Report:
                  precision    recall  f1-score   support
 
-      omittable       0.95      0.96      0.95       149
-        measure       0.93      0.91      0.92        88
-      extension       0.84      0.71      0.77        45
-    atelectasis       1.00      0.35      0.52        20
-      satellite       0.83      0.67      0.74        30
-lymphadenopathy       0.95      0.95      0.95        39
-        pleural       1.00      0.78      0.87        40
-        distant       0.84      0.67      0.74        39
+        measure       0.77      0.88      0.82        88
+      extension       0.87      0.91      0.89        45
+    atelectasis       0.91      0.50      0.65        20
+      satellite       0.76      0.53      0.63        30
+lymphadenopathy       0.74      0.95      0.83        39
+        pleural       0.97      0.78      0.86        40
+        distant       0.89      0.44      0.59        39
 
-      micro avg       0.92      0.84      0.88       450
-      macro avg       0.92      0.75      0.81       450
-   weighted avg       0.92      0.84      0.87       450
-    samples avg       0.89      0.86      0.87       450
+      micro avg       0.82      0.76      0.79       301
+      macro avg       0.85      0.71      0.75       301
+   weighted avg       0.83      0.76      0.78       301
+    samples avg       0.49      0.50      0.49       301
 ```
-![[Google_BERT_training_history.png|600]]
+
 ### Freeze first 6 layers
 ```
-F1 Scores:
-	omittable: 0.9360
-	measure: 0.9157
-	extension: 0.8539
-	atelectasis: 0.8000
-	satellite: 0.7547
-	lymphadenopathy: 0.9487
-	pleural: 0.9041
-	distant: 0.8116
-	Overall: 0.8953
-
-F2 Scores:
-	omittable: 0.9341
-	measure: 0.8837
-	extension: 0.8482
-	atelectasis: 0.7368
-	satellite: 0.6993
-	lymphadenopathy: 0.9487
-	pleural: 0.8549
-	distant: 0.7527
-	Overall: 0.8710
+INFO:__main__:F1 Scores:
+INFO:__main__:measure: 0.8939
+INFO:__main__:extension: 0.7907
+INFO:__main__:atelectasis: 0.0000
+INFO:__main__:satellite: 0.0000
+INFO:__main__:lymphadenopathy: 0.9014
+INFO:__main__:pleural: 0.7302
+INFO:__main__:distant: 0.5000
+INFO:__main__:Overall: 0.7265
+INFO:__main__:F2 Scores:
+INFO:__main__:measure: 0.9029
+INFO:__main__:extension: 0.7692
+INFO:__main__:atelectasis: 0.0000
+INFO:__main__:satellite: 0.0000
+INFO:__main__:lymphadenopathy: 0.8511
+INFO:__main__:pleural: 0.6284
+INFO:__main__:distant: 0.3846
+INFO:__main__:Overall: 0.6481
 
 Classification Report:
                  precision    recall  f1-score   support
 
-      omittable       0.94      0.93      0.94       149
-        measure       0.97      0.86      0.92        88
-      extension       0.86      0.84      0.85        45
-    atelectasis       0.93      0.70      0.80        20
-      satellite       0.87      0.67      0.75        30
-lymphadenopathy       0.95      0.95      0.95        39
-        pleural       1.00      0.82      0.90        40
-        distant       0.93      0.72      0.81        39
+        measure       0.88      0.91      0.89        88
+      extension       0.83      0.76      0.79        45
+    atelectasis       0.00      0.00      0.00        20
+      satellite       0.00      0.00      0.00        30
+lymphadenopathy       1.00      0.82      0.90        39
+        pleural       1.00      0.57      0.73        40
+        distant       1.00      0.33      0.50        39
 
-      micro avg       0.94      0.86      0.90       450
-      macro avg       0.93      0.81      0.87       450
-   weighted avg       0.94      0.86      0.89       450
-    samples avg       0.89      0.87      0.88       450
+      micro avg       0.91      0.60      0.73       301
+      macro avg       0.67      0.48      0.55       301
+   weighted avg       0.77      0.60      0.66       301
+    samples avg       0.42      0.40      0.41       301
 ```
-![[Google_BERT_freeze_6_training_history.png|600]]
+
 
 -------
 ## BioBERT
 ```
-F1 Scores:
-	omittable: 0.9502
-	measure: 0.9480
-	extension: 0.7857
-	atelectasis: 0.5143
-	satellite: 0.6792
-	lymphadenopathy: 0.9048
-	pleural: 0.9189
-	distant: 0.8462
-	Overall: 0.8844
-F2 Scores:
-	omittable: 0.9559
-	measure: 0.9382
-	extension: 0.7534
-	atelectasis: 0.4737
-	satellite: 0.6294
-	lymphadenopathy: 0.9453
-	pleural: 0.8763
-	distant: 0.8462
-	Overall: 0.8737
+INFO:__main__:F1 Scores:
+INFO:__main__:measure: 0.8970
+INFO:__main__:extension: 0.8636
+INFO:__main__:atelectasis: 0.7692
+INFO:__main__:satellite: 0.7719
+INFO:__main__:lymphadenopathy: 0.9600
+INFO:__main__:pleural: 0.8235
+INFO:__main__:distant: 0.7778
+INFO:__main__:Overall: 0.8546
+INFO:__main__:F2 Scores:
+INFO:__main__:measure: 0.8625
+INFO:__main__:extension: 0.8520
+INFO:__main__:atelectasis: 0.7576
+INFO:__main__:satellite: 0.7483
+INFO:__main__:lymphadenopathy: 0.9375
+INFO:__main__:pleural: 0.7447
+INFO:__main__:distant: 0.7407
+INFO:__main__:Overall: 0.8214
 	
 Classification Report:
                  precision    recall  f1-score   support
 
-      omittable       0.94      0.96      0.95       149
-        measure       0.96      0.93      0.95        88
-      extension       0.85      0.73      0.79        45
-    atelectasis       0.60      0.45      0.51        20
-      satellite       0.78      0.60      0.68        30
-lymphadenopathy       0.84      0.97      0.90        39
-        pleural       1.00      0.85      0.92        40
-        distant       0.85      0.85      0.85        39
+        measure       0.96      0.84      0.90        88
+      extension       0.88      0.84      0.86        45
+    atelectasis       0.79      0.75      0.77        20
+      satellite       0.81      0.73      0.77        30
+lymphadenopathy       1.00      0.92      0.96        39
+        pleural       1.00      0.70      0.82        40
+        distant       0.85      0.72      0.78        39
 
-      micro avg       0.90      0.87      0.88       450
-      macro avg       0.85      0.79      0.82       450
-   weighted avg       0.90      0.87      0.88       450
-    samples avg       0.90      0.90      0.89       450
+      micro avg       0.92      0.80      0.85       301
+      macro avg       0.90      0.79      0.84       301
+   weighted avg       0.92      0.80      0.85       301
+    samples avg       0.54      0.52      0.53       301
 ```
-![[Bio_BERT_training_history.png|600]]
+
 ### Freeze first 6 layers
 ```
-F1 Scores:
-	omittable: 0.9502
-	measure: 0.9480
-	extension: 0.7857
-	atelectasis: 0.5143
-	satellite: 0.6792
-	lymphadenopathy: 0.9048
-	pleural: 0.9189
-	distant: 0.8462
-	Overall: 0.8844
-F2 Scores:
-	omittable: 0.9559
-	measure: 0.9382
-	extension: 0.7534
-	atelectasis: 0.4737
-	satellite: 0.6294
-	lymphadenopathy: 0.9453
-	pleural: 0.8763
-	distant: 0.8462
-	Overall: 0.8737
+INFO:__main__:F1 Scores:
+INFO:__main__:measure: 0.8957
+INFO:__main__:extension: 0.8736
+INFO:__main__:atelectasis: 0.6875
+INFO:__main__:satellite: 0.8276
+INFO:__main__:lymphadenopathy: 0.9487
+INFO:__main__:pleural: 0.8889
+INFO:__main__:distant: 0.7813
+INFO:__main__:Overall: 0.8664
+INFO:__main__:F2 Scores:
+INFO:__main__:measure: 0.8548
+INFO:__main__:extension: 0.8559
+INFO:__main__:atelectasis: 0.5978
+INFO:__main__:satellite: 0.8108
+INFO:__main__:lymphadenopathy: 0.9487
+INFO:__main__:pleural: 0.8333
+INFO:__main__:distant: 0.6906
+INFO:__main__:Overall: 0.8236
 
 Classification Report:
                  precision    recall  f1-score   support
 
-      omittable       0.94      0.96      0.95       149
-        measure       0.96      0.93      0.95        88
-      extension       0.85      0.73      0.79        45
-    atelectasis       0.60      0.45      0.51        20
-      satellite       0.78      0.60      0.68        30
-lymphadenopathy       0.84      0.97      0.90        39
-        pleural       1.00      0.85      0.92        40
-        distant       0.85      0.85      0.85        39
+        measure       0.97      0.83      0.90        88
+      extension       0.90      0.84      0.87        45
+    atelectasis       0.92      0.55      0.69        20
+      satellite       0.86      0.80      0.83        30
+lymphadenopathy       0.95      0.95      0.95        39
+        pleural       1.00      0.80      0.89        40
+        distant       1.00      0.64      0.78        39
 
-      micro avg       0.90      0.87      0.88       450
-      macro avg       0.85      0.79      0.82       450
-   weighted avg       0.90      0.87      0.88       450
-    samples avg       0.90      0.90      0.89       450
+      micro avg       0.95      0.80      0.87       301
+      macro avg       0.94      0.77      0.84       301
+   weighted avg       0.95      0.80      0.86       301
+    samples avg       0.55      0.53      0.53       301
 ```
-![[Bio_BERT_freeze_6_training_history.png|600]]
+
 
 -------
 ## BioClinical BERT
 ```
-F1 Scores:
-	omittable: 0.9265
-	measure: 0.9059
-	extension: 0.8537
-	atelectasis: 0.9231
-	satellite: 0.7857
-	lymphadenopathy: 0.9487
-	pleural: 0.8732
-	distant: 0.8219
-	Overall: 0.8957
-F2 Scores:
-	omittable: 0.9539
-	measure: 0.8871
-	extension: 0.8065
-	atelectasis: 0.9091
-	satellite: 0.7534
-	lymphadenopathy: 0.9487
-	pleural: 0.8115
-	distant: 0.7895
-	Overall: 0.8849
+INFO:__main__:F1 Scores:
+INFO:__main__:measure: 0.9059
+INFO:__main__:extension: 0.9231
+INFO:__main__:atelectasis: 0.7647
+INFO:__main__:satellite: 0.7778
+INFO:__main__:lymphadenopathy: 0.9600
+INFO:__main__:pleural: 0.8451
+INFO:__main__:distant: 0.7879
+INFO:__main__:Overall: 0.8734
+INFO:__main__:F2 Scores:
+INFO:__main__:measure: 0.8871
+INFO:__main__:extension: 0.9292
+INFO:__main__:atelectasis: 0.6915
+INFO:__main__:satellite: 0.7292
+INFO:__main__:lymphadenopathy: 0.9375
+INFO:__main__:pleural: 0.7853
+INFO:__main__:distant: 0.7104
+INFO:__main__:Overall: 0.8367
 
 Classification Report:
                  precision    recall  f1-score   support
 
-      omittable       0.88      0.97      0.93       149
         measure       0.94      0.88      0.91        88
-      extension       0.95      0.78      0.85        45
-    atelectasis       0.95      0.90      0.92        20
-      satellite       0.85      0.73      0.79        30
-lymphadenopathy       0.95      0.95      0.95        39
-        pleural       1.00      0.78      0.87        40
-        distant       0.88      0.77      0.82        39
+      extension       0.91      0.93      0.92        45
+    atelectasis       0.93      0.65      0.76        20
+      satellite       0.88      0.70      0.78        30
+lymphadenopathy       1.00      0.92      0.96        39
+        pleural       0.97      0.75      0.85        40
+        distant       0.96      0.67      0.79        39
 
-      micro avg       0.91      0.88      0.90       450
-      macro avg       0.92      0.84      0.88       450
-   weighted avg       0.92      0.88      0.89       450
-    samples avg       0.92      0.90      0.90       450
+      micro avg       0.94      0.81      0.87       301
+      macro avg       0.94      0.79      0.85       301
+   weighted avg       0.94      0.81      0.87       301
+    samples avg       0.54      0.53      0.54       301
 ```
-![[Bio_Clinical_BERT_training_history.png|600]]
+
+### Freeze first 6 layers
 ```
-F1 Scores:
-	omittable: 0.9385
-	measure: 0.9070
-	extension: 0.8409
-	atelectasis: 0.7500
-	satellite: 0.8077
-	lymphadenopathy: 0.9367
-	pleural: 0.8889
-	distant: 0.8611
-	Overall: 0.8973
-F2 Scores:
-	omittable: 0.9590
-	measure: 0.8945
-	extension: 0.8296
-	atelectasis: 0.6522
-	satellite: 0.7394
-	lymphadenopathy: 0.9439
-	pleural: 0.8333
-	distant: 0.8201
-	Overall: 0.8827
+INFO:__main__:F1 Scores:
+INFO:__main__:measure: 0.8889
+INFO:__main__:extension: 0.8966
+INFO:__main__:atelectasis: 0.6667
+INFO:__main__:satellite: 0.7812
+INFO:__main__:lymphadenopathy: 0.9367
+INFO:__main__:pleural: 0.8406
+INFO:__main__:distant: 0.8611
+INFO:__main__:Overall: 0.8622
+INFO:__main__:F2 Scores:
+INFO:__main__:measure: 0.8451
+INFO:__main__:extension: 0.8784
+INFO:__main__:atelectasis: 0.5914
+INFO:__main__:satellite: 0.8117
+INFO:__main__:lymphadenopathy: 0.9439
+INFO:__main__:pleural: 0.7672
+INFO:__main__:distant: 0.8201
+INFO:__main__:Overall: 0.8305
 
 Classification Report:
                  precision    recall  f1-score   support
 
-      omittable       0.91      0.97      0.94       149
-        measure       0.93      0.89      0.91        88
-      extension       0.86      0.82      0.84        45
-    atelectasis       1.00      0.60      0.75        20
-      satellite       0.95      0.70      0.81        30
+        measure       0.97      0.82      0.89        88
+      extension       0.93      0.87      0.90        45
+    atelectasis       0.85      0.55      0.67        20
+      satellite       0.74      0.83      0.78        30
 lymphadenopathy       0.93      0.95      0.94        39
-        pleural       1.00      0.80      0.89        40
+        pleural       1.00      0.72      0.84        40
         distant       0.94      0.79      0.86        39
 
-      micro avg       0.92      0.87      0.90       450
-      macro avg       0.94      0.82      0.87       450
-   weighted avg       0.93      0.87      0.89       450
-    samples avg       0.91      0.89      0.90       450
+      micro avg       0.92      0.81      0.86       301
+      macro avg       0.91      0.79      0.84       301
+   weighted avg       0.93      0.81      0.86       301
+    samples avg       0.55      0.53      0.54       301
 ```
-![[Bio_Clinical_BERT_freeze_6_training_history.png|600]]
+
 
 -------
-## BlueBERT
+## BiomedBERT
 ```
-F1 Scores:
-	omittable: 0.9527
-	measure: 0.8914
-	extension: 0.7805
-	atelectasis: 0.6809
-	satellite: 0.6780
-	lymphadenopathy: 0.9487
-	pleural: 0.8732
-	distant: 0.8286
-	Overall: 0.8747
-F2 Scores:
-	omittable: 0.9489
-	measure: 0.8884
-	extension: 0.7373
-	atelectasis: 0.7477
-	satellite: 0.6711
-	lymphadenopathy: 0.9487
-	pleural: 0.8115
-	distant: 0.7754
-Overall: 0.8618
+INFO:__main__:F1 Scores:
+INFO:__main__:measure: 0.9080
+INFO:__main__:extension: 0.8315
+INFO:__main__:atelectasis: 0.7778
+INFO:__main__:satellite: 0.7333
+INFO:__main__:lymphadenopathy: 0.9231
+INFO:__main__:pleural: 0.8235
+INFO:__main__:distant: 0.7606
+INFO:__main__:Overall: 0.8438
+INFO:__main__:F2 Scores:
+INFO:__main__:measure: 0.9018
+INFO:__main__:extension: 0.8259
+INFO:__main__:atelectasis: 0.7292
+INFO:__main__:satellite: 0.7333
+INFO:__main__:lymphadenopathy: 0.9231
+INFO:__main__:pleural: 0.7447
+INFO:__main__:distant: 0.7181
+INFO:__main__:Overall: 0.8215
 
 Classification Report:
                  precision    recall  f1-score   support
 
-      omittable       0.96      0.95      0.95       149
-        measure       0.90      0.89      0.89        88
-      extension       0.86      0.71      0.78        45
-    atelectasis       0.59      0.80      0.68        20
-      satellite       0.69      0.67      0.68        30
-lymphadenopathy       0.95      0.95      0.95        39
-        pleural       1.00      0.78      0.87        40
-        distant       0.94      0.74      0.83        39
+        measure       0.92      0.90      0.91        88
+      extension       0.84      0.82      0.83        45
+    atelectasis       0.88      0.70      0.78        20
+      satellite       0.73      0.73      0.73        30
+lymphadenopathy       0.92      0.92      0.92        39
+        pleural       1.00      0.70      0.82        40
+        distant       0.84      0.69      0.76        39
 
-      micro avg       0.90      0.85      0.87       450
-      macro avg       0.86      0.81      0.83       450
-   weighted avg       0.90      0.85      0.87       450
-    samples avg       0.90      0.88      0.89       450
+      micro avg       0.88      0.81      0.84       301
+      macro avg       0.88      0.78      0.82       301
+   weighted avg       0.89      0.81      0.84       301
+    samples avg       0.56      0.53      0.54       301
 ```
-![[BlueBert_training_history.png|600]]
+
+### Freeze first 6 layers
+```
+INFO:__main__:F1 Scores:
+INFO:__main__:measure: 0.9070
+INFO:__main__:extension: 0.7961
+INFO:__main__:atelectasis: 0.8108
+INFO:__main__:satellite: 0.6897
+INFO:__main__:lymphadenopathy: 0.9487
+INFO:__main__:pleural: 0.8286
+INFO:__main__:distant: 0.8116
+INFO:__main__:Overall: 0.8450
+INFO:__main__:F2 Scores:
+INFO:__main__:measure: 0.8945
+INFO:__main__:extension: 0.8613
+INFO:__main__:atelectasis: 0.7732
+INFO:__main__:satellite: 0.6757
+INFO:__main__:lymphadenopathy: 0.9487
+INFO:__main__:pleural: 0.7632
+INFO:__main__:distant: 0.7527
+INFO:__main__:Overall: 0.8322
+
+Classification Report:
+                 precision    recall  f1-score   support
+
+        measure       0.93      0.89      0.91        88
+      extension       0.71      0.91      0.80        45
+    atelectasis       0.88      0.75      0.81        20
+      satellite       0.71      0.67      0.69        30
+lymphadenopathy       0.95      0.95      0.95        39
+        pleural       0.97      0.72      0.83        40
+        distant       0.93      0.72      0.81        39
+
+      micro avg       0.87      0.82      0.84       301
+      macro avg       0.87      0.80      0.83       301
+   weighted avg       0.88      0.82      0.84       301
+    samples avg       0.55      0.54      0.54       301
+```
