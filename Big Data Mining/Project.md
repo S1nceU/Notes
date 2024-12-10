@@ -309,3 +309,112 @@ lymphadenopathy       0.95      0.95      0.95        39
     samples avg       0.55      0.54      0.54       301
 ```
 ![[BiomedBERT_freeze_6_training_history.png]]
+
+```
+INFO:__main__:F1 Scores:
+INFO:__main__:measure: 0.9222
+INFO:__main__:extension: 0.8261
+INFO:__main__:atelectasis: 0.7429
+INFO:__main__:satellite: 0.7347
+INFO:__main__:lymphadenopathy: 0.9487
+INFO:__main__:pleural: 0.3333
+INFO:__main__:distant: 0.0500
+INFO:__main__:Overall: 0.7544
+INFO:__main__:F2 Scores:
+INFO:__main__:measure: 0.8933
+INFO:__main__:extension: 0.8370
+INFO:__main__:atelectasis: 0.6842
+INFO:__main__:satellite: 0.6475
+INFO:__main__:lymphadenopathy: 0.9487
+INFO:__main__:pleural: 0.2381
+INFO:__main__:distant: 0.0318
+INFO:__main__:Overall: 0.6799
+INFO:__main__:Classification Report:
+
+                 precision    recall  f1-score   support
+
+        measure       0.97      0.88      0.92        88
+      extension       0.81      0.84      0.83        45
+    atelectasis       0.87      0.65      0.74        20
+      satellite       0.95      0.60      0.73        30
+lymphadenopathy       0.95      0.95      0.95        39
+        pleural       1.00      0.20      0.33        40
+        distant       1.00      0.03      0.05        39
+
+      micro avg       0.92      0.64      0.75       301
+      macro avg       0.94      0.59      0.65       301
+   weighted avg       0.94      0.64      0.69       301
+    samples avg       0.43      0.41      0.42       301
+
+```
+
+```
+INFO:__main__:F1 Scores:
+INFO:__main__:measure: 0.9091
+INFO:__main__:extension: 0.8571
+INFO:__main__:atelectasis: 0.7895
+INFO:__main__:satellite: 0.7308
+INFO:__main__:lymphadenopathy: 0.9367
+INFO:__main__:pleural: 0.8649
+INFO:__main__:distant: 0.7941
+INFO:__main__:Overall: 0.8616
+INFO:__main__:F2 Scores:
+INFO:__main__:measure: 0.9091
+INFO:__main__:extension: 0.8628
+INFO:__main__:atelectasis: 0.7653
+INFO:__main__:satellite: 0.6690
+INFO:__main__:lymphadenopathy: 0.9439
+INFO:__main__:pleural: 0.8247
+INFO:__main__:distant: 0.7297
+INFO:__main__:Overall: 0.8406
+INFO:__main__:Classification Report:
+c:\Users\Zhe\miniconda3\envs\moead\lib\site-packages\sklearn\metrics\_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in samples with no predicted labels. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+c:\Users\Zhe\miniconda3\envs\moead\lib\site-packages\sklearn\metrics\_classification.py:1248: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in samples with no true labels. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+INFO:__main__:
+                 precision    recall  f1-score   support
+
+        measure       0.91      0.91      0.91        88
+      extension       0.85      0.87      0.86        45
+    atelectasis       0.83      0.75      0.79        20
+      satellite       0.86      0.63      0.73        30
+lymphadenopathy       0.93      0.95      0.94        39
+        pleural       0.94      0.80      0.86        40
+        distant       0.93      0.69      0.79        39
+
+      micro avg       0.90      0.83      0.86       301
+      macro avg       0.89      0.80      0.84       301
+   weighted avg       0.90      0.83      0.86       301
+    samples avg       0.56      0.54      0.54       301
+
+INFO:__main__:Predictions saved to Datasets/predict_csv\RadBERT_freeze_6_submission.csv
+INFO:__main__:       id  sentence_index  measure  extension  atelectasis  satellite  \
+0  147290               0        1          0            0          0   
+1  147290               1        0          0            0          0   
+2  147290               2        0          0            0          0   
+3  147290               3        0          0            0          0   
+4  241752               0        1          0            0          0   
+
+   lymphadenopathy  pleural  distant  
+0                0        0        0  
+1                0        0        0  
+2                0        0        0  
+3                0        0        0  
+4                0        0        0  
+INFO:__main__:           id  sentence_index
+0      147290               0
+1      147290               1
+2      147290               2
+3      147290               3
+4      241752               0
+..        ...             ...
+410  16572985               1
+411  16572985               2
+412  16572985               3
+413  16572985               4
+414  16572985               5
+
+[415 rows x 2 columns]
+
+```
