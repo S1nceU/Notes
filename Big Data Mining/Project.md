@@ -378,32 +378,29 @@ lymphadenopathy       0.93      0.95      0.94        39
 ```
 ### Freeze first 6 layers
 ```
-INFO:__main__:F1 Scores:
-INFO:__main__:omittable: 0.9295
-INFO:__main__:measure: 0.8966
-INFO:__main__:extension: 0.8352
-INFO:__main__:atelectasis: 0.8947
-INFO:__main__:satellite: 0.6923
-INFO:__main__:lymphadenopathy: 0.9487
-INFO:__main__:pleural: 0.8974
-INFO:__main__:distant: 0.7826
-INFO:__main__:Overall: 0.8857
-INFO:__main__:F2 Scores:
-INFO:__main__:omittable: 0.9552
-INFO:__main__:measure: 0.8904
-INFO:__main__:extension: 0.8407
-INFO:__main__:atelectasis: 0.8673
-INFO:__main__:satellite: 0.6338
-INFO:__main__:lymphadenopathy: 0.9487
-INFO:__main__:pleural: 0.8838
-INFO:__main__:distant: 0.7258
-INFO:__main__:Overall: 0.8809
-INFO:__main__:Classification Report:
-c:\Users\Zhe\miniconda3\envs\moead\lib\site-packages\sklearn\metrics\_classification.py:1248: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in samples with no predicted labels. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-c:\Users\Zhe\miniconda3\envs\moead\lib\site-packages\sklearn\metrics\_classification.py:1248: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in samples with no true labels. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-INFO:__main__:
+F1 Scores:
+	omittable: 0.9295
+	measure: 0.8966
+	extension: 0.8352
+	atelectasis: 0.8947
+	satellite: 0.6923
+	lymphadenopathy: 0.9487
+	pleural: 0.8974
+	distant: 0.7826
+	Overall: 0.8857
+F2 Scores:
+	omittable: 0.9552
+	measure: 0.8904
+	extension: 0.8407
+	atelectasis: 0.8673
+	satellite: 0.6338
+	lymphadenopathy: 0.9487
+	pleural: 0.8838
+	distant: 0.7258
+	Overall: 0.8809
+	
+Classification Report:
+
                  precision    recall  f1-score   support
 
       omittable       0.89      0.97      0.93       149
