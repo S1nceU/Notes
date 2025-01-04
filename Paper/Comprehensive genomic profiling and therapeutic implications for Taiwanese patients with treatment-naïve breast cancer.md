@@ -40,12 +40,12 @@ tags:
 	2. **TP53**（36.2%）：
 		- **HR+ HER2−**：突變頻率較低（13.8%）。
 		- **TNBC**：截短突變（truncating mutation）比例最高，占 75%。
-	1. KMT2C（9.5%）
-	2. GATA3（8.6%）
+	3. KMT2C（9.5%）
+	4. GATA3（8.6%）
 		- 該基因的突變只在非 TNBC 的組別才有
-	3. SF3B1（6.9%）
-	4. DNMT3A（5.2%）
-	5. MAP3K1（5.2%）
+	5. SF3B1（6.9%）
+	6. DNMT3A（5.2%）
+	7. MAP3K1（5.2%）
 - 透過 CNA ( Copy Number Alteration ) 分析，有以下發現
 	- **ERBB2 基因**：所有 HER2+ 樣本均檢測到基因擴增
 	- **CDK12 基因**：61.8% 的 HER2+ 樣本檢測到基因擴增
@@ -112,3 +112,12 @@ tags:
 - Treatment-naïve : 未接受治療
 - 臨床資料 : 腫瘤分期、亞型分類 ( HR、HER2-、TNBC ) 
 ### DNA 淬取以及 NGS
+- DNA 淬取
+	- 使用 QIAamp DNA FFPE Kit 從 FFPE 樣本中提取 DNA 資料
+- 
+	- 使用 NanoDrop 和 Qubit 進行質量檢測，確保資料的品質
+- 文庫建置
+	- 使用 AmpliSeq for Illumina Hotspot Panel 建構文庫，採用乳癌相關基因的熱門區塊
+### NGS Sequencing and Data Analysis
+- 使用 Illumina 進行高通量測序，產生數據
+- 
