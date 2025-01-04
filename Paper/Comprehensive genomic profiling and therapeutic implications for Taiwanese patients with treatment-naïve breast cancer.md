@@ -120,4 +120,17 @@ tags:
 	- 使用 AmpliSeq for Illumina Hotspot Panel 建構文庫，採用乳癌相關基因的熱門區塊
 ### NGS Sequencing and Data Analysis
 - 使用 Illumina 進行高通量測序，產生數據
-- 
+- 資料處理
+	- 使用 FastQC 檢查讀段質量、錯誤率、重複序列
+	- 使用 BWA-MEM 將數據 map 到 hg19 上
+	- 利用 GATK 以及 VarDict 檢測各種突變狀況，如 : SNV、small Indels、CNVs
+### 突變註解跟解釋
+- 使用 ClinVar 以及 COSMIC 解釋突變帶來的結果
+- 並由這些結果，將基因分類成三種類型
+	- T1 : 直接影響治療決策的基因，在臨床上已有實驗結果
+	- T2 : 在分析上有數據意義，具有研究價值，還需臨床的實驗結果
+	- T3 : 有突變，但可能未有數具意義，可能需要有其他研究方法支持
+### CNA Analysis
+- 使用 CNA 計算方法，計算拷貝異常數量
+- 針對拷貝數異常的基因做更多的研究分析
+- 在後面的result時，會有更多的研究分析流程
