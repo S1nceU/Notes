@@ -115,7 +115,7 @@ tags:
 - DNA 淬取
 	- 使用 QIAamp DNA FFPE Kit 從 FFPE 樣本中提取 DNA 資料
 	- 專為處理 FFPE 樣本設計的 DNA 提取工具，能有效分離 DNA，去除甲醛交聯的影響。
-- 
+- 檢測 DNA 濃度
 	- 使用 NanoDrop 和 Qubit 進行質量檢測，確保資料的品質
 - 文庫建置
 	- 使用 AmpliSeq for Illumina Hotspot Panel 建構文庫，採用乳癌相關基因的熱門區塊
@@ -153,5 +153,45 @@ tags:
 ### QIAamp DNA FFPE Kit
 - 用意
 	- 從 FFPE 樣本提取高純度的基因組 DNA
-	- 適合高靈敏度的 DNA 應用，像是該論文所用的 NGS
-- 
+	- 適合高靈敏度的 DNA 應用，像是該論文所用的 NGS 技術
+- 提取步驟
+	- 分析流程
+	![[Pasted image 20250105145246.jpg|200]]
+	- 透過脫蠟 $\rightarrow$ 裂解細胞 $\rightarrow$ 去交聯 $\rightarrow$ 得到DNA 純化 
+### NanoDrop
+- 用意
+	- 測量 DNA 濃度以及純度
+	- 檢測 NGS 的適用性
+- 透過紫外光吸收特性，測量樣本的吸光度 ( 260nm )，通過公式計算濃度
+### Qubit
+- 用意
+	- 可測量較低濃度的 DNA 濃度
+- 利用螢光染料與 DNA 結合過後，利用螢光強度計算樣本濃度，避免雜質干擾
+### AmpliSeq for Illumina Hotspot Panel
+- 用意
+	- 透過目標基因的 NGS 文庫，主要使得分析重點在相關基因上的突變熱點
+- 使用靶向擴增法，通過設計引物池進行 PCR 擴增，生成適合測序的 DNA 片段
+### Illumina 
+
+### Ion Torrent Suite
+- 用途
+	- 
+### FastQC
+
+### BWA-MEM
+
+### GATK ( Genome Analysis Toolkit )
+
+### VarDict
+
+
+
+
+
+
+
+
+
+
+
+
