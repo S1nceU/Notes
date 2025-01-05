@@ -114,6 +114,7 @@ tags:
 ### DNA 淬取以及 NGS
 - DNA 淬取
 	- 使用 QIAamp DNA FFPE Kit 從 FFPE 樣本中提取 DNA 資料
+	- 專為處理 FFPE 樣本設計的 DNA 提取工具，能有效分離 DNA，去除甲醛交聯的影響。
 - 
 	- 使用 NanoDrop 和 Qubit 進行質量檢測，確保資料的品質
 - 文庫建置
@@ -147,3 +148,10 @@ tags:
 - 數據分析方法
 	- 使用卡方檢定研究基因以及臨床特徵的相關性
 	- 比較不同人種的突變差距
+
+## Method Tools
+### QIAamp DNA FFPE Kit
+- 用意
+	- 從 FFPE 樣本提取高純度的基因組 DNA
+	- 適合高靈敏度的 DNA 應用，像是該論文所用的 NGS
+- 
