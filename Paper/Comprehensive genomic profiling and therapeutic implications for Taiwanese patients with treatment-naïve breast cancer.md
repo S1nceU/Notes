@@ -252,7 +252,7 @@ tags:
 總共有116個患者，來自於奇美醫院(CMMC)的患者，並將他們的資料左去識別化臨床資訊，像是 TNM 分期、病例報告等。
 在 FFPE 樣本的切片上，透過 IHC 的分析蛋白質表達，以專家的評估結果分析 HER2 本身的表現強度，分類為 0、1+、2+、3+，0 以及 1+ 代表陰性，3+ 代表陽性，則因為 2+ 在判斷上無法有明確的判斷，所以作者進一步使用 Ventana HER2 雙原位雜交 ( ISH ) 判定是否陽性。
 將患者的陽陰性確定後，作者將患者的組織樣本透過 QIAamp DNA FFPE tissue kit 淬取基因組 DNA，透過 Quant-iT dsDNA 測定以及 PCR 對 DNA 的表現定量，並且使用 Fragment Analyzer 以及 Qubit 檢測 DNA 的濃度。將 DNA 數據放入 Ion Chef 系統中經過處理，以便能使用 Ion Torrent 的測序芯片上。
-將樣本數據放入 NGS 定序儀當中，
+將樣本數據放入 NGS 定序儀當中，定序完後，透過 Ion Torrent Suite 將原始數據映射到 hg19 當中。使用 Torrent Variant Caller 辨識 SNV、Indel。並且使用 ClinVar 以及 COSMIC 以及 Genome aggregation database 對於每個目標基因進行註釋，以之後分析資料中可用。而 CNV 的檢測，篩選了變異量達到一定量突變的基因，且透過 ONCOCNV 進行正規化
 
 
 
