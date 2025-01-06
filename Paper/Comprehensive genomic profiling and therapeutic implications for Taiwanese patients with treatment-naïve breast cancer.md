@@ -236,7 +236,6 @@ tags:
 - 數據庫提供了 SNVs、Indels、CNA 等資訊
 ### ONCOCNV
 
-
 | **特徵**   | **ClinVar**          | **COSMIC**      |
 | -------- | -------------------- | --------------- |
 | **主要對象** | 臨床相關的遺傳性突變           | 癌症相關的體細胞突變      |
@@ -244,21 +243,16 @@ tags:
 | **數據類型** | 致病性分類（Pathogenicity） | 突變頻率、組織分布、致癌性   |
 | **來源**   | 醫療機構、實驗室和研究團隊        | 文獻、癌症基因組計畫、測序數據 |
 | **典型用途** | 評估突變是否與遺傳病或癌症相關      | 發現癌症驅動基因，評估治療靶點 |
-
-
-
-
 ## 流程
 ### Introduction
 作者在陳述時為什麼要做乳癌疾病的動機時，她解釋了在2018年，全球有 200 萬的新罹患乳癌的患者，並且有 60 萬個患者死亡。而我們有額外找尋相關資料，我們找了 2020 年時，也有相關資料，讓我們意外的地方是乳癌在女性罹患的癌症居然佔了將近1/4的人數，並且在因乳症死亡的人也佔了 15% 之高。這讓我們覺得關於乳癌的研究也是至關重要，但作者也提及了在亞洲乳癌的基因研究卻相當稀少。
 依作者所述，乳癌是一 heterogeneous disease，而在眾多的研究中，都意旨一個 hormone receptor 對於乳癌的治療有所應用。除此之外，也有研究對於 HER2 對於癌症也有相關重要性。所以作者想要這樣兩目標作為分類基準，以便後續分析。
 而作者的這次實驗除了想要找出乳癌的生物標記物外，也想探討 NGS 為基礎的 CGP 分析對於台灣患者的臨床適用性，並且和西方患者作為比較，了解 NGS 對於反應和預後的基因變化，研究 NGS 對於癌症管理的優勢。
-
 ### Method 
 總共有116個患者，來自於奇美醫院(CMMC)的患者，並將他們的資料左去識別化臨床資訊，像是 TNM 分期、病例報告等。
 在 FFPE 樣本的切片上，透過 IHC 的分析蛋白質表達，以專家的評估結果分析 HER2 本身的表現強度，分類為 0、1+、2+、3+，0 以及 1+ 代表陰性，3+ 代表陽性，則因為 2+ 在判斷上無法有明確的判斷，所以作者進一步使用 Ventana HER2 雙原位雜交 ( ISH ) 判定是否陽性。
-將患者的陽陰性確定後，作者將患者的組織樣本透過 QIAamp DNA FFPE tissue kit 淬取基因組 DNA，透過 Quant-iT dsDNA 測定以及 PCR 對 DNA 的表現定量，並且使用 Fragment Analyzer 以及 Qubit 檢測 DNA 的濃度。將 DNA 數據放入 Ion Chef 系統中經過處理，以便能使用 Ion Torrent 的測序芯片上。
-將樣本數據放入 NGS 定序儀當中，定序完後，透過 Ion Torrent Suite 將原始數據映射到 hg19 當中。使用 Torrent Variant Caller 辨識 SNV、Indel。並且使用 ClinVar 以及 COSMIC 以及 Genome aggregation database 對於每個目標基因進行註釋，以之後分析資料中可用。而 CNV 的檢測，篩選了變異量達到一定量突變的基因，且透過 ONCOCNV 對於拷貝數擴增進行正規化的。
+將患者的陽陰性確定後，作者將患者的組織樣本透過 QIAamp DNA FFPE tissue kit 淬取基因組 DNA，透過 Quant-iT dsDNA 測定以及 PCR 對 DNA 的表現定量，為了確保所得到 DNA 的濃度，作者使用了 Fragment Analyzer 以及 Qubit 兩工具檢測 DNA 的濃度。將 DNA 數據放入 Ion Chef 系統中經過處理，以便能使用 Ion Torrent 的測序芯片上。
+將樣本數據放入Ion Torrent 平台的 NGS 定序儀當中，定序完後，透過 Ion Torrent Suite 將原始數據映射到 hg19 當中。使用 Torrent Variant Caller 辨識 SNV、Indel。並且使用 ClinVar 以及 COSMIC 以及 Genome aggregation database 對於每個目標基因進行註釋，以之後分析資料中可用。而 CNV 的檢測，篩選了變異量達到一定量突變的基因，且透過 ONCOCNV 對於拷貝數擴增進行正規化的。
 在作者文中，有提及 Tumor mutation burden calculation ( TMB )，
 #### TMB
 - Tumor Mutation Burden
@@ -272,8 +266,10 @@ tags:
 - Tumor
 - Node 淋巴結
 - Metastasis 遠端轉移
-
-
+#### hg19
+- **hg19** 是指人類基因組參考序列 Human Genome Reference 的第 19 個版本
+- 作為基準序列，為基因組數據進行比對和分析時提供參考框架。
+- 包含人類基因組所有已知染色體的序列
 
 
 
