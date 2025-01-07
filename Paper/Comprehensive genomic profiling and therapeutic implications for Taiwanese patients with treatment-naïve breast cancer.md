@@ -273,7 +273,13 @@ tags:
 
 
 
+# 講稿
+大家好，我們今天要演講的是論文是，Comprehensive genomic profiling and therapeutic implications for Taiwanese patients with treatment-naïve breast cancer。
 
+以上是我們這次講述的outline，我們會先從介紹、方法到最後結論與討論。
 
+那我由先從 introduction 開始做簡報的開頭，
 
+作者在開頭說明了為什麼要選擇乳癌作為研究目標，在 2018 年時，有研究指出了女性罹患癌症的群體當中，共有將近1/4的人罹患乳癌，約莫 200 萬的人數，並在因癌症死亡的女性裡，乳癌的佔比也有了15%之多。
 
+而除了作者所提及的2018年的資料，我們有另外找尋其他年份的資料
