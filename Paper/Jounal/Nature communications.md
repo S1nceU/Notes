@@ -1,7 +1,10 @@
 ---
 Publisher: "[[Nature Portfolio]]"
 Edition: SCIE
-Category: MULTIDISCIPLINARY SCIENCES
+Category:
+  - MULTIDISCIPLINARY SCIENCES
+  - MATHEMATICAL & COMPUTATIONAL BIOLOGY
+  - BIOCHEMICAL RESEARCH METHODS
 ---
 ## Papers
 + [[DNA methylation markers for kidney function and progression of diabetic kidney disease]]
