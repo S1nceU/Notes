@@ -10,10 +10,12 @@ tags:
 ## Background
 - 在基因調控與表關遺傳學中，已有許多研究透過多樣化的架構預測 miRNA 與疾病的關聯，展示了整合網路嵌入與深度學習技術的潛力。
 	- DBNMDA：[DBNMDA: 预测潜在 miRNA-疾病相关性的深度信念网络（Briefings in Bioinformatics）_mirna 深度学习-CSDN博客](https://blog.csdn.net/adsdasdasdahj/article/details/130550061)
+	- DBN 架構預測 miRNA-disease 關係
 - 也有研究題及 CNN 萃取蛋白質特徵遠端同源性檢測的技術
 	- DeepRHD：[DeepRHD: An efficient hybrid feature extraction technique for protein remote homology detection using deep learning strategies - ScienceDirect](https://www.sciencedirect.com/science/article/pii/S1476927122001293)
+	- 使用 CNN 萃取蛋白質序列特徵
 - 這些成功案例說明深度學習在生物序列建模上的潛力
-- 因此作者延伸此概念至甲基化與基因表現層級，提出 DeepMethyGene，利用variable convolution kernel 以及 ResNet block，試圖提高甲基化預測基因表達的準確率
+- 因此作者延伸此概念至甲基化與基因表現層級，提出 DeepMethyGene，探索 CpG 甲基化與 RNA 表現之間的預測關聯。
 
 ## Method
 ### Datasets
@@ -104,7 +106,7 @@ tags:
 - 每個卷積模組之間會加入 **殘差區塊（Residual Block）**
 - 所有經卷積與殘差強化後的特徵，會被 **攤平成一維向量（reshape）**
 - 然後再輸入到 **全連接層（Fully Connected, FC）**
-
+模型尾端的全連接層負責將卷積網路所學到的特徵進行整合與壓縮，前一層使用 512 個神經元作為特徵抽象層，最後輸出至一個單一神經元進行迴歸，輸出即為該 sample 在該基因的預測表現量。這樣的設計能有效保留高維特徵資訊，同時控制模型參數數量，達到準確與計算效率的平衡。
 ### 不同的模型比較
 📊 結論補充比較：
 
