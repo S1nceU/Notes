@@ -12,14 +12,15 @@ tags:
 	- DBNMDA：[DBNMDA: 预测潜在 miRNA-疾病相关性的深度信念网络（Briefings in Bioinformatics）_mirna 深度学习-CSDN博客](https://blog.csdn.net/adsdasdasdahj/article/details/130550061)
 - 也有研究題及 CNN 萃取蛋白質特徵遠端同源性檢測的技術
 	- DeepRHD：[DeepRHD: An efficient hybrid feature extraction technique for protein remote homology detection using deep learning strategies - ScienceDirect](https://www.sciencedirect.com/science/article/pii/S1476927122001293)
-- 作者了解甲基化與基因表達之間的關係，也...
-- 因此作者提出，DeepMethyGene，利用variable convolution kernel 以及 ResNet block，試圖提高甲基化預測基因表達的準確率
+- 這些成功案例說明深度學習在生物序列建模上的潛力
+- 因此作者延伸此概念至甲基化與基因表現層級，提出 DeepMethyGene，利用variable convolution kernel 以及 ResNet block，試圖提高甲基化預測基因表達的準確率
 
 ## Method
 ### Datasets
 - 使用了 TCGA 中多個癌症類型的數據
 	- 乳癌(BRCA)、結腸癌（COAD）、膠質母細胞瘤（GBM）以及肺腺癌（LUAD）
 	- DNA：450K 的資料
+	- RNA：RNA-seq 基因表現數據
 - 主要訓練集：
 	- BRCA
 	- 788 tumor
@@ -29,7 +30,12 @@ tags:
 ### Data proprocessing
 - 篩選甲基化資料的方法
 	- 過濾缺失值並且將基因表達量 $\beta$ 值轉換為 $M$ 值
-	- $M$ 值更適合建模 (為什麼?)
+	- $M$ 值更適合建模 (以取得類高斯分布 $\rightarrow$ 提高模型穩定性)
+		![[Pasted image 20250411041543.png|300]]
+		- M-values具有更好的统计特性，更适合用于进行下游的统计分析（差异分析等）
+		- Beta-values更加容易解释，更能说明生物学上的意义
+		
+- Beta-values更加容易解释，更能说明生物学上的意义
 	- 透過表達程度以及啟動子篩選出，高代表性的探針以及基因
 	- 細節如何篩選，文中表達透過引用 [34] 
 		- Data preprocessing followed the methodology outlined in [34]
@@ -51,6 +57,7 @@ tags:
 		- **梯度爆炸（exploding gradient）**
 
 - 模型設計架構
+	- 輸入為 TSS ±1Mb 區域 CpG 的 M 值向量
 	- 為一個**自適應回歸卷積神經網路（AdaptiveRegressionCNN）**
 	- 兩層一維卷積層 (Conv1 d)
 	- 全連接層 (Fully Connected layers)，用於特徵映射與進行最終的迴歸(regression)預測
@@ -120,3 +127,41 @@ tags:
 	- 最終形成一種 **類似深度學習的階層式決策架構**
 - 雖然能捕捉複雜的特徵關係，但無法像 ResNet 等深度學習架構那樣，捕捉到連續性與動態變化的特性
 
+## Result
+### DeepMethyGene accurately predicts gene expression using DNA methylation
+- 作者用了自己研究的模型與其他模型做了比較，像是 SVM、RF、geneEXPLORE等模型對象
+- 本段結果顯示 DeepMethyGene 在預測基因表現量上表現優異。相較於現有模型（如 geneEXPLORE、SVM、Random Forest），DeepMethyGene 在 TCGA 乳癌資料集上達成 R² = 0.640，並在三個其他癌症資料集中均展現高度泛化能力。透過消融實驗進一步證明卷積層對模型效能至關重要。此外，即便模型僅使用正常樣本訓練，也仍維持高準確率，反映其對資料異質性的穩定適應能力。
+### The prediction performance is influenced by the number of CpGs near a gene
+- CpG 數量是否影響預測準確度？
+- 在作者的測試底下，發現抓取的 CpG 數越多，預測越準
+- 反映資料豐富性對深度模型特徵學習的重要性。此結果不僅支持模型設計的合理性，也提供後續預測應用中的信心參考。
+- 要能精確預測基因表現，需要周圍 CpG 位點提供**足夠豐富的甲基化資訊**
+- 若某個基因本身附近 CpG 少，那模型預測可能會比較沒把握
+### The prediction performance is associated with the distance between CpGs and genes
+- 不同**距離範圍內的 CpG 位點**對預測是否有不同的貢獻
+- 他們做了多組模型訓練，每組輸入資料的 CpG 位置是：
+	- **從 TSS 起 ±1 kb、±10 kb、±100 kb、±1 Mb**
+- 作者發現距離基因越近的 CpG 位點對預測表現貢獻越大
+## Conclusions
+- 作者使用 TCGA 數個資料集，為了開發一個能夠預測基因表現量的深度學習模型
+- 而在選取 CpG 位點的方法，傳統方法很難處理在每個基因要取不同的位點數量
+- 所以作者研究了一個解決方案，DeepMethyGene，採用動態通道調整 + 卷積神經網路 + 殘差結構(ResNet block)適應不同數量位點輸入的問題
+- 模型架構也會根據輸入的CpG數量動態調整通道計算量，避免浪費資源，同時也能提升效能以及準確率
+- 模型透過CNN神經網路抽取 CpG 和表現量中複雜的序列特徵，並且運用 ResNet 穩定模型表現，並且在其中也能夠學會「局部 CpG 密度、位置、距離」與 RNA expression 的非線性關係
+- 在與傳統方法比較時，也更加準確也更穩定
+	- DeepMethyGene （R² = 0.640）
+	- geneEXPLORE（R² = 0.449）
+	- SVM（R² = 0.327）
+	- Random Forest（R² = 0.374)
+- 在數據統計上，將 $\beta$ 轉為 $M$ 值，使得數值更接近常態分佈，能提升統計學的穩定性以及預測表現
+- 在未來應用上，也可用於時序性的資料，像是疾病進程預測等，甚至能夠在臨床較塊推估 RNA 的表現
+## Summary
+本研究提出 DeepMethyGene 模型，利用 CNN 深度學習架構，從基因區域附近的 DNA 甲基化數據（CpG M 值）預測基因表現量（RNA-seq derived gene expression），希望以更便宜穩定的甲基化資料推估高變動成本高的 RNA 資料，具有潛在臨床與生物資訊應用價值。
+雖然 DNA 甲基化（M 值）與 RNA 表現量是來自不同實驗平台，分別反映不同層級的分子活動，但已有大量研究指出，基因啟動子與鄰近區域的甲基化程度與基因轉錄活性呈顯著負相關。因此，透過 CNN 模型對 CpG 甲基化區段進行特徵學習，有機會建構出由 M 值預測 RNA 表現量的模型。DeepMethyGene 即是針對此一生物學假設所設計的深度學習架構。
+
+學會的方法：
+在神經網路訓練中，每筆樣本會進行一次 forward 預測與 loss 計算，接著透過反向傳播計算每一層參數的梯度（方向與靈敏度），並根據這些梯度與學習率共同決定如何調整模型的參數，使預測更準確。這是模型「學會」資料的核心機制。
+
+在深度學習模型中，對每一筆資料，模型會先進行前向傳播（forward pass）產生預測值，並透過損失函數（例如 MSELoss）計算預測與真實值的誤差。接著透過反向傳播（backpropagation）計算每一層參數對 loss 的偏導數（即梯度），以決定這些參數對預測結果的重要性與修正方向。最終透過學習率（learning rate）決定實際的更新幅度。
+
+而為了避免在深層網路中出現梯度爆炸（exploding gradient）與梯度消失（vanishing gradient）問題，模型中引入 Residual Block，其透過跳接（skip connection）機制，讓梯度可在網路中更穩定地傳遞，進而提升模型可訓練性與收斂速度。
