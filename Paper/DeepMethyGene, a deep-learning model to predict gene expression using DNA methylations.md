@@ -49,3 +49,66 @@ tags:
 	- 有效解決深度神經網路在訓練過程中常見的問題
 		- **梯度消失（vanishing gradient）**
 		- **梯度爆炸（exploding gradient）**
+
+- 模型設計架構
+	- 為一個**自適應回歸卷積神經網路（AdaptiveRegressionCNN）**
+	- 兩層一維卷積層 (Conv1 d)
+	- 全連接層 (Fully Connected layers)，用於特徵映射與進行最終的迴歸(regression)預測
+	- 流程為
+		- 第一層卷積後，加入 **一個殘差區塊（Residual Block）**
+		- 接著再加第二層卷積與 **另一個殘差區塊**
+		- 經過 **一個含 512 個神經元的全連接層**
+		- 然後再通過一個**單一輸出神經元**進行基因表現量的預測（回歸模型）
+	![[Pasted image 20250410223424.png]]
+	- 最佳化以及評估方法
+		- Adam 優化器 ( learning rate = 0.001 )
+		- MSELoss 
+		- 5-fold cross-validation
+		- correlation coefficient
+		- $R^2$ value
+	- 訓練過程設定
+		- 700 epochs
+		- Early stopping when patience = 90，以避免 overfitting
+- 最後的結果會是單一位點的表現資料
+
+### Design of residual blocks 殘差區塊的設計
+- Residual block 包含兩層一維卷積 (Conv1 d)
+- 每一層的大小
+	- Kernal size : 3
+	- padding : 1
+- 這樣的設計在不改變資料維度的情況下，增加卷積層
+- 在每一層卷積過後，LeakyReLU 激活函數
+	- 負斜率設為 0.01 -> 對於負數輸入，輸出不回零，而是保留部分訊號
+	- 可避免 ReLU 死區問題 (Dead zone)，即輸出長期為 0 而導致神經元失效
+- 殘差區塊透過 **跳接（skip connection）** 將：
+	- 原始輸入 → 與卷積層輸出相加
+	- 好處：
+		- 避免 gradient vanishing/explosion
+		- **讓模型更容易學習“變化”而不是“絕對輸出”**，提升訓練效率與穩定性
+
+### Architecture of the adaptive regression convolutional neural network
+- 模型架構
+	- Conv1d + Residual Block 所組成，形成一個 adaptive regression CNN
+- 為不同基因上下流的CpG數量不一致的問題，作者在卷積通道數做了設計
+	- 第一層卷積：
+		- 輸出通道數 = $min(64, input\_size \ // \ 10)$
+	-  第二層卷積：
+		- 輸出通道數 = $min(32, input\_size \ // \ 20)$
+- 每個卷積模組之間會加入 **殘差區塊（Residual Block）**
+- 所有經卷積與殘差強化後的特徵，會被 **攤平成一維向量（reshape）**
+- 然後再輸入到 **全連接層（Fully Connected, FC）**
+
+### 不同的模型比較
+#### SVM Support Vector Machine
+- 但在這個高維度的資料集則會有效能下降的可能性
+- 難處理時間序列這類具非線性與依賴性特徵的資料
+#### Deep Forest
+- 又稱 Cascase forest
+- 以集合學習原則為基礎，與 RF 一樣以 Decision Tree 為基礎
+- 特點：將多層模型 **像神經網路一樣堆疊成階層式結構（multi-layered）**
+
+- 運作方式：
+	- 每一層會輸出一組預測結果或特徵
+	- 再作為**下一層的輸入**
+	- 最終形成一種 **類似深度學習的階層式決策架構**
+- 
