@@ -34,4 +34,10 @@
 
 ### DNA methylation involvement in the DKD pathogenic pathway 在DKD中methylation的角色
 - DNA 甲基化異常還直接影響與腎臟纖維化與發炎有關的關鍵致病途徑
-- 
+- 纖維化（Fibrosis）與發炎（Inflammation）
+	- RASAL1 **hyper**
+	- CTGF **hypo**
+	- COL1A2 **hypo**
+	- PTEN **hyper**
+	- TXNIP **hypo**
+### DNA methylation crosstalk with other epigenetic modifications in kidney diseases 甲基化在腎臟疾病的交互作用
