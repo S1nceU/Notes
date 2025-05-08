@@ -34,7 +34,7 @@ tags:
 ## Method
 ### Dataset
 - 使用了 TCGA 中多個癌症類型的數據
-	- 乳癌(BRCA)、結腸癌（COAD）、膠質母細胞瘤（GBM）以及肺腺癌（LUAD）
+	- 乳癌(BRCA)、10 種 TCGA 癌症類型（如 LUNG、GBMLGG、PRAD...）與 GSE39004
 	- DNA：450K 的資料
 	- RNA：RNA-seq 基因表現數據
 - 主要訓練集：
@@ -44,7 +44,7 @@ tags:
 - 而其他資料則作為測試模型泛化的能力
 
 ### Pre processing
-- Methylation Data $\rightarrow$ $\beta$ 不適合直接用於線性回歸模型，因其分布不符合常態分佈，所以作者使用 $M \ value$
+- Methylation Data $\rightarrow$ $\beta$ 不適合直接用於線性回歸模型，因其分布不符合常態分佈，所以作者使用 $M \ value$，Beta 值界於 0 到 1，偏態分布，不符合線性假設
 	![[Pasted image 20250411041543.png|300]]
 - 作者在芯片中得到了 485577 個位點，刪除缺失 90007 個位點，並將那些缺失值使用 K-means 做缺失值的插補，補了 31700 個位點
 - 20540 個基因，平均表現低於 1RPKM，移除了 3418 個基因
