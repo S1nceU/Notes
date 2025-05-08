@@ -44,5 +44,29 @@ tags:
 - 而其他資料則作為測試模型泛化的能力
 
 ### Pre processing
-- Methylation Data $\rightarrow$ $\beta$ 不適合直接用於線性回歸模型，因其分布不符合常態分佈
-- 
+- Methylation Data $\rightarrow$ $\beta$ 不適合直接用於線性回歸模型，因其分布不符合常態分佈，所以作者使用 $M \ value$
+	![[Pasted image 20250411041543.png|300]]
+- 作者在芯片中得到了 485577 個位點，刪除缺失 90007 個位點，並將那些缺失值使用 K-means 做缺失值的插補，補了 31700 個位點
+- 20540 個基因，平均表現低於 1RPKM，移除了 3418 個基因
+- 透過 UCSC 基因體瀏覽器找到 TSS 有 16681，且在這 16681 當中的 13982 promoter 至少有一個 probe
+### Measuring prediction accuracy
+- 10 fold CV，9 train、1 test
+- $R^2$ 作為評估係數
+- $\hat{y}_g = \sum_{k=1}^{M_g} \hat{w}_{k,g} x_{k,g}$
+	- $\hat{y_g}$ : 預測表現量
+	- $x_{k,g}$ : 第 $k$ 個與基因 $g$ 相關的probe
+	- $\hat{w}_{k,g}$ : 對應 probe 的迴歸係數 (權重)
+		- 權重透過 Elastic-Net，自動篩選與估計
+	- $M_g$ : 選定區間內的 probe 數量
+### Comparing the prediction accuracy of different regions in a gene
+- 對於每個基因所有的CpG位點分三個區域
+	- Promoter
+		- TSS 上游 2000 bp 以及 下游 0 bp 定義啟動子區域 [37]
+	- Gene
+		- 450k 註釋資料所提供的位置，promoter、5'UTR、First exon、Gene body、3'UTR
+	- Long-range 
+		- 為 TSS +- 一定數量的 $x$ Mb 的所有 CpG 位點，
+- 對於每個區域的 CpG 位點們做10 fold CV
+
+### Investigation of various distances from promoter regions of genes
+- 對於每個 long-range，作者從 +- 1Mb 到 +- 50 Mb 甚至到整條染色體等，分別作訓練，計算 $R^2$
