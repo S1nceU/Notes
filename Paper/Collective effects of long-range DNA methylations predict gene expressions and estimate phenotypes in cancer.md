@@ -83,3 +83,12 @@ tags:
 - 用篩選後的 CpG 位點為每個基因做多元線性迴歸模型，與 geneEXPLORE 比較
 ### Testing on an independent cohort
 用不同的乳癌樣本，驗證模型泛化能力
+
+### Predicting clinical phenotypes
+1. **癌症狀態（Cancer status）**
+    - tumor vs. normal（788 tumor / 85 normal）
+2. **雌激素受體狀態（ER status）**
+    - ER-positive vs. ER-negative（632 positive / 183 negative，58 缺值）
+3. **5 年存活率（5-year survival）**
+    - 存活與否
+4. **PAM50 乳癌亞型（如 Luminal A, Basal 等）**
