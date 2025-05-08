@@ -52,7 +52,7 @@ tags:
 ### Measuring prediction accuracy
 - 10 fold CV，9 train、1 test
 - $\hat{y}_g = \sum_{k=1}^{M_g} \hat{w}_{k,g} x_{k,g}$
-	- $\hat{y_g}$ : 預測表現量
+	- $\hat{y_g}$ : 預測 RNA expression
 	- $x_{k,g}$ : 第 $k$ 個與基因 $g$ 相關的probe
 	- $\hat{w}_{k,g}$ : 對應 probe 的迴歸係數 (權重)
 		- 權重透過 Elastic-Net，自動篩選與估計
@@ -75,5 +75,11 @@ tags:
 用一傳統方法，與作者做的 geneEXPLORE 進行比較，而所用之方法是
 - **expression Quantitative Trait Methylations（eQTMs）**
 	- 每一個 CpG 探針與基因表現之間的統計關聯性測試
-- 因為無法處理高為數據 (樣本數 < 探針數)
-- 
+- 因為無法處理高維數據 (樣本數 < 探針數)
+- 針對樣本的75%做迴歸模型
+
+- 將每一個基因 g，用所有的探針做一次CpG檢定得到結果
+- 做多重檢定校正，Bonferroni correction，只保留校正後 p-value < 0.05 的探針 (為了讓探針能夠減少)
+- 用篩選後的 CpG 位點為每個基因做多元線性迴歸模型，與 geneEXPLORE 比較
+### Testing on an independent cohort
+用不同的乳癌樣本，驗證模型泛化能力
