@@ -51,13 +51,13 @@ tags:
 - 透過 UCSC 基因體瀏覽器找到 TSS 有 16681，且在這 16681 當中的 13982 promoter 至少有一個 probe
 ### Measuring prediction accuracy
 - 10 fold CV，9 train、1 test
-- $R^2$ 作為評估係數
 - $\hat{y}_g = \sum_{k=1}^{M_g} \hat{w}_{k,g} x_{k,g}$
 	- $\hat{y_g}$ : 預測表現量
 	- $x_{k,g}$ : 第 $k$ 個與基因 $g$ 相關的probe
 	- $\hat{w}_{k,g}$ : 對應 probe 的迴歸係數 (權重)
 		- 權重透過 Elastic-Net，自動篩選與估計
 	- $M_g$ : 選定區間內的 probe 數量
+- $R^2$ 作為評估係數
 ### Comparing the prediction accuracy of different regions in a gene
 - 對於每個基因所有的CpG位點分三個區域
 	- Promoter
@@ -69,4 +69,11 @@ tags:
 - 對於每個區域的 CpG 位點們做10 fold CV
 
 ### Investigation of various distances from promoter regions of genes
-- 對於每個 long-range，作者從 +- 1Mb 到 +- 50 Mb 甚至到整條染色體等，分別作訓練，計算 $R^2$
+- 對於每個 long-range，作者從 +- 1Mb 到 +- 50 Mb 甚至到整條染色體等，分別作訓練，計算 $R^2$，得到該基因最佳的long-range範圍
+- geneEXPLORE 模型背後的核心邏輯：**不同基因受不同距離範圍的調控，且這些遠端調控的效果通常強於近端**
+### Evaluating prediction accuracy using multiple regression based on eQTMs
+用一傳統方法，與作者做的 geneEXPLORE 進行比較，而所用之方法是
+- **expression Quantitative Trait Methylations（eQTMs）**
+	- 每一個 CpG 探針與基因表現之間的統計關聯性測試
+- 因為無法處理高為數據 (樣本數 < 探針數)
+- 
