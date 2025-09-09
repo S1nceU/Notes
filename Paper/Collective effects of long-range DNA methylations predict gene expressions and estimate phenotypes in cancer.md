@@ -180,12 +180,12 @@ tags:
 ### geneEXPLORE accurately predicts clinical features of human cancer based on the predicted gene expressions
 - 在臨床上的應用
 
-| 預測目標                          | 分類                     |
-| ----------------------------- | ---------------------- |
-| Cancer status                 | 腫瘤 vs. 正常              |
-| ER (estrogen receptor) status | ER 陽性 vs. 陰性           |
-| 5-year survival               | 存活 vs. 未存活             |
-| PAM50 subtypes                | Luminal A, Basal 等亞型分類 |
+| 預測目標            | 分類                     |
+| --------------- | ---------------------- |
+| Cancer status   | 腫瘤 vs. 正常              |
+| ER (            | ER 陽性 vs. 陰性           |
+| 5-year survival | 存活 vs. 未存活             |
+| PAM50 subtypes  | Luminal A, Basal 等亞型分類 |
 - 將樣本的基因表現量作為輸入到 geneEXPLORE
 - 使用 Elastic Net 邏輯迴歸模型，預測各個臨床表型
 ![[Pasted image 20250509035614.png]]
