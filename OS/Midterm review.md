@@ -29,3 +29,36 @@
 9. You are playing a shooting game and click the left mouse button to fire. From the moment you click until the bullet is fired, what does the computer do to make this happen smoothly?
 	- 當使用者滑鼠點擊時，會產生一個 interrupt，CPU 處理中斷後回傳訊號給遊戲
 10. Main memory is designed as sequential access so that it can store data in an ordderly manner. The statement above is T or F? Explain answer.
+	- F
+	- Main memory 是隨機存取的，Sequential access 是磁帶裝置的特性，不是 main memory 的設計
+## CH3 
+1. In the message passing of the two models of IPC in tthe cooperating processes, when process A needs to passs a message to process B, is it transmitted directly? yes or no. If the answer is no please explain message passing.
+	- No
+	- Message passing 中，A $\rightarrow$ B 需要先建立通訊連結，再用 send 和 receive 交換訊息
+	- A 不會「直接」把資料塞進 B；是透過 OS Kernal 所建立的連結與 mailbox或是buffer，並以 **send/receive** 在核心中轉遞並交付給 B。
+2.  Process communication is carried out through IPC, which can be implemented using either shared memory or message passing. What are the advantages and drawbacks of these two communication methods
+	- **共享記憶體（Shared memory）**  
+		- 優點：速度快，適合大量資料交換。  
+		- 缺點：在讀寫等操作中可能產生同步問題。
+	- **訊息傳遞（Message passing）**  
+		- 優點：由核心控制通訊，可避免資料同步問題。  
+		- 缺點：資料傳輸需要系統呼叫，因此相對較慢。
+	- ![[Pasted image 20250922155933.png|500]]
+3. Draw the process state transition diagram including the states: New, Ready, Running, Waiting, and Terminated. Label the key transition events.
+	- ![[Pasted image 20251105191838.png]]
+4. Which of the following are stored in a Process Control Block (PCB)?
+	1. Process state
+	2. Program counter 
+	3. CPU registers
+	4. CPU scheduling information
+	5. Accounting information
+	6. I/O status information
+5. In message passing communication, which of the following is correct?
+	1. Non-blocking receive may return a null message if no message is available
+6. Simply example what is context switch?
+	1. 當 CPU 由一個行程/執行緒切到另一個時，**把舊的 CPU 狀態存入其 PCB，載入新的 PCB 狀態再繼續跑**；切換期間屬**額外開銷（overhead）**，常由計時器中斷、系統呼叫或 I/O 事件觸發。
+	2. 把正在跑的程式 A 的「進度」（暫存器、PC 等）先存起來，再把程式 B 的進度載回來，然後改跑 B。通常是**計時器到點、系統呼叫、或 I/O 完成**時發生
+7. The primary functions of the long-term scheduler and short-term scheduler?
+	- Short-term scheduler ( CPU scheduler ) : 選擇 Ready queue 中的 process 給 CPU 做
+	- Long-term scheduler ( job scheduler ) : 為了讓 CPU 使用最高效，所以會一直安排工作到 ready queue 上，調控系統中 process 的數量 ( degree of multiprogramming )
+	- Short term 是決定那個 process 選擇給 CPU 做運算，Long term 是決定哪個 process 進入 ready queue
