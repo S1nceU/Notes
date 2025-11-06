@@ -62,3 +62,79 @@
 	- Short-term scheduler ( CPU scheduler ) : 選擇 Ready queue 中的 process 給 CPU 做
 	- Long-term scheduler ( job scheduler ) : 為了讓 CPU 使用最高效，所以會一直安排工作到 ready queue 上，調控系統中 process 的數量 ( degree of multiprogramming )
 	- Short term 是決定那個 process 選擇給 CPU 做運算，Long term 是決定哪個 process 進入 ready queue
+8. A system is executing processes with average CPU burst time T ms, and there is a context switch every N burst. What is the maximum allowable context switch time S ms to keep the overhead less than 5%? (T is 100 and N should be 2, and please truncate the answer to two decimal places) 
+	- $Overhead = \frac{S}{N * T+S} < 0.05 \rightarrow S < \frac{0.05}{0.95}NT$
+	- $S < \frac{0.05}{0.95}*200 = \frac{200}{19}ms$
+9. In the pseudocode, the purpose of the parent process using wait(NULL) is:
+	```
+	  else { /*parent process*/
+		  /* prent will wait for the child to 
+		  wait (NULL);
+		  printf("Child Complete");
+	  }
+	  ```
+  - To wait for the child process to terminate and reclaim its status, preventing hte child process from becoming a zombie
+10. What is a "socket"? How is it applied in client-serverr system communication?
+	- Socket 是進程通訊的端點
+	- **Server**：建立 socket → 綁定到服務 **port** → 監聽並接受連線；之後以該連線上的兩端 socket 讀寫資料。
+	- **Client**：建立 socket → 連到伺服器的 `IP:port` → 與伺服器成對通訊（TCP/UDP 皆可）。
+## Ch4
+1. In an operating system, when a process receives a signal, the system must deliver it to some thread for handling. Which of the following approaches is the simplest and most convenient way to implement signal handling?
+	- Designate a single thread to act as the agent, responsible for handling all signals.
+2. What are the main benefits of multithreaded programming?
+	+ Responsiveness : 反應好，當其中有執行續被中斷，則其他執行緒則會接上使用 CPU
+	+ Resource sharing : 有共同的位址空間
+	+ Economy : cost 比 process 還要高，process 需要做其餘轉換跟記憶體共享
+	+ Scalability : 可以有多個執行緒在 process 上，擴展性充足
+3. A thread function in Windows C Program is conventionally called by runner, yes or no? Why and why not?
+	-  NO
+	- 名稱是自訂的，thread function 是被 OS 建立的並呼叫
+4. If the child process created by fork() immediately calls exec(), what happens to the threads?
+	- child process 呼叫 exec() 時，整個 process 會被新的程式所取代，原本 fork() 的 thread 會無法使用，新程式會以一個新的 thread 展開
+	- fork() 會複製一個新的 thread 或是一個新的 process
+	- exec() 會取代整個 thread 以及整個 process 位址空間
+5. In multithreading, what is the common way to create way to create a new thread?
+	- Using a Thread class or threading library
+	- 用 Thread 函式庫去建立一個 Thread
+6. What are the three common multithreading models that relate user threads to kernel threads?
+	+ Many-to-One 
+	+ One-to-One
+	+ Many-to-Many
+7. Explain the differences in the usage of registers and stacks between a single-threaded process a multithreaded process, and clarify why they are designed this way.
+	- Single thread
+		- 只有 **一組暫存器狀態**（含 PC）與 **一個執行緒堆疊（stack）** 隨程式逐步執行。
+		- 使用所有的暫存器和資料
+	- Multi thread
+		- 每個執行緒各自擁有一組暫存器集合（含 PC）與自己的堆疊，同一行程內的緒共享程式碼、全域資料與堆積（heap）。
+		- 分別暫存器使用，並使用同一程式碼以及資料
+8. Thread and pthread are often mentinoed in OS. Please explain their relationship and why pthread is often emphaized in Linux systems.
+	- Pthread is 規範、規格, use to create and manage thread.
+9. In the M2M thread model, what is the mechanism by which the kernel can notify the user-level thread library about resource availability? Describe this method concisely. 
+	- 使用 Scheduler Activations 進行 Upcall，當 thread 有事件發生時，Kernel 會用 upcall handler 發出通知
+	- upcall hanler 允許應用管理 kernel thread 的數量或是狀況
+## Ch5
+1. In a computer system simulation, when the varibale Clock increases, what action does the simulator perform?
+	- Clock 是模擬器裡的模擬時間，Clock 進行時，會更新系統狀態去反應裝置以及排程動態
+2. Which of the following is NOT a common optimization criterion for scheduling algorithm?
+	- - CPU utilization
+		- 為了讓 CPU 盡可能忙碌
+	- Throughtput
+		- 每單位時間內平均完成 processes 的工作量
+	- Turnaround time
+		- 整個過程開始到結束的時間
+		- 各種 state 到 terminate
+	- Waiting time
+		- 花費在 ready queue 的時間
+	- Response time
+		- 從開始到第一次執行的時間
+3. What is memory stall?
+	- 當 thread 執行的時候，讀寫記憶體或是指令時會有一個短時間的延遲
+4. What is the potenital isssue when using Priority Scheduling, and what is the solution to it?
+	- Priority Scheduling 會造成 Starvation
+	- 可以用 agin，隨時間增加 process 的優先權，解決 starvation
+5. 示圖
+6. In CPU scheduling, what is the main difference between a Multilevel Queue and a Multilevel Feedback Queue?
+7. In multiprocessor scheduling, please explain the main difference between "soft affinity" and "hard arrinity".
+8. Explain the difference between "preemptive" and "non-preemptive" CPU scheduling, and provide one example algorithm for each.
+9. In RR scheduling system, explain the difference, when time quantum (q) is extremly large and extremely small.
+10. 
