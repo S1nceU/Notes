@@ -133,8 +133,61 @@
 	- Priority Scheduling 會造成 Starvation
 	- 可以用 agin，隨時間增加 process 的優先權，解決 starvation
 5. 示圖
+	Q: ![[Pasted image 20251106163610.png|500]]
+	A:
+	![[Pasted image 20251106163642.png]]
+	![[Pasted image 20251106163654.png]]
+	
 6. In CPU scheduling, what is the main difference between a Multilevel Queue and a Multilevel Feedback Queue?
+	- MLQ 的分層是固定的，無法移動 process 的位置
+	- MLFQ 可以根據規則使得 process 可以在不同的Queue動態調整優先權
 7. In multiprocessor scheduling, please explain the main difference between "soft affinity" and "hard arrinity".
+	- soft affinity : 任何的 process 都可以被所有的 processor 處理
+	- hard affinity : 只能被同一 processor 處理
+	
+	- Hard affinity: 把 process 綁定指令 affinity maksk，使得只能在這個 processor 處理
+	- Soft affinity: 則可以遷移 process 給其他的 processor 做，使得平衡負載
 8. Explain the difference between "preemptive" and "non-preemptive" CPU scheduling, and provide one example algorithm for each.
+	- Preemptive : 在 CPU 執行時，可以強制搶斷 CPU 的執行權，接上其他的 process，像是 RR、SRTF
+	- Non-preemptive : 其他的 process 需要等待上一個 process 做完或是阻塞才會換成自己執行，像是 FCFS
 9. In RR scheduling system, explain the difference, when time quantum (q) is extremly large and extremely small.
-10. 
+	- Large q : 近似 FCFS，回應慢，但 context switch 的消耗低
+	- Small q : 形成頻繁搶斷，context switch 會很高，導致 overhead 暴增
+10. Convey Effect
+	- Convoy effect＝**一個慢／長工作的行程拖住整隊**，其他行程（多半是 I/O-bound）都在等共享資源，整體效能下滑。
+## Ch6
+1. Advantage or feature of Peterson's Solution?
+	- 保證 **Mutual Exclusion**、**Progress**、**Bounded Waiting**
+	- 沒有硬體支援
+	- 假設 load 以及 store 原子性
+2. What is the purpose of the Entry Section in the critical section?
+	- 用於控制許可並確保只有一個 process 可以進入 crtical section
+	- 在進入 critical section 前，**執行存取協定以「請求並取得進入許可」**；若尚未安全可進入，就在此等待，直到協定保證可進入（符合 **Mutual Exclusion / Progress / Bounded Waiting** 的設計）。
+3. test_and_set
+	![[Pasted image 20251026194800.png|300]]
+4. Which of the three properties - Mutual Exclsion, Progress, or Bounded Waiting - does the implementation of test_and_set() fail to satisfy? Please explain the solution in one sentence.
+	- 無法保證 Bounded waiting
+	- 單純 `test_and_set` 自旋鎖只能保證 Mutual Exclsion，無法保證每次請求後等待次數有上界（可能 starvation）。
+5. Two processes, P1 and P2, both update a shared variable count. P1 executes count++, and P2 executes count--. Explain what happens if these two instructions execute concurrently without synchronization.
+	![[Pasted image 20251026162214.png|300]]
+	![[Pasted image 20251106173039.png|500]]
+6. What is the atomic instructions?
+	- 是一個不能被搶斷的操作，確保操作可以一次就執行完成，不會有中斷，可以用來實現鎖或是 CS
+7. Use a binary semaphore to force the execution order: P1's S1 must run before P2's S2. Write minimal pseudocode and state the initial value of the semaphore with a brief reason.
+	```c
+	//P1
+	S1;
+	signal(synch); // 確保 S1 可以先執行，並通知 P2 可以執行 S2
+	
+	//P2
+	wait(synch);   // 等待完 S1 執行完，才會往下跑 S2
+	S2;
+	```
+
+8. wait() 以及 signal() 的操作為什麼必須在 CS 中執行?
+	- (C) 為了確保對信號量的**內部狀態（如計數器）**所做的修改是**原子性**的，從而避免**競態條件**。
+9. For avoid Busy waiting, when a thread call wait() and finds the resource is unavailable, what is the most critical next operation?
+	- 避免 Busy Waiting 的信號量實作中，`wait()` 會把呼叫 thread **加入信號量的等待佇列並阻塞（block）**；之後 `signal()` 會**從佇列喚醒一個緒並送回就緒佇列**。
+10. What is the difference between a counting semaphore and a binary semaphore?
+	- 用來**計數可用資源數**，可同時放行多個執行緒的資源
+	- 只有兩個狀態，控制一次只能一個進入 CS 做操作
