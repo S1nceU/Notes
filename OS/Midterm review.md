@@ -111,12 +111,12 @@
 	- Pthread is 規範、規格, use to create and manage thread.
 9. In the M2M thread model, what is the mechanism by which the kernel can notify the user-level thread library about resource availability? Describe this method concisely. 
 	- 使用 Scheduler Activations 進行 Upcall，當 thread 有事件發生時，Kernel 會用 upcall handler 發出通知
-	- upcall hanler 允許應用管理 kernel thread 的數量或是狀況
+	- upcall handler 允許應用管理 kernel thread 的數量或是狀況
 ## Ch5
 1. In a computer system simulation, when the varibale Clock increases, what action does the simulator perform?
 	- Clock 是模擬器裡的模擬時間，Clock 進行時，會更新系統狀態去反應裝置以及排程動態
 2. Which of the following is NOT a common optimization criterion for scheduling algorithm?
-	- - CPU utilization
+	- CPU utilization
 		- 為了讓 CPU 盡可能忙碌
 	- Throughtput
 		- 每單位時間內平均完成 processes 的工作量
