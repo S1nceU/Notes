@@ -34,3 +34,4 @@
 |             |                       |
 |             |                       |
 |             |                       |
+$g(u) = \begin{cases} +1, & u > 0 \\ -1, & u < 0 \\ \text{origin}, & u = 0 \end{cases}  :contentReference[oaicite:10]{index=10}$
