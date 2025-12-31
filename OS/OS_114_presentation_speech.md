@@ -99,3 +99,154 @@ SJF 是效率標竿，在模擬條件下最穩定；FCFS 最簡單、成本低�
 這篇研究指出 SJF 在理想條件下最強、FCFS 容易被長作業早到拖垮、RR 需要合理的 quantum 才能避免切換成本主導。
 未來方向很自然：更自適應的排程，例如動態調整 quantum、用資料或機器學習預測負載特性，甚至做 hybrid scheduling 結合多種策略的優點。
 我的報告到這邊，謝謝大家
+
+# EN Script (Simple English, Readable)
+## Slide 1 — Title
+Hello everyone. Today I will present a 2024 paper from the Journal of Computer Science.
+The title is “Performance Assessment of CPU Scheduling Algorithms: A Scenario-Based Approach with FCFS, RR, and SJF.”
+This study compares three classic CPU schedulers: FCFS, Round Robin, and SJF.
+The key idea is simple: real workloads are not clean and predictable, so the authors test these algorithms under five stress-test scenarios.
+They measure performance with two metrics: response time and turnaround time.
+
+## Slide 2 — The Context: Short-Term Scheduling
+This paper focuses on short-term scheduling.
+That means: the OS looks at the ready queue and decides which process gets the CPU next.
+The goals are shown on the slide:
+We want to maximize CPU utilization and throughput, and minimize response time and turnaround time.
+
+## Slide 3 — The Core Problem
+Traditional analysis often assumes a static and predictable system.
+But the real world is chaotic. Workloads can change fast, and congestion can happen suddenly.
+So the main question is:
+When the workload changes, which algorithm still performs well, and which one breaks down?
+
+## Slide 4 — The Contenders
+The paper compares three schedulers.
+
+First, FCFS. It is a simple FIFO queue.
+Its weakness is the convoy effect: short jobs can get stuck behind a long job.
+
+Second, Round Robin. Each process gets a fixed time quantum.
+Its weakness is that performance depends a lot on the quantum size.
+
+Third, SJF. It runs the shortest job first.
+Its weakness is that it needs knowing burst time, and long jobs may starve.
+
+## Slide 5 — Deep Dive: FCFS
+FCFS is first come, first served, and it is non-preemptive.
+So one CPU-bound process can **monopolize[mㄜ no po lize]** the CPU for a long time.
+If a huge job arrives first, then many short I/O jobs must wait.
+That is the convoy康voy effect, and it increases waiting time a lot.
+
+## Slide 6 — Deep Dive: Round Robin
+Round Robin is a trade-off controlled by the time quantum.
+
+If the quantum is small, the advantage is high responsiveness for interactive use.
+But the disadvantage is too many context switches. The CPU may spend more time switching than working.
+
+If the quantum is large, the advantage is low overhead and better **efficiency[ㄜfioncy]**.
+But the disadvantage is it behaves more like FCFS, and responsiveness becomes worse.
+
+## Slide 7 — Deep Dive: SJF
+SJF has a major **limitation**. It assumes: “the system must know future burst times.”
+In real OS environments, **exact[依z柯特]** prediction is hard, so pure SJF is not easy to deploy.
+
+But under ideal conditions, SJF is very strong.
+It is known for minimum average waiting and turnaround time, and it clears short jobs quickly.
+
+## Slide 8 — Methodology: The Simulation
+The authors built a custom Java simulation to test dynamic conditions.
+In each run, they create 8 processes.
+They use a function called Random Time generator to generate random arrival times and burst times.
+Then they test FCFS, SJF, and RR with different quantum values: 1, 5, and 10.
+Finally, they log two metrics: response time and turnaround time.
+
+## Slide 9 — The 5 Stress Test Scenarios
+Here are the five scenarios used for stress testing.
+
+Scenario 1: Steady & Heavy. Steady arrival, long burst times. It tests **endurance[in du rance]**.
+Scenario 2: Quick & Staggered. Late start, mostly short tasks. It tests rapid turnover.
+Scenario 3: Early Congestion. Most processes arrive immediately, with high burst variance. This is the hardest case.
+Scenario 4: Balanced. Arrival and burst times are more even. This is the baseline.
+Scenario 5: Delayed & Mostly Short. Later arrivals, mostly short tasks, but with a few long bursts.
+
+## Slide 10 — Scenario Data Detail (Arrival, Burst)
+This table summarizes the objective of each scenario.
+Scenario 1 tests handling of mixed long and short jobs under steady arrival.
+Scenario 2 focuses on responsiveness under light load, since jobs start late and are short.
+Scenario 3 is the key stress test—the slide states it is the primary failure point for FCFS, because **congestion[肯jackion]** plus long jobs early is the worst case for **convoy[康voy]** effect.
+Scenario 4 is the balanced standard load control.
+Scenario 5 tests idle performance when arrivals are **sparse[斯霸爾斯]** and many bursts are short.
+`Scenario 3 has high concurrency and long burst times.`
+`So we should expect Scenario 3 to create the most congestion, and to punish weak scheduling choices.`
+
+## Slide 11 — Scenario Data Detail Table
+This table is basically the input map for the whole experiment.
+It tells us when each process arrives, and how long it runs.
+So when we see results later, we can connect them back to the workload pattern—especially why Scenario 3 is so difficult.
+
+## Slide 12 — Results: Average Response Time
+Now we look at average response time, meaning: how long a process waits until it gets CPU the first time.
+
+Main points from the slide:
+First, SJF is consistently the lowest across all five scenarios.
+Second, RR with Quantum = 1 performs poorly because context switching overhead is too high.
+Third, RR with Quantum = 5 or 10 improves, and becomes more FCFS-like, especially when bursts are short-to-moderate.
+Also, Scenario 3 (Congestion) makes performance drop, because long jobs arrive early and delay everyone.
+
+## Slide 13 — Response Time Interpretation
+So why does response time look like this?
+SJF wins because it starts short jobs earlier, so the queue clears faster.
+FCFS can look okay in balanced cases, but it depends on arrival order. If a long job comes first, response time jumps.
+For RR, the quantum decides everything: too small means too much switching, too large means it behaves like FCFS.
+
+## Slide 14 — Analysis: Context Switching Cost
+This slide answers: Why did Q=1 fail?
+With Quantum = 1, the CPU switches tasks constantly.
+The overhead accumulates, so response time becomes much worse than FCFS or SJF.
+The key message on the slide is:
+Time spent switching can become larger than time spent processing.
+
+## Slide 15 — Results: Average Turnaround Time
+Next is average turnaround time, meaning: from arrival until the process finishes.
+The slide summary is: SJF maintains the best performance across all scenarios.
+Scenario 5 is the best case because burst times are very short.
+Scenario 3 is the worst case because early long processes block the queue.
+For RR, small quantum is **inefficient[in a fion t]**, and large quantum reduces context switches. In Scenario 3, a larger quantum handles long bursts better and can match FCFS efficiency.
+
+## Slide 16 — Turnaround Time Interpretation
+Turnaround time cares a lot about one thing: how fast the whole system finishes jobs.
+SJF helps by finishing many short jobs quickly, so fewer jobs stay in the system for a long time.
+FCFS suffers most when a long job comes early. That pushes back the finish time for everyone.
+RR again depends on quantum: if quantum is too small, overhead delays completion.
+
+## Slide 17 — Deep Dive: The Quantum Dilemma
+This slide gives the main conclusion for RR: there is no magic number.
+The best quantum depends on the workload.
+If Q = 1, you get high responsiveness, but also high overhead.
+If Q = 10, overhead is low, but responsiveness is low and it becomes like FCFS.
+
+## Slide 18 — Summary Matrix
+This matrix summarizes the takeaways.
+
+FCFS: “Simple but Brittle.” It can be okay in balanced loads, but it is very sensitive to arrival order, and it **collapses[call lap ses]** under congestion like Scenario 3.
+
+Round Robin: “The Great Compromise.” It is the standard for fairness, but performance is dictated by quantum size, so it needs tuning.
+
+SJF: “**Theoretical[th o re ti cal]** Champion.” It wins the metrics, but it depends on predicting burst times, so it is hard to deploy in general-purpose OS.
+
+## Slide 19 — Reality Check: Theory vs. Practice
+This slide is the **reality[re 阿 le ty]** check.
+Yes, SJF consistently won the simulation metrics.
+But SJF assumes zero-error prediction of burst times, and it ignores the cost of starvation for long jobs.
+So in real life, SJF is more like an **ideal ceiling**, not a direct solution.
+
+Round Robin did not win every metric, but it is practical:
+It needs no **prior[py er]** knowledge of jobs, and it **guarantees[gay ron tee se]** fairness with no starvation.
+With an optimized quantum, like Q = 5, it can give the best balance for real systems.
+
+## Slide 20 — Conclusion & Future Work
+So the final message is the quote on the slide:
+“The ideal scheduling strategy depends on the **specific[s b cfic]** requirements of the operating environment.”
+In other words, the best scheduler depends on the workload and the system goal.
+That is the end of my presentation. Thank you.
