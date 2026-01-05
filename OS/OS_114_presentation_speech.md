@@ -110,7 +110,7 @@ They measure performance with two metrics: response time and turnaround time.
 
 ## Slide 2 — The Context: Short-Term Scheduling
 This paper focuses on short-term scheduling.
-That means: the OS looks at the ready queue and decides which process gets the CPU next.
+That means: the OS looks at the ready queue and decides which process(ㄆㄨㄚ ses) gets the CPU next.
 The goals are shown on the slide:
 We want to maximize CPU utilization and throughput, and minimize response time and turnaround time.
 
@@ -124,7 +124,7 @@ When the workload changes, which algorithm still performs well, and which one br
 The paper compares three schedulers.
 
 First, FCFS. It is a simple FIFO queue.
-Its weakness is the convoy effect: short jobs can get stuck behind a long job.
+Its weakness is the convoy effect(ㄜfect): short jobs can get stuck behind a long job.
 
 Second, Round Robin. Each process gets a fixed time quantum.
 Its weakness is that performance depends a lot on the quantum size.
