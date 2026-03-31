@@ -66,7 +66,7 @@
 	- $Overhead = \frac{S}{N * T+S} < 0.05 \rightarrow S < \frac{0.05}{0.95}NT$
 	- $S < \frac{0.05}{0.95}*200 = \frac{200}{19}ms$
 9. In the pseudocode, the purpose of the parent process using wait(NULL) is:
-	```
+```
 	  else { /*parent process*/
 		  /* prent will wait for the child to 
 		  wait (NULL);
