@@ -66,13 +66,13 @@
 	- $Overhead = \frac{S}{N * T+S} < 0.05 \rightarrow S < \frac{0.05}{0.95}NT$
 	- $S < \frac{0.05}{0.95}*200 = \frac{200}{19}ms$
 9. In the pseudocode, the purpose of the parent process using wait(NULL) is:
-```
+```c
 	  else { /*parent process*/
-		  /* prent will wait for the child to 
+		  /* prent will wait for the child */ 
 		  wait (NULL);
 		  printf("Child Complete");
 	  }
-	  ```
+```
   - To wait for the child process to terminate and reclaim its status, preventing hte child process from becoming a zombie
 10. What is a "socket"? How is it applied in client-serverr system communication?
 	- Socket 是進程通訊的端點
@@ -174,7 +174,7 @@
 6. What is the atomic instructions?
 	- 是一個不能被搶斷的操作，確保操作可以一次就執行完成，不會有中斷，可以用來實現鎖或是 CS
 7. Use a binary semaphore to force the execution order: P1's S1 must run before P2's S2. Write minimal pseudocode and state the initial value of the semaphore with a brief reason.
-	```c
+```c
 	//P1
 	S1;
 	signal(synch); // 確保 S1 可以先執行，並通知 P2 可以執行 S2
@@ -182,7 +182,7 @@
 	//P2
 	wait(synch);   // 等待完 S1 執行完，才會往下跑 S2
 	S2;
-	```
+```
 
 8. wait() 以及 signal() 的操作為什麼必須在 CS 中執行?
 	- (C) 為了確保對信號量的**內部狀態（如計數器）**所做的修改是**原子性**的，從而避免**競態條件**。
