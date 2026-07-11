@@ -1,0 +1,1296 @@
+<title>Go × K8s × AI Platform 學習中心</title>
+<style>
+:root{
+  --bg:#f2f5f6; --surface:#ffffff; --surface2:#e9eef0; --ink:#17262e; --ink2:#5b6e78;
+  --line:#d8e0e4; --accent:#00758d; --accent-soft:#d9edf2; --accent-ink:#ffffff;
+  --done:#1d8a5f; --done-soft:#dcf0e6; --warn:#b3661a; --warn-soft:#f6e8d8;
+  --code-bg:#0e1a20; --code-ink:#c9dfe8;
+  --mono:"Cascadia Code","JetBrains Mono",Consolas,"Courier New",monospace;
+  --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0b1116; --surface:#111a21; --surface2:#18242d; --ink:#d9e5ec; --ink2:#8aa0ac;
+    --line:#243440; --accent:#3fc1d8; --accent-soft:#0e2f38; --accent-ink:#06272e;
+    --done:#4cc593; --done-soft:#123527; --warn:#e0a35c; --warn-soft:#3a2a14;
+    --code-bg:#0a141a; --code-ink:#c9dfe8;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b1116; --surface:#111a21; --surface2:#18242d; --ink:#d9e5ec; --ink2:#8aa0ac;
+  --line:#243440; --accent:#3fc1d8; --accent-soft:#0e2f38; --accent-ink:#06272e;
+  --done:#4cc593; --done-soft:#123527; --warn:#e0a35c; --warn-soft:#3a2a14;
+  --code-bg:#0a141a; --code-ink:#c9dfe8;
+}
+:root[data-theme="light"]{
+  --bg:#f2f5f6; --surface:#ffffff; --surface2:#e9eef0; --ink:#17262e; --ink2:#5b6e78;
+  --line:#d8e0e4; --accent:#00758d; --accent-soft:#d9edf2; --accent-ink:#ffffff;
+  --done:#1d8a5f; --done-soft:#dcf0e6; --warn:#b3661a; --warn-soft:#f6e8d8;
+  --code-bg:#0e1a20; --code-ink:#c9dfe8;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:15.5px}
+a{color:var(--accent)}
+button{font-family:inherit}
+
+/* ---------- header ---------- */
+.hdr{background:var(--surface);border-bottom:1px solid var(--line);padding:26px 22px 0}
+.hdr-in{max-width:1060px;margin:0 auto}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+.hdr h1{margin:0 0 6px;font-size:clamp(21px,3.4vw,30px);line-height:1.25;text-wrap:balance;letter-spacing:.01em}
+.hdr .sub{color:var(--ink2);margin:0;font-size:14px;max-width:66ch}
+.hdr-stats{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0 20px}
+.stat{background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:10px 16px;min-width:130px;flex:0 1 auto}
+.stat .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);display:block}
+.stat .val{font-family:var(--mono);font-size:21px;font-variant-numeric:tabular-nums;font-weight:600;color:var(--ink)}
+.stat .val small{font-size:12px;color:var(--ink2);font-weight:400}
+.stat.acc .val{color:var(--accent)}
+.stat.done .val{color:var(--done)}
+
+/* ---------- nav ---------- */
+nav.tabs{position:sticky;top:0;z-index:30;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:0 1px 0 var(--line)}
+.tabs-in{max-width:1060px;margin:0 auto;display:flex;gap:2px;overflow-x:auto;padding:0 14px}
+.tab{appearance:none;background:none;border:none;border-bottom:3px solid transparent;padding:12px 14px 10px;font-size:14.5px;color:var(--ink2);cursor:pointer;white-space:nowrap;font-weight:500}
+.tab:hover{color:var(--ink)}
+.tab:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;border-radius:6px}
+.tab.on{color:var(--accent);border-bottom-color:var(--accent);font-weight:700}
+
+/* ---------- layout ---------- */
+main{max-width:1060px;margin:0 auto;padding:26px 22px 80px}
+section.pane{display:none}
+section.pane.on{display:block}
+h2.sec{font-size:20px;margin:34px 0 6px;letter-spacing:.01em}
+h2.sec:first-child{margin-top:0}
+p.lede{color:var(--ink2);margin:0 0 18px;max-width:70ch}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px;margin-bottom:16px}
+.grid2 .card{margin:0}
+
+/* ---------- progress bars ---------- */
+.bar{height:7px;background:var(--surface2);border-radius:99px;overflow:hidden;border:1px solid var(--line)}
+.bar>i{display:block;height:100%;background:var(--accent);border-radius:99px;width:0;transition:width .35s ease}
+.bar.g>i{background:var(--done)}
+@media (prefers-reduced-motion: reduce){.bar>i{transition:none}}
+
+/* ---------- pipeline ---------- */
+.pipe{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:14px 0 8px}
+.pstep{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;position:relative}
+.pstep .num{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--ink2);text-transform:uppercase}
+.pstep h3{margin:4px 0 6px;font-size:15.5px}
+.pstep .meta{font-size:13px;color:var(--ink2);margin-bottom:10px;min-height:2.6em}
+.pstep.sdone{border-color:var(--done)}
+.pstep.sdoing{border-color:var(--accent)}
+
+/* ---------- chips ---------- */
+.chip{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;border-radius:99px;padding:2px 10px;font-weight:600;vertical-align:middle}
+.chip.todo{background:var(--surface2);color:var(--ink2);border:1px solid var(--line)}
+.chip.doing{background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent)}
+.chip.ok{background:var(--done-soft);color:var(--done);border:1px solid var(--done)}
+.chip.opt{background:var(--warn-soft);color:var(--warn);border:1px solid var(--warn)}
+
+/* ---------- phase / week ---------- */
+.phase{margin:0 0 26px;border-left:3px solid var(--line);padding-left:18px;position:relative}
+.phase.pdone{border-left-color:var(--done)}
+.phase.pdoing{border-left-color:var(--accent)}
+.phase-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-bottom:4px}
+.phase-head .pn{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--accent);text-transform:uppercase;font-weight:700}
+.phase-head h3{margin:0;font-size:17.5px}
+.phase-head .pr{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--ink2);font-variant-numeric:tabular-nums}
+.phase-goal{color:var(--ink2);font-size:13.5px;margin:0 0 12px;max-width:72ch}
+details.week{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin:0 0 10px;overflow:hidden}
+details.week[data-done="1"]{border-color:var(--done)}
+details.week>summary{display:flex;align-items:center;gap:12px;padding:12px 16px;cursor:pointer;list-style:none;user-select:none}
+details.week>summary::-webkit-details-marker{display:none}
+details.week>summary:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.wk-num{font-family:var(--mono);font-size:12px;font-weight:700;background:var(--accent-soft);color:var(--accent);border-radius:8px;padding:4px 9px;white-space:nowrap}
+details.week[data-done="1"] .wk-num{background:var(--done-soft);color:var(--done)}
+.wk-title{font-weight:600;font-size:15px;flex:1 1 auto;min-width:140px}
+.wk-right{display:flex;align-items:center;gap:10px;margin-left:auto}
+.wk-pct{font-family:var(--mono);font-size:11.5px;color:var(--ink2);font-variant-numeric:tabular-nums;min-width:38px;text-align:right}
+.wk-bar{width:74px}
+.wk-caret{color:var(--ink2);font-size:11px;transition:transform .2s}
+details.week[open] .wk-caret{transform:rotate(90deg)}
+@media (prefers-reduced-motion: reduce){.wk-caret{transition:none}}
+.wk-body{padding:4px 18px 16px;border-top:1px solid var(--line)}
+
+/* ---------- sections inside week ---------- */
+.blk{margin:14px 0 0}
+.blk h4{margin:0 0 8px;font-size:12px;font-family:var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+.blk.accept h4{color:var(--done)}
+.blk.exp h4{color:var(--warn)}
+.blk .note{font-size:13.5px;color:var(--ink2);margin:0 0 8px;max-width:72ch}
+ul.ck{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:2px 18px}
+ul.ck.one{grid-template-columns:1fr}
+ul.ck li{margin:0}
+ul.ck label{display:flex;gap:9px;align-items:flex-start;padding:4px 6px;border-radius:7px;cursor:pointer;font-size:14px}
+ul.ck label:hover{background:var(--surface2)}
+ul.ck input{appearance:none;width:16px;height:16px;min-width:16px;border:1.6px solid var(--ink2);border-radius:4.5px;margin-top:3.5px;cursor:pointer;position:relative;background:var(--surface)}
+ul.ck input:checked{background:var(--done);border-color:var(--done)}
+ul.ck input:checked::after{content:"";position:absolute;left:4.4px;top:1.2px;width:4px;height:8px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(42deg)}
+ul.ck input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+ul.ck input:checked+span{color:var(--ink2);text-decoration:line-through;text-decoration-color:var(--line);text-decoration-thickness:1.5px}
+.ck-d{font-size:12.3px;color:var(--ink2);margin:-2px 6px 6px 31px;line-height:1.55;max-width:62ch}
+.ck-d::before{content:"驗證 › ";color:var(--accent);font-family:var(--mono);font-size:10px;letter-spacing:.08em;font-weight:700}
+ul.ck li:has(input:checked) .ck-d{opacity:.45}
+.blk.accept ul.ck input:checked{background:var(--done);border-color:var(--done)}
+
+/* ---------- code ---------- */
+pre.code{background:var(--code-bg);color:var(--code-ink);font-family:var(--mono);font-size:12.6px;line-height:1.6;border-radius:10px;padding:14px 16px;overflow-x:auto;margin:8px 0;border:1px solid var(--line)}
+pre.code .ct{display:block;color:#6f93a3;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+
+/* ---------- quiz ---------- */
+.qgroup{margin-bottom:20px}
+.qrow{display:flex;align-items:center;gap:12px;padding:8px 10px;border-bottom:1px solid var(--line)}
+.qrow:last-child{border-bottom:none}
+.qrow .qt{flex:1 1 auto;font-size:14px}
+.qrow .hardmark{font-family:var(--mono);font-size:10px;color:var(--warn);border:1px solid var(--warn);border-radius:99px;padding:1px 7px;margin-left:8px;white-space:nowrap}
+.seg{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{appearance:none;border:none;background:var(--surface);color:var(--ink2);font-size:12.5px;padding:5px 13px;cursor:pointer;font-weight:600}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.seg button.y-on{background:var(--done);color:#fff}
+.seg button.n-on{background:var(--warn);color:#fff}
+.verdict{border-radius:12px;padding:16px 20px;margin:16px 0;border:1px solid var(--line);background:var(--surface)}
+.verdict.v-go{border-color:var(--done);background:var(--done-soft)}
+.verdict.v-fast{border-color:var(--accent);background:var(--accent-soft)}
+.verdict.v-full,.verdict.v-base{border-color:var(--warn);background:var(--warn-soft)}
+.verdict h3{margin:0 0 6px;font-size:16px}
+.verdict p{margin:0;font-size:14px}
+.verdict .score{font-family:var(--mono);font-variant-numeric:tabular-nums;font-weight:700}
+
+/* ---------- tables ---------- */
+.twrap{overflow-x:auto;margin:10px 0}
+table.t{border-collapse:collapse;width:100%;font-size:13.5px;min-width:520px}
+table.t th{text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);border-bottom:2px solid var(--line);padding:7px 12px 7px 0}
+table.t td{border-bottom:1px solid var(--line);padding:7px 12px 7px 0;vertical-align:top}
+
+/* ---------- misc ---------- */
+details.fold{border:1px solid var(--line);border-radius:10px;background:var(--surface);margin-bottom:10px}
+details.fold>summary{padding:11px 16px;cursor:pointer;font-weight:600;font-size:14.5px;list-style:none}
+details.fold>summary::-webkit-details-marker{display:none}
+details.fold>summary::before{content:"▸ ";color:var(--accent);font-size:12px}
+details.fold[open]>summary::before{content:"▾ "}
+details.fold>summary:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+details.fold .fold-body{padding:2px 18px 14px}
+.tagline{font-family:var(--mono);font-size:12.5px;color:var(--ink2)}
+.mono{font-family:var(--mono)}
+.btn{appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:7px 14px;font-size:13px;cursor:pointer;font-weight:600}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.btn.danger:hover{border-color:var(--warn);color:var(--warn)}
+.foot{margin-top:44px;border-top:1px solid var(--line);padding-top:18px;color:var(--ink2);font-size:12.5px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.quote{border-left:3px solid var(--accent);padding:4px 0 4px 16px;margin:14px 0;color:var(--ink);font-size:15px;font-weight:500;max-width:66ch}
+ol.demo{margin:8px 0;padding-left:22px;font-size:14px}
+ol.demo li{margin:3px 0}
+.hint{font-size:12.5px;color:var(--ink2)}
+</style>
+
+<header class="hdr">
+  <div class="hdr-in">
+    <p class="eyebrow">Go × Kubernetes × Cloud-Native AI Platform</p>
+    <h1>平台工程學習中心</h1>
+    <p class="sub">從先備知識檢核、前導補強,到 32 週完整主線 — 逐步打造一個以 Go 與 Kubernetes 為核心、可展示的 Mini Cloud-Native AI Platform。所有勾選進度會儲存在此瀏覽器。</p>
+    <div class="hdr-stats">
+      <div class="stat acc"><span class="lbl">檢核得分</span><span class="val" id="st-quiz">–<small> / 30</small></span></div>
+      <div class="stat"><span class="lbl">前導進度</span><span class="val" id="st-pre">0<small> %</small></span></div>
+      <div class="stat done"><span class="lbl">主計畫完成週數</span><span class="val" id="st-weeks">0<small> / 33 週</small></span></div>
+      <div class="stat"><span class="lbl">主計畫總進度</span><span class="val" id="st-main">0<small> %</small></span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs"><div class="tabs-in" id="tabbar">
+  <button class="tab" data-pane="overview">總覽</button>
+  <button class="tab" data-pane="quiz">1 · 自我檢核</button>
+  <button class="tab" data-pane="prelude">2 · 前導計畫</button>
+  <button class="tab" data-pane="main">3 · 32 週主計畫</button>
+  <button class="tab" data-pane="res">資源與參考</button>
+</div></nav>
+
+<main>
+  <section class="pane" id="pane-overview"></section>
+  <section class="pane" id="pane-quiz"></section>
+  <section class="pane" id="pane-prelude"></section>
+  <section class="pane" id="pane-main"></section>
+  <section class="pane" id="pane-res"></section>
+  <div class="foot">
+    <span>學習資料來源:《32 週完整學習計畫》與《先備知識與前導學習指南》· 進度僅儲存於本機瀏覽器</span>
+    <span style="display:flex;gap:10px;flex-wrap:wrap">
+      <button class="btn" id="btn-export">匯出進度</button>
+      <button class="btn" id="btn-import">匯入進度</button>
+      <input type="file" id="import-file" accept="application/json,.json" style="display:none">
+      <button class="btn danger" id="btn-reset">重設所有進度</button>
+    </span>
+  </div>
+</main>
+
+<script>
+/* ============================================================ state */
+const KEY='gokai-plan-v1';
+let st;
+try{ st=JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){ st={}; }
+st.c=st.c||{}; st.q=st.q||{}; st.tab=st.tab||'overview';
+function save(){ try{ localStorage.setItem(KEY,JSON.stringify(st)); }catch(e){} }
+function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+/* ============================================================ quiz data */
+const QUIZ=[
+ {g:'Go 與 Backend',items:[
+  ['能自行建立 Go module'],['能使用 struct、method、interface'],['能正確處理 error'],
+  ['能閱讀 goroutine 與 channel 基礎程式'],['能建立 JSON REST API','hard'],['能將 request body 轉為 struct'],
+  ['能回傳合理的 HTTP status code'],['能連接 MySQL 或 PostgreSQL'],['能完成基本 CRUD','hard'],
+  ['知道 Middleware 的用途'],['知道 JWT 的基本運作方式'],['能區分 Authentication 與 Authorization']]},
+ {g:'工具與環境',items:[
+  ['能使用 Git commit、branch、merge、push','hard'],['能處理基本 merge conflict'],
+  ['能在命令列啟動程式與查看 log','hard'],['能使用 curl 測試 API'],['能使用 environment variable'],
+  ['能閱讀基本 Shell command'],['能寫基本 Dockerfile'],['能 build 並執行 Container','hard'],
+  ['能閱讀 Docker log'],['能閱讀基本 YAML']]},
+ {g:'基礎觀念',items:[
+  ['知道 process 與 container 的差異'],['知道 image 與 container 的差異'],['知道 host、port、path 的意義'],
+  ['知道 HTTP 與 HTTPS 的差異'],['知道 DNS 的用途'],['知道 index 與 transaction 的基本用途'],
+  ['知道手動測試不能取代自動測試'],['能透過翻譯工具閱讀英文技術文件']]},
+ {g:'加分項目(不計入 30 題核心分數)',bonus:true,items:[
+  ['寫過 Unit Test'],['寫過 Handler Test'],['使用過 Docker Compose'],
+  ['使用過 GitHub Actions'],['使用過 kubectl'],['在本機建立過 kind 或 k3d cluster']]}
+];
+
+/* ============================================================ prelude weeks */
+const PRELUDE=[
+ {w:1,t:'Go 語法與工具鏈',goal:'能獨立建立 Go 專案、熟悉基本語法與資料結構、理解 package 與 module。',secs:[
+  {h:'學習內容',k:'learn',items:[
+   'Go 安裝與環境||go version、go env 正常,能說明 module mode 下不需要 GOPATH 放專案。',
+   'go run / go build / go test||能說明三者差異:直接執行、產出 binary、跑測試,並各執行過一次。',
+   'go fmt / go vet||能格式化程式碼,並修正過至少一個 go vet 找到的問題(如 Printf 格式錯誤)。',
+   'package 與 module||能建立含兩個以上 package 的 module,並正確 import 自己的 package。',
+   'variable、constant、condition、loop||能不看範例寫出 if / for / switch,知道 Go 只有 for 一種迴圈。',
+   'function、struct、pointer||能說明值傳遞與指標傳遞的差異:何時修改會影響呼叫端。',
+   'slice 與 map||能說明 slice 共享底層陣列的行為(append 可能搬移),以及 map 取值的 ok 慣用法。']},
+  {h:'實作任務:CLI Todo Application',k:'task',note:'指令:add / list / complete / remove,資料可先儲存在 JSON file。',items:['實作 add、list、complete、remove 指令','資料儲存於 JSON file']},
+  {h:'驗收標準',k:'accept',items:['能拆分至少兩個 package','不依賴全域變數管理主要狀態','能正確處理檔案錯誤','通過 go fmt 與 go vet']}]},
+ {w:2,t:'Interface、Error、Concurrency 與 Context',goal:'理解 Go 的 composition、建立 error handling 習慣、初步理解 cancellation。',secs:[
+  {h:'學習內容',k:'learn',items:[
+   'Interface 與 method set 基礎||能定義一個小 interface(1–2 個方法)並讓 struct 隱式實作,說明 Go 不需要 implements 關鍵字。',
+   'Error wrapping、errors.Is、errors.As||能用 fmt.Errorf("...: %w", err) 包裝錯誤,並在上層用 errors.Is 判斷原始錯誤。',
+   'defer||能說明 defer 在函式返回前執行(LIFO),並用它關閉檔案或解鎖。',
+   'goroutine、channel||能用 go 啟動 goroutine 並透過 channel 把結果傳回 main。',
+   'WaitGroup、Mutex 基礎||能用 WaitGroup 等待一組 goroutine 結束,用 Mutex 保護共享 map 不觸發 race。',
+   'context.Background / WithCancel / WithTimeout||能寫出「工作在 timeout 或 cancel 時提前結束」的程式,並記得 defer cancel()。']},
+  {h:'實作任務:可取消的 background job runner',k:'task',note:'提交工作 → Worker 執行 → 支援 Timeout → 支援 Cancel → 正確關閉 Goroutine。',items:['實作 worker 執行流程','支援 timeout 與 cancel','正確關閉 goroutine']},
+  {h:'驗收標準',k:'accept',items:['不產生明顯 goroutine leak','cancellation 能傳遞至工作函式','發生錯誤時能停止相關工作','通過 go test -race ./...']}]},
+ {w:3,t:'HTTP 與 REST API',goal:'理解 HTTP request/response,能獨立建立 JSON REST API。',secs:[
+  {h:'學習內容',k:'learn',items:[
+   'net/http 基礎、Router、Handler||能用 http.HandleFunc 註冊路由、啟動 server 並處理 request。',
+   'path parameter 與 query parameter||能分別取出 /todos/{id} 的 id 與 ?status=done 的 status。',
+   'JSON decode / encode||能把 request body decode 進 struct、把 struct encode 成回應,並處理 decode 失敗。',
+   'status code||能依情境正確回 200 / 201 / 400 / 404 / 500,並說明各自的意義。',
+   'Middleware||能寫一個記錄 method、path、耗時的 logging middleware 包住所有 handler。',
+   'Validation 與 error response||能驗證必填欄位,錯誤時回統一格式的 JSON error(含訊息與代碼)。',
+   'health check||能提供 /healthz 回 200,並說明它與 readiness 的差異方向。']},
+  {h:'實作任務:記憶體版 Todo REST API',k:'task',code:'POST   /todos\nGET    /todos\nGET    /todos/{id}\nPATCH  /todos/{id}\nDELETE /todos/{id}\nGET    /healthz',items:['完成所有 endpoint','支援 request ID']},
+  {h:'驗收標準',k:'accept',items:['錯誤輸入不造成 panic','回傳合理 status code','統一 JSON error schema','支援 request ID','能使用 curl 完整測試']}]},
+ {w:4,t:'SQL、Migration 與 Repository',goal:'將 API 從記憶體儲存改為資料庫,理解 Repository 與 transaction。',secs:[
+  {h:'學習內容',k:'learn',items:[
+   'PostgreSQL 或 MySQL||能在本機(建議用 Docker)啟動資料庫並從 Go 程式連線成功。',
+   'Schema 與 migration||能用 migration 工具(golang-migrate 等)以版本化 SQL 建立與變更資料表。',
+   'CRUD SQL||能手寫 SELECT / INSERT / UPDATE / DELETE 與一個 JOIN 查詢,不依賴 ORM 自動生成。',
+   'foreign key 與 index||能建立 user_id 外鍵與索引,並說明索引加速查詢、拖慢寫入的取捨。',
+   'transaction||能把「扣庫存+建訂單」這類多步驟包進交易,失敗時全部 rollback。',
+   'connection pool||能說明 MaxOpenConns / MaxIdleConns 的作用與連線耗盡的症狀。',
+   'Repository interface 與 database implementation||能定義 TodoRepository interface,讓 service 只依賴介面、不依賴 SQL 細節。']},
+  {h:'實作任務',k:'task',items:['將 Todo API 改為資料庫版本','新增 User 與 Todo ownership','新增 due date 與 status 欄位']},
+  {h:'驗收標準',k:'accept',items:['使用 migration 建立 schema','Repository 支援 context','查無資料能回傳 domain error','重要欄位建立適當 index','不將 SQL error 直接回傳給 Client']}]},
+ {w:5,t:'Authentication 與分層架構',goal:'建立完整會員登入流程,把 HTTP、Use case 與 Database 分離。',secs:[
+  {h:'學習內容',k:'learn',items:[
+   'Password hashing||能用 bcrypt 儲存密碼並驗證登入,說明為何不能用 MD5/SHA 直接雜湊。',
+   'JWT||能簽發含 sub 與 exp 的 token,並在 server 驗證簽名與過期時間。',
+   'Authentication middleware 與 authorization||能用 middleware 保護路由,並區分:沒帶 token 回 401、有 token 但無權限回 403。',
+   'Handler / Service / Repository / Domain model / DTO||能說出每一層的責任,且 service 函式簽名只有 context 與純資料,不出現 gin.Context。',
+   'Configuration 與 environment variable||能把 DB 連線字串、JWT secret 等全部改由環境變數載入。',
+   'Secret handling||能確保 secret 只存在 .env(已列入 .gitignore)或環境中,git log 裡找不到任何密鑰。']},
+  {h:'實作任務',k:'task',code:'POST /auth/register\nPOST /auth/login\nGET  /me',items:['完成 register / login / me','每個使用者只能操作自己的 Todo']},
+  {h:'驗收標準',k:'accept',items:['密碼不得以明文儲存','JWT 驗證 expiration','Service 不依賴 Gin/Echo Context','未授權與無權限使用不同錯誤','Secret 不 commit 進 Git']}]},
+ {w:6,t:'Testing、Git 與 CI',goal:'建立自動測試與基本 CI,形成可維護的 Git workflow。',secs:[
+  {h:'學習內容',k:'learn',items:[
+   'Unit test 與 table-driven test||能寫 []struct 測資表 + t.Run 子測試,涵蓋成功與失敗案例。',
+   'Fake / Mock 基礎||能手寫一個記憶體版 fake repository,讓 service 測試不需要真資料庫。',
+   'Handler test||能用 httptest.NewRecorder 驗證 handler 的 status code 與回應 JSON。',
+   'Repository integration test 與 test database||能對真實測試資料庫跑 repository 測試,每次測試前重置資料。',
+   'Git branch 與 pull request||能以 feature branch 開發、發 PR、處理一次 merge conflict。',
+   'GitHub Actions 與 lint||能寫 workflow 讓每次 push 自動跑 test 與 lint,並看懂失敗記錄。']},
+  {h:'實作任務',k:'task',items:['Service unit test','Handler test','Repository integration test','GitHub Actions workflow']},
+  {h:'驗收標準',k:'accept',note:'CI 至少執行 go test ./...、go test -race ./...、go vet ./...',items:['CI 執行 test / race / vet','重要 Use case 有成功與失敗測試']}]},
+ {w:7,t:'Docker、Linux 與可部署服務',goal:'將 API 轉為可重複部署的 Container,能處理基本程序與容器問題。',secs:[
+  {h:'學習內容',k:'learn',items:[
+   'Dockerfile 與 image layer||能寫 Dockerfile 建出可執行的 API image,並說明每個指令產生一層、順序影響快取。',
+   'Container lifecycle||能說明 create → start → stop → rm 的狀態轉換,以及 --rm 的作用。',
+   'port mapping、volume、network||能用 -p 對外開 port、-v 掛載資料、讓兩個容器透過同一 network 互連。',
+   'Docker Compose||能用一份 compose.yaml 同時啟動 API 與資料庫,並設定 depends_on。',
+   'PID 1 與 signal||能說明容器內第一個 process 是 PID 1,shell 包一層會吃掉 signal,因此用 exec 形式的 CMD。',
+   'graceful shutdown 基礎||docker stop 時 API 能收到 SIGTERM 正常收尾,而不是等 10 秒被 SIGKILL。',
+   'container logging||log 輸出到 stdout/stderr,能用 docker logs -f 查看。',
+   'environment configuration||能用 -e 或 compose environment 切換設定,同一個 image 可用於不同環境。']},
+  {h:'實作任務:Docker Compose',k:'task',note:'API + PostgreSQL + Migration。',items:['建立 Compose 組態','包含 API、資料庫與 migration']},
+  {h:'驗收標準',k:'accept',items:['新環境可由單一指令啟動','API 不以 root 身分執行較佳','支援 graceful shutdown','Secret 不寫死在 image','Log 輸出至 stdout/stderr']}]},
+ {w:8,t:'Kubernetes 入門',goal:'將既有 API 部署至本機 Kubernetes,建立 declarative mindset。',secs:[
+  {h:'學習內容',k:'learn',items:[
+   'kind 或 k3d||能建立與刪除本機 cluster,kubectl get nodes 看得到節點。',
+   'Pod、Deployment、Service、Namespace||能說明:Pod 是執行單位、Deployment 維持副本數、Service 提供穩定存取、Namespace 是隔離邊界。',
+   'ConfigMap 與 Secret||能把設定與密鑰以環境變數注入 Pod,並說明兩者差異。',
+   'liveness / readiness probe||能說明 liveness 失敗會重啟、readiness 失敗只摘除流量,並各設定一個。',
+   'resource request / limit||能為容器設定 requests/limits,並說明 request 影響排程位置。',
+   'kubectl apply / get / describe / logs||能用這四個指令部署並找出一個故意弄壞的 Pod 的失敗原因。']},
+  {h:'實作任務:將 Todo API 部署到 kind',k:'task',items:['Namespace','Deployment 與 Service','ConfigMap 與 Secret','Readiness / Liveness probe']},
+  {h:'驗收標準',k:'accept',items:['Pod 能成功啟動','Service 能被存取','設定由 ConfigMap/Secret 注入','刪除 Pod 後 Deployment 能自動補回','能透過 describe 與 logs 找出失敗原因']}]}
+];
+
+const FAST=[
+ {w:1,t:'Go Service Quality',items:[
+  'Error wrapping||能用 %w 包裝錯誤並以 errors.Is / errors.As 在上層判斷。',
+  'Context||能讓 timeout 與 cancel 沿呼叫鏈傳遞並提前結束工作。',
+  'Graceful shutdown||SIGTERM 後停止收新請求、等待既有請求完成再退出。',
+  'Middleware||能自行撰寫並組合 logging / recovery / auth middleware。',
+  'Table-driven test||能寫測資表 + t.Run,涵蓋成功與失敗案例。',
+  'Handler test||能用 httptest 驗證 status code 與回應內容。',
+  'Race detector||能跑 go test -race 並修復一個真實 data race。'],out:'具備測試與 graceful shutdown 的 Job API。'},
+ {w:2,t:'Database、Architecture 與 Authentication',items:[
+  'Repository||能以 interface 隔離資料存取,service 不依賴 SQL 細節。',
+  'Transaction||能把多步驟寫入包進交易,失敗全部 rollback。',
+  'JWT||能簽發與驗證含 expiry 的 token。',
+  'Config||設定全由環境變數載入,缺漏時啟動失敗。',
+  'Secret handling||git 歷史中找不到任何密鑰。',
+  'Layered architecture||service 函式簽名不出現 gin.Context 或 http.Request。'],out:'具備 PostgreSQL 與 JWT 的 Job API。'},
+ {w:3,t:'Docker、Linux 與 CI',items:[
+  'Dockerfile||能建出可執行的 image,理解 layer 快取。',
+  'Docker Compose||一個指令啟動 API + DB + migration。',
+  'Signal||容器 stop 時 API 能收到 SIGTERM 正常收尾。',
+  'Logging||log 輸出 stdout/stderr,docker logs 可讀。',
+  'GitHub Actions||push 自動跑 test / race / vet。',
+  'Integration test||CI 或本機能對真資料庫跑 repository 測試。'],out:'可由 CI 測試、可透過 Compose 部署的 Service。'},
+ {w:4,t:'Kubernetes Fundamentals',items:[
+  'kind||能建立本機 cluster 並讓 kubectl 指向它。',
+  'Deployment||能部署 API,刪掉 Pod 後自動補回。',
+  'Service||能透過 Service 存取 Pod。',
+  'ConfigMap||設定以 ConfigMap 注入。',
+  'Secret||密鑰以 Secret 注入,不寫死在 manifest。',
+  'Probe||liveness / readiness 各設定一個並能說明差異。',
+  'Resource request/limit||能設定並說明對排程與 OOMKill 的影響。',
+  'RBAC 入門||能建立 ServiceAccount + Role 並用 auth can-i 驗證。'],out:'部署至 kind 並完成基本故障排查。'}
+];
+
+const PREFLIGHT=['可註冊與登入','可建立與查詢 Job','未登入不可操作受保護 API','使用者不能操作其他人的 Job','API 正確處理 invalid input','Database schema 可由 migration 建立','go test ./... 通過','go test -race ./... 通過','Docker Compose 可完整啟動','Kubernetes Pod 可正常啟動','Readiness / Liveness probe 正常','Secret 未提交至 Git','README 包含啟動、測試與 API 範例'];
+
+/* ============================================================ 32-week plan */
+const PHASES=[
+{p:0,range:'第 0 週',title:'基線盤點與開發環境',goal:'建立統一開發環境、主專案骨架、版本策略與學習追蹤方式,避免後續被環境問題反覆中斷。',weeks:[
+ {w:0,t:'環境、Repo 與 CI 基線',secs:[
+  {h:'必學與設定',k:'learn',items:[
+   'Go module、workspace 與 toolchain 版本管理||能建立 go.mod、指定 go 版本,並說明 go.work 在多 module 開發時的用途。',
+   'golangci-lint、go vet、staticcheck||能在專案執行三者、看懂並修正至少一種警告,並建立 .golangci.yml 設定檔。',
+   'Makefile 或 Taskfile||能寫出 lint / test / build 三個 target,本機與 CI 使用同一份指令。',
+   'Git branch、commit convention、tag 與 release note||能以 feat: / fix: 風格 commit、建立 annotated tag 並寫一份 release note。',
+   'Docker、Docker Compose||能 build image 並用 compose 啟動 API + 依賴服務。',
+   'kind 或 k3d||能建立/刪除本機 cluster,並確認 kubectl context 指向它。',
+   'kubectl、helm、kustomize||能 apply manifest、安裝一個 helm chart、用 kustomize overlay 改 image tag。',
+   'buf、protoc、ConnectRPC code generation||能從 .proto 產生 Go code,並知道 generated code 不手動修改。',
+   'Kubebuilder CLI||能 scaffold 一個專案,說出 api/、controllers/、main.go 各自的角色。',
+   '可選:Tilt、Skaffold 或 DevSpace 做本機迭代||知道用途即可:改 code 自動 rebuild + redeploy 到本機 cluster。']},
+  {h:'主專案初始結構',k:'code',code:'mini-ai-platform/\n├── api/            # proto 與 generated\n├── cmd/            # platform-api / cluster-agent / controller-manager\n├── internal/       # application / domain / transport / infrastructure\n│                   # observability / security\n├── operator/       # api / controllers / webhooks\n├── deploy/         # base / overlays / helm\n├── test/           # integration / e2e\n├── docs/           # architecture / adr / notes\n├── Makefile\n└── README.md'},
+  {h:'驗收標準',k:'accept',items:['make lint、make test、make build 可執行','本機可建立 kind cluster','GitHub Actions 可跑 lint 與 unit test','README 清楚記載需求版本與啟動方式']}]}
+]},
+{p:1,range:'第 1–4 週',title:'Go 原生模型與系統程式設計',goal:'從「會使用 Gin 寫 API」提升到「理解 Go server、context、concurrency 與 runtime 行為」。',outputs:['Production-ready Job API','一份 net/http 與 Gin 抽象比較筆記','一份 concurrency 與 cancellation 架構圖','一份效能分析紀錄'],weeks:[
+ {w:1,t:'net/http、Handler 與 Server Lifecycle',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'http.Handler 與 http.HandlerFunc||能手寫一個實作 ServeHTTP 的 struct 當 handler,並說明 HandlerFunc 只是把函式轉型成 Handler。',
+   'ServeHTTP 呼叫模型||能說明每個 request 由獨立 goroutine 呼叫 handler,因此 handler 內的共享狀態必須 concurrent-safe。',
+   'http.ServeMux 的 method/path routing||能用「GET /jobs/{id}」式 pattern 註冊路由,並以 r.PathValue("id") 取參數。',
+   'request、response、header、status code||能說明 WriteHeader 只能呼叫一次,且修改 Header() 必須在它之前。',
+   'JSON encode/decode||能用 json.NewDecoder + DisallowUnknownFields 拒絕未知欄位並回 400。',
+   'http.Server||能自建 http.Server struct 設定 Addr / Handler / timeout,而非直接用 http.ListenAndServe。',
+   'read / write / idle / header timeout||能說明四種 timeout 各防什麼(慢讀、慢寫、閒置連線、慢 header 攻擊),並實測其中一種生效。',
+   'graceful shutdown||能用 signal.NotifyContext + srv.Shutdown(ctx) 實作,並解釋為何 Shutdown 也要給 deadline。',
+   'signal handling||能攔截 SIGINT / SIGTERM 觸發收尾流程,而不是直接死掉。',
+   'http.MaxBytesReader 與 request body 限制||能限制 body 大小,超限時回 413 而非讓服務被灌爆記憶體。',
+   'header already written 問題||能重現「superfluous response.WriteHeader」警告並說明成因(已寫 body 後再改 status)。',
+   'keep-alive 與 connection reuse 基本概念||能說明 HTTP/1.1 連線重用如何影響資源釋放與 IdleTimeout 的必要性。']},
+  {h:'實作任務:建立 job-api',k:'task',code:'POST   /jobs\nGET    /jobs/{id}\nDELETE /jobs/{id}\nGET    /healthz\nGET    /readyz',note:'限制:使用純 net/http 或標準 ServeMux,暫不使用 Gin。',items:['統一 JSON response','實作 request body size limit','正確處理 malformed JSON 與 unknown field','加入 graceful shutdown']},
+  {h:'驗收標準',k:'accept',items:['SIGTERM 後不再接受新請求,並等待既有請求結束','timeout 能實際中止慢請求','所有 handler 有 httptest 測試','能口頭說明 Gin Engine 與 http.Handler 的關係']}]},
+ {w:2,t:'Context、Cancellation 與 Concurrency',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'context.Background、TODO、WithCancel、WithTimeout、WithDeadline||能說明 Background 與 TODO 的差異,為外部呼叫加 WithTimeout 且永遠 defer cancel()。',
+   'request context lifecycle||能實測 client 中斷連線時 r.Context() 被取消,下游工作跟著停止。',
+   'context value 的適用與不適用情境||能說明只放 request-scoped metadata(request ID、身分),不放 logger、DB 連線等依賴。',
+   'goroutine lifecycle||對每個 go 陳述式能回答:這個 goroutine 何時結束?誰負責讓它結束?',
+   'channel、buffered channel、select||能用 select 同時等待資料與 ctx.Done(),並說明 buffered channel 的容量意義。',
+   'worker pool||能寫固定數量 worker 從 channel 取工作的 pool,關閉時所有 worker 正常退出。',
+   'fan-out / fan-in||能把一批工作分給多個 goroutine 並聚合結果與錯誤。',
+   'goroutine leak||能舉出兩種 leak 成因(往無人接收的 channel 發送、忘記取消),並用 goroutine profile 證實修復。',
+   'sync.Mutex、RWMutex、WaitGroup、Once||能說明 RWMutex 適合讀多寫少、Once 用於一次性初始化,並各用過一次。',
+   'errgroup.Group||能用 errgroup.WithContext 讓任一工作失敗時取消其餘工作。',
+   'backpressure||能說明 bounded queue 滿載時的三種策略(阻塞/拒絕/丟棄),並實作「拒絕並回 503」。',
+   'shutdown sequence||能寫出正確順序:停止收新工作 → 等待 in-flight 完成 → 關閉資源,並說明順序顛倒的後果。']},
+  {h:'實作任務:擴充 Job API',k:'task',items:['Job 由 worker pool 非同步執行','支援取消 Job','API request 中斷時可決定是否取消下游工作','服務關閉時停止接收新 Job,等待或取消未完成 Job','為 worker queue 加入容量限制']},
+  {h:'故障實驗',k:'exp',items:['故意製造 goroutine leak','故意關閉錯誤的 channel','故意產生 data race','使用 go test -race ./... 驗證修復']},
+  {h:'驗收標準',k:'accept',items:['race detector 通過','goroutine profile 無持續增長','能說明 cancellation propagation 與 backpressure']}]},
+ {w:3,t:'錯誤設計、Logging 與 Configuration',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'sentinel error 與 typed error||能定義 var ErrJobNotFound = errors.New(...) 與帶欄位的自訂 error struct,並說明各自適用時機。',
+   'error wrapping、errors.Is、errors.As||能用 %w 逐層包裝保留因果鏈,上層用 Is 判斷 sentinel、用 As 取出 typed error 的欄位。',
+   'domain error 與 transport error mapping||能在 handler 層把 ErrJobNotFound 映射為 404、ErrConflict 為 409,內部訊息不洩漏給 client。',
+   'retryable 與 non-retryable error||能區分逾時/暫時性錯誤(可重試)與驗證錯誤(不可重試),並在 error 型別上表達出來。',
+   'log/slog structured logging||能輸出 JSON 格式 log,並用 logger.With() 附加固定欄位重複使用。',
+   'request ID、trace ID、tenant ID||同一個 request 產生的所有 log 都帶同一 request ID,可用它撈出完整過程。',
+   '避免記錄 secret、token 與敏感 payload||能檢查 log 中不出現 Authorization header、密碼與完整 request body,必要欄位做 redact。',
+   'environment-based configuration||設定集中在一個 Config struct,啟動時從環境變數一次載入。',
+   'config validation 與 immutable configuration||啟動時驗證必填與格式,啟動後 Config 不再被修改。',
+   'startup fail-fast||能說明設定錯誤時要立即退出並印出原因,而不是帶病運行到半夜才炸。',
+   'secrets 與普通 configuration 的區別||能說明 secret 需要:不進版控、可輪替、載入來源與一般設定分離。']},
+  {h:'實作任務',k:'task',items:['定義 ErrJobNotFound、ErrQueueFull、ErrConflict','統一 API error schema','日誌包含 request ID、method、path、duration、status','config 缺漏時拒絕啟動','加入 log level 與 JSON log']},
+  {h:'驗收標準',k:'accept',items:['Repository error 不直接洩漏到 HTTP response','可從一筆錯誤日誌追蹤完整 request','測試驗證錯誤映射與 log field']}]},
+ {w:4,t:'Testing、Benchmark、pprof 與品質工具',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'table-driven test 與 subtest||能寫 []struct 測資表 + t.Run,單一測試函式涵蓋多組成功/失敗案例。',
+   'interface boundary||能為 repository 定義最小 interface,讓 service 測試時可注入 fake。',
+   'fake、stub、mock、spy 的差異||能各用一句話說明差異(可運作的簡化實作/固定回傳/驗證互動/記錄呼叫),並手寫一個 fake。',
+   'httptest.Server 與 integration test||能用 httptest.NewServer 起真 HTTP server 測完整 request → response 流程。',
+   'benchmark 與 allocation||能寫 BenchmarkXxx 並用 -benchmem 解讀 ns/op 與 allocs/op。',
+   'CPU、heap、goroutine、mutex profile||能開啟 net/http/pprof,抓 CPU 與 heap profile 並看懂火焰圖熱點。',
+   'fuzz test 基礎||能寫 FuzzXxx 測 JSON parser 對任意輸入不 panic。',
+   'coverage 的正確解讀||能說明覆蓋率高不等於測得好,並找出一段「有覆蓋但沒驗證行為」的測試。',
+   'deterministic test 與 flaky test 常見原因||能舉出 flaky 三大成因(依賴時間、依賴順序、共享狀態)並修復一個。']},
+  {h:'實作任務',k:'task',items:['Service unit tests','Handler tests','Repository fake','benchmark JSON encoding 與 queue operation','使用 pprof 找出一個刻意製造的 allocation hotspot','寫一個 fuzz test 測 JSON input parser']},
+  {h:'驗收標準',k:'accept',items:['完成單元與整合測試','完成 benchmark 與 pprof 分析紀錄','建立第一個 release tag:v0.1-go-http']}]}
+]},
+{p:2,range:'第 5–7 週',title:'Production HTTP、Chi、Gin 邊界與 RPC',goal:'理解框架取捨,並建立對外 REST / Connect 與內部 RPC 契約。',outputs:['ConnectRPC Job Service','.proto contract 與 API versioning 文件','REST 與 RPC 選擇比較','一組 resilience test'],weeks:[
+ {w:5,t:'Chi、Middleware Composition 與 Clean Boundary',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'chi router 與標準 http.Handler 相容性||能說明 chi.Router 本身就是 http.Handler、middleware 就是 func(http.Handler) http.Handler,因此與標準庫完全互通。',
+   'route group||能用 Route / Group 把 /api/v1 下的路由分組,並對群組掛不同 middleware。',
+   'middleware chaining||能畫出洋蔥模型與執行順序,並說明 recovery 為何要放最外層。',
+   'authentication / authorization middleware||能實作驗 token 並把身分放進 context 的 authn,以及在其後檢查資源擁有權的 authz。',
+   'panic recovery||能攔截 handler panic 回 500,且 stack trace 只進 log 不回給 client。',
+   'CORS||能說明 preflight(OPTIONS)請求與 Access-Control-Allow-Origin 的作用。',
+   'rate limiting 基礎||能說明 token bucket 概念,並對單一 client 實作限流回 429。',
+   'idempotency key||能說明 client 重送 POST 時,server 如何靠 Idempotency-Key 辨識重複請求。',
+   'HTTP adapter 與 application service 分離||handler 只做解析/驗證/轉 DTO,商業邏輯全部在 service — 換掉 router 不需要動 service。']},
+  {h:'架構原則',k:'code',code:'HTTP / Gin / Chi Context\n           ↓\n       Handler DTO\n           ↓\n   Application Service\n           ↓\n    Domain / Repository',note:'*gin.Context 不進入 application service;HTTP status code 不出現在 domain layer;DB model 不直接作為 API response。'},
+  {h:'實作任務',k:'task',items:['將 Job API routing 改為 chi(或保留 Gin,但僅存在 transport layer)','實作 request ID、auth、recovery、timeout middleware','撰寫 ADR:為何選 chi、Gin 或 net/http']},
+  {h:'驗收標準',k:'accept',items:['transport 與 application 邊界清楚','middleware 順序有測試或文件佐證','ADR 完成並入版控']}]},
+ {w:6,t:'Protocol Buffers 與 API Contract',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'message、field、enum、service||能手寫含 enum 與巢狀 message 的 .proto,enum 第一個值為 _UNSPECIFIED = 0。',
+   'field number 與 wire compatibility||能說明 field number 才是序列化的身分(名稱可改、編號不可),改編號等於 breaking change。',
+   'optional、repeated、map||能說明 proto3 optional 的 presence 語意(能區分「沒設」與「零值」)。',
+   'timestamp、duration、well-known types||能使用 google.protobuf.Timestamp / Duration 而非自訂字串格式。',
+   'package 與 version 命名||能以 platform.job.v1 風格命名,並說明升 v2 的時機。',
+   'breaking change 與 backward / forward compatibility||能舉出三種 breaking change:重用已刪除編號、改欄位型別、改欄位語意。',
+   'buf lint、buf breaking||能在 CI 對 main 分支跑 buf breaking,擋下不相容的修改。',
+   'generated code 與手寫 code 的邊界||generated code 放獨立目錄、不手改;手寫 adapter 負責轉換 domain 型別。',
+   'API pagination、filter、sort、resource name||能設計 page_token 式分頁與 resource name(如 tenants/{id}),並說明 offset 分頁的問題。']},
+  {h:'實作任務:定義 JobService',k:'task',code:'service JobService {\n  rpc CreateJob(CreateJobRequest) returns (CreateJobResponse);\n  rpc GetJob(GetJobRequest) returns (GetJobResponse);\n  rpc CancelJob(CancelJobRequest) returns (CancelJobResponse);\n  rpc WatchJob(WatchJobRequest) returns (stream JobEvent);\n}',items:['完成 proto 定義與 code generation']},
+  {h:'驗收標準',k:'accept',items:['buf lint 通過','建立 breaking change check','能解釋為何不能重複使用已刪除 field number']}]},
+ {w:7,t:'ConnectRPC、gRPC Semantics 與 Resilience',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'Connect protocol、gRPC、gRPC-Web||能說明三種協定差異與瀏覽器相容性,以及 ConnectRPC 一套實作同時支援三者的價值。',
+   'unary RPC 與 server streaming||能實作一問一答與 server 持續推送兩種 RPC,並知道 stream 何時結束。',
+   'client / bidirectional streaming 概念||能各說出一個適用場景(大檔上傳、雙向即時通訊)。',
+   'interceptor||能寫一個 logging interceptor 套用到所有 RPC,等同 HTTP middleware 的角色。',
+   'metadata / header||能在 client 附加 header(如 token)並在 server interceptor 取出。',
+   'deadline 與 cancellation||能讓 client 設定的 deadline 傳到 server ctx,逾時後 server 端工作真的停止。',
+   'RPC status code||能把 domain error 映射到 CodeNotFound / CodeAlreadyExists / CodeInvalidArgument 等。',
+   'retry policy、exponential backoff、jitter||能實作指數退避 + 隨機抖動,並說明 jitter 防止的 thundering herd 問題。',
+   'idempotency||能判斷哪些 RPC 可安全自動重試(讀取、冪等寫入),哪些不可(未去重的建立)。',
+   'circuit breaker 概念||能說明三態轉換:closed → open(連續失敗)→ half-open(試探恢復)。',
+   'request hedging 的風險||能說明對非冪等操作做 hedging(同時發多份請求)可能造成重複執行。']},
+  {h:'實作任務',k:'task',items:['將 Job Service 提供 ConnectRPC endpoint','REST endpoint 作為外部相容層','WatchJob 透過 streaming 推送狀態','建立 auth interceptor','建立 logging、metrics interceptor','模擬 timeout、retry 與 duplicate request']},
+  {h:'驗收標準',k:'accept',items:['ConnectRPC 與 REST 並存且行為一致','streaming 推送可運作','resilience 測試(timeout / retry / duplicate)通過','建立 release tag:v0.2-connectrpc']}]}
+]},
+{p:3,range:'第 8–10 週',title:'Container 與 Kubernetes 核心',goal:'把服務可靠地容器化、部署到 Kubernetes,並具備基礎除錯能力。',outputs:['Kubernetes manifests 或 Kustomize overlays','Kubernetes troubleshooting runbook','RBAC 權限矩陣','Container security checklist'],weeks:[
+ {w:8,t:'Production Container Image',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'multi-stage build||能寫 builder + runtime 兩階段 Dockerfile,最終 image 不含 Go toolchain 與原始碼。',
+   'distroless / scratch / alpine 取捨||能說明三者差異(除錯工具、CA 憑證、shell、大小),並為自己的選擇給出理由。',
+   'CGO 與 static binary||能用 CGO_ENABLED=0 產出 static binary,並解釋 scratch image 為何需要它。',
+   'non-root user||能在 Dockerfile 以 USER 指定非 root,並在容器內用 id 驗證 uid 不是 0。',
+   'read-only filesystem||能以唯讀 root filesystem 執行服務,需要寫入的目錄改掛 tmpfs/volume。',
+   'signal handling||能說明 CMD 用 exec 形式(非 shell 包裝)讓 binary 直接成為 PID 1 接收 SIGTERM。',
+   'image layer cache 與 .dockerignore||能安排先 COPY go.mod 再 COPY 原始碼讓依賴層可快取,並排除 .git 等無關檔案。',
+   'architecture / platform build||知道 buildx 可產出 amd64/arm64 多平台 image,並理解 manifest 的角色。',
+   'SBOM 基礎||能用 syft 等工具產出 SBOM,並說明它回答「這個 image 裡有哪些元件」。',
+   'image vulnerability scanning||能用 trivy/grype 掃描 image,解讀 CVE 嚴重度並決定處理方式。',
+   'OCI image、registry、tag 與 digest||能說明 tag 可被覆蓋、digest 不可變,因此正式部署要 pin digest。']},
+  {h:'實作任務',k:'task',items:['建立小型、安全的 Job API image','使用 non-root','設定 read-only root filesystem','建立 healthcheck','使用 image digest 部署','產生 SBOM,執行 vulnerability scan']},
+  {h:'驗收標準',k:'accept',items:['image 以 non-root 執行且體積精簡','SBOM 與掃描報告產出','以 digest 而非 latest 部署']}]},
+ {w:9,t:'Kubernetes Workload、Config 與 Resource Management',secs:[
+  {h:'必學資源',k:'learn',items:[
+   'Pod、ReplicaSet、Deployment||能說明三層關係:Deployment 管理 ReplicaSet、RS 維持 Pod 數,rolling update 時新舊 RS 如何交替。',
+   'StatefulSet||能說明穩定網路識別(pod-0、pod-1)與 per-pod PVC,並舉出何時需要它(資料庫)。',
+   'Job / CronJob||能說明 completions / backoffLimit,並部署一個會失敗重試的 Job 觀察行為。',
+   'Service||能說明 selector → Endpoints 的對應關係,以及 Pod 不 ready 時被移出 Endpoints。',
+   'ConfigMap 與 Secret||能以 env 與 volume 兩種方式注入,並說明兩種方式在更新時的行為差異。',
+   'Namespace||能說明它隔離什麼(名稱、quota、RBAC 範圍)與不隔離什麼(節點、CRD 定義)。',
+   'requests / limits||能說明 request 決定排程、limit 觸發 CPU throttle 或 OOMKill,以及三種 QoS class。',
+   'liveness、readiness、startup probe||能說明三者失敗的不同後果:重啟容器/摘除流量/延後前兩者生效。',
+   'rolling update 與 rollback||能設定 maxSurge / maxUnavailable,並用 rollout undo 回滾一次。',
+   'affinity、anti-affinity||能寫出「副本分散在不同節點」的 pod anti-affinity。',
+   'taint、toleration||能說明方向:taint 是節點排斥 Pod、toleration 只是允許不是吸引。',
+   'topology spread constraints||能讓副本平均分佈於節點或 zone。',
+   'priority class 基礎||知道高優先權 Pod 可搶佔(preempt)低優先權 Pod 的影響。']},
+  {h:'實作任務',k:'task',items:['將 Job API 部署到 kind','加入 probes','設定 requests / limits','執行 rolling update 與 rollback','刻意製造 OOMKilled、CrashLoopBackOff、ImagePullBackOff']},
+  {h:'驗收標準',k:'accept',code:'kubectl get\nkubectl describe\nkubectl logs\nkubectl exec\nkubectl top\nkubectl events',items:['能使用左列指令完成基本根因分析']}]},
+ {w:10,t:'Kubernetes Network、Storage 與 RBAC 基礎',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'ClusterIP、NodePort、LoadBalancer||能說明三種 Service type 的流量路徑與適用環境(叢集內/開發測試/雲端對外)。',
+   'DNS 與 service discovery||能說出 name.namespace.svc.cluster.local 的解析規則,並在 Pod 內 nslookup 驗證。',
+   'Ingress 與 Gateway API 的角色差異||能說明 Gateway API 把「基礎設施(Gateway)」與「路由(Route)」分離的設計改善。',
+   'CNI 基本概念||知道 Pod 網路由 CNI plugin 提供,NetworkPolicy 是否生效取決於 CNI 是否支援。',
+   'NetworkPolicy||能寫 default-deny 加白名單放行,並理解「Pod 被任一 policy 選中後才進入限制模式」。',
+   'PV、PVC、StorageClass||能說明動態供應流程:PVC 引用 StorageClass → 自動建立 PV → 綁定。',
+   'volume lifecycle||能說明 reclaim policy Delete 與 Retain 在 PVC 刪除後的不同後果。',
+   'ServiceAccount||能說明 Pod 以掛載的 SA token 呼叫 API server,身分就是該 SA。',
+   'Role、ClusterRole||能說明 namespace-scoped 與 cluster-scoped 的差異,以及 ClusterRole 也可被 RoleBinding 借用。',
+   'RoleBinding、ClusterRoleBinding||能把 Role 綁定到 ServiceAccount 並實測權限生效。',
+   'least privilege||能只授予需要的 verbs/resources,說明為何不能圖方便給 cluster-admin。',
+   'kubectl auth can-i||能用 --as=system:serviceaccount:ns:name 模擬身分驗證權限矩陣。']},
+  {h:'實作任務',k:'task',items:['建立 tenant-a namespace','建立 ServiceAccount','Role 只允許讀 Pod','使用 NetworkPolicy 限制服務流量','建立 PVC 並驗證 Pod 重建後資料仍存在','建立 Gateway / HTTPRoute 的最小範例']},
+  {h:'驗收標準',k:'accept',items:['RBAC 權限如預期(auth can-i 驗證)','NetworkPolicy 有效阻擋非允許流量','PVC 資料在 Pod 重建後仍存在','建立 release tag:v0.3-kubernetes']}]}
+]},
+{p:4,range:'第 11–13 週',title:'Kubernetes API Machinery、client-go 與自製 Controller',goal:'先理解 Operator 底層 control loop,再使用高階框架。',outputs:['client-go Deployment Health Controller','control loop 架構圖','一份「事件不等於狀態」的技術筆記','controller reliability 測試報告'],weeks:[
+ {w:11,t:'Kubernetes API Object 與 Client',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'Group、Version、Kind||能說明 GVK(型別)與 GVR(REST 路徑)的差異,並用 kubectl api-resources 查對應。',
+   'resource 與 subresource||能說明 /status、/scale subresource 存在的意義:權限與更新路徑分離。',
+   'metadata、spec、status||能說明 spec 是使用者意圖、status 是 controller 的觀察結果,各由誰負責寫。',
+   'labels、annotations、selectors||能說明 label 供查詢與 selector 匹配、annotation 存附註資料不可查詢。',
+   'UID、generation、resourceVersion||能說明 generation 只在 spec 變更時遞增、resourceVersion 每次寫入都變、UID 辨識重建。',
+   'optimistic concurrency||能實際製造一次 409 Conflict,並以「重新讀取 → 重套變更 → 重試」處理。',
+   'watch 與 list-watch||能說明先 list 取得 resourceVersion、再從該版本開始 watch 的銜接機制。',
+   'API discovery||能用 discovery client 列出 server 支援的 group/version/resource。',
+   'typed client 與 dynamic client||能各寫一段列出 Deployment 的程式,並說明取捨:型別安全 vs 不需編譯期知道型別。',
+   'RESTMapper||能說明它負責 GVK ↔ GVR 的映射,dynamic client 需要它找到 REST 路徑。',
+   'unstructured object||能用 unstructured.Unstructured 讀寫任意資源的欄位。',
+   'server-side apply||能說明 SSA 由 server 合併欄位、以 field manager 記錄欄位擁有者。',
+   'patch:merge、strategic merge、JSON patch||能說明 strategic merge 對 list 依 patchMergeKey 合併,JSON patch 是精確的操作序列。']},
+  {h:'實作任務:建立 CLI',k:'task',items:['列出 namespace 內 Deployment','顯示 desired / available replicas','使用 label selector 篩選','使用 patch 修改 annotation','處理 resourceVersion conflict']},
+  {h:'驗收標準',k:'accept',items:['CLI 可正確操作與篩選 Deployment','conflict 處理有重試邏輯','能說明 resourceVersion 與 optimistic concurrency']}]},
+ {w:12,t:'Informer、Cache、Workqueue',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'SharedInformer||能說明多個 controller 共用同一份 watch 與 cache 的理由:減少 API server 負擔。',
+   'local cache 與 lister||能說明從 lister 讀取不會打 API server,代價是可能讀到稍舊的資料。',
+   'event handler||能註冊 Add/Update/Delete handler,且 handler 只做一件事:把 key 丟進 queue。',
+   'workqueue 與 rate-limiting queue||能說明 queue 對同一 key 去重、失敗後以退避延遲重新入列的行為。',
+   'key-based processing||能說明為何 queue 存 namespace/name 而非整個物件:處理時永遠以最新狀態為準。',
+   'resync||能說明 resync 是本地 cache 定期重播所有物件給 handler,不是重新向 API server list。',
+   'at-least-once delivery||能說明同一 key 可能被處理多次,因此 reconcile 必須冪等。',
+   'event coalescing||能說明短時間多次更新可能合併為一次處理,controller 不能假設看得到每次變化。',
+   'controller 不應依賴事件順序||能舉例:網路重連後事件順序可能與實際發生順序不同。',
+   'cache stale read||能說明剛寫入的物件立即從 cache 讀可能還讀不到,以及對策(容忍或直讀 API)。']},
+  {h:'實作任務:Deployment Health Controller',k:'task',code:'Watch Deployment\n→ 將 namespace/name 放入 queue\n→ worker 讀取 key\n→ 從 cache 取得 object\n→ 比較 desired 與 available replicas\n→ 輸出 metric / Event\n→ 失敗時 rate-limited retry',items:['依左列 control loop 完成 controller']},
+  {h:'驗收標準',k:'accept',items:['支援多 worker','shutdown 時正確關閉 queue','transient error 會重試','permanent error 不無限重試']}]},
+ {w:13,t:'Controller Reliability',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'idempotency||reconcile 同一物件連跑 10 次,結果與跑 1 次完全相同、無重複副作用。',
+   'level-triggered 與 edge-triggered||能說明 level-triggered 只看「現在的狀態」決定行動,不依賴事件內容 — 錯過事件也能收斂。',
+   'reconcile convergence||能說明單次 reconcile 不必做完所有事,只要每次都朝 desired state 前進。',
+   'eventual consistency||能接受系統短暫不一致,以 requeue 與重試等待收斂,而不是同步阻塞等待。',
+   'rate limiting 與 exponential backoff||能設定失敗 requeue 的退避,避免壞物件把 API server 打爆。',
+   'conflict retry||能正確處理 status 更新的 409:重讀最新版本再套用變更。',
+   'duplicate event||能以測試證明重複事件不會造成重複建立資源。',
+   'cache delay||能處理「剛建立的 child 還沒進 cache」導致的誤判(如用 AlreadyExists 容錯)。',
+   'leader election||能說明 controller 多副本時只有 leader 執行 reconcile,避免互相衝突。',
+   'controller metrics||能暴露 reconcile 次數、耗時、錯誤數與 queue 深度。',
+   'Kubernetes Event||能發出 Event,讓使用者用 kubectl describe 看到 controller 做了什麼。']},
+  {h:'實作任務',k:'task',items:['對自製 controller 加入 metrics','模擬 API server 暫時失敗','模擬 watch restart','模擬 object 快速連續更新','寫 controller unit test']},
+  {h:'驗收標準',k:'accept',items:['故障模擬後 controller 能收斂','metrics 反映 reconcile 行為','unit test 覆蓋 reconcile 決策']}]}
+]},
+{p:5,range:'第 14–18 週',title:'Kubebuilder、CRD 與 Tenant Operator',goal:'掌握正式 Operator 開發流程與 Kubernetes-native API 設計。',outputs:['Tenant Operator','CRD API 文件','condition 與 error catalog','operator e2e test','upgrade / deletion runbook'],weeks:[
+ {w:14,t:'Kubebuilder 與 CRD API Design',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'Kubebuilder project layout||能說出 api/(型別定義)、controllers/(reconcile)、main.go(manager 啟動)各自的角色。',
+   'API group / version||能解釋 platform.example.com/v1alpha1 的組成,以及 group 用網域避免衝突。',
+   'markers 與 deepcopy||能說明 +kubebuilder: marker 如何生成 CRD schema,以及 DeepCopy 為何是 API 型別的必要條件。',
+   'CRD schema 與 structural schema||能說明 structural schema 是 CRD 進階功能(defaulting、pruning)的前提。',
+   'OpenAPI validation||能為欄位加 Required / Format 等限制,並實測 kubectl apply 擋下不合法資料。',
+   'defaulting||能在 schema 層以 +kubebuilder:default 設定預設值並驗證生效。',
+   'enum、pattern、minimum、maximum||能用 validation marker 限制值域(如 phase 只能是特定字串、quota 不可為負)。',
+   'printer columns||能讓 kubectl get tenant 直接顯示 PHASE 等自訂欄位。',
+   'status subresource||能說明啟用後 spec 與 status 分開更新,一般 update 不會動到 status。',
+   'short name、category||能讓 kubectl get tn(縮寫)與 kubectl get all 類別查詢生效。']},
+  {h:'第一個 CRD:Tenant',k:'code',code:'apiVersion: platform.example.com/v1alpha1\nkind: Tenant\nmetadata:\n  name: team-a\nspec:\n  displayName: Team A\n  namespaces:\n    - team-a-dev\n    - team-a-prod\n  quota:\n    cpu: "4"\n    memory: "8Gi"\n    pods: 20\n  defaultLimits:\n    cpu: "1"\n    memory: "1Gi"\nstatus:\n  observedGeneration: 1\n  phase: Ready\n  conditions: []'},
+  {h:'驗收標準',k:'accept',items:['無效 quota 無法通過 API validation','kubectl get tenant 顯示 phase','spec 與 status 責任清楚']}]},
+ {w:15,t:'Reconcile Loop 與 Child Resources',secs:[
+  {h:'Controller 自動建立',k:'learn',items:[
+   'Namespace||理解它是租戶隔離的基本邊界,Tenant 的每個 namespace 都由 controller 建立與管理。',
+   'ResourceQuota||理解它限制租戶 namespace 的總用量(CPU、記憶體、Pod 數),超額建立會被 API server 拒絕。',
+   'LimitRange||理解它給未宣告 requests/limits 的 Pod 補預設值,避免無限制的工作負載。',
+   'ServiceAccount||理解它是租戶工作負載在叢集內的身分。',
+   'Role 與 RoleBinding||理解它限制租戶只能操作自己 namespace 內的資源。',
+   'NetworkPolicy||理解它阻擋跨租戶的網路流量,是隔離的網路層。']},
+  {h:'必學內容',k:'learn',items:[
+   'controller-runtime client||能用同一個 client Get/List/Create/Update 任意已註冊 scheme 的型別。',
+   'CreateOrUpdate pattern||能用 ctrl.CreateOrUpdate + mutate function 表達 desired state,不自己寫 if-exists 分支。',
+   'controller reference 與 owner reference||能設定 ownerRef 讓刪除 Tenant 時 child resources 被 GC 級聯刪除。',
+   'Owns watch||能讓 child resource 被修改/刪除時自動觸發 parent 的 reconcile。',
+   'desired resource builder||能把「產生期望的 ResourceQuota」寫成純函式,方便單元測試比對。',
+   'immutable field 處理||能處理不可變欄位(如某些 spec 欄位):偵測差異後重建或明確報錯。',
+   'status patch||能用 Status().Update / Patch 更新 status,並說明與一般 Update 的權限差異。']},
+  {h:'驗收標準',k:'accept',items:['重複 reconcile 不會建立重複資源','手動刪除 child resource 後可自動補回','修改 Tenant spec 後 child resource 會收斂']}]},
+ {w:16,t:'Conditions、Status 與 ObservedGeneration',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'Ready、Progressing、Degraded conditions||能定義三種 condition 的語意,並說明它們可同時存在、各自獨立轉換。',
+   'status.observedGeneration||能在 status 記錄已處理的 generation,使用者比對 metadata.generation 即知新 spec 是否已被處理。',
+   'reason、message、lastTransitionTime||reason 用機器可讀的 CamelCase、message 給人讀;只有 status 真的改變才更新 transition 時間。',
+   'phase 與 conditions 的角色||能說明 phase 是單一摘要值、conditions 是多維度明細,phase 應由 conditions 推導。',
+   'status update conflict||能處理多 worker 同時更新 status 的 409:重讀再套用。',
+   'user-facing status||設計標準:使用者只看 kubectl get / describe 就知道發生什麼事,不需要翻 controller log。']},
+  {h:'實作任務:狀態範例',k:'code',code:'status:\n  observedGeneration: 3\n  conditions:\n    - type: Ready\n      status: "False"\n      reason: RBACProvisioningFailed\n      message: failed to create RoleBinding'},
+  {h:'驗收標準',k:'accept',items:['使用者可從 status 判斷目前發生什麼事','spec 新版本尚未處理時可辨識','condition transition 正確']}]},
+ {w:17,t:'Finalizer、Deletion 與 External Resource Cleanup',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'deletionTimestamp||能說明物件帶 finalizer 時,刪除只是設定 deletionTimestamp,物件仍存在等待清理。',
+   'finalizer lifecycle||能實作完整流程:reconcile 時加上 finalizer → 偵測到 deletionTimestamp 執行清理 → 清理成功後移除 finalizer。',
+   'external resource cleanup||能在物件真正消失前清理 Kubernetes 之外的資源(外部 registry、雲端資源)。',
+   'stuck terminating||能診斷物件卡在 Terminating 的原因:finalizer 未被移除,通常是清理失敗或 controller 掛了。',
+   'cleanup idempotency||清理重複執行不報錯:外部資源已不存在時視為清理成功。',
+   'timeout 與 force delete 的風險||能說明手動硬移除 finalizer 會跳過清理,造成外部資源洩漏 — 只能是最後手段且需記錄。']},
+  {h:'實作任務',k:'task',items:['Tenant 刪除前清理模擬外部 registry record','cleanup 失敗時保留 finalizer 並重試','cleanup 成功後移除 finalizer','提供 runbook 處理 stuck finalizer']},
+  {h:'驗收標準',k:'accept',items:['刪除流程可靠且 idempotent','stuck finalizer 有處理程序文件']}]},
+ {w:18,t:'Webhook、版本演進與 Operator Testing',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'validating webhook||能拒絕不合法的 CR(如跨欄位邏輯驗證)並回傳使用者看得懂的錯誤訊息。',
+   'mutating / defaulting webhook||能在物件寫入前自動補預設值,並說明與 schema default 的差異(可寫邏輯)。',
+   'conversion webhook||能說明多版本 CRD 共存時,由它負責版本間的物件轉換。',
+   'v1alpha1、v1beta1、v1||能說明版本階段代表的穩定性承諾:alpha 可隨時改、GA 保證相容。',
+   'hub / spoke conversion||能說明以一個 hub 版本為中心、其他版本只與 hub 互轉,避免 N×N 轉換。',
+   'envtest||能在測試中啟動真實 API server + etcd,驗證 CRD 註冊與 reconcile 行為。',
+   'fake client 限制||能舉出 fake client 與真實行為的差異:沒有 GC、沒有 webhook、status 行為不同。',
+   'controller integration test||能界定範圍:controller + API server,不含真實工作負載。',
+   'end-to-end test||能在 kind 上驗證從建立 Tenant 到 child resources 全部就緒的完整流程。']},
+  {h:'實作任務',k:'task',items:['Tenant default quota webhook','驗證 namespace 命名規則','envtest 驗證 reconcile','kind e2e 驗證完整 child resource']},
+  {h:'驗收標準',k:'accept',items:['webhook validation / defaulting 生效','envtest 與 e2e 通過','建立 release tag:v0.4-tenant-operator']}]}
+]},
+{p:6,range:'第 19–21 週',title:'平台 API、OIDC、多租戶安全與可觀測性',goal:'建立使用者入口、雙層授權模型與完整可觀測性。',outputs:['Tenant-aware Platform API','OIDC login / token verification demo','Authorization matrix','Grafana dashboard','基礎 SLO 文件'],weeks:[
+ {w:19,t:'Platform API Server 與 TenantService',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'API layer 與 Kubernetes client boundary||能說明平台 API 不直接暴露 Kubernetes 物件,對外是自己的 DTO、對內才轉成 CR。',
+   'ConnectRPC service implementation||能實作 buf 產生的 service interface 並掛上 interceptor。',
+   'DTO / CR mapping||能雙向轉換 proto message ↔ Tenant CR,並隔離不該外露的內部欄位。',
+   'pagination||能實作 page_token 式分頁,token 內含游標資訊。',
+   'field mask 基礎||知道部分更新用 field mask 表達「只更新這些欄位」的語意。',
+   'request validation||能在 API 層先驗證(必填、格式、值域),不合法請求不會產生 CR。',
+   'idempotency key||能讓帶相同 key 的重複 CreateTenant 只建立一次並回傳相同結果。',
+   'audit metadata||能記錄每個變更操作的 who / when / what,供事後追查。',
+   'long-running operation pattern||能說明建立是非同步的:API 先回受理,實際狀態由 status / watch 追蹤。']},
+  {h:'實作任務:TenantService',k:'task',code:'service TenantService {\n  rpc CreateTenant(CreateTenantRequest) returns (Tenant);\n  rpc GetTenant(GetTenantRequest) returns (Tenant);\n  rpc ListTenants(ListTenantsRequest) returns (ListTenantsResponse);\n  rpc DeleteTenant(DeleteTenantRequest) returns (DeleteTenantResponse);\n  rpc WatchTenant(WatchTenantRequest) returns (stream TenantEvent);\n}',note:'後端流程:API Request → AuthN/AuthZ → Validate → Create Tenant CR → Operator Reconcile → Stream/Poll Status。',items:['完成 TenantService 與 CR mapping','支援 watch / streaming 狀態']},
+  {h:'驗收標準',k:'accept',items:['API 與 Kubernetes client 邊界清楚','建立 Tenant 全流程可運作']}]},
+ {w:20,t:'OIDC、JWT 與 Authorization',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'OAuth 2.0 與 OIDC 差異||能說明 OAuth 2.0 是授權框架,OIDC 在其上加了身分層(ID token 與標準 claims)。',
+   'Authorization Code flow||能畫出完整流程:redirect 到 IdP → 使用者登入 → code 換 token,並說明 code 存在的意義。',
+   'ID token 與 access token||能說明 ID token 證明「你是誰」給 client、access token 用於呼叫 API。',
+   'issuer、audience、subject||能說明驗證 iss 防假 IdP、驗證 aud 防 token 被拿去別的服務用、sub 是使用者識別。',
+   'JWKS 與 key rotation||能說明以 token header 的 kid 從 JWKS endpoint 選公鑰,IdP 換鑰時自動更新。',
+   'token expiry 與 refresh token 基礎||能處理過期回 401,並說明 refresh token 換新 access token 的流程。',
+   'role / group claims||能從自訂 claims(roles、tenant)建立授權決策的輸入。',
+   'tenant-aware authorization||能實作:tenant-admin 的每個請求都檢查目標資源屬於自己的 tenant。',
+   'confused deputy problem||能舉例說明服務被誘導拿自己的高權限替攻擊者做事,以及驗 audience 如何防範。',
+   'RBAC 與 ABAC 概念||能說明角色式(role → 權限)與屬性式(依 tenant、資源屬性判斷)的差異與組合。']},
+  {h:'實作任務',k:'task',code:'{\n  "sub": "user-a",\n  "tenant": "team-a",\n  "roles": ["tenant-admin"]\n}',items:['使用 Dex 或 Keycloak','API server 驗證 issuer、audience、signature、expiry','tenant-admin 只能操作自己的 Tenant 與 ModelService','platform-admin 可跨 tenant 管理','Kubernetes ServiceAccount 權限再做第二層限制']},
+  {h:'安全原則',k:'code',code:'UI 隱藏按鈕:不是安全控制\nAPI authorization:第一層\nKubernetes RBAC:第二層\nNamespace / NetworkPolicy / Quota:隔離層'},
+  {h:'驗收標準',k:'accept',items:['token 驗證完整(issuer/audience/signature/expiry)','跨 tenant 越權測試被拒絕','雙層授權模型可展示']}]},
+ {w:21,t:'Metrics、Tracing、Logging 與 Audit',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'RED metrics:Rate、Errors、Duration||能為 API 服務定義每秒請求數、錯誤率、延遲分佈三組指標。',
+   'USE metrics:Utilization、Saturation、Errors||能為資源(queue、worker、連線池)定義使用率、飽和度、錯誤。',
+   'Prometheus metric types||能說明 counter(只增)、gauge(可增減)、histogram(分佈)各自適用場景。',
+   'cardinality 風險||能說明 label 放 user ID、request ID 等高基數值會讓時序數量爆炸。',
+   'OpenTelemetry trace 與 span propagation||能建立 span 並讓 trace context 跨服務傳遞(HTTP header)。',
+   'structured log correlation||log 帶 trace ID,可以從一筆 log 跳到對應 trace、再看到全部相關 log。',
+   'audit log||能說明與一般 log 的差異:記錄「誰做了什麼決策」、不可竄改、保存期限不同。',
+   'SLI、SLO、error budget 基礎||能為平台 API 訂出一條 SLO(如 99% 請求 < 500ms)並說明 error budget 的用途。']},
+  {h:'實作任務',k:'task',note:'Tracing:Platform API span → Kubernetes API request span → Operator reconcile log correlation。',items:['API metrics:request count / latency / error count / active request','Controller metrics:reconcile count / duration / error / queue depth / ready tenant count','建立 trace 貫穿 API 與 operator','建立 audit log']},
+  {h:'驗收標準',k:'accept',items:['Grafana dashboard 呈現 RED / USE','一筆 request 可從 trace 與 log 完整追蹤','基礎 SLO 文件完成']}]}
+]},
+{p:7,range:'第 22–24 週',title:'Gateway API、Istio 與 Storage',goal:'理解平台資料面的入口、安全、流量與儲存,而不是只會安裝套件。',outputs:['Gateway / HTTPRoute manifests','Istio mTLS 與 authorization demo','canary routing demo','模型 storage 設計文件'],weeks:[
+ {w:22,t:'Gateway API',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'GatewayClass、Gateway||能說明 GatewayClass 是「哪家實作」、Gateway 是實例(listener 集合),分別由基礎設施與平台團隊管理。',
+   'HTTPRoute、GRPCRoute||能寫出含 hostname、path match 與 backendRef 的 route。',
+   'ReferenceGrant||能說明 route 引用其他 namespace 的 Service 時,需要目標 namespace 明確授權。',
+   'listener||能設定 port / protocol / hostname,並說明一個 Gateway 可有多個 listener。',
+   'hostname / path matching||能寫 path prefix 與 header match,並說明多條規則的優先序。',
+   'route attachment||能說明 route 綁上 gateway 的條件:parentRef + gateway 的 allowedRoutes 同意。',
+   'cross-namespace reference||能說明跨 namespace 引用的安全考量:防止別的租戶把流量導到你的服務。',
+   'TLS termination||能在 listener 掛上 TLS 憑證(Secret)並驗證 HTTPS 生效。',
+   'controller implementation 與標準 API 的區別||能說明 Gateway API 是標準規格,同一份 YAML 換 controller(Istio、Envoy Gateway 等)仍可用。']},
+  {h:'實作任務',k:'task',items:['使用 Gateway API 暴露 Platform API','為不同 tenant 建立 route','配置 TLS','驗證 route status conditions','比較 Ingress 與 Gateway API']},
+  {h:'驗收標準',k:'accept',items:['多 tenant route 正常運作','TLS 生效','route status conditions 正確']}]},
+ {w:23,t:'Istio Traffic、mTLS 與 AuthorizationPolicy',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'service mesh control plane / data plane||能說明 istiod 下發設定、proxy(Envoy)實際承載流量的分工。',
+   'sidecar 或 ambient mode 基礎概念||能說明 sidecar 每個 Pod 一個 proxy、ambient 把 proxy 移到節點層的差異。',
+   'PeerAuthentication||能用它啟用 namespace 或 mesh 層級的 mTLS 模式。',
+   'DestinationRule||能設定連線池上限與離群偵測(outlier detection)。',
+   'VirtualService 與 Gateway API 整合概念||知道 Istio 同時支援自家 VirtualService 與標準 Gateway API 的對應關係。',
+   'service identity||能說明 mesh 中服務身分(SPIFFE 格式)綁定 ServiceAccount,而非 IP。',
+   'mTLS STRICT / PERMISSIVE||能說明 PERMISSIVE 同時接受明文與 mTLS(遷移期用),STRICT 只收 mTLS。',
+   'AuthorizationPolicy||能寫出「只允許特定 principal(SA)呼叫此服務」的 policy 並實測拒絕其他來源。',
+   'retries、timeouts、circuit breaking||能在 mesh 層設定,並說明與應用層重試疊加造成 retry storm 的風險。',
+   'traffic shifting||能設定 90/10 權重分流並以請求驗證比例。',
+   'observability||能查看 mesh 自動產生的服務間 metrics 與 trace,不需改應用程式碼。']},
+  {h:'實作任務',k:'task',items:['兩個 Go service 透過 mesh 通訊','啟用 STRICT mTLS','只允許特定 ServiceAccount 呼叫 model service','建立 90/10 canary routing','模擬 retry storm 並調整 policy']},
+  {h:'驗收標準',k:'accept',items:['STRICT mTLS 下服務互通','AuthorizationPolicy 有效限制呼叫者','canary 流量分配可驗證']}]},
+ {w:24,t:'Storage、Rook/Ceph 與模型資料',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'block、file、object storage||能各舉一個場景:資料庫用 block、共享檔案用 file、模型檔/備份用 object。',
+   'access mode||能說明 RWO(單節點讀寫)與 RWX(多節點讀寫)的差異,以及多數 block storage 不支援 RWX。',
+   'reclaim policy||能說明 Delete(PVC 刪除即刪資料)與 Retain(保留待手動處理)的後果。',
+   'volume expansion||能擴充一個 PVC 並知道縮小通常不支援。',
+   'snapshot 基礎||知道 VolumeSnapshot 可為 PVC 建立時間點快照供還原。',
+   'CSI||能說明 CSI driver 是儲存供應商接入 Kubernetes 的標準介面。',
+   'Rook Operator 與 Ceph resource 基礎||能說明 Rook 把 Ceph 叢集本身變成 Kubernetes 資源來管理(operator 模式的實例)。',
+   'object storage / S3 compatible API||能用 S3 相容 API(如 MinIO)上傳/下載模型檔。',
+   '模型 artifact 與 runtime image 分離||能說明理由:模型檔大且更新頻率與程式不同,放 object storage 由 runtime 啟動時載入。',
+   'data locality||能說明資料與運算的距離如何影響模型載入時間與推論延遲。']},
+  {h:'實作任務',k:'task',items:['使用簡化本機 storage class 完成 PVC 流程','若環境允許,安裝 Rook/Ceph 測試環境','建立模型 artifact storage','驗證 Pod 重建與節點變更後資料行為','寫 storage failure runbook']},
+  {h:'驗收標準',k:'accept',items:['模型 artifact storage 可用','storage failure runbook 完成','建立 release tag:v0.5-secure-platform']}]}
+]},
+{p:8,range:'第 25–27 週',title:'Multi-Cluster Control Plane',goal:'建立可管理多個 Kubernetes cluster 的平台核心能力。',outputs:['Multi-Cluster Manager','Cluster Agent','Cluster CRD','斷線與重連測試','placement decision 文件'],weeks:[
+ {w:25,t:'Cluster Registry 與 Multi-Cluster Client',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'kubeconfig 與 rest.Config||能從 kubeconfig 檔建出 rest.Config 並連上遠端 cluster。',
+   'per-cluster client cache||能為每個已註冊 cluster 快取 client,不在每次請求重新建立。',
+   'cluster credentials lifecycle||能說明憑證的簽發、儲存、過期與輪替流程。',
+   'cluster identity||能用 UID 或憑證唯一識別 cluster,不能只靠名稱(名稱可重複/重建)。',
+   'capability discovery||能查詢 member cluster 支援的 API 與資源(如是否裝了 KServe)。',
+   'Kubernetes version compatibility||能處理不同版本 cluster 的 API 差異(discovery + 條件邏輯)。',
+   'health check 與 heartbeat||能區分管理面主動探測與 agent 被動回報兩種健康機制。',
+   'credential encryption||能說明 cluster 憑證屬於高敏感資料,儲存需加密且限制存取。',
+   'agentless 與 agent-based 模式||能說明取捨:agentless 需管理面能直連 member;agent 主動連出,適合防火牆後的叢集。']},
+  {h:'Cluster CRD 範例',k:'code',code:'apiVersion: platform.example.com/v1alpha1\nkind: Cluster\nmetadata:\n  name: edge-a\nspec:\n  connectionMode: Agent\n  tenant: team-a\nstatus:\n  kubernetesVersion: v1.xx.x\n  nodeCount: 3\n  capacity:\n    gpu: 2\n  lastHeartbeatTime: "..."\n  phase: Ready'},
+  {h:'實作任務',k:'task',items:['註冊第二個 kind cluster','建立 cluster client factory','顯示 version、node count、capacity','定期 health check']},
+  {h:'驗收標準',k:'accept',items:['第二個 cluster 成功註冊並回報狀態','health check 週期性運作']}]},
+ {w:26,t:'Cluster Agent 與 ConnectRPC Streaming',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'outbound agent connection||能說明 agent 主動連出的好處:member cluster 不需開放任何入站 port。',
+   'reverse connection 概念||能說明管理面透過 agent 已建立的連線「反向」下發指令。',
+   'heartbeat stream||能維持長連線 streaming,定期回報健康與容量資訊。',
+   'reconnect||agent 斷線後能自動重連,重連後重新回報完整狀態。',
+   'exponential backoff + jitter||能說明大量 agent 同時斷線重連時,jitter 避免同一瞬間全部湧回。',
+   'sequence number||能用序號偵測訊息遺漏或亂序。',
+   'duplicate message||重送造成的重複訊息以冪等處理,不重複執行指令。',
+   'message acknowledgement||能實作 ack 機制確認指令已被 agent 執行。',
+   'offline queue||agent 斷線期間把待回報結果暫存,重連後補送。',
+   'eventual consistency||能接受管理面看到的 member 狀態有延遲,設計以收斂為目標。',
+   'certificate bootstrap 概念||知道 agent 初次註冊如何安全取得憑證(bootstrap token 換正式憑證)。']},
+  {h:'實作任務:建立 cluster-agent',k:'task',code:'Agent 啟動\n→ 讀取 cluster identity\n→ ConnectRPC 連線 management plane\n→ 回報 heartbeat / version / capacity\n→ 接收 deployment instruction\n→ apply resource\n→ 回報 result',items:['依左列流程完成 agent']},
+  {h:'驗收標準',k:'accept',items:['heartbeat stream 穩定運作','斷線後自動重連(backoff + jitter)','重複訊息不造成重複執行']}]},
+ {w:27,t:'Remote Apply、Failure Handling 與 Scheduling Decision',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'server-side apply 與 field manager||能以 SSA apply 到 member cluster,並理解不同 field manager 的欄位擁有權衝突。',
+   'drift detection||能偵測 member cluster 上的實際資源被人手動改動而偏離 desired state。',
+   'desired state replication||能把管理面的 desired state 可靠地同步到 member,重送不會產生副作用。',
+   'cluster unavailable||cluster 無法連線時標記狀態並停止無效重試,不阻塞其他 cluster 的處理。',
+   'partial failure||能處理一次部署中部分資源成功、部分失敗的情況,並在狀態中如實呈現。',
+   'timeout 與 retry budget||能為遠端操作設定逾時與重試上限,避免無限重試。',
+   'placement policy||能定義選擇 cluster 的規則輸入:容量、GPU、tenant 限制、健康狀態。',
+   'capacity-aware scheduling||能依剩餘容量排除放不下的 cluster。',
+   'GPU capability||能依 cluster 回報的 GPU 數量/型號過濾。',
+   'tenant policy||能依 tenant allowlist 限制工作負載只能落在允許的 cluster。']},
+  {h:'實作任務',k:'task',items:['將 demo workload 部署到指定 member cluster','cluster 斷線時狀態標為 Unknown / Unavailable','重連後重新同步 desired state','實作簡單 placement:依 GPU 數量與 tenant allowlist 選 cluster']},
+  {h:'驗收標準',k:'accept',items:['遠端部署與狀態回報可運作','斷線 / 重連後 desired state 收斂','placement 決策文件完成','建立 release tag:v0.6-multicluster']}]}
+]},
+{p:9,range:'第 28–30 週',title:'KServe、ModelService 與 AI Inference Infrastructure',goal:'把平台能力延伸到模型部署、GPU、runtime、route 與 lifecycle。',outputs:['ModelService Operator','KServe demo','model lifecycle 狀態機','GPU scheduling 筆記','inference routing demo'],weeks:[
+ {w:28,t:'模型服務與 KServe 基礎',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'model artifact||能說明模型檔(訓練產出的權重)與程式碼分開存放於 object storage 的理由。',
+   'inference runtime||能說明 runtime 負責載入模型並提供標準推論 API,不同框架有對應 runtime。',
+   'predictor / transformer / explainer 概念||能說明三個元件:推論本體、前後處理、解釋預測結果。',
+   'KServe InferenceService||能寫最小 YAML 部署一個模型並取得 endpoint。',
+   'storage URI||能指定 s3:// 或 pvc:// 來源,並說明 storage initializer 啟動時下載模型的流程。',
+   'runtime image||能指定或更換 serving runtime image。',
+   'readiness / model load||能說明 InferenceService ready 代表模型已載入完成,而非容器啟動而已。',
+   'autoscaling 與 scale-to-zero||能設定依流量自動伸縮,無流量時縮到零。',
+   'cold start||能量測 scale-to-zero 後第一個請求的延遲,並說明成因(拉 image + 載模型)。',
+   'V1 / V2 inference protocol 基礎||能說出兩代協定的差異方向:V2 是跨框架的標準化推論介面。',
+   'predictive AI 與 generative AI serving 差異||能說明 LLM serving 的額外挑戰:長回應、token streaming、KV cache 記憶體。']},
+  {h:'實作任務',k:'task',items:['部署一個小型 CPU model','呼叫 inference endpoint','觀察 InferenceService status','模擬 model URI 錯誤','比較 raw Deployment 與 KServe 的抽象價值']},
+  {h:'驗收標準',k:'accept',items:['inference endpoint 可呼叫','能解讀 InferenceService 狀態與失敗原因']}]},
+ {w:29,t:'ModelService Operator',secs:[
+  {h:'CRD 範例',k:'code',code:'apiVersion: platform.example.com/v1alpha1\nkind: ModelService\nmetadata:\n  name: demo-model\nspec:\n  tenantRef: team-a\n  clusterRef: edge-a\n  model:\n    uri: s3://models/demo-model\n    format: sklearn\n  runtime:\n    name: sklearn\n  resources:\n    requests:\n      cpu: "1"\n      memory: "2Gi"\n  autoscaling:\n    minReplicas: 0\n    maxReplicas: 3\n  exposure:\n    type: Private\n    path: /v1/models/demo-model\nstatus:\n  observedGeneration: 1\n  phase: Ready\n  endpoint: https://example.com/v1/models/demo-model\n  conditions: []'},
+  {h:'Controller 負責',k:'task',items:['驗證 tenant 與 cluster','建立 KServe InferenceService','建立 ServiceAccount / RBAC','建立 Gateway API route','建立 NetworkPolicy','監看 KServe readiness','回寫 endpoint','回寫 ModelLoadFailed、RoutingFailed、InsufficientGPU 等 conditions']},
+  {h:'驗收標準',k:'accept',items:['重複 reconcile idempotent','刪除 ModelService 可清理 child resources','runtime / resource 更新能正確 rollout']}]},
+ {w:30,t:'GPU Scheduling、LLM Runtime 與 Inference Routing',secs:[
+  {h:'必學內容',k:'learn',items:[
+   'GPU device plugin||能說明 device plugin 讓節點回報 nvidia.com/gpu 等可排程資源。',
+   'resource request||能在 Pod spec 寫 nvidia.com/gpu: 1 並理解 GPU 不可超賣(無 limit/request 之分)。',
+   'node label||能以 label 標記 GPU 型號,供 placement 篩選。',
+   'taint / toleration 與 node affinity||能組合兩者讓 GPU 節點只跑 GPU 工作、GPU 工作只去 GPU 節點。',
+   'GPU fragmentation 概念||能說明整卡分配下,小工作佔整卡造成的浪費。',
+   'MIG 基礎||知道 MIG 可把一張 GPU 切成多個隔離的實例。',
+   'batch、latency、throughput 取捨||能說明 batching 提升 GPU 利用率與吞吐,但增加單一請求延遲。',
+   'vLLM / TGI / Triton 等 runtime 的定位||能各一句話定位:vLLM 高吞吐 LLM serving、TGI HuggingFace 生態、Triton 多框架通用。',
+   'model parallelism 基礎概念||知道模型太大放不進單卡時,需要切分到多卡(tensor / pipeline parallelism)。',
+   'KV cache 概念||能說明 LLM 生成時快取先前 token 的 attention 狀態,是吞吐與記憶體的關鍵。',
+   'canary model version||能同時部署兩個模型版本並逐步放量。',
+   'weighted routing||能設定新舊版本的流量權重。',
+   'inference-specific routing||能說明推論路由為何需要模型感知:依 queue 深度、載入狀態選 backend,而非單純輪詢。',
+   'Gateway API Inference Extension 的定位||知道它是 Gateway API 針對推論流量(模型感知負載平衡)的擴充標準。']},
+  {h:'實作任務(有 GPU)',k:'task',items:['部署小型 vLLM 或其他 runtime','設定 GPU request','觀察 scheduling 與 utilization']},
+  {h:'實作任務(無 GPU)',k:'task',items:['使用 CPU 小模型或 mock inference server','以 node label / extended resource 模擬 GPU placement','專注完成 control plane 與 routing']},
+  {h:'驗收標準',k:'accept',items:['GPU(或模擬 GPU)placement 可運作','inference routing demo 完成']}]}
+]},
+{p:10,range:'第 31–32 週',title:'Capstone 整合、可靠性與求職化',goal:'把所有模組整合成可展示、可部署、可說明設計取捨的作品。',outputs:['完整可展示的 Mini Cloud-Native AI Platform','建立 release tag:v1.0-ai-platform'],weeks:[
+ {w:31,t:'整合測試、Failure Injection 與 Security Hardening',secs:[
+  {h:'測試層級',k:'learn',items:[
+   'Unit test||驗證單一函式與決策邏輯,不碰任何外部依賴。',
+   'Integration test||驗證模組與真實依賴(DB、API)的協作。',
+   'envtest||驗證 controller 對真實 API server 的行為(CRD、status、webhook)。',
+   'kind e2e||驗證完整部署後的實際行為:child resources、RBAC、deletion。',
+   'multi-cluster e2e||以兩個 kind cluster 驗證 agent、heartbeat 與 remote apply。',
+   'API contract test||驗證 API 相容性不被新版本破壞(buf breaking + 行為測試)。',
+   'authorization test||驗證所有越權路徑都被拒絕(negative test 為主)。',
+   'failure injection||驗證各種故障下系統能收斂與恢復,不靜默壞掉。']},
+  {h:'故障情境',k:'exp',items:[
+   'API server restart||預期:重啟後服務自動恢復,無資料遺失、client 只看到短暫錯誤。',
+   'operator restart||預期:重啟後 reconcile 重新收斂,不產生重複資源或重複副作用。',
+   'Kubernetes API timeout||預期:退避重試,不無限重試打爆 API server。',
+   'member cluster offline||預期:cluster 狀態轉 Unknown/Unavailable,重連後 desired state 重新同步。',
+   'duplicate request||預期:冪等處理,不重複建立資源。',
+   'token expired||預期:回 401 且訊息明確,client 可用 refresh 流程恢復。',
+   'RBAC denied||預期:回 403 並留下 audit 記錄,不以 500 混淆。',
+   'model load failed||預期:ModelService condition 呈現 ModelLoadFailed 與原因,不卡在無資訊的 pending。',
+   'gateway route failed||預期:route status conditions 呈現失敗原因。',
+   'insufficient GPU||預期:placement 明確拒絕並回報,不讓工作負載無限 Pending。',
+   'storage unavailable||預期:錯誤明確、可重試,不靜默失敗。',
+   'stuck finalizer||預期:能依 runbook 診斷原因並安全解除,不直接硬刪。']},
+  {h:'Security checklist',k:'accept',items:[
+   'non-root container||驗證:kubectl exec 進容器 id 顯示 uid 非 0。',
+   'read-only root filesystem||驗證:securityContext.readOnlyRootFilesystem: true 且服務功能正常。',
+   'least privilege RBAC||驗證:逐一審查每個 ServiceAccount 的權限矩陣,無多餘權限。',
+   'no hardcoded secret||驗證:以 gitleaks 等工具掃描整個 repo 歷史。',
+   'token validation complete||驗證:過期、錯 audience、錯簽名的 token 全部被拒。',
+   'NetworkPolicy default deny||驗證:未被明確允許的 Pod 間流量被擋下。',
+   'mTLS||驗證:繞過 mesh 的明文直連被拒絕。',
+   'audit log||驗證:任一關鍵操作可追溯到操作者與時間。',
+   'dependency scan||驗證:govulncheck / 依賴掃描通過或已記錄豁免。',
+   'image scan||驗證:無未處理的高危 CVE。',
+   'secret redaction||驗證:在全部 log 中搜尋 token/password 樣式無結果。']}]},
+ {w:32,t:'文件、Demo、履歷與面試準備',secs:[
+  {h:'必備文件',k:'task',items:[
+   '根目錄 README 與一鍵啟動流程||標準:一個沒看過專案的人照文件 30 分鐘內能跑起 demo。',
+   'architecture diagram||標準:呈現 API、operator、agent、data plane 的關係與流量方向。',
+   'sequence diagram||標準:至少涵蓋「建立 ModelService 到可推論」的完整時序。',
+   'CRD reference 與 API reference||標準:每個欄位有型別、說明與範例值。',
+   'security model||標準:說明雙層授權(API + K8s RBAC)與各隔離層。',
+   'multi-cluster design||標準:說明連線模式、heartbeat、斷線處理與 placement。',
+   'failure handling||標準:列出故障情境與系統的預期行為。',
+   'testing strategy||標準:說明各層測試的範圍與執行指令。',
+   'known limitations 與 roadmap||標準:誠實列出已知限制,展現工程判斷。',
+   'ADR||標準:關鍵決策各一篇(為何 ConnectRPC、為何 agent-based 等),含被否決的替代方案。']},
+  {h:'Demo 流程',k:'demo',items:['使用 OIDC 登入','建立 Tenant','Tenant Operator 建立 namespace、quota、RBAC','註冊 member cluster','建立 ModelService','placement 選擇 cluster','Operator 建立 KServe resource','Gateway 建立 endpoint','呼叫模型推論','顯示 metrics、trace 與 status','模擬 cluster offline','顯示平台錯誤狀態與恢復過程']},
+  {h:'履歷可寫成果',k:'learn',items:['Built a Go-based Kubernetes control plane using ConnectRPC, CRDs and controller-runtime.','Designed tenant isolation with OIDC, RBAC, Namespace, ResourceQuota and NetworkPolicy.','Implemented a multi-cluster agent with streaming heartbeat, reconnect and remote resource application.','Developed a ModelService Operator integrating KServe, Gateway API and GPU-aware placement.','Added production observability, end-to-end testing, failure handling and security hardening.']},
+  {h:'驗收標準',k:'accept',items:['Demo 全流程可重現','文件齊備','建立 release tag:v1.0-ai-platform']}]}
+]}
+];
+
+/* ============================================================ resources data */
+const INTERVIEW=[
+ ['Go 與服務設計',['http.Handler 的模型是什麼?','Gin 為何不應進入 service layer?','context 如何傳遞 cancellation?','如何避免 goroutine leak?','Mutex、channel、atomic 如何選?','graceful shutdown 的正確順序是什麼?','如何區分 retryable error?','如何使用 pprof 找 CPU 或 memory 問題?']],
+ ['RPC',['REST、gRPC、ConnectRPC 的差異?','Protobuf 如何維持 backward compatibility?','deadline 與 retry 如何互動?','哪些操作不適合自動 retry?','streaming 遇到斷線如何恢復?']],
+ ['Kubernetes',['Deployment、StatefulSet、Job 如何選?','readiness 與 liveness 差在哪?','requests / limits 如何影響 scheduling 與 QoS?','Service 如何提供服務發現?','RBAC Role 與 ClusterRole 差異?','NetworkPolicy 為何不是所有 CNI 都一定支援?','PVC 與 StorageClass 的關係?']],
+ ['Controller / Operator',['reconcile 為什麼要 idempotent?','controller 為什麼不應依賴事件順序?','informer cache 可能造成什麼問題?','finalizer 如何避免外部資源洩漏?','observedGeneration 解決什麼問題?','status condition 應如何設計?','webhook 與 CRD schema validation 有何不同?']],
+ ['Security',['OIDC 與 OAuth 2.0 差異?','如何驗證 JWT?','API authorization 與 Kubernetes RBAC 為何要雙層?','tenant isolation 應包含哪些層?','mTLS 解決的是身份、機密性還是授權?','ServiceAccount token 應如何使用?']],
+ ['Multi-Cluster',['Agent-based 與 agentless 模式如何選?','叢集斷線時 desired state 怎麼處理?','如何避免重複 apply?','cluster credential 如何保護與輪替?','placement policy 需要哪些輸入?']],
+ ['AI Inference Platform',['KServe 解決哪些問題?','模型 artifact 與 runtime image 為何應分離?','GPU request 如何影響 scheduling?','scale-to-zero 的代價是什麼?','LLM inference 的 latency 與 throughput 如何取捨?','Gateway API Inference Extension 的價值在哪裡?']]
+];
+const NOTES=['Gin Context 為何不應傳入 Service?','net/http middleware 的執行順序','Context cancellation 如何穿過 HTTP、RPC 與 DB','Goroutine leak 的常見原因','Error wrapping 與 API error mapping','Protobuf field number 的相容性規則','ConnectRPC 與 gRPC-Web 的差異','Kubernetes probe 的錯誤使用方式','requests / limits 與 OOMKilled','RBAC least privilege 設計','Informer cache 與 eventual consistency','為什麼 controller 要 level-triggered','Reconcile idempotency 設計','Finalizer 的正確生命週期','Kubernetes Conditions 設計原則','API layer 與 control plane layer 的責任邊界','OIDC claim 到 tenant authorization 的映射','Gateway API 相較 Ingress 的設計改善','Istio mTLS 與 AuthorizationPolicy 的責任差異','Multi-Cluster agent 的 reconnect 設計','Server-side apply 與 field ownership','KServe InferenceService 的生命週期','GPU scheduling 與資源碎片','模型 serving 的冷啟動問題','平台 SLO 應如何定義'];
+const REFS=[['Go Documentation','https://go.dev/doc/'],['net/http','https://pkg.go.dev/net/http'],['Chi','https://github.com/go-chi/chi'],['ConnectRPC','https://connectrpc.com/'],['Buf','https://buf.build/docs/'],['Kubernetes Documentation','https://kubernetes.io/docs/'],['client-go','https://github.com/kubernetes/client-go'],['Kubebuilder Book','https://book.kubebuilder.io/'],['controller-runtime','https://github.com/kubernetes-sigs/controller-runtime'],['Gateway API','https://gateway-api.sigs.k8s.io/'],['Istio','https://istio.io/latest/docs/'],['Rook','https://rook.io/docs/rook/latest-release/'],['KServe','https://kserve.github.io/website/'],['Gateway API Inference Extension','https://gateway-api-inference-extension.sigs.k8s.io/']];
+const TESTSTRAT=[['Unit','Go testing','domain、service、mapper、validation'],['Handler / RPC','httptest、Connect client','status、error mapping、metadata'],['Controller Unit','fake / stub','reconcile decision、resource builder'],['Controller Integration','envtest','API server、CRD、status、webhook'],['Kubernetes E2E','kind / k3d','child resources、RBAC、deletion'],['Multi-Cluster E2E','兩個 kind cluster','agent、heartbeat、remote apply'],['Security','token / RBAC negative test','越權、過期 token、跨 tenant'],['Failure Injection','script / chaos-lite','timeout、offline、restart、conflict'],['Performance','benchmark / load test','API latency、queue、reconcile throughput']];
+
+/* ============================================================ render helpers */
+function ckList(items,prefix,one){
+  const hasDetail=items.some(x=>x.indexOf('||')>-1);
+  let h='<ul class="ck'+((one||hasDetail)?' one':'')+'">';
+  items.forEach((it,i)=>{
+    const id=prefix+'-'+i;
+    const parts=it.split('||');
+    h+='<li><label><input type="checkbox" data-ck="'+id+'"'+(st.c[id]?' checked':'')+'><span>'+esc(parts[0])+'</span></label>';
+    if(parts[1])h+='<div class="ck-d">'+esc(parts[1])+'</div>';
+    h+='</li>';
+  });
+  return h+'</ul>';
+}
+function codeBlock(code,title){
+  return '<pre class="code">'+(title?'<span class="ct">'+esc(title)+'</span>':'')+esc(code)+'</pre>';
+}
+function renderSec(sec,prefix,si){
+  const kindClass=sec.k==='accept'?'accept':(sec.k==='exp'?'exp':'');
+  let h='<div class="blk '+kindClass+'" data-kind="'+sec.k+'"><h4>'+esc(sec.h)+'</h4>';
+  if(sec.note)h+='<p class="note">'+esc(sec.note)+'</p>';
+  if(sec.code)h+=codeBlock(sec.code);
+  if(sec.items){
+    if(sec.k==='demo'){
+      h+='<ol class="demo">'+sec.items.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol>';
+    }else{
+      h+=ckList(sec.items,prefix+'-s'+si,sec.items.some(x=>x.length>60));
+    }
+  }
+  return h+'</div>';
+}
+function renderWeek(wk,prefix,label){
+  const wid=prefix+'w'+wk.w;
+  let body='';
+  if(wk.goal)body+='<p class="note" style="margin-top:12px">'+esc(wk.goal)+'</p>';
+  wk.secs.forEach((s,si)=>{ body+=renderSec(s,wid,si); });
+  return '<details class="week" id="'+wid+'" data-wid="'+wid+'">'
+    +'<summary><span class="wk-num">'+esc(label)+'</span><span class="wk-title">'+esc(wk.t)+'</span>'
+    +'<span class="wk-right"><span class="chip todo wk-chip">未開始</span><span class="wk-bar bar"><i></i></span><span class="wk-pct">0%</span><span class="wk-caret">▶</span></span></summary>'
+    +'<div class="wk-body">'+body+'</div></details>';
+}
+
+/* ============================================================ overview pane */
+function renderOverview(){
+  const el=document.getElementById('pane-overview');
+  el.innerHTML=
+  '<h2 class="sec">學習旅程</h2>'
+  +'<p class="lede">依照下列順序前進:先完成自我檢核,依結果決定是否走前導補強,完成 Preflight 驗收專案後,進入 32 週主線。</p>'
+  +'<div class="pipe">'
+  +'<div class="pstep" id="ps-1"><span class="num">Step 1</span><h3>自我檢核</h3><p class="meta">30 題核心能力檢核,決定你的起點。</p><div class="bar"><i id="pb-1"></i></div></div>'
+  +'<div class="pstep" id="ps-2"><span class="num">Step 2 · 視結果</span><h3>前導學習</h3><p class="meta">8 週前導或 3–4 週快速補強,補齊硬性基礎。</p><div class="bar"><i id="pb-2"></i></div></div>'
+  +'<div class="pstep" id="ps-3"><span class="num">Step 3</span><h3>Preflight 專案</h3><p class="meta">Job Management API:進入主線前的驗收專案。</p><div class="bar"><i id="pb-3"></i></div></div>'
+  +'<div class="pstep" id="ps-4"><span class="num">Step 4</span><h3>32 週主計畫</h3><p class="meta">11 個 Phase,從 Go 原生模型到 AI Inference Platform。</p><div class="bar g"><i id="pb-4"></i></div></div>'
+  +'</div>'
+  +'<div class="card" id="next-hint"></div>'
+  +'<h2 class="sec">最終作品:Mini Cloud-Native AI Platform</h2>'
+  +'<p class="lede">整份計畫以一個逐步演化的主專案為核心:以 Go 開發的輕量雲原生 AI 平台,包含 ConnectRPC 平台 API、Tenant / Cluster / ModelService / InferenceRoute 等 CRD、Operator、多租戶隔離、OIDC、Gateway API、Istio mTLS、Multi-Cluster、KServe 與完整可觀測性。</p>'
+  +codeBlock('                 ┌──────────────────────────────┐\n                 │ Web UI / CLI / External API  │\n                 └──────────────┬───────────────┘\n                                │ Connect / gRPC-Web\n                 ┌──────────────▼───────────────┐\n                 │ Platform API Server          │\n                 │ Go + ConnectRPC + OIDC       │\n                 └──────────────┬───────────────┘\n                                │ Create / Read CRs\n        ┌───────────────────────▼───────────────────────┐\n        │ Kubernetes Management Cluster                 │\n        │  Tenant CRD          Cluster CRD              │\n        │  ModelService CRD    InferenceRoute CRD       │\n        │  Controllers / Operators                      │\n        └───────────────┬───────────────────┬───────────┘\n                        │                   │\n               Local resources         Remote agent / API\n                        │                   │\n    ┌───────────────────▼──────┐  ┌────────▼──────────────┐\n    │ Workload / Data Plane    │  │ Member Clusters       │\n    │ KServe / Gateway / Istio │  │ Agent + Workloads     │\n    │ Storage / GPU / Metrics  │  │ KServe / GPU          │\n    └──────────────────────────┘  └───────────────────────┘','整體架構')
+  +'<div class="grid2">'
+  +'<div class="card"><h3 style="margin:0 0 8px;font-size:15.5px">學習原則</h3>'
+  +codeBlock('20% 官方文件與概念閱讀\n60% 實作、測試、除錯\n20% README、架構圖、筆記與回顧','每週投入比例')
+  +'<p class="note">學習順序由底層模型逐步往上:Go runtime → RPC contract → Container → Kubernetes object model → client-go control loop → CRD / Operator → Security / Networking / Storage → Multi-Cluster → KServe。不要反過來先背指令再補理解。</p></div>'
+  +'<div class="card"><h3 style="margin:0 0 8px;font-size:15.5px">Definition of Done</h3><p class="note">一個主題不以「看完文章」算完成,需至少符合:</p>'
+  +'<ol class="demo"><li>能自行實作最小版本</li><li>能寫測試或驗證腳本</li><li>能說明設計取捨</li><li>能刻意製造錯誤並完成除錯</li><li>能把功能整合進主專案</li><li>能寫出 README 使用方式與已知限制</li></ol></div>'
+  +'</div>'
+  +'<div class="card"><h3 style="margin:0 0 8px;font-size:15.5px">每週固定產出</h3>'
+  +'<p class="note">每週至少留下:一組可追蹤的 Git commit、一份技術筆記、一個測試或驗收腳本、一段可重現的 demo 指令、一項踩坑紀錄與根因分析,以及一個「這項技術解決什麼問題」的口頭說明。</p></div>'
+  +'<h2 class="sec">專案演化順序與 Milestone Tags</h2>'
+  +codeBlock('Job API → ConnectRPC Job Service → Kubernetes Deployment\n→ client-go Controller → Tenant Operator → Platform API\n→ Secure Multi-Tenant Platform → Multi-Cluster Manager\n→ ModelService Operator → Cloud-Native AI Platform','演化路徑')
+  +codeBlock('v0.1-go-http        第 4 週\nv0.2-connectrpc     第 7 週\nv0.3-kubernetes     第 10 週\nv0.4-tenant-operator 第 18 週\nv0.5-secure-platform 第 24 週\nv0.6-multicluster   第 27 週\nv1.0-ai-platform    第 32 週','monorepo milestone tags')
+  +'<h2 class="sec">最終的學習主線</h2>'
+  +codeBlock('使用者提出意圖\n→ API 驗證身份與權限\n→ CRD 表達 desired state\n→ Controller 持續 reconcile\n→ Kubernetes 建立實際資源\n→ Gateway / Istio / KServe 承載流量與模型\n→ Metrics / Status 回報目前狀態\n→ 故障後系統重新收斂')
+  +'<blockquote class="quote">最終目標:「我能設計並實作一個以 Go 與 Kubernetes 為核心的控制平面,透過宣告式 API、Operator、多租戶安全與多叢集機制,可靠地管理 AI 模型服務的部署與推論生命週期。」</blockquote>';
+}
+
+/* ============================================================ quiz pane */
+function renderQuiz(){
+  const el=document.getElementById('pane-quiz');
+  let h='<h2 class="sec">開始前自我檢核</h2>'
+  +'<p class="lede">針對每一項回答「是」或「否」。前三組共 30 題為核心分數;標示「硬性」的五項即使總分夠高,只要為「否」仍建議先補強。</p>'
+  +'<div id="quiz-verdict"></div>';
+  let qi=0;
+  QUIZ.forEach((g,gi)=>{
+    h+='<div class="qgroup card"><h3 style="margin:0 0 6px;font-size:15.5px">'+esc(g.g)+'</h3>';
+    g.items.forEach((it,ii)=>{
+      const id='q'+gi+'-'+ii;
+      const val=st.q[id];
+      h+='<div class="qrow"><span class="qt">'+esc(it[0])+(it[1]==='hard'?'<span class="hardmark">硬性基礎</span>':'')+'</span>'
+      +'<span class="seg" data-q="'+id+'">'
+      +'<button type="button" data-v="y" class="'+(val==='y'?'y-on':'')+'">是</button>'
+      +'<button type="button" data-v="n" class="'+(val==='n'?'n-on':'')+'">否</button>'
+      +'</span></div>';
+      qi++;
+    });
+    h+='</div>';
+  });
+  h+='<h2 class="sec">依檢核結果選擇起點</h2><div class="twrap"><table class="t"><tr><th>答「是」數量</th><th>建議起點</th></tr>'
+  +'<tr><td class="mono">25–30</td><td>可直接開始 32 週主計畫</td></tr>'
+  +'<tr><td class="mono">19–24</td><td>建議先執行 3–4 週快速補強</td></tr>'
+  +'<tr><td class="mono">11–18</td><td>建議完成完整 8 週前導計畫</td></tr>'
+  +'<tr><td class="mono">0–10</td><td>建議先完成 Go 與 Web Backend 基礎課程,再執行前導計畫</td></tr></table></div>'
+  +'<details class="fold"><summary>不需要事先具備的能力(主計畫會教)</summary><div class="fold-body"><p class="note">以下是 32 週主計畫的核心學習內容,不應被當成入場條件:深入 net/http、graceful shutdown、worker pool、pprof、Protocol Buffers、ConnectRPC、gRPC、client-go、Informer、Workqueue、CRD、Kubebuilder、reconcile loop、finalizer、webhook、OIDC 整合、Kubernetes RBAC 進階、NetworkPolicy、mTLS、Gateway API、Istio、Rook/Ceph、multi-cluster、KServe、vLLM、GPU scheduling⋯⋯若要求先熟悉這些,等於要求先完成整份主計畫才能開始主計畫。</p></div></details>'
+  +'<details class="fold"><summary>強烈建議(非硬性)具備的能力</summary><div class="fold-body"><p class="note">基本分層架構(Handler → Service → Repository → DB,且 Service 不依賴 gin.Context)、基本測試經驗(table-driven test)、YAML 基礎、基礎 kubectl 操作、能透過翻譯工具閱讀英文官方文件。</p></div></details>'
+  +'<details class="fold"><summary>常見錯誤與進入門檻判斷</summary><div class="fold-body"><ul class="ck one" style="list-style:disc;padding-left:20px;display:block">'
+  +['以為會 Gin 就等於熟悉 Go Backend — 會 c.JSON() 不代表理解 http.Handler、cancellation、timeout 與 graceful shutdown;仍可開始,但前幾週要認真補 Go 原生 HTTP。','會下 kubectl 指令就等於理解 Kubernetes — 主計畫要建立的是 desired state、controller loop、reconciliation 的 Kubernetes-native thinking,不是 YAML 記憶能力。','一次補所有基礎 — 不要同時學 Go + React + Terraform + Istio + LLM training + LeetCode;維持主線:Go Service → RPC → Container → Kubernetes → Controller → Security → Multi-cluster → AI Inference。','因為尚未全部準備好而一直延後 — 能獨立完成基本 Go Backend、能 Dockerize、能用 Git 與 CLI、願意讀官方文件,就可以開始。','只看影片,不建立可驗收產出 — 每個階段都應留下 commit、README、test、demo command、架構圖與踩坑筆記。'].map(x=>'<li style="margin:6px 0;font-size:13.5px;color:var(--ink2)">'+esc(x)+'</li>').join('')
+  +'</ul></div></details>'
+  +'<blockquote class="quote">最簡單的判斷方式:能自行完成並 Dockerize 一個 Go CRUD API,就大致具備進入 32 週計畫的最低條件。</blockquote>';
+  el.innerHTML=h;
+}
+function quizStats(){
+  let y=0,answered=0,hardMiss=[];
+  QUIZ.forEach((g,gi)=>{ if(g.bonus)return;
+    g.items.forEach((it,ii)=>{
+      const v=st.q['q'+gi+'-'+ii];
+      if(v)answered++;
+      if(v==='y')y++;
+      if(it[1]==='hard'&&v==='n')hardMiss.push(it[0]);
+    });
+  });
+  return {y,answered,hardMiss};
+}
+function updateQuizVerdict(){
+  const {y,answered,hardMiss}=quizStats();
+  const box=document.getElementById('quiz-verdict');
+  if(!box)return;
+  if(answered===0){ box.innerHTML='<div class="verdict"><h3>尚未開始檢核</h3><p>回答下方 30 題核心項目後,這裡會顯示建議起點。</p></div>'; return; }
+  let cls,title,advice;
+  if(y>=25){cls='v-go';title='可直接開始 32 週主計畫';advice='直接前往「32 週主計畫」分頁,從第 0 週環境建置開始。仍建議先完成 Preflight 專案作為暖身。';}
+  else if(y>=19){cls='v-fast';title='建議先執行 3–4 週快速補強';advice='前往「前導計畫」分頁的快速補強版,完成後做 Preflight 專案,再進入主計畫。';}
+  else if(y>=11){cls='v-full';title='建議完成完整 8 週前導計畫';advice='前往「前導計畫」分頁,依序完成前導第 1–8 週,再做 Preflight 專案。';}
+  else {cls='v-base';title='建議先完成 Go 與 Web Backend 基礎課程';advice='先透過基礎課程建立程式設計與 Web 概念,再回到 8 週前導計畫。';}
+  let hardHtml='';
+  if(hardMiss.length){
+    hardHtml='<p style="margin-top:8px"><strong>注意:</strong>下列硬性基礎為「否」,即使分數足夠也建議先補強 — '+hardMiss.map(esc).join('、')+'。</p>';
+  }
+  const prog=answered<30?'<p class="hint" style="margin-top:6px">已回答 '+answered+' / 30 題,建議全部作答後再看結論。</p>':'';
+  box.innerHTML='<div class="verdict '+cls+'"><h3>'+title+'</h3><p>目前得分 <span class="score">'+y+' / 30</span>。'+esc(advice)+'</p>'+hardHtml+prog+'</div>';
+}
+
+/* ============================================================ prelude pane */
+function renderPrelude(){
+  const el=document.getElementById('pane-prelude');
+  let h='<h2 class="sec">前導學習計畫</h2>'
+  +'<p class="lede">依自我檢核結果選擇:完整 8 週前導(適合 Go / Backend / Docker 尚未形成完整專案經驗者,每週 8–12 小時)、或 3–4 週快速補強(已能完成 Go CRUD API,但測試、Docker、Linux、Kubernetes 較弱)。完成後以 Preflight 專案驗收。每個項目下方的「驗證 ›」是勾選前的自我檢驗標準:能實際做到、說明或跑出來,才算學會。</p>'
+  +'<div id="pre-verdict"></div>'
+  +'<h2 class="sec">8 週前導學習計畫</h2><div id="pre-weeks">';
+  PRELUDE.forEach(wk=>{ h+=renderWeek(wk,'p','前導 W'+wk.w); });
+  h+='</div><h2 class="sec">3–4 週快速補強版</h2><div id="fast-weeks">';
+  FAST.forEach(f=>{
+    h+=renderWeek({w:f.w,t:f.t,goal:'產出:'+f.out,secs:[{h:'補強重點',k:'task',items:f.items}]},'f','補強 W'+f.w);
+  });
+  h+='</div>'
+  +'<h2 class="sec">Preflight 驗收專案:Job Management API</h2>'
+  +'<p class="lede">建議所有學習者在進入 32 週主計畫前完成此小型專案。不要求完美,但應能不依賴逐行教學完成主要功能、自行閱讀 log 找原因、說明每一層責任、說明 request 從 Client 到 Database 的完整路徑,以及 Container 與 Kubernetes Deployment 的差異。</p>'
+  +'<div class="grid2">'
+  +'<div class="card">'+codeBlock('POST   /jobs\nGET    /jobs\nGET    /jobs/{id}\nDELETE /jobs/{id}\nPOST   /auth/register\nPOST   /auth/login\nGET    /healthz\nGET    /readyz','最低功能')
+  +codeBlock('HTTP Handler\n    ↓\nApplication Service\n    ↓\nRepository Interface\n    ↓\nDatabase Repository','架構邊界(Service 與 Repository 不可依賴 Web Framework Context)')+'</div>'
+  +'<div class="card"><h3 style="margin:0 0 8px;font-size:15.5px">技術要求</h3><p class="note">Go(net/http、chi、Gin 或 Echo 任一)、PostgreSQL 或 MySQL、Migration、JWT Authentication、Layered architecture、Environment configuration、Structured logging、Unit test、Handler test、Dockerfile、Docker Compose、GitHub Actions、Kubernetes Deployment / Service。</p></div>'
+  +'</div>'
+  +'<div class="card" id="preflight-card"><h3 style="margin:0 0 8px;font-size:15.5px">驗收清單 <span class="chip todo" id="pf-chip">0 / '+PREFLIGHT.length+'</span></h3>'
+  +ckList(PREFLIGHT,'pf',false)+'</div>'
+  +'<h2 class="sec">AI 與機器學習需要懂多少</h2>'
+  +'<p class="lede">本計畫偏向 AI Infrastructure / Model Serving / Inference Platform,而不是模型研究與訓練。開始前不需要線性代數推導、backpropagation、PyTorch 訓練流程或 fine-tuning。</p>'
+  +'<div class="card"><h3 style="margin:0 0 8px;font-size:15.5px">進入 KServe 階段(第 28 週)前應補齊</h3>'
+  +ckList(['Training 與 inference 的差異||能一句話說明:訓練是用資料更新參數,推論是用固定參數產生結果。',
+   'Model artifact||能說明模型檔(權重)是什麼、常見格式,以及它與程式碼分開存放的理由。',
+   'Online inference 與 batch inference||能各舉一個場景:即時 API 回應 vs 離線批次跑整批資料。',
+   'Model runtime||能說明 runtime(sklearn server、vLLM 等)負責載入模型並提供推論 API。',
+   'CPU inference 與 GPU inference||能說明小模型 CPU 可行、大模型/LLM 需要 GPU 的原因(矩陣運算平行度)。',
+   'Latency 與 throughput||能說明兩者常互相拉扯:batching 提高吞吐但增加單一請求延遲。',
+   'Token 與 context length||能說明 LLM 以 token 計算輸入輸出,context length 是單次可處理的上限。',
+   'Model loading、autoscaling 與 cold start||能說明模型載入耗時導致 scale-to-zero 後第一個請求特別慢。'],'ai',false)
+  +codeBlock('模型訓練:使用資料更新模型參數\n模型推論:使用已訓練完成的模型產生預測結果\n模型服務:把模型包裝成可透過網路呼叫的長期執行服務','建議最低理解')+'</div>';
+  el.innerHTML=h;
+}
+function updatePreVerdict(){
+  const box=document.getElementById('pre-verdict'); if(!box)return;
+  const {y,answered}=quizStats();
+  if(answered<30){ box.innerHTML='<div class="verdict"><h3>先完成自我檢核</h3><p>回答「自我檢核」分頁的 30 題後,這裡會建議你走 8 週前導、快速補強,或直接進主計畫。</p></div>'; return; }
+  let msg;
+  if(y>=25)msg='<div class="verdict v-go"><h3>你可以直接進入 32 週主計畫</h3><p>前導計畫對你是選修;建議直接完成下方 Preflight 專案驗收後開始主線。</p></div>';
+  else if(y>=19)msg='<div class="verdict v-fast"><h3>建議走 3–4 週快速補強版</h3><p>完成下方「快速補強」四週與 Preflight 專案後進入主計畫。</p></div>';
+  else if(y>=11)msg='<div class="verdict v-full"><h3>建議完成完整 8 週前導計畫</h3><p>依序完成前導第 1–8 週,再完成 Preflight 專案。</p></div>';
+  else msg='<div class="verdict v-base"><h3>建議先完成基礎課程</h3><p>先建立 Go 與 Web Backend 基礎,再回到此 8 週前導計畫。</p></div>';
+  box.innerHTML=msg;
+}
+
+/* ============================================================ main plan pane */
+function renderMain(){
+  const el=document.getElementById('pane-main');
+  let h='<h2 class="sec">32 週完整學習路線</h2>'
+  +'<p class="lede">建議投入每週 10–12 小時。每週均包含概念學習、實作、測試、除錯與文件化;若某週未達驗收標準,優先順延,不建議跳過核心階段。勾選「驗收標準」全部完成後,該週即標記為完成。</p>'
+  +'<div class="card" style="border-color:var(--accent)"><strong>怎麼判斷「我真的學會了」?</strong><p class="note" style="margin:6px 0 0">每個學習項目下方都有一行 <span class="mono" style="color:var(--accent);font-size:11px">驗證 ›</span> 開頭的驗證點 — 描述你應該「能做到、能說明、能實測」的具體標準。誠實地做到那件事(寫得出來、講得出來、跑得起來)再勾選;做不到就代表還沒學會,回頭補。這比看完文章的感覺可靠得多。</p></div>';
+  PHASES.forEach(ph=>{
+    h+='<div class="phase" id="phase-'+ph.p+'">'
+    +'<div class="phase-head"><span class="pn">Phase '+ph.p+'</span><h3>'+esc(ph.title)+'</h3><span class="pr" id="phpr-'+ph.p+'">'+esc(ph.range)+'</span></div>'
+    +'<p class="phase-goal">'+esc(ph.goal)+'</p>';
+    ph.weeks.forEach(wk=>{ h+=renderWeek(wk,'m','W'+wk.w); });
+    if(ph.outputs){
+      h+='<div class="card" style="margin-top:4px"><h4 style="margin:0 0 8px;font-size:12px;font-family:var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)">Phase '+ph.p+' 產出</h4>'
+      +ckList(ph.outputs,'ph'+ph.p+'-out',false)+'</div>';
+    }
+    h+='</div>';
+  });
+  el.innerHTML=h;
+}
+
+/* ============================================================ resources pane */
+function renderRes(){
+  const el=document.getElementById('pane-res');
+  let h='<h2 class="sec">面試問題檢核</h2><p class="lede">每個階段完成後,應能回答對應的面試問題。用它檢驗你是否真的理解,而不只是做完。</p>';
+  INTERVIEW.forEach(g=>{
+    h+='<details class="fold"><summary>'+esc(g[0])+'</summary><div class="fold-body"><ol class="demo">'+g[1].map(q=>'<li>'+esc(q)+'</li>').join('')+'</ol></div></details>';
+  });
+  h+='<h2 class="sec">建議技術筆記題目</h2><p class="lede">每週從下列題目選一篇撰寫。</p><div class="card"><ol class="demo" style="columns:2;column-gap:36px">'+NOTES.map(n=>'<li>'+esc(n)+'</li>').join('')+'</ol></div>'
+  +'<h2 class="sec">測試策略總覽</h2><div class="twrap"><table class="t"><tr><th>層級</th><th>工具或方式</th><th>測試重點</th></tr>'
+  +TESTSTRAT.map(r=>'<tr><td>'+esc(r[0])+'</td><td class="mono" style="font-size:12.5px">'+esc(r[1])+'</td><td>'+esc(r[2])+'</td></tr>').join('')+'</table></div>'
+  +'<h2 class="sec">設備與開發環境需求</h2><div class="grid2">'
+  +'<div class="card"><h3 style="margin:0 0 8px;font-size:15.5px">最低配置</h3><p class="note">4 核心 CPU、16 GB RAM、80–100 GB SSD、支援硬體虛擬化、穩定網路;Windows 11 + WSL2、Linux 或 macOS。同時啟動 kind + Istio + KServe + Observability 可能吃緊,建議按階段啟動。</p></div>'
+  +'<div class="card"><h3 style="margin:0 0 8px;font-size:15.5px">推薦配置</h3><p class="note">8 核心以上 CPU、32 GB RAM、150 GB 以上 SSD。適合多節點 kind、Istio、Prometheus/Grafana、KServe、多叢集模擬與本機 LLM runtime。GPU 不是開始的必要條件:前期可用 CPU runtime、mock model server 或模擬 GPU resource request。</p></div></div>'
+  +'<h2 class="sec">建議安裝的工具</h2><div class="card"><p class="note">基礎:Git、Go、Make、curl、jq、OpenSSL、Docker、Docker Compose。Kubernetes:kubectl、kind 或 k3d、Helm、k9s(可選)。開發:VS Code 或 GoLand + Go / YAML / Docker extension。</p>'
+  +codeBlock('go version\ngit --version\ndocker version\ndocker compose version\nkubectl version --client\nkind version\nhelm version\ncurl --version\njq --version','檢查指令')+'</div>'
+  +'<h2 class="sec">主線完成前暫緩</h2><div class="twrap"><table class="t"><tr><th>項目</th><th>暫緩原因</th></tr>'
+  +[['深入 Ceph OSD / CRUSH map','偏 storage specialist,先理解 Rook 與使用模式即可'],['深入前端框架','主線是 Go / platform backend,UI 可最後補'],['LLM 訓練與 fine-tuning','本計畫聚焦 serving infrastructure'],['複雜 service mesh tuning','先掌握 mTLS、routing、policy、telemetry'],['過早閱讀大型專案全部原始碼','先建立可運作 mental model,再挑模組閱讀'],['自行實作完整 scheduler','先做 placement policy,不需重寫 kube-scheduler'],['過度追求 benchmark 數字','先 profiling,確認真實 bottleneck']].map(r=>'<tr><td>'+esc(r[0])+'</td><td>'+esc(r[1])+'</td></tr>').join('')+'</table></div>'
+  +'<h2 class="sec">完成主線後的進階選修</h2><div class="grid2">'
+  +[['Operator 深化','controller-runtime source code、multi-version CRD conversion、admission control、operator upgrade strategy、leader election 與 sharding、controller scale testing'],
+    ['Kubernetes Platform','Argo CD / Flux GitOps、Crossplane、Cluster API、OPA Gatekeeper / Kyverno、External Secrets Operator、cert-manager、SPIFFE / SPIRE'],
+    ['Multi-Cluster','Cluster API、Submariner、Istio multi-cluster、Karmada / Open Cluster Management、federation 與 data sovereignty'],
+    ['AI Infrastructure','Kueue、Volcano scheduler、Ray on Kubernetes、NVIDIA GPU Operator、Triton、vLLM distributed serving、model cache / prefetch、inference autoscaling、tokens/sec、TTFT、TPOT 觀測'],
+    ['Reliability','chaos engineering、load testing、rate limiting、bulkhead、disaster recovery、backup / restore、SLO / error budget policy']].map(c=>'<div class="card"><h3 style="margin:0 0 8px;font-size:15px">'+esc(c[0])+'</h3><p class="note">'+esc(c[1])+'</p></div>').join('')
+  +'</div>'
+  +'<h2 class="sec">GitHub Repository 品質標準</h2><div class="card"><p class="note">完成後 repository 至少應包含:清楚的問題定義、架構圖、功能列表、快速啟動、本機需求、API / CRD 範例、Demo script、測試方式、安全模型、failure handling、已知限制、roadmap、ADR、release tags、GitHub Actions、issue templates、dependency update 設定。推薦 badges:build、test、lint、coverage、release、container scan。</p></div>'
+  +'<h2 class="sec">官方文件入口</h2><div class="card"><ul class="ck one" style="display:block">'
+  +REFS.map(r=>'<li style="margin:3px 0"><a href="'+r[1]+'" target="_blank" rel="noopener">'+esc(r[0])+'</a> <span class="hint mono">'+esc(r[1])+'</span></li>').join('')
+  +'</ul></div>';
+  el.innerHTML=h;
+}
+
+/* ============================================================ progress computation */
+function weekProgress(det){
+  const boxes=det.querySelectorAll('input[type="checkbox"][data-ck]');
+  const total=boxes.length; let done=0;
+  boxes.forEach(b=>{ if(b.checked)done++; });
+  const acc=det.querySelectorAll('.blk[data-kind="accept"] input[data-ck]');
+  let accDone=acc.length>0;
+  acc.forEach(b=>{ if(!b.checked)accDone=false; });
+  if(acc.length===0)accDone=(total>0&&done===total);
+  const pct=total?Math.round(done/total*100):0;
+  return {pct,done,total,complete:accDone};
+}
+function refresh(){
+  let mainDone=0,mainPctSum=0,mainCount=0;
+  document.querySelectorAll('details.week').forEach(det=>{
+    const p=weekProgress(det);
+    det.dataset.done=p.complete?'1':'0';
+    const chip=det.querySelector('.wk-chip');
+    if(chip){
+      chip.className='chip wk-chip '+(p.complete?'ok':(p.done>0?'doing':'todo'));
+      chip.textContent=p.complete?'完成':(p.done>0?'進行中':'未開始');
+    }
+    const bar=det.querySelector('.wk-bar>i'); if(bar)bar.style.width=p.pct+'%';
+    const pt=det.querySelector('.wk-pct'); if(pt)pt.textContent=p.pct+'%';
+    if(det.id.startsWith('mw')){ mainCount++; mainPctSum+=p.pct; if(p.complete)mainDone++; }
+  });
+  // phase rails
+  PHASES.forEach(ph=>{
+    const div=document.getElementById('phase-'+ph.p); if(!div)return;
+    const weeks=div.querySelectorAll('details.week');
+    let all=true,any=false;
+    weeks.forEach(w=>{ if(w.dataset.done==='1')any=true; else all=false;
+      if(w.querySelector('input[data-ck]:checked'))any=true; });
+    div.classList.toggle('pdone',all&&weeks.length>0);
+    div.classList.toggle('pdoing',any&&!all);
+  });
+  // prelude %
+  let pT=0,pD=0;
+  document.querySelectorAll('#pre-weeks input[data-ck], #fast-weeks input[data-ck]').forEach(b=>{ pT++; if(b.checked)pD++; });
+  const prePct=pT?Math.round(pD/pT*100):0;
+  // preflight
+  let pfD=0;
+  document.querySelectorAll('#preflight-card input[data-ck]').forEach(b=>{ if(b.checked)pfD++; });
+  const pfChip=document.getElementById('pf-chip');
+  if(pfChip){ pfChip.textContent=pfD+' / '+PREFLIGHT.length; pfChip.className='chip '+(pfD===PREFLIGHT.length?'ok':(pfD>0?'doing':'todo')); }
+  // quiz
+  const q=quizStats();
+  // header stats
+  document.getElementById('st-quiz').innerHTML=(q.answered?q.y:'–')+'<small> / 30</small>';
+  document.getElementById('st-pre').innerHTML=prePct+'<small> %</small>';
+  document.getElementById('st-weeks').innerHTML=mainDone+'<small> / 33 週</small>';
+  const mainPct=mainCount?Math.round(mainPctSum/mainCount):0;
+  document.getElementById('st-main').innerHTML=mainPct+'<small> %</small>';
+  // pipeline
+  const set=(n,pct,doneCond)=>{
+    const bar=document.getElementById('pb-'+n); if(bar)bar.style.width=pct+'%';
+    const stp=document.getElementById('ps-'+n); if(!stp)return;
+    stp.classList.toggle('sdone',doneCond);
+    stp.classList.toggle('sdoing',!doneCond&&pct>0);
+  };
+  set(1,Math.round(q.answered/30*100),q.answered>=30);
+  set(2,prePct,prePct>=100);
+  set(3,Math.round(pfD/PREFLIGHT.length*100),pfD===PREFLIGHT.length);
+  set(4,mainPct,mainDone>=33);
+  // next hint
+  const hint=document.getElementById('next-hint');
+  if(hint){
+    let msg;
+    if(q.answered<30)msg='<strong>下一步:</strong>前往「1 · 自我檢核」完成 30 題核心檢核,決定你的起點。';
+    else{
+      let next=null;
+      document.querySelectorAll('#pane-main details.week').forEach(d=>{ if(!next&&d.dataset.done!=='1')next=d; });
+      if(next){
+        const t=next.querySelector('.wk-title').textContent;
+        const n=next.querySelector('.wk-num').textContent;
+        msg='<strong>主計畫下一個目標:</strong>'+esc(n)+' — '+esc(t)+'。前往「3 · 32 週主計畫」繼續。';
+      }else msg='<strong>🎉 恭喜!</strong>33 週全部完成 — 你已具備 Cloud-Native AI Platform 的完整實作能力,前往「資源與參考」準備履歷與面試。';
+    }
+    hint.innerHTML=msg;
+  }
+}
+
+/* ============================================================ events */
+function bind(){
+  document.body.addEventListener('change',e=>{
+    const t=e.target;
+    if(t.matches('input[data-ck]')){
+      const id=t.dataset.ck;
+      if(t.checked)st.c[id]=1; else delete st.c[id];
+      save(); refresh();
+    }
+  });
+  document.body.addEventListener('click',e=>{
+    const b=e.target.closest('.seg button');
+    if(b){
+      const seg=b.closest('.seg'); const id=seg.dataset.q; const v=b.dataset.v;
+      if(st.q[id]===v)delete st.q[id]; else st.q[id]=v;
+      save();
+      seg.querySelectorAll('button').forEach(x=>{
+        x.className=(st.q[id]==='y'&&x.dataset.v==='y')?'y-on':((st.q[id]==='n'&&x.dataset.v==='n')?'n-on':'');
+      });
+      updateQuizVerdict(); updatePreVerdict(); refresh();
+      return;
+    }
+    const tab=e.target.closest('.tab');
+    if(tab){ showTab(tab.dataset.pane); }
+  });
+  document.getElementById('btn-reset').addEventListener('click',()=>{
+    if(confirm('確定要清除所有勾選與檢核紀錄嗎?此動作無法復原。')){
+      st={c:{},q:{},tab:st.tab}; save(); location.reload();
+    }
+  });
+  document.getElementById('btn-export').addEventListener('click',()=>{
+    const blob=new Blob([JSON.stringify(st,null,2)],{type:'application/json'});
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download='learning-progress.json'; a.click();
+    URL.revokeObjectURL(a.href);
+  });
+  document.getElementById('btn-import').addEventListener('click',()=>{
+    document.getElementById('import-file').click();
+  });
+  document.getElementById('import-file').addEventListener('change',e=>{
+    const f=e.target.files[0]; if(!f)return;
+    const r=new FileReader();
+    r.onload=()=>{
+      try{
+        const data=JSON.parse(r.result);
+        if(typeof data!=='object'||!data||(!data.c&&!data.q))throw new Error('bad');
+        if(!confirm('匯入將以檔案內容覆蓋目前進度,確定嗎?'))return;
+        st={c:data.c||{},q:data.q||{},tab:data.tab||st.tab};
+        save(); location.reload();
+      }catch(err){ alert('匯入失敗:這不是有效的進度檔(learning-progress.json)。'); }
+    };
+    r.readAsText(f);
+    e.target.value='';
+  });
+}
+function showTab(name){
+  st.tab=name; save();
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.pane===name));
+  document.querySelectorAll('section.pane').forEach(p=>p.classList.toggle('on',p.id==='pane-'+name));
+  window.scrollTo({top:0});
+}
+
+/* ============================================================ boot */
+renderOverview(); renderQuiz(); renderPrelude(); renderMain(); renderRes();
+bind(); updateQuizVerdict(); updatePreVerdict(); refresh();
+showTab(st.tab||'overview');
+</script>
